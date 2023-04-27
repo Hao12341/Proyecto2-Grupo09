@@ -1,10 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacto</title>
 </head>
 <body>
+<header class="header">
+
+    <!-- Logo -->
+    <a id="Logo" href="index.html"><img src="/img/logo.svg" alt="Logo de la empresa"></a>
+    <!-- Fin logo -->
+
+    <!-- Opcion menu -->
+    <label for="check" class="boton-barras">
+        <i class="fa fa-bars"></i>
+    </label>
+    <input type="checkbox" name="check" id= "check">
+    <!-- Fin opcion menu -->
+
+    <!-- Menu -->
+    <nav id="menu-principal">
+        <ul>
+            <li id="menu-servicios"><a href="#informacion">Información</a></li>
+            <li><a href="#contacto">Servicio</a></li>
+        </ul>
+    </nav>
+    <!-- Fin menu -->
+
+    <!-- Icono del login -->
+    <a id="Login" href="Login.html"><i class="fa fa-user-circle"></i></a>
+    <!-- Fin Icono del login -->
+
+</header>
+<form action="#" method="post">
+
+    <h1 id="Título"> Contacta con nosotros</h1>
+    <!-- Empieza Caja Formulario -->
+    <div id="contenedorGris">
+        <!-- Empieza Parte Escribir Formulario-->
+        <h3>Nombre y apellidos*</h3><input required id="Nombre" type="text" placeholder="Nombre y apellidos">
+        <h3>Email*</h3><input required id="email" type="email" placeholder="Email">
+        <h3>Teléfono</h3><input id="tel" type="tel" placeholder="Teléfono" pattern="[0-9]{9}">
+        <h3>Escribe aquí tu consulta*</h3>
+        <textarea required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta...">
+        </textarea>
+        <!-- ACaba parte escribir formulario-->
+
+        <!-- Empiezan checkbox y botón de envío -->
+        <div id="containerCheckbox">
+            <input type="checkbox" id="checkboxTerminos" class="checkbox">
+            <p>Acepto los
+                <a href="#">
+                    <p>Términos y condiciones del servicio</p>
+                </a>
+            </p>
+        </div>
+
+            <button type="submit"> Enviar... </button>
+
+        <!-- Aacaba checkbox y boton de envío-->
+    </div>
+
+    <!-- Texto Pop Up -->
+</form>
 
 </body>
 </html>
