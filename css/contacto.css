@@ -1,0 +1,14 @@
+
+
+
+
+
+
+ /* Imagen de fondo de pantalla*/
+
+    body {
+        background-image: url("../img/FondoInicioSesion.jpeg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
