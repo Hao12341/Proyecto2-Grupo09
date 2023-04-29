@@ -35,19 +35,24 @@
     <!-- Fin Icono del login -->
 
 </header>
-<form action="#" method="post">
+<form id="Formulario" action="#" method="post">
 
     <h1 id="Título"> Contacta con nosotros</h1>
     <!-- Empieza Caja Formulario -->
     <div id="contenedorGris">
         <!-- Empieza Parte Escribir Formulario-->
         <h3>Nombre y apellidos*</h3><input required id="Nombre" type="text" placeholder="Nombre y apellidos">
+
         <h3>Email*</h3><input required id="email" type="email" placeholder="Email">
+
         <h3>Teléfono</h3><input id="tel" type="tel" placeholder="Teléfono" pattern="[0-9]{9}">
+
         <h3>Escribe aquí tu consulta*</h3>
+
         <textarea required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta...">
+
         </textarea>
-        <!-- ACaba parte escribir formulario-->
+        <!-- Acaba parte escribir formulario-->
 
         <!-- Empiezan checkbox y botón de envío -->
         <div id="containerCheckbox">
@@ -59,19 +64,58 @@
             </p>
         </div>
 
-            <button type="submit"> Enviar... </button>
+            <button id="submit" type="submit"> Enviar... </button>
 
-        <!-- Aacaba checkbox y boton de envío-->
+        <!-- Acaba checkbox y boton de envío-->
     </div>
 
     <!-- Texto Pop Up r-->
-    <div id="Pop-Up">
-        <h3>  Tetxo envio bien o mal</h3>
-        <a href="index.html"><p>Cerrar</p></a>
-    </div>
+    <dialog id="Pop-Up">
+        <h3 id="TextoPop-Up">  Texto envio bien o mal</h3>
+        <a id="BotonCerrar" href="index.html"><p>Cerrar</p></a>
+    </dialog>
     <!-- Pop Up  -->
 
+    <!-- Funcionalidad Pop-Up -->
+    <script>
 
+        // Declaración de Variables
+        const botonEnvio = document.getElementById("submit")
+        const PopUp = document.getElementById("Pop-Up")
+        const BotonCerrar = document.getElementById("BotonCerrar")
+        const TextoPopUp = document.getElementById("TextoPop-Up")
+        const Formulario = document.getElementById("Formulario")
+
+        // Simulación de estado del envío
+        const EnvioExitoso = false
+
+        //Funcion para cerrar el PopUp
+        function cerrar() {
+            PopUp.close()
+        }
+
+        //Funcion de activación del PopUp y cambio de atributos de los elementos dentro del mismo
+        Formulario.addEventListener('submit', () => {
+            event.preventDefault()
+            if (EnvioExitoso) {
+                TextoPopUp.innerText = "El formulario se ha enviado correctamente"
+                BotonCerrar.href = "index.html"
+            }else{
+                TextoPopUp.innerText = "El formulario no se ha podido enviar correctamente. Por favor intentelo más tarde"
+                BotonCerrar.addEventListener('click', () => {
+                    BotonCerrar.href = "#"
+                    event.preventDefault()
+                    PopUp.close()
+                })
+            }
+            PopUp.showModal()
+
+        })
+
+
+
+
+    </script>
 </form>
 
 </body>
