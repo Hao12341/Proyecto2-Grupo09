@@ -9,9 +9,10 @@
 
     body {
         background-image: url("../img/FondoInicioSesion.jpeg");
-        background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        background-blend-mode: normal;
+        background-repeat: no-repeat;
     }
 
     /* H3  */
@@ -42,6 +43,9 @@
         align-items: center;
         display: flex;
         flex-direction: column;
+        height: max-content;
+        min-height: 100vh;
+        width: 100%;
     }
 
     /* Contenedor del form */
