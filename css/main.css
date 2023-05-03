@@ -1,6 +1,6 @@
 @font-face {
     font-family: "poppins";
-    src: url(../font/Poppins-Regular.ttf);
+
 }
 *{
     font-family: "poppins";
@@ -42,11 +42,11 @@
 }
 .boton-barras .fa, .boton-barras .fa-times {
     font-size: 2rem;
-    pointer-events: pointer;
+
   }
 #menu-principal{
     position: absolute;
-    display: absolute;
+    display: initial;
     text-align: center;
     width: 100%;
     margin: 0px auto;
@@ -192,6 +192,7 @@
 #InfoEmpresa > p {
     text-align: center;
 
+.popup {
 }
 #ContactoPie{
     margin-top: 1rem;
@@ -218,3 +219,22 @@ footer{
     margin-top: 1.3rem;
     margin-bottom: 1.5rem;
 }
+<<<<<<<
+
+=======
+
+
+
+
+
+
+header {
+    position: sticky;
+    top: 0px;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+>>>>>>>
