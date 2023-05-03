@@ -1,0 +1,83 @@
+#menu{
+    --bg-color: white;
+    --txt-color: white;
+    --hover-bg: var(--accent-bg-color);
+    --hover-txt: var(--accent-fg-color);
+    --li-bg: #204b36;
+    --menu-height: 3rem;
+}
+#menu ul{
+    background-color: var(--bg-color);
+    position: absolute;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%) scaleY(0);
+    transition: .5s;
+}
+
+#menu.activo ul{
+    transform: translateY(0) scaleY(1);
+}
+
+#menu li{
+    padding: .5em;
+    text-align: center;
+    border: 1px solid white;
+    background-color: var(--li-bg);
+    color: var(--txt-color);
+
+}
+
+#menu {
+    background-color: var(--bg-color);
+    color: black;
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    position: fixed;
+    width: 100%;
+}
+.hamburguesa {
+    width: 2em;
+    height: 2em;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.hamburguesa div{
+    background-color: black;
+    width: 2em;
+    height: .3em;
+    margin: .3em auto;
+    transition: .5s;
+    z-index: -1;
+}
+
+#menu.activo .hamburguesa div:nth-child(2){
+    opacity: 0;
+}
+
+#menu.activo .hamburguesa div:nth-child(1){
+    transform: translateY(.6em) rotate(45deg);
+}
+#menu.activo .hamburguesa div:nth-child(3){
+    transform: translateY(-.6em) rotate(-45deg);
+}
+#iconosBanner{
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#Login i{
+    margin: 0 auto;
+    font-size: 1.9rem;
+    float: right;
+}
