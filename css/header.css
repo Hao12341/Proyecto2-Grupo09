@@ -1,133 +1,95 @@
-/*  Header  */
-.header{
-    position: fixed;
-    size: 2rem;
-    width: 100%;
-    background-color: white;
-    margin-bottom: 1rem;
-    z-index: +1;
-}
-.texto{
-    margin-top: 0.8rem;
-    margin-bottom: 2.5rem;
-    font-size: 0.9rem;
-}
-#Logo img{
-    width: 7.7rem;
-    height: 4.7rem;
-}
-.boton-barras{
-    margin-top: 1.4rem;
-    float: right;
-    margin-left: 1rem;
-    margin-right: 1.2rem;
-}
-#check{
-    display: none;
-}
-.boton-barras .fa, .boton-barras .fa-times {
-    font-size: 2rem;
-    pointer-events: pointer;
-}
-#menu-principal{
+
+/*
+                    HEADER.CSS
+ */
+
+
+
+header{
     position: absolute;
-    display: absolute;
-    text-align: center;
-    width: 100%;
-    margin: 0px auto;
-    background-color: #204b36;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: 0.5s ease-in-out;
+    z-index: 1;
 }
-#check:checked + nav#menu-principal{
+
+
+#menu{
+    --bg-color: white;
+    --txt-color: white;
+    --hover-bg: var(--accent-bg-color);
+    --hover-txt: var(--accent-fg-color);
+    --li-bg: #204b36;
+    --menu-height: 3rem;
+}
+#menu ul{
+    background-color: var(--bg-color);
     position: absolute;
+    top: var(--menu-height);
+    left: 0;
     width: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translateY(-50%) scaleY(0);
+    transition: .5s;
 }
-#menu-principal li{
-    padding: 15px 0px;
+
+#menu.activo ul{
+    transform: translateY(0) scaleY(1);
 }
-#menu-principal ul{
-    display: hidden;
-    list-style: none;
-    padding: 0px ;
-    margin: 0ch;
-}
-#menu-principal a{
-    margin: 0px;
-    font-weight: bold;
-    font-size: 12px;
-    text-decoration: none;
+
+#menu li{
     text-align: center;
-    display: block;
-    position: relative;
-    color: white;
+    border: 1px solid white;
+    background-color: var(--li-bg);
+    color: var(--txt-color);
+    flex: 1 1 0;
+
 }
-#menu-servicios{
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-}
-#menu-contacto{
-    border-bottom: 1px solid white;
-}
-#Foto-tablet{
+
+#menu {
+    background-color: var(--bg-color);
+    color: black;
+    height: var(--menu-height);
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    padding-top: 3px;
-    flex-direction: column;
     align-items: center;
-    background: url("../img/FondoLandingPage.jpeg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
 }
-#eslogan{
-    align-self: center;
-    padding: 0rem 2rem;
-    clear: both;
-    width: auto;
-    color: white;
-    margin: 0px auto;
-    margin-top: 10rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-#sublogo{
-    align-self: center;
-    padding: 0rem 2rem;
-    clear: both;
-    width: auto;
-    color: white;
-    margin: 0px auto;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-#call-to-action{
-    font-size: 1rem;
-    margin: 0px auto;
-    margin-bottom: 9rem;
-    color: #810052;
-    background-color: white;
-    border: none;
-    font-weight: bolder;
-    border-radius: 20px;
-    padding: 0.8rem 1.5rem;
-}
-
-.Bajar i{
-    color: white;
-    font-size: 3rem;
-}
-.Bajar i:hover{
+.hamburguesa {
+    width: 2em;
+    height: 2em;
+    padding: 10px;
     cursor: pointer;
+
 }
-#bajar{
-    scroll-behavior: smooth;
-    scroll-margin-block-start: 1.7rem;
+.hamburguesa div{
+    background-color: black;
+    width: 2em;
+    height: .3em;
+    margin: .3em auto;
+    transition: .5s;
+    z-index: -1;
 }
-/* Fin Header */
+
+#menu.activo .hamburguesa div:nth-child(2){
+    opacity: 0;
+}
+
+#menu.activo .hamburguesa div:nth-child(1){
+    transform: translateY(.6em) rotate(45deg);
+}
+#menu.activo .hamburguesa div:nth-child(3){
+    transform: translateY(-.6em) rotate(-45deg);
+}
+#iconosBanner{
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#Login i{
+    margin: 0 auto;
+    font-size: 1.9rem;
+    float: right;
+}
