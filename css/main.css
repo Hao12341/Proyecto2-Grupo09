@@ -1,6 +1,6 @@
 @font-face {
     font-family: "poppins";
-    src: url(../font/Poppins-Regular.ttf);
+
 }
 *{
     font-family: "poppins";
@@ -36,11 +36,11 @@
 }
 .boton-barras .fa, .boton-barras .fa-times {
     font-size: 2rem;
-    pointer-events: pointer;
+
   }
 #menu-principal{
     position: absolute;
-    display: absolute;
+    display: initial;
     text-align: center;
     width: 100%;
     margin: 0px auto;
@@ -86,7 +86,7 @@
     padding-top: 3px;
     flex-direction: column;
     align-items: center;
-    background: url("/images/Campo2.png");
+    background: url("/img/Fondo.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -186,7 +186,7 @@ footer{
 
 .popup {
     border: none;
-    box-shadow: 1px grey;
+    box-shadow: 1px solid grey;
     background-color: #810052;
     font-weight: bold;
     font-size: 1.2rem;
@@ -194,7 +194,7 @@ footer{
     width: 7rem;    
     height: 3rem;
     border-radius: 20px;
-    padding: 0 auto;
+    padding: 0 0;
     background-color: #810052;
     margin: 1rem auto;
     position: relative;
