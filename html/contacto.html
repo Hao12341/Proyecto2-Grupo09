@@ -76,8 +76,11 @@
         <!-- Acaba checkbox y boton de envío-->
 
         <!-- Div estado del envío -->
+        <div id="Estado envío">
+            <p id="textoEnvío"></p>
+        </div>
 
-
+    </div>
     </form>
     </div>
 <!-- Funcionalidad Pop-Up -->
@@ -85,37 +88,28 @@
 
     // Declaración de Variables
     const botonEnvio = document.getElementById("botonEnvio")
-    const PopUp = document.getElementById("Pop-Up")
-    const BotonCerrar = document.getElementById("BotonCerrar")
-    const TextoPopUp = document.getElementById("TextoPop-Up")
+    const textoEnvío = document.getElementById("textoEnvío")
     const Formulario = document.getElementById("Formulario")
 
     // Simulación de estado del envío
     const EnvioExitoso = true
 
     //Funcion para cerrar el PopUp
-    function cerrar() {
-        PopUp.close()
-    }
 
     //Funcion de activación del PopUp y cambio de atributos de los elementos dentro del mismo
     Formulario.addEventListener('submit', (event) => {
         event.preventDefault()
-        PopUp.display = "flex"
-        PopUp.flexDirection = "column"
         if (EnvioExitoso) {
-            TextoPopUp.innerText = "El formulario se ha enviado correctamente"
-            BotonCerrar.href = "index.html"
+            textoEnvío.innerText = "El formulario se ha enviado correctamente"
+            setTimeout(()=> {
+                window.location.replace("../index.html")
+            }, 1000)
+
         }else{
-            TextoPopUp.innerText = "El formulario no se ha podido enviar correctamente. Por favor intentelo más tarde"
-            BotonCerrar.addEventListener('click', () => {
-                BotonCerrar.href = "#"
-                PopUp.display = "none"
-                event.preventDefault()
-                PopUp.close()
-            })
+            textoEnvío.innerText = "El formulario no se ha podido enviar correctamente. Por favor intentelo más tarde"
         }
-        PopUp.showModal()
+
+
         //Formulario.submit()
     })
 </script>
