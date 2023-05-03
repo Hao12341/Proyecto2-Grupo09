@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    color: #04291C;
+    text-align: center;
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+
+}
+
+h3 {
+    font-size: 1em;
+    color: black;
+    text-align: left;
+    position: relative;
+    margin: 10px 0;
+    margin-left: 5px;
+}
+
+h4 {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+h5 {
+    font-size: 20px;
+    margin-bottom: 30px;
+
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    /*background-image: url(../img/FondoInicioSesion.jpeg);*/
+    background-position: center;
+    background-size: cover;
+}
+
+/* Estilos para el contenedor del formulario */
+.Caja-Inicio {
+    position: relative;
+    height: 400px;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 280px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para los inputs */
+.inputs {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+
+/* Estilos para el botón de inicio de sesión */
+button {
+    background-color: #04291C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #65946F;
+}
+
+/* Estilos para el enlace de recuperación de contraseña */
+.recordarContraseña {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#olvido-contraseña {
+    color: #04291C;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#olvido-contraseña:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del popup */
+.popup {
+    position: fixed;
+    height: 440px;
+    background-color: rgba(252, 252, 252, 1);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 320px;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+.popup-contenido {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.popup-envio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.botonInicioSesion {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 150px;
+
+
+}
+
+.cerrarBoton {
+    display: flex;
+    align-items: flex-end;
+
+
+
+}
