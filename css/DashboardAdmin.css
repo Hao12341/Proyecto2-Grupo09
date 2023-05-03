@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-bg-color: #0ef106;
+    --main-fg-color: #092a09;
+    --contrast-bg-color: #b4f68e;
+    --contrast-fg-color: #007935;
+    --accent-bg-color: #092a09;
+    --accent-fg-color: #fffffe;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-fg-color);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+section:nth-child(even){
+    background-color: color-mix(in srgb,
+    var(--main-fg-color) 10%, var(--main-bg-color));
+}
+
+.InicioAdmin {
+
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.filtro {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+
+}
+table {
+    font-family: arial, sans-serif;
+    border: 1px solid forestgreen;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    width: 100%;
+}
+thead th{
+    background-color: #fffffe;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+
+}
+th{
+    border: 1px solid #092a09;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 8px;
+
+}
+td {
+    border: 1px solid #092a09;
+    border-radius: 3px;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #2f7706;
+}
+tr:nth-child(odd) {
+    background-color: #0ef106;
+}
+.imagen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
