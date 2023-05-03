@@ -39,7 +39,7 @@
 .hamburguesa {
     width: 2em;
     height: 2em;
-
+    padding: 10px;
 
 }
 .hamburguesa div{
@@ -59,4 +59,19 @@
 }
 #menu.activo .hamburguesa div:nth-child(3){
     transform: translateY(-.6em) rotate(-45deg);
+}
+#iconosBanner{
+    padding: 20px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#Login i{
+    margin: 0 auto;
+    font-size: 1.9rem;
+    float: right;
 }
