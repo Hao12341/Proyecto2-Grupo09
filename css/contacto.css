@@ -47,14 +47,17 @@
     /* Contenedor del form */
 
     #contenedorGris {
-        background: rgba(242,242,242,80%);
+        background: rgba(252,252,252,90%);
         backdrop-filter: blur(5px);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         width: 342px;
         height: 670px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
         z-index: -1;
+        border-radius: 15px;
+        padding: 30px;
 
     }
 
@@ -67,12 +70,15 @@
     }
     /* Boton Enviar */
     #botonEnvio{
-        align-self: center;
-        width: 163px;
-        height: 47px;
-        font-size: 13px;
-        background-color: white;
-        position: center;
+        background-color: #04291C;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        margin: 10px auto;
     }
     /* Bakcdrop config dialog*/
 
@@ -95,14 +101,24 @@
         height: 33px;
         font-style: normal;
     }
+    
+    textarea {
+        resize: none;
+        height: 300px;
+    }
 
 
 
-    /* Input rounded corners */
+    /* Input caja texto */
 
 
-    .rounded {
+    .inputCajaTexto {
         border-radius: 20px;
+        border: none;
+        border: 2px solid #ccc;
+        font-size: 16px;
+        padding: 10px 0;
+
     }
 
 
