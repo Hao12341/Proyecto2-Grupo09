@@ -4,42 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/DashboardAdmin.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/header2.css">
     <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto</title>
 </head>
 <body>
-<header class="Encabezado" role="banner">
     <!-- Esto es el encabezado que actuará de banner-->
-    <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
-        <ul>
-            <li><a href="#Contacto">Contacto</a></li>
-            <li><a href="#Avisos">Avisos</a></li>
-            <li><a href="#CerrarSesion">Cerrar Sesión</a></li>
-        </ul>
-        <div id="iconosBanner">
-            <a id="Login" href="Login.html"><i class="fa fa-user-circle"></i></a>
-            <div class="hamburguesa">
-                <div></div>
-                <div></div>
-                <div></div>
+    <header class="Encabezado" role="banner">
+        <!-- Esto es el encabezado que actuará de banner-->
+        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
+                                                              alt="Logo de la empresa"></a>
+            <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+            <div id="contenedorContenedorDesktop">
+                <div id="separador"></div>
+                <div id="contenedorMenuDesktop">
+                    <ul id="menuDesktop">
+                        <li><a href="#Contacto">Inicio</a></li>
+                        <li><a href="#Perfil">Mi perfil</a></li>
+                        <li><a href="#Sensores">Mis sensores</a></li>
+                        <li><a href="../html/contacto.html">Contáctanos</a></li>
+                        <li><a href="#CerrarSesion">Cerrar sesión</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
 
-</header>
-<script src="../js/menu.js"></script>
+            <ul id="menuDesplegable">
+                <li><a href="#Contacto">Inicio</a></li>
+                <li><a href="#Perfil">Mi perfil</a></li>
+                <li><a href="#Sensores">Mis sensores</a></li>
+                <li><a href="../html/contacto.html">Contáctanos</a></li>
+                <li><a href="#CerrarSesion">Cerrar sesión</a></li>
+            </ul>
 
+
+
+            <div id="iconosBanner">
+                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+                <div class="hamburguesa">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="../js/menu.js"></script>
     <div id="ContenedorNoHeader">
     <div><h1 id="Título"> Contacta con nosotros</h1></div>
     <form id="Formulario" action="#" method="post">
     <!-- Empieza Caja Formulario -->
-    <div id="contenedorGris">
+    <div class="divBlanco" id="contenedorGris">
         <!-- Empieza Parte Escribir Formulario-->
         <h3>Nombre y apellidos*</h3><input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos">
 
@@ -50,7 +65,7 @@
         <h3>Escribe aquí tu consulta*</h3>
 
         <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta..."
-                  rows="1" cols = "10">
+                  rows="1">
 
         </textarea>
         <!-- Acaba parte escribir formulario-->
@@ -59,10 +74,10 @@
         <div id="containerCheckbox">
             <input type="checkbox" id="checkboxTerminos" class="checkbox" required>
             <label for="checkboxTerminos">
-                <p>Acepto los
+                <p id="terminosServicio">Acepto los
                     <a href="#">
-                <p>Términos y condiciones del servicio</p>
-                </a>
+                        <p>Términos y condiciones del servicio</p>
+                     </a>
                 </p>
             </label>
         </div>
