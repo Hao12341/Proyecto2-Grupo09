@@ -5,13 +5,20 @@
 
 
  /* Estilos del header */
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    z-index: 20;
+}
 #menu{
     --bg-color: white;
     --txt-color: white;
     --hover-bg: var(--accent-bg-color);
     --hover-txt: var(--accent-fg-color);
     --li-bg: #204b36;
-    --menu-height: 3rem;
+    --menu-height: 2rem;
 }
 #menu ul{
     background-color: var(--bg-color);
@@ -21,6 +28,8 @@
     width: 100%;
     transform: translateY(-50%) scaleY(0);
     transition: .5s;
+    z-index: auto;
+    margin-top: 17px;
 }
 
 #menu.activo ul{
@@ -34,6 +43,10 @@
     background-color: var(--li-bg);
     color: var(--txt-color);
 
+}
+
+#menu a{
+    color: white;
 }
 #Logo img{
     width: 7.7rem;
@@ -55,6 +68,7 @@
     height: 2em;
     padding: 10px;
     cursor: pointer;
+   padding-top:  9px;
 
 }
 .hamburguesa div{
@@ -70,7 +84,9 @@
     height: 2em;
     padding: 10px;
     cursor: pointer;
+    flex: 1 1 0;
 }
+
 
 #menu.activo .hamburguesa div:nth-child(2){
     opacity: 0;
@@ -83,18 +99,20 @@
     transform: translateY(-.6em) rotate(-45deg);
 }
 #iconosBanner{
-    padding: 20px;
+    padding-top: 10px;
     margin-bottom: 1.5rem;
-    display: flex;
     align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
+    height: 60px;
+
+
+
 }
 
-#Login i{
-    margin: 0 auto;
-    font-size: 1.9rem;
-    float: right;
+
+#iconoLogin{
+    width: 2rem;
+    height: 2rem;
 }
