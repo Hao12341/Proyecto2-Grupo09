@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&family=Roboto:ital@1&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#Bienvenido{
+    text-align: center;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+}
+#contenedor{
+    text-align: start;
+    display: flex;
+
+    flex: 1 1 0;
+
+}
+@media(max-width: 590px){
+    #contenedor{
+        flex-direction: column;
+    }
+    #Cuadrao{
+        text-align: center;
+    }
+
+}
+#Cuadrao{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items:center ;
+    flex-direction: column;
+    background-color: rgba(180, 172, 172, 0.09);
+
+}
+#anuncio-incidencias{
+    width: 600px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    order: 0;
+    background-color: white;
+    border-radius: 20px;
+
+
+
+}
+
+.incidencias{
+    width: 700px ;
+    height: 70px;
+    border: 1px solid black;
+    margin:  15px auto;
+    order: 1;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+
+}
+
+
+
+p{
+    margin: 10px
+}
+.achuchu{
+    font-size: 30px;
+}
+
+.BienvenidoJL{
+    font-size: 50px;
+}
+
+
+
+
+.btn{
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-self: flex-end;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+
+
+
+}
+/* Estilo del pop-up */
+#popUpBox1 {
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    width: 1500px; /* Ancho del pop-up */
+    height: 800px; /* Alto del pop-up */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+}
+
+/* Estilo del contenido del pop-up */
+#popUpContent1 {
+    padding: 20px; /* Relleno */
+    text-align: center; /* Alineación de texto */
+}
+
+/* Estilo del icono de cerrar */
+#closeIcon1 {
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+/* Estilo del pop-up */
+#popUpBox2 {
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    width: 1500px; /* Ancho del pop-up */
+    height: 800px; /* Alto del pop-up */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+}
+
+/* Estilo del contenido del pop-up */
+#popUpContent2 {
+    padding: 20px; /* Relleno */
+    text-align: center; /* Alineación de texto */
+}
+
+/* Estilo del icono de cerrar */
+#closeIcon2 {
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+/* Estilo del pop-up */
+#popUpBox3 {
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    width: 1500px; /* Ancho del pop-up */
+    height: 800px; /* Alto del pop-up */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+}
+
+/* Estilo del contenido del pop-up */
+#popUpContent3 {
+    padding: 20px; /* Relleno */
+    text-align: center; /* Alineación de texto */
+}
+
+/* Estilo del icono de cerrar */
+#closeIcon3 {
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+/* Estilo del pop-up */
+#popUpBox4 {
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    width: 1500px; /* Ancho del pop-up */
+    height: 800px; /* Alto del pop-up */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+}
+
+/* Estilo del contenido del pop-up */
+#popUpContent4 {
+    padding: 20px; /* Relleno */
+    text-align: center; /* Alineación de texto */
+}
+
+/* Estilo del icono de cerrar */
+#closeIcon4 {
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+
+/* Estilo del pop-up */
+#popUpBox5 {
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    width: 1500px; /* Ancho del pop-up */
+    height: 800px; /* Alto del pop-up */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+}
+
+/* Estilo del contenido del pop-up */
+#popUpContent5 {
+    padding: 20px; /* Relleno */
+    text-align: center; /* Alineación de texto */
+}
+
+/* Estilo del icono de cerrar */
+#closeIcon5 {
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+

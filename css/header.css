@@ -17,7 +17,7 @@ header{
     --hover-bg: var(--accent-bg-color);
     --hover-txt: var(--accent-fg-color);
     --li-bg: #204b36;
-    --menu-height: 4rem;
+    --menu-height: 3.5rem;
 }
 #menu ul{
     background-color: var(--bg-color);
@@ -92,4 +92,20 @@ header{
     margin: 0 auto;
     font-size: 1.9rem;
     float: right;
+}
+#botonContactoAdmin {
+    font-size: 0.9rem;
+    background-color: #348137;
+    display: block;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+}
+#botonContactoAdmin1 {
+    font-size: 0.9rem;
+    background-color: #348137;
+    display: block;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
 }
