@@ -1,0 +1,319 @@
+/* Import de fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+}
+
+.todo{
+    /* esto hace que salgo todo en columna y no se amontone en una sola página, no borrar o me suicido */
+}
+
+.pagina1{
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(../img/FondoInicioSesion.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.PackSensores {
+
+    height: 600px;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botonSolicitarPresupuesto {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 150px;
+    flex: 1 1 0;
+}
+
+button {
+    background-color: #04291C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.botonesProductos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenidopack{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SensorLuz {
+    position: relative;
+    height: 600px;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SensorHumedad{
+    position: relative;
+    height: 600px;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SensorTemperatura{
+    position: relative;
+    height: 600px;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SensorSalinidad{
+    position: relative;
+    height: 600px;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.SensorPH{
+    position: relative;
+    height: 600px;
+    background-color: rgba(252, 252, 252, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fotos{
+
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    width: 340px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.espacio{
+    margin-top: 20px;
+}
+
+.h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 0.5em;
+    color: #04291c;
+    height: 15px;
+}
+
+
+
+
+
+@media(max-width: 590px) {
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: white;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .todo{
+        /* esto hace que salgo todo en columna y no se amontone en una sola página, no borrar o me suicido */
+    }
+
+    .pagina1{
+        min-height: 100vh;
+        background-image: url(../img/FondoInicioSesion.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .PackSensores {
+
+        height: 100vh;
+        background-color: rgba(252, 252, 252, 0.9);
+        padding: 1em;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .botonSolicitarPresupuesto {
+        display: flex;
+        align-items: flex-end;
+        margin-left: 25px;
+        flex: 1 1 0;
+    }
+
+    button {
+        background-color: #04291C;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px auto;
+    }
+
+    .botonesProductos {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contenidopack{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .SensorLuz {
+        position: relative;
+        height: 100vh;
+        background-color: rgba(252, 252, 252, 0.9);
+        padding: 1em;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .SensorHumedad{
+        position: relative;
+        height: 100vh;
+        background-color: rgba(252, 252, 252, 0.9);
+        padding: 1em;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .SensorTemperatura{
+        position: relative;
+        height: 100vh;
+        background-color: rgba(252, 252, 252, 0.9);
+        padding: 1em;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .fotos {
+        height: 200px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        width: 150px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .espacio {
+        margin-top: 10px;
+    }
+    }

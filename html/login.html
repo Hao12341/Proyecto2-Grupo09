@@ -6,11 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login2.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+
+
     <title>Inicio de sesión</title>
 </head>
 
 
 <body>
+    <header class="header" > <!-- Esto es el encabezado que actuará de banner-->
+        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
+                                                              alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+
+        </nav>
+
+    </header>
     <section>
         <div class="Caja-Inicio">
             <div class="formulario">
@@ -53,7 +63,7 @@
         <!-- Pop up envio correcto -->
         <div id="popupEnvio" class="popup" style="display: none;">
             <div class="popup-contenido">
-                <h5>Se ha enviado correctamente</h4>
+                <h4>Se ha enviado correctamente</h4>
                     <div class="cerrarBoton"><button type="submit" id="cerraBoton">Cerrar</button></div>
             </div>
         </div>
