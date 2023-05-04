@@ -8,88 +8,14 @@
     scroll-behavior: smooth;
 }
 
-/*  Header  */
-.header{
-    position: fixed;
-    size: 2rem;
-    width: 100%;
-    background-color: white;
-    margin-bottom: 1rem;
-}
-.texto{
-    margin-top: 0.8rem;
-    margin-bottom: 2.5rem;
-    font-size: 0.9rem;
-}
-#Logo img{
-    width: 7.7rem;
-    height: 4.7rem;
-}
-#Login i{
-    margin-top: 1.5rem;
-    font-size: 1.9rem;
-    float: right;
-}
-.boton-barras{
-    margin-top: 1.4rem;
-    float: right;
-    margin-left: 1rem;
-    margin-right: 1.2rem;
-}
-#check{
-    display: none;
-}
-.boton-barras .fa, .boton-barras .fa-times {
-    font-size: 2rem;
-    pointer-events: pointer;
-}
-#menu-principal{
-    position: absolute;
-    display: absolute;
-    text-align: center;
-    width: 100%;
-    margin: 0px auto;
-    background-color: #ffffff;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: 0.5s ease-in-out;
-}
-#check:checked + nav#menu-principal{
-    position: absolute;
-    width: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-#menu-principal li{
-    padding: 15px 0px;
-}
-#menu-principal ul{
-    display: hidden;
-    list-style: none;
-    padding: 0px ;
-    margin: 0ch;
-}
-#menu-principal a{
-    margin: 0px;
-    font-weight: bold;
-    font-size: 1rem;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-	position: relative;
-    color: black;
-}
-#menu-ham{
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-}
-/* Fin Header */
 #Foto-Landing{
     display: flex;
     height: 100vh;
     width: 100vw;
-    padding-top: 1rem;
+    padding-top: 13px;
     flex-direction: column;
     align-items: center;
-    background: url("../img/FondoLandingPageDifuminado2.jpeg");
+    background: url("../img/FondoLandingPageDifuminado.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -101,8 +27,8 @@
     width: auto;
     color: white;
     margin: 0px auto;
-    margin-top: 6.7rem;
-    margin-bottom: 1rem;
+    margin-top: 6rem;
+    margin-bottom: 0.9rem;
     text-align: center;
     font-weight: bold;
     font-size: 2.5rem;
@@ -117,11 +43,10 @@
     margin: 0px auto;
     text-align: center;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 #call-to-action{
     font-size: 1.2rem;
-    margin: 2rem 6rem; 
     background-color: black;
     color: white;
     border: none;
@@ -129,29 +54,22 @@
     border-radius: 8px;
     padding: 0.8rem 1.5rem;
 }
-
-.Bajar i{
-    color: white;
-    font-size: 5rem;
-}
-.Bajar i:hover{
-    cursor: pointer;
-}
 #bajar{
     scroll-behavior: smooth;
     scroll-margin-block-start: 3rem;
 }
 
-.titulos{
+.titulo{
+    margin-top: 40px;
     text-align: center;
     color: black;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 .texto{
     margin-bottom: 0.9rem;
+    padding: 1rem 4rem 0rem 4rem;
     color: black;
-    font-weight: 100;
     font-size: 1rem;
     text-align: center;
 }
@@ -162,18 +80,15 @@
     width: 90vw;
     clear: both;
 }
-
-
 #CajaExplicacion {
     display: flex;
     width: 90vw; /* ancho fijo */
-    height: 12.8rem;
+    height: 10.2rem;
     margin: auto; /* centrar horizontalmente */
 }
 #Bto{
     margin: auto;
 }
-
 #Boton_Explicacion{
     font-size: 1rem;
     background-color: black;
