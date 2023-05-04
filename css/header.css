@@ -101,3 +101,11 @@ header{
     padding: 0.6rem 1.5rem;
     border-radius: 20px;
 }
+#botonContactoAdmin1 {
+    font-size: 0.9rem;
+    background-color: #348137;
+    display: block;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+}
