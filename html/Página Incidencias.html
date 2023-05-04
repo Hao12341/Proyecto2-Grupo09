@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="../css/DashboardAdmin.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
-  <!--<link rel="stylesheet" href="../css/Pagina%20Incidencias.css">-->
+
 
 
 
@@ -86,10 +86,17 @@
      display: flex;
 
    }
+
+
+
    p{
      margin: 10px
    }
-   button{
+
+
+
+
+   .btn{
      width: 120px;
      height: 50px;
      border-radius: 20px;
@@ -100,7 +107,41 @@
      justify-content: center;
      margin-right: 30px;
 
+
+
    }
+    /* Estilo del pop-up */
+    #popUpBox2 {
+      display: none; /* Estado inicial oculto */
+      position: fixed; /* Posición fija */
+      top: 50%; /* Centrado vertical */
+      left: 50%; /* Centrado horizontal */
+      transform: translate(-50%, -50%); /* Ajuste de centrado */
+      width: 300px; /* Ancho del pop-up */
+      height: 200px; /* Alto del pop-up */
+      background-color: #1555cc; /* Color de fondo */
+      border: 2px solid #fa0000; /* Borde */
+      z-index: 9999; /* Z-index para estar por encima de otros elementos */
+    }
+
+    /* Estilo del contenido del pop-up */
+    #popUpContent2 {
+      padding: 20px; /* Relleno */
+      text-align: center; /* Alineación de texto */
+    }
+
+    /* Estilo del icono de cerrar */
+    #closeIcon2 {
+      position: absolute; /* Posición absoluta */
+      top: 10px; /* Distancia desde arriba */
+      right: 10px; /* Distancia desde la derecha */
+      font-size: 20px; /* Tamaño de fuente */
+      cursor: pointer; /* Cursor de puntero */
+    }
+
+
+
+
   </style>
 
 </head>
@@ -112,7 +153,7 @@
     <ul>
       <li><a href="#Contacto">Contacto</a></li>
       <li><a href="#Avisos">Avisos</a></li>
-      <li><a href="Incidencias">Indicencias</a></li>
+      <li><a href="#Incidencias">Indicencias</a></li>
       <li><a href="#CerrarSesion">Cerrar Sesión</a></li>
     </ul>
     <div id="iconosBanner">
@@ -129,35 +170,66 @@
 
 <section>
   <div id="Bienvenido"><h1>Bienvenido Técnico</h1></div>
-
   <div id="contenedor">
     <div id="Cuadrao">
       <div id="anuncio-incidencias">
         <p>Número de Incidencias: <b>5</b></p>
         </div>
+
       <div class="incidencias">
         <div>
         <p><b>Usuario: </b>Alberto Pérez </p>
         <p><b>Prioridad de Incidencia: </b><b style="color:#b70101">Urgente</b></p>
         </div>
-        <button>Ver Más</button>
-
+        <button class="btn" onclick="showPopUp2()">Mostrar Pop-Up</button>
+        <!-- Elemento que contiene el pop-up -->
+        <div id="popUpBox2">
+          <!-- Contenido del pop-up -->
+          <div id="popUpContent2">
+            <h1>Puta funciona, comeme la pija</h1>
+            <p>Puedes poner lo que quieras aquí</p>
+          </div>
+          <!-- Icono de cerrar -->
+          <span id="closeIcon2" onclick="hidePopUp2()">x</span>
+        </div>
       </div>
+      <!-- Botón que activa el pop-up -->
+
+
+
+
+
+
+
       <div class="incidencias">
         <div>
         <p><b>Usuario: </b>Javier Ruperez</p>
         <p><b>Prioridad de Incidencia: </b><b style="color:red">Alta</b></p>
+        </div>
+        <button>Ver Más</button>
       </div>
-      <button>Ver Más</button>
 
-      </div>
+
+
+
+
+
+
+
+
       <div class="incidencias">
         <div>
         <p><b>Usuario: </b>Alex Escrivá</p>
         <p ><b>Prioridad de Incidencia: </b><b style="color:red">Alta</b></p>
         </div>
-        <button>Ver Más</button>
+        <button >Ver Más</button>
       </div>
+
+
+
+
+
+
       <div class="incidencias">
         <div>
           <p><b>Usuario: </b>César Herrero </p>
@@ -166,27 +238,37 @@
         <button>Ver Más</button>
       </div>
 
+
+
+
+
+
       <div class="incidencias">
         <div>
         <p><b>Usuario: </b>Hugo Belda</p>
         <p><b>Prioridad de Incidencia: </b><b style="color:green">Baja</b></p>
         </div>
         <button>Ver Más</button>
-
       </div>
-
     </div>
-
-
-
   </div>
-</section>
+  </section>
+<script>
+  // Función para mostrar el pop-up
+  function showPopUp2() {
+    // Obtiene el elemento del pop-up por su ID
+    var popUp = document.getElementById("popUpBox2");
+    // Cambia la propiedad display a block para hacerlo visible
+    popUp.style.display = "block";
+  }
 
-<script src="../js/menu.js"></script>
-
-
-
-
-
+  // Función para ocultar el pop-up
+  function hidePopUp2() {
+    // Obtiene el elemento del pop-up por su ID
+    var popUp = document.getElementById("popUpBox2");
+    // Cambia la propiedad display a none para hacerlo invisible
+    popUp.style.display = "none";
+  }
+</script>
 </body>
 </html>
