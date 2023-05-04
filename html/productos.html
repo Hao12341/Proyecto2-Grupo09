@@ -56,28 +56,37 @@
    <div class="todo">
       <div class="pagina1">
        <div class="PackSensores">
-            <form>
+            <div>
                 <h2>Pack de sensores</h2>
                 <div class="espacio"></div>
                 <img class="fotos" src="../img/CajaPackSensores.jpg" alt="Caja pack de sensores"/>
                 <div class="espacio"></div>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi, cumque dolorem esse illo nisi odio quis reprehenderit similique. Alias amet cumque dicta ipsum laudantium nihil optio sit sunt vero.</p>
                <div class="botonesProductos">
-                   <div class="botonVerMas"> <button>Ver más</button></div>
-                   <div class="botonSolicitarPresupuesto"> <button>Solicitar presupuesto</button></div>
+                   <div class="botonVerMas">
+                       <form action="#espacio">
+                           <button type="submit">Ver más</button>
+                       </form>
+                   </div>
+                   <div class="botonSolicitarPresupuesto">
+                       <form action="../html/contacto.html">
+                           <button type="submit">Solicitar Presupuesto</button>
+                       </form>
+
+                   </div>
                </div>
 
-            </form>
+            </div>
        </div>
     </div>
 
-<div class="espacio"></div>
+<div class="espacio" id="espacio"></div>
 
     <div class="pagina2">
         <div class="espacio"></div>
-        <div class="contenidopack"><h2>Contenido del Pack</h2></div>
+        <div id="contenidopack"><h2>Contenido del Pack</h2></div>
         <div class="espacio"></div>
-        <div class="SensorLuz">
+        <div class="Sensor" id="SensorLuz">
             <h3>Sensor de Luz</h3>
             <div class="espacio"></div>
             <img class="fotos" src="../img/foto_sensor_de_luz.jpg" alt="Sensor de luz"/>
@@ -87,7 +96,7 @@
         </div>
     </div>
        <div class="espacio"></div>
-       <div class="SensorHumedad">
+       <div class="Sensor" id="SensorHumedad">
            <h3>Sensor de Humedad</h3>
            <div class="espacio"></div>
            <img class="fotos" src="../img/foto_sensor_de_humedad.jpg"/>
@@ -97,7 +106,7 @@
 
 <div class="espacio"></div>
 
-       <div class="SensorTemperatura">
+       <div class="Sensor" id="SensorTemperaturaen">
            <h3>Sensor de Temperatura</h3>
            <div class="espacio"></div>
            <img class="fotos" src="../img/foto_sensor_de_temperatura.jpg"/>
@@ -107,7 +116,7 @@
 
 <div class="espacio"></div>
 
-       <div class="SensorSalinidad">
+       <div class="Sensor" id="SensorSalinidad">
            <h3>Sensor de Salinidad</h3>
            <div class="espacio"></div>
            <img class="fotos" src="../img/foto_sensor_de_salinidad.jpeg"/>
@@ -117,7 +126,7 @@
 
 <div class="espacio"></div>
 
-       <div class="SensorPH">
+       <div class="Sensor" id="SensorPH">
            <h3>Sensor de PH</h3>
            <div class="espacio"></div>
            <img class="fotos" src="../img/foto_sensor_de_ph.jpg"/>
@@ -125,6 +134,11 @@
            <p>Este sensor muestra los datos que recibe de la temperatura que detecta a su alrededor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
 
        </div>
+
+
+       <form action="../html/contacto.html">
+           <button id="botonContacto" type="submit"> Contáctanos </button>
+       </form>
 
    </div>
 
