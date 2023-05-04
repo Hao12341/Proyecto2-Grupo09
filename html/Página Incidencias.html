@@ -10,255 +10,9 @@
   <link rel="stylesheet" type="text/css" href="../css/DashboardAdmin.css">
   <link rel="stylesheet" href="../css/header2.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" href="../css/Pagina%20Incidencias.css">
+  <script src="../js/Página%20Incidencias.js"></script>
 
-
-
-
-
-
-
-
-
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&family=Roboto:ital@1&display=swap');
-    *{
-      font-family: 'Poppins', sans-serif;
-    }
-
-
-    #Bienvenido{
-      text-align: center;
-      padding: 45px;
-      display: flex;
-      flex-direction: column;
-    }
-   #contenedor{
-     text-align: start;
-     display: flex;
-
-     flex: 1 1 0;
-
-   }
-   @media(max-width: 590px){
-     #contenedor{
-       flex-direction: column;
-     }
-     #Cuadrao{
-       text-align: center;
-     }
-
-   }
-   #Cuadrao{
-     width: 800px;
-     height: 600px;
-     margin: 0 auto;
-     display: flex;
-     align-items:center ;
-     flex-direction: column;
-     background-color: rgba(180, 172, 172, 0.09);
-
-   }
-   #anuncio-incidencias{
-     width: 600px;
-     height: 50px;
-     border: 1px solid black;
-     margin: 10px auto;
-     display: flex;
-     align-items: center;
-     order: 0;
-     background-color: white;
-     border-radius: 20px;
-
-
-
-   }
-
-   .incidencias{
-     width: 700px ;
-     height: 70px;
-     border: 1px solid black;
-     margin:  15px auto;
-     order: 1;
-     border-radius: 20px;
-     background-color: white;
-     display: flex;
-
-   }
-
-
-
-   p{
-     margin: 10px
-   }
-
-
-
-
-   .btn{
-     width: 120px;
-     height: 50px;
-     border-radius: 20px;
-     display: flex;
-     align-self: flex-end;
-     margin: auto;
-     align-items: center;
-     justify-content: center;
-     margin-right: 30px;
-
-
-
-   }
-    /* Estilo del pop-up */
-    #popUpBox1 {
-      display: none; /* Estado inicial oculto */
-      position: fixed; /* Posición fija */
-      top: 50%; /* Centrado vertical */
-      left: 50%; /* Centrado horizontal */
-      transform: translate(-50%, -50%); /* Ajuste de centrado */
-      width: 1500px; /* Ancho del pop-up */
-      height: 800px; /* Alto del pop-up */
-      background-color: #ffffff; /* Color de fondo */
-      border: 2px solid #000000; /* Borde */
-      z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    }
-
-    /* Estilo del contenido del pop-up */
-    #popUpContent1 {
-      padding: 20px; /* Relleno */
-      text-align: center; /* Alineación de texto */
-    }
-
-    /* Estilo del icono de cerrar */
-    #closeIcon1 {
-      position: absolute; /* Posición absoluta */
-      top: 10px; /* Distancia desde arriba */
-      right: 10px; /* Distancia desde la derecha */
-      font-size: 20px; /* Tamaño de fuente */
-      cursor: pointer; /* Cursor de puntero */
-    }
-
-    /* Estilo del pop-up */
-    #popUpBox2 {
-      display: none; /* Estado inicial oculto */
-      position: fixed; /* Posición fija */
-      top: 50%; /* Centrado vertical */
-      left: 50%; /* Centrado horizontal */
-      transform: translate(-50%, -50%); /* Ajuste de centrado */
-      width: 1500px; /* Ancho del pop-up */
-      height: 800px; /* Alto del pop-up */
-      background-color: #ffffff; /* Color de fondo */
-      border: 2px solid #000000; /* Borde */
-      z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    }
-
-    /* Estilo del contenido del pop-up */
-    #popUpContent2 {
-      padding: 20px; /* Relleno */
-      text-align: center; /* Alineación de texto */
-    }
-
-    /* Estilo del icono de cerrar */
-    #closeIcon2 {
-      position: absolute; /* Posición absoluta */
-      top: 10px; /* Distancia desde arriba */
-      right: 10px; /* Distancia desde la derecha */
-      font-size: 20px; /* Tamaño de fuente */
-      cursor: pointer; /* Cursor de puntero */
-    }
-
-    /* Estilo del pop-up */
-    #popUpBox3 {
-      display: none; /* Estado inicial oculto */
-      position: fixed; /* Posición fija */
-      top: 50%; /* Centrado vertical */
-      left: 50%; /* Centrado horizontal */
-      transform: translate(-50%, -50%); /* Ajuste de centrado */
-      width: 1500px; /* Ancho del pop-up */
-      height: 800px; /* Alto del pop-up */
-      background-color: #ffffff; /* Color de fondo */
-      border: 2px solid #000000; /* Borde */
-      z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    }
-
-    /* Estilo del contenido del pop-up */
-    #popUpContent3 {
-      padding: 20px; /* Relleno */
-      text-align: center; /* Alineación de texto */
-    }
-
-    /* Estilo del icono de cerrar */
-    #closeIcon3 {
-      position: absolute; /* Posición absoluta */
-      top: 10px; /* Distancia desde arriba */
-      right: 10px; /* Distancia desde la derecha */
-      font-size: 20px; /* Tamaño de fuente */
-      cursor: pointer; /* Cursor de puntero */
-    }
-
-    /* Estilo del pop-up */
-    #popUpBox4 {
-      display: none; /* Estado inicial oculto */
-      position: fixed; /* Posición fija */
-      top: 50%; /* Centrado vertical */
-      left: 50%; /* Centrado horizontal */
-      transform: translate(-50%, -50%); /* Ajuste de centrado */
-      width: 1500px; /* Ancho del pop-up */
-      height: 800px; /* Alto del pop-up */
-      background-color: #ffffff; /* Color de fondo */
-      border: 2px solid #000000; /* Borde */
-      z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    }
-
-    /* Estilo del contenido del pop-up */
-    #popUpContent4 {
-      padding: 20px; /* Relleno */
-      text-align: center; /* Alineación de texto */
-    }
-
-    /* Estilo del icono de cerrar */
-    #closeIcon4 {
-      position: absolute; /* Posición absoluta */
-      top: 10px; /* Distancia desde arriba */
-      right: 10px; /* Distancia desde la derecha */
-      font-size: 20px; /* Tamaño de fuente */
-      cursor: pointer; /* Cursor de puntero */
-    }
-
-
-    /* Estilo del pop-up */
-    #popUpBox5 {
-      display: none; /* Estado inicial oculto */
-      position: fixed; /* Posición fija */
-      top: 50%; /* Centrado vertical */
-      left: 50%; /* Centrado horizontal */
-      transform: translate(-50%, -50%); /* Ajuste de centrado */
-      width: 1500px; /* Ancho del pop-up */
-      height: 800px; /* Alto del pop-up */
-      background-color: #ffffff; /* Color de fondo */
-      border: 2px solid #000000; /* Borde */
-      z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    }
-
-    /* Estilo del contenido del pop-up */
-    #popUpContent5 {
-      padding: 20px; /* Relleno */
-      text-align: center; /* Alineación de texto */
-    }
-
-    /* Estilo del icono de cerrar */
-    #closeIcon5 {
-      position: absolute; /* Posición absoluta */
-      top: 10px; /* Distancia desde arriba */
-      right: 10px; /* Distancia desde la derecha */
-      font-size: 20px; /* Tamaño de fuente */
-      cursor: pointer; /* Cursor de puntero */
-    }
-
-
-
-
-  </style>
 
 </head>
 <body>
@@ -304,7 +58,7 @@
 <script src="../js/menu.js"></script>
 
 <section>
-  <div id="Bienvenido"><h1>Bienvenido Técnico</h1></div>
+  <div id="Bienvenido"><h1 class="BienvenidoJL">Bienvenido Técnico</h1></div>
   <div id="contenedor">
     <div id="Cuadrao">
       <div id="anuncio-incidencias">
@@ -316,16 +70,16 @@
         <p><b>Usuario: </b>Alberto Pérez </p>
         <p><b>Prioridad de Incidencia: </b><b style="color:#b70101">Urgente</b></p>
         </div>
-        <button class="btn" onclick="showPopUp1()">Mostrar Pop-Up</button>
+        <button class="btn" onclick="showPopUp1()">Ver Más</button>
         <!-- Elemento que contiene el pop-up -->
         <div id="popUpBox1">
           <!-- Contenido del pop-up -->
           <div id="popUpContent1">
-            <h1>Puta funciona, comeme la pija</h1>
+            <h1>Incidencia</h1>
             <p>Puedes poner lo que quieras aquí</p>
           </div>
           <!-- Icono de cerrar -->
-          <span id="closeIcon1" onclick="hidePopUp1()">x</span>
+          <span id="closeIcon1" onclick="hidePopUp1()"><p class="achuchu"><b>X</b></p></span>
         </div>
         </div>
 
@@ -342,16 +96,16 @@
         <p><b>Usuario: </b>Javier Ruperez</p>
         <p><b>Prioridad de Incidencia: </b><b style="color:red">Alta</b></p>
         </div>
-        <button class="btn" onclick="showPopUp2()">Mostrar Pop-Up</button>
+        <button class="btn" onclick="showPopUp2()">Ver Más</button>
         <!-- Elemento que contiene el pop-up -->
         <div id="popUpBox2">
           <!-- Contenido del pop-up -->
           <div id="popUpContent2">
-            <h1>Puta funciona, comeme la pija</h1>
+            <h1>Incidencia</h1>
             <p>Puedes poner lo que quieras aquí</p>
           </div>
           <!-- Icono de cerrar -->
-          <span id="closeIcon2" onclick="hidePopUp2()">x</span>
+          <span id="closeIcon2" onclick="hidePopUp2()"><p class="achuchu"><b>X</b></p></span>
         </div>
       </div>
 
@@ -369,16 +123,16 @@
         <p><b>Usuario: </b>Alex Escrivá</p>
         <p ><b>Prioridad de Incidencia: </b><b style="color:red">Alta</b></p>
         </div>
-        <button class="btn" onclick="showPopUp3()">Mostrar Pop-Up</button>
+        <button class="btn" onclick="showPopUp3()">Ver Más</button>
         <!-- Elemento que contiene el pop-up -->
         <div id="popUpBox3">
           <!-- Contenido del pop-up -->
           <div id="popUpContent3">
-            <h1>Puta funciona, comeme la pija</h1>
+            <h1>Incidencia</h1>
             <p>Puedes poner lo que quieras aquí</p>
           </div>
           <!-- Icono de cerrar -->
-          <span id="closeIcon3" onclick="hidePopUp3()">x</span>
+          <span id="closeIcon3" onclick="hidePopUp3()"><p class="achuchu"><b>X</b></p></span>
         </div>
       </div>
 
@@ -393,16 +147,16 @@
           <p><b>Usuario: </b>César Herrero </p>
           <p><b>Prioridad de Incidencia: </b><b style="color:orange">Media</b></p>
         </div>
-        <button class="btn" onclick="showPopUp4()">Mostrar Pop-Up</button>
+        <button class="btn" onclick="showPopUp4()">Ver Más</button>
         <!-- Elemento que contiene el pop-up -->
         <div id="popUpBox4">
           <!-- Contenido del pop-up -->
           <div id="popUpContent4">
-            <h1>Puta funciona, comeme la pija</h1>
+            <h1>Incidencia</h1>
             <p>Puedes poner lo que quieras aquí</p>
           </div>
           <!-- Icono de cerrar -->
-          <span id="closeIcon4" onclick="hidePopUp4()">x</span>
+          <span id="closeIcon4" onclick="hidePopUp4()"><p class="achuchu"><b>X</b></p></span>
         </div>
       </div>
 
@@ -414,107 +168,24 @@
         <p><b>Usuario: </b>Hugo Belda</p>
         <p><b>Prioridad de Incidencia: </b><b style="color:green">Baja</b></p>
         </div>
-        <button class="btn" onclick="showPopUp5()">Mostrar Pop-Up</button>
+        <button class="btn" onclick="showPopUp5()">Ver Más</button>
         <!-- Elemento que contiene el pop-up -->
         <div id="popUpBox5">
           <!-- Contenido del pop-up -->
           <div id="popUpContent5">
-            <h1>Puta funciona, comeme la pija</h1>
+            <h1>Incidencia</h1>
             <p>Puedes poner lo que quieras aquí</p>
           </div>
           <!-- Icono de cerrar -->
-          <span id="closeIcon5" onclick="hidePopUp5()">x</span>
+          <span id="closeIcon5" onclick="hidePopUp5()"><p class="achuchu"><b>X</b></p></span>
         </div>
       </div>
-      </div></div>
+      </div>
+    </div>
     </div>
   </div>
 
   </section>
-<script>
-  // Función para mostrar el pop-up
-  function showPopUp1() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox1");
-    // Cambia la propiedad display a block para hacerlo visible
-    popUp.style.display = "block";
-  }
 
-  // Función para ocultar el pop-up
-  function hidePopUp1() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox1");
-    // Cambia la propiedad display a none para hacerlo invisible
-    popUp.style.display = "none";
-  }
-</script>
-<script>
-  // Función para mostrar el pop-up
-  function showPopUp2() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox2");
-    // Cambia la propiedad display a block para hacerlo visible
-    popUp.style.display = "block";
-  }
-
-  // Función para ocultar el pop-up
-  function hidePopUp2() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox2");
-    // Cambia la propiedad display a none para hacerlo invisible
-    popUp.style.display = "none";
-  }
-</script>
-<script>
-  // Función para mostrar el pop-up
-  function showPopUp3() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox3");
-    // Cambia la propiedad display a block para hacerlo visible
-    popUp.style.display = "block";
-  }
-
-  // Función para ocultar el pop-up
-  function hidePopUp3() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox3");
-    // Cambia la propiedad display a none para hacerlo invisible
-    popUp.style.display = "none";
-  }
-</script>
-<script>
-  // Función para mostrar el pop-up
-  function showPopUp4() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox4");
-    // Cambia la propiedad display a block para hacerlo visible
-    popUp.style.display = "block";
-  }
-
-  // Función para ocultar el pop-up
-  function hidePopUp4() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox4");
-    // Cambia la propiedad display a none para hacerlo invisible
-    popUp.style.display = "none";
-  }
-</script>
-<script>
-  // Función para mostrar el pop-up
-  function showPopUp5() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox5");
-    // Cambia la propiedad display a block para hacerlo visible
-    popUp.style.display = "block";
-  }
-
-  // Función para ocultar el pop-up
-  function hidePopUp5() {
-    // Obtiene el elemento del pop-up por su ID
-    var popUp = document.getElementById("popUpBox5");
-    // Cambia la propiedad display a none para hacerlo invisible
-    popUp.style.display = "none";
-  }
-</script>
 </body>
 </html>
