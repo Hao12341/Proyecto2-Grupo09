@@ -17,7 +17,7 @@ header{
     --hover-bg: var(--accent-bg-color);
     --hover-txt: var(--accent-fg-color);
     --li-bg: #204b36;
-    --menu-height: 3rem;
+    --menu-height: 4rem;
 }
 #menu ul{
     background-color: var(--bg-color);
