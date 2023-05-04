@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&family=Roboto:ital@1&display=swap');
+
+
+
+
+
+/* Imagen de fondo de pantalla*/
+
+body {
+    background-image: url("../img/FondoInicioSesion.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+}
+
+
+
+/*Tetxo del form*/
+
+#contenedorGris h3 {
+    position: center;
+}
+
+#Título{
+    display: block;
+    padding: 2rem;
+}
+
+/*COntenedor de página */
+
+#ContenedorNoHeader{
+    padding-top: 70px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    min-height: 80vh;
+    width: 100%;
+}
+
+/* Contenedor del form */
+
+#contenedorGris {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30vw;
+    min-width: max-content;
+    height: 60vh;
+    padding: 30px;
+}
+
+.inputCajaTexto {
+    border: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding-left: 1em;
+}
+
+
+#containerCheckbox{
+    padding-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#containerCheckbox a {
+    color: black;
+}
+/* Boton Enviar */
+#botonEnvio{
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 10px auto;
+}
+
+#BotonCerrar {
+    width: 130px;
+    height: 33px;
+    font-style: normal;
+}
+
+textarea {
+    resize: none;
+    height: 200px;
+    overflow: visible;
+}
+
+
+
