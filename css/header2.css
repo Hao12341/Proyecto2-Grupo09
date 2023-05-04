@@ -44,6 +44,10 @@ header{
     color: var(--txt-color);
 
 }
+
+#menu a{
+    color: white;
+}
 #Logo img{
     width: 7.7rem;
     height: 4.7rem;
