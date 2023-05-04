@@ -6,29 +6,37 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
-section {
+.todo {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    width: 100%;
-    background-color: white;
+    width: 100vw;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
+    flex-direction: column;
 }
 
-.todo{
-    /* esto hace que salgo todo en columna y no se amontone en una sola página, no borrar o me suicido */
-}
+    section{
+        width: 50vw;
+    }
 
 .pagina1{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../img/FondoInicioSesion.jpeg);
-    background-position: center;
-    background-size: cover;
 }
+body{
+    background-image: url("../img/FondoInicioSesion.jpeg");
+    background-position: top right;
+    background-size: cover;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+}
+
 
 .PackSensores {
 
@@ -77,7 +85,7 @@ button {
     align-items: center;
 }
 
-.SensorLuz {
+.Sensor {
     position: relative;
     height: 600px;
     background-color: rgba(252, 252, 252, 0.9);
@@ -91,71 +99,16 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 8rem;
 }
 
-.SensorHumedad{
-    position: relative;
-    height: 600px;
-    background-color: rgba(252, 252, 252, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.SensorTemperatura{
-    position: relative;
-    height: 600px;
-    background-color: rgba(252, 252, 252, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.SensorSalinidad{
-    position: relative;
-    height: 600px;
-    background-color: rgba(252, 252, 252, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.SensorPH{
-    position: relative;
-    height: 600px;
-    background-color: rgba(252, 252, 252, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
+
+
+
 
 .fotos{
 
@@ -167,7 +120,6 @@ button {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .espacio{
@@ -180,140 +132,20 @@ button {
     justify-content: center;
     margin-top: 25px;
     padding: 0.5em;
-    color: #04291c;
-    height: 15px;
+}
+
+
+#botonContacto {
+    margin-bottom: 5rem;
+    height: 8rem;
+    width: 16rem;
+    margin-top: 0;
+}
+
+form{
 }
 
 
 
 
 
-@media(max-width: 590px) {
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: white;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .todo{
-        /* esto hace que salgo todo en columna y no se amontone en una sola página, no borrar o me suicido */
-    }
-
-    .pagina1{
-        min-height: 100vh;
-        background-image: url(../img/FondoInicioSesion.jpeg);
-        background-position: center;
-        background-size: cover;
-    }
-
-    .PackSensores {
-
-        height: 100vh;
-        background-color: rgba(252, 252, 252, 0.9);
-        padding: 1em;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        margin: 0 auto;
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .botonSolicitarPresupuesto {
-        display: flex;
-        align-items: flex-end;
-        margin-left: 25px;
-        flex: 1 1 0;
-    }
-
-    button {
-        background-color: #04291C;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        margin: 10px auto;
-    }
-
-    .botonesProductos {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .contenidopack{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .SensorLuz {
-        position: relative;
-        height: 100vh;
-        background-color: rgba(252, 252, 252, 0.9);
-        padding: 1em;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .SensorHumedad{
-        position: relative;
-        height: 100vh;
-        background-color: rgba(252, 252, 252, 0.9);
-        padding: 1em;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .SensorTemperatura{
-        position: relative;
-        height: 100vh;
-        background-color: rgba(252, 252, 252, 0.9);
-        padding: 1em;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .fotos {
-        height: 200px;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        width: 150px;
-        max-width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .espacio {
-        margin-top: 10px;
-    }
-    }
