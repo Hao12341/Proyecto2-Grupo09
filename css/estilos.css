@@ -40,6 +40,7 @@
 
     a {
         text-decoration: none;
+        color: white;
     }
 
     button {
@@ -53,4 +54,11 @@
 
     button:hover {
         background-color: #65946F;
+    }
+
+    /* Para usar en divs con formularios, textos, información breve. etc */
+    .divBlanco {
+        background: rgba(252,252,252,90%);
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     }
