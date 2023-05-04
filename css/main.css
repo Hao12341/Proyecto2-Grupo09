@@ -1,12 +1,13 @@
 @font-face {
     font-family: "poppins";
-    src: url(../font/Poppins-Regular.ttf);
+
 }
 *{
     font-family: "poppins";
     margin: 0px;
     scroll-behavior: smooth;
 }
+
 
 /*  Header  */
 .header{
@@ -23,24 +24,24 @@
 }
 #Logo img{
     width: 7.7rem;
-    height: 4rem;
+    height: 4.7rem;
 }
 .boton-barras{
-    margin-top: 1.1rem;
+    margin-top: 1.4rem;
     float: right;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
 }
 #check{
     display: none;
 }
 .boton-barras .fa, .boton-barras .fa-times {
     font-size: 2rem;
-    pointer-events: pointer;
+
   }
 #menu-principal{
     position: absolute;
-    display: absolute;
+    display: initial;
     text-align: center;
     width: 100%;
     margin: 0px auto;
@@ -86,7 +87,7 @@
     padding-top: 3px;
     flex-direction: column;
     align-items: center;
-    background: url("/images/Campo2.png");
+    background: url("../img/FondoLandingPage.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -98,8 +99,20 @@
     width: auto;
     color: white;
     margin: 0px auto;
-    margin-top: 17.5rem;
+    margin-top: 10rem;
     margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#sublogo{
+    align-self: center; 
+    padding: 0rem 2rem;
+    clear: both;
+    width: auto;
+    color: white;
+    margin: 0px auto;
     text-align: center;
     font-weight: bold;
     font-size: 1.4rem;
@@ -116,7 +129,7 @@
     padding: 0.8rem 1.5rem;
 }
 #Login i{
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
     font-size: 1.9rem;
     float: right;
 }
@@ -186,7 +199,7 @@ footer{
 
 .popup {
     border: none;
-    box-shadow: 1px grey;
+    box-shadow: 1px solid grey;
     background-color: #810052;
     font-weight: bold;
     font-size: 1.2rem;
@@ -194,7 +207,7 @@ footer{
     width: 7rem;    
     height: 3rem;
     border-radius: 20px;
-    padding: 0 auto;
+    padding: 0 0;
     background-color: #810052;
     margin: 1rem auto;
     position: relative;
@@ -365,4 +378,19 @@ h3{
     text-align: center;
     font-weight: bold;
     color: #810052;
+}
+
+
+
+
+
+
+header {
+    position: sticky;
+    top: 0px;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
 }
