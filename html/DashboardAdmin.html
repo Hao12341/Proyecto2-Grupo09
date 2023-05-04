@@ -6,16 +6,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">                                       <!-- Hacer compatible con el navegador edge -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/DashboardAdmin.css">                              <!-- Enlace a la hoja de estilos CSS de DashboardAdmin -->
-    <link rel="stylesheet" type="text/css" href="css/header.css">                              <!-- Enlace a la hoja de estilos CSS de DashboardAdminMenu-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/DashboardAdmin.css">                              <!-- Enlace a la hoja de estilos CSS de DashboardAdmin -->
+    <link rel="stylesheet" type="text/css" href="../css/header.css">                              <!-- Enlace a la hoja de estilos CSS de DashboardAdminMenu-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <title>Dashboard Administrador</title>
 
 </head>
 <body>
 <header class="Encabezado" role="banner">    <!-- Esto es el encabezado que actuará de banner-->
-    <nav id="menu"><a id="Logo" href="index.html"><img src="img/logo.svg" alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+    <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
         <ul>
             <li><a href="#Contacto">Contacto</a></li>
             <li><a href="#Avisos">Avisos</a></li>
@@ -32,20 +32,28 @@
     </nav>
 
 </header>
-<script src="js/menu.js"></script>
+<script src="../js/menu.js"></script>
 <section class="InicioAdmin" id="InicioAdmin"><!-- Inicio Sección Dashboard Administrador-->
 
     <div>
         <div class="filtro">
             <div class="encabezado">
        <h1>Usuarios Dados De Alta</h1></div>
-            <div><p>Filtrar</p><img src="img/filtrar.png"></div></div>
+            <div class="opciones-filtro"><button>
+                <label for="Campo">Filtrar por campo:</label>
+                <select name="Campo" id="Campo">
+                    <option value="NombreUsuario">Nombre Usuario</option>
+                    <option value="Email">Email</option>
+                    <option value="Teléfono">Teléfono</option>
+                </select>
+                <img src="../img/filtrar.png" alt="filtro">
+            </button></div></div>
         <table>
             <thead>
             <tr>
-                <th><p>Nombre Usuario</p>  <img src="img/arrows.png"></th>
-                <th><p>Email</p> <img src="img/arrows.png"></th>
-                <th><p>Teléfono </p><img src="img/arrows.png"></th>
+                <th><p>Nombre Usuario</p></th>
+                <th><p>Email</p></th>
+                <th><p>Teléfono </p></th>
                 <th>Acciones</th>
             </tr>
             </thead>
@@ -54,8 +62,8 @@
                 <td>manperlo@gamil.com</td>
                 <td>978546223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                        <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                        <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                     </div></td>
             </tr>
             <tr>
@@ -63,8 +71,8 @@
                 <td>manperlo@gamil.com</td>
                 <td>978546223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -72,8 +80,8 @@
                 <td>jojase@gamil.com</td>
                 <td>985266223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -81,8 +89,8 @@
                 <td>jojase@gamil.com</td>
                 <td>985266223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -90,8 +98,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -99,8 +107,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -108,8 +116,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -117,8 +125,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -126,8 +134,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -135,8 +143,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -144,8 +152,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -153,8 +161,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -162,8 +170,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -171,8 +179,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
             <tr>
@@ -180,8 +188,8 @@
                 <td>bobafer@gamil.com</td>
                 <td>975364223</td>
                 <td><div class="imagen">
-                    <div><img src="img/editar%20(1).png"></div>
-                    <div><img src="img/boton-x%20(2).png"></div>
+                    <div><img src="../img/editar.png" alt="editar"></div>
+                    <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
 

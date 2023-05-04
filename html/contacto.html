@@ -7,37 +7,32 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/DashboardAdmin.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/contacto.css">
     <title>Contacto</title>
 </head>
 <body>
-<header class="header">
-
-    <!-- Logo -->
-    <a id="Logo" href="../index.html"><img src="/img/logo.svg" alt="Logo de la empresa"></a>
-    <!-- Fin logo -->
-
-    <!-- Opcion menu -->
-    <label for="check" class="boton-barras">
-        <i class="fa fa-bars"></i>
-    </label>
-    <input type="checkbox" name="check" id= "check">
-    <!-- Fin opcion menu -->
-
-    <!-- Menu -->
-    <nav id="menu-principal">
+<header class="Encabezado" role="banner">
+    <!-- Esto es el encabezado que actuará de banner-->
+    <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
         <ul>
-            <li id="menu-servicios"><a href="#informacion">Información</a></li>
-            <li><a href="#contacto">Servicio</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+            <li><a href="#Avisos">Avisos</a></li>
+            <li><a href="#CerrarSesion">Cerrar Sesión</a></li>
         </ul>
+        <div id="iconosBanner">
+            <a id="Login" href="Login.html"><i class="fa fa-user-circle"></i></a>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </nav>
-    <!-- Fin menu -->
-
-    <!-- Icono del login -->
-    <a id="Login" href="Login.html"><i class="fa fa-user-circle"></i></a>
-    <!-- Fin Icono del login -->
 
 </header>
+<script src="../js/menu.js"></script>
 
     <div id="ContenedorNoHeader">
     <div><h1 id="Título"> Contacta con nosotros</h1></div>
@@ -45,15 +40,15 @@
     <!-- Empieza Caja Formulario -->
     <div id="contenedorGris">
         <!-- Empieza Parte Escribir Formulario-->
-        <h3>Nombre y apellidos*</h3><input class="inputCajaTexto" required id="Nombre" type="text" placeholder=" Nombre y apellidos">
+        <h3>Nombre y apellidos*</h3><input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos">
 
-        <h3>Email*</h3><input required class="inputCajaTexto" id="email" type="email" placeholder=" Email">
+        <h3>Email*</h3><input required class="inputCajaTexto" id="email" type="email" placeholder="Email">
 
-        <h3>Teléfono</h3><input id="tel" class="inputCajaTexto" type="tel" placeholder=" Teléfono" pattern="[0-9]{9}">
+        <h3>Teléfono</h3><input id="tel" class="inputCajaTexto" type="tel" placeholder="Teléfono" pattern="[0-9]{9}">
 
         <h3>Escribe aquí tu consulta*</h3>
 
-        <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder=" Escriba aquí más información sobre su consulta..."
+        <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta..."
                   rows="1" cols = "10">
 
         </textarea>

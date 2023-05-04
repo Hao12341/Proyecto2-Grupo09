@@ -379,3 +379,18 @@ h3{
     font-weight: bold;
     color: #810052;
 }
+
+
+
+
+
+
+header {
+    position: sticky;
+    top: 0px;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}

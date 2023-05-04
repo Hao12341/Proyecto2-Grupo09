@@ -1,10 +1,23 @@
+
+/*
+                    HEADER.CSS
+ */
+
+
+
+header{
+    position: absolute;
+    z-index: 1;
+}
+
+
 #menu{
     --bg-color: white;
     --txt-color: white;
     --hover-bg: var(--accent-bg-color);
     --hover-txt: var(--accent-fg-color);
     --li-bg: #204b36;
-    --menu-height: 3rem;
+    --menu-height: 4rem;
 }
 #menu ul{
     background-color: var(--bg-color);
@@ -21,11 +34,11 @@
 }
 
 #menu li{
-    padding: .5em;
     text-align: center;
     border: 1px solid white;
     background-color: var(--li-bg);
     color: var(--txt-color);
+    flex: 1 1 0;
 
 }
 
@@ -36,7 +49,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .5em;
     position: fixed;
     width: 100%;
 }
