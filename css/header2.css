@@ -1,0 +1,118 @@
+
+/*
+                    HEADER.CSS
+ */
+
+
+ /* Estilos del header */
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    z-index: 20;
+}
+#menu{
+    --bg-color: white;
+    --txt-color: white;
+    --hover-bg: var(--accent-bg-color);
+    --hover-txt: var(--accent-fg-color);
+    --li-bg: #204b36;
+    --menu-height: 2rem;
+}
+#menu ul{
+    background-color: var(--bg-color);
+    position: absolute;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%) scaleY(0);
+    transition: .5s;
+    z-index: auto;
+    margin-top: 17px;
+}
+
+#menu.activo ul{
+    transform: translateY(0) scaleY(1);
+}
+
+#menu li{
+    padding: .5em;
+    text-align: center;
+    border: 1px solid white;
+    background-color: var(--li-bg);
+    color: var(--txt-color);
+
+}
+
+#menu a{
+    color: white;
+}
+#Logo img{
+    width: 7.7rem;
+    height: 4.7rem;
+}
+#menu {
+    background-color: var(--bg-color);
+    color: black;
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    position: fixed;
+    width: 100%;
+}
+.hamburguesa {
+    width: 2em;
+    height: 2em;
+    padding: 10px;
+    cursor: pointer;
+   padding-top:  9px;
+
+}
+.hamburguesa div{
+    background-color: black;
+    width: 2em;
+    height: .3em;
+    margin: .3em auto;
+    transition: .5s;
+    z-index: -1;
+}
+#Login{
+    width: 2em;
+    height: 2em;
+    padding: 10px;
+    cursor: pointer;
+    flex: 1 1 0;
+}
+
+
+#menu.activo .hamburguesa div:nth-child(2){
+    opacity: 0;
+}
+
+#menu.activo .hamburguesa div:nth-child(1){
+    transform: translateY(.6em) rotate(45deg);
+}
+#menu.activo .hamburguesa div:nth-child(3){
+    transform: translateY(-.6em) rotate(-45deg);
+}
+#iconosBanner{
+    padding-top: 10px;
+    margin-bottom: 1.5rem;
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 60px;
+
+
+
+}
+
+
+#iconoLogin{
+    width: 2rem;
+    height: 2rem;
+}

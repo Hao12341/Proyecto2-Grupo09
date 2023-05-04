@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/DashboardAdmin.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Contacto</title>
+</head>
+<body>
+<header class="Encabezado" role="banner">
+    <!-- Esto es el encabezado que actuará de banner-->
+    <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+        <ul>
+            <li><a href="#Contacto">Contacto</a></li>
+            <li><a href="#Avisos">Avisos</a></li>
+            <li><a href="#CerrarSesion">Cerrar Sesión</a></li>
+        </ul>
+        <div id="iconosBanner">
+            <a id="Login" href="Login.html"><i class="fa fa-user-circle"></i></a>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script src="../js/menu.js"></script>
+
+    <div id="ContenedorNoHeader">
+    <div><h1 id="Título"> Contacta con nosotros</h1></div>
+    <form id="Formulario" action="#" method="post">
+    <!-- Empieza Caja Formulario -->
+    <div id="contenedorGris">
+        <!-- Empieza Parte Escribir Formulario-->
+        <h3>Nombre y apellidos*</h3><input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos">
+
+        <h3>Email*</h3><input required class="inputCajaTexto" id="email" type="email" placeholder="Email">
+
+        <h3>Teléfono</h3><input id="tel" class="inputCajaTexto" type="tel" placeholder="Teléfono" pattern="[0-9]{9}">
+
+        <h3>Escribe aquí tu consulta*</h3>
+
+        <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta..."
+                  rows="1" cols = "10">
+
+        </textarea>
+        <!-- Acaba parte escribir formulario-->
+
+        <!-- Empiezan checkbox y botón de envío -->
+        <div id="containerCheckbox">
+            <input type="checkbox" id="checkboxTerminos" class="checkbox" required>
+            <label for="checkboxTerminos">
+                <p>Acepto los
+                    <a href="#">
+                <p>Términos y condiciones del servicio</p>
+                </a>
+                </p>
+            </label>
+        </div>
+
+            <button id="botonEnvio" type="submit"> Enviar... </button>
+
+        <!-- Acaba checkbox y boton de envío-->
+
+        <!-- Div estado del envío -->
+        <div id="Estado envío">
+            <p id="textoEnvío"></p>
+        </div>
+
+    </div>
+    </form>
+    </div>
+<!-- Funcionalidad Pop-Up -->
+<script>
+
+    // Declaración de Variables
+    const botonEnvio = document.getElementById("botonEnvio")
+    const textoEnvío = document.getElementById("textoEnvío")
+    const Formulario = document.getElementById("Formulario")
+
+    // Simulación de estado del envío
+    const EnvioExitoso = true
+
+    //Funcion para cerrar el PopUp
+
+    //Funcion de activación del PopUp y cambio de atributos de los elementos dentro del mismo
+    Formulario.addEventListener('submit', (event) => {
+        event.preventDefault()
+        if (EnvioExitoso) {
+            textoEnvío.innerText = "El formulario se ha enviado correctamente"
+            setTimeout(()=> {
+                window.location.replace("../index.html")
+            }, 1000)
+
+        }else{
+            textoEnvío.innerText = "El formulario no se ha podido enviar correctamente. Por favor intentelo más tarde"
+        }
+
+
+        //Formulario.submit()
+    })
+</script>
+<!-- Acaba funcionalidad PopUp -->
+
+</body>
+</html>
