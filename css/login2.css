@@ -6,7 +6,19 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+  /*  Header  */
+  .header{
+    position: fixed;
+    size: 2rem;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 1rem;
+}
 
+#Logo img{
+    width: 7.7rem;
+    height: 4.7rem;
+}
 h2 {
     font-size: 2em;
     color: #04291C;
@@ -94,7 +106,6 @@ button {
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
     margin: 10px auto;
 }
 
@@ -112,7 +123,6 @@ button:hover {
     color: #04291C;
     text-decoration: none;
     font-size: 14px;
-    transition: all 0.2s ease-in-out;
 }
 
 #olvido-contraseña:hover {
