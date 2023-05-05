@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/pagina_sensores.css">
+    <link rel="stylesheet" href="../css/header2.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>pagina sensores</title>
+    <script src="../js/Chart.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body >
+<!-- empieza contenido del header-->
+<header class="Encabezado" role="banner">
+    <!-- Esto es el encabezado que actuará de banner-->
+    <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
+                                                          alt="Logo de la empresa"></a>
+        <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+        <div id="contenedorContenedorDesktop">
+            <div id="separador"></div>
+            <div id="contenedorMenuDesktop">
+                <ul id="menuDesktop">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../html/perfil.html">Mi perfil</a></li>
+                    <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+                    <li><a href="../html/contacto.html">Contáctanos</a></li>
+                    <li><a href="../html/login.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="menuDesplegable">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/perfil.html">Mi perfil</a></li>
+            <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+            <li><a href="../html/contacto.html">Contáctanos</a></li>
+            <li><a href="../html/login.html">Cerrar sesión</a></li>
+        </ul>
+
+
+
+        <div id="iconosBanner">
+            <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+</header>
+<script src="../js/menu.js"></script><br>
+<!--acaba contenido del header-->
+
+<h1 class="bienvenida"> Bienvenido usuario</h1>
+
+<div id="graficas">
+    <h1 class="medidas">MEDIDAS</h1>
+    <select name="huertos" id="huertos" onchange="cambiarImagen()" ondurationchange="cambiarHuerto()">
+        <option value="h1">huerto 1</option>
+        <option value="h2">huerto 2</option>
+        <option value="h3">huerto 3</option>
+    </select>
+</div> <br>
+<img id="imagen" src="../img/gr_h1/h1_sal.png" alt="grafica"><br>
+
+<select name="sensores" id="sensores" onchange="cambiarImagen()">
+    <option value="sal">salinidad</option>
+    <option value="hum">humedad</option>
+    <option value="ph">pH</option>
+    <option value="temp">temperatura</option>
+    <option value="luz">luminosidad</option>
+</select><br>
+
+<h1 class="historial">historial de medidas</h1>
+<!--aqui empieza la tabla-->
+<table class="medidas">
+    <thead><tr>
+        <th>fecha</th>
+        <th>sal</th>
+        <th>luz</th>
+        <th>ºC</th>
+        <th>pH</th>
+        <th>FC</th>
+    </tr></thead>
+    <tr>
+        <td>2023/04/16</td>
+        <td>24.76</td>
+        <td>822.94</td>
+        <td>21</td>
+        <td>7.35</td>
+        <td>64.7</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>16.62</td>
+        <td>934.71</td>
+        <td>23</td>
+        <td>7.65</td>
+        <td>58.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>13.85</td>
+        <td>981.04</td>
+        <td>38</td>
+        <td>6.71</td>
+        <td>60.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>35.27</td>
+        <td>950.87</td>
+        <td>39</td>
+        <td>7.39</td>
+        <td>88.9</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>8.57</td>
+        <td>863.77</td>
+        <td>22</td>
+        <td>7.51</td>
+        <td>42.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>29.78</td>
+        <td>899.6</td>
+        <td>18</td>
+        <td>6.12</td>
+        <td>16.1</td>
+        </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>38.91</td>
+        <td>945.51</td>
+        <td>20</td>
+        <td>7.54</td>
+        <td>5.7</td></tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>1.21</td>
+        <td>916.13</td>
+        <td>33</td>
+        <td>6.02</td>
+        <td>62.4</td>
+        </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>7.6</td>
+        <td>937.21</td>
+        <td>39</td>
+        <td>7.0</td>
+        <td>46.3</td></tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>7.23</td>
+        <td>928.31</td>
+        <td>27</td>
+        <td>7.35</td>
+        <td>97.8</td></tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>2.93</td>
+        <td>992.37</td>
+        <td>33</td>
+        <td>6.74</td>
+        <td>3.5</td></tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>35.06</td>
+        <td>994.77</td>
+        <td>34</td>
+        <td>7.46</td>
+        <td>18.9</td></tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>8.38</td>
+        <td>954.36</td>
+        <td>36</td>
+        <td>6.82</td>
+        <td>80.7</td></tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>31.4</td>
+        <td>918.01</td>
+        <td>20</td>
+        <td>7.73</td>
+        <td>96.3</td></tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>28.1</td>
+        <td>828.02</td>
+        <td>16</td>
+        <td>7.74</td>
+        <td>90.2</td></tr>
+    <tfoot>
+    <tr>
+        <th COLSPAN="6">
+            <div class="triangulo izquierda">
+                <div></div>
+            </div><p>1 de 59</p><div class="triangulo derecha">
+        <div></div>
+        </div></th>
+    </tr>
+
+    </tfoot>
+</table>
+<!--aqui acaba la tabla-->
+</body><script src="../js/elegirgrafica.js"></script>
+</html>

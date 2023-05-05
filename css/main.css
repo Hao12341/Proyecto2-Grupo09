@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "poppins";
+    src: url(../font/Poppins-Regular.ttf);
+}
+*{
+    font-family: "poppins";
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+#Foto-Landing{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 13px;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/FondoLandingPageDifuminado.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#eslogan{
+    align-self: center; 
+    padding: 0rem 3.4rem;
+    clear: both;
+    width: auto;
+    color: white;
+    margin: 0px auto;
+    margin-top: 6rem;
+    margin-bottom: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#sublogo{
+    align-self: center; 
+    padding: 0rem 6rem 3rem 6rem;
+    clear: both;
+    width: auto;
+    color: white;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+#call-to-action{
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+}
+#arrow-container {
+  }
+  
+#triangulo {
+    margin-top: 100px;
+    border-style: solid;
+    border-width: 25px 25px 0 25px;
+    border-color: white transparent transparent transparent;
+  }
+  
+#destination{
+    
+    margin-top: 4rem;
+}
+.titulo{
+    margin-top: 4rem;
+    text-align: center;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.texto{
+    margin-bottom: 0.9rem;
+    padding: 1rem 4rem 0rem 4rem;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
+#Foto_Producto{
+    display: flex;
+    margin: auto;
+    height: 50vh;
+    width: 90vw;
+    clear: both;
+}
+#CajaExplicacion {
+    display: flex;
+    width: 90vw; /* ancho fijo */
+    height: 10.2rem;
+    margin: auto; /* centrar horizontalmente */
+}
+#Bto{
+    margin: auto;
+}
+#Boton_Explicacion{
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    margin-top: 17px;
+}
+#InfoEmpresa{
+    margin-top: 88px;
+    border: none;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+#InfoEmpresa > p {
+    text-align: center;
+
+}
+#ContactoPie{
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem ;
+}
+.Black{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.Simple{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+footer{
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.6rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+#redes{
+    padding: 0.4rem;
+    display:flex;
+    justify-content: space-around;
+}
+img {
+    width: 30px;
+  }
+  
+
+  
