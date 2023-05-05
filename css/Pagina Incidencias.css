@@ -239,4 +239,91 @@ p{
     cursor: pointer; /* Cursor de puntero */
 }
 
+#cosohumedad{
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+
+
+}
+#SensorHumedad{
+     display: flex;
+     justify-content: center;
+     font-size: 30px;
+     padding: 45px;
+ }
+
+
+#cososal{
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+
+}
+#SensorSal{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 45px;
+}
+
+#cosotemperatura{
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+
+}
+#SensorTemperatura{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 45px;
+}
+
+#cosoph{
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+}
+#SensorPH{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 45px;
+}
+
+
+#cosoluz{
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    display: flex;
+    margin: 0 auto;
+
+}
+#SensorLuz{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding: 45px;
+
+}
+
+#problema{
+
+}
+
 
