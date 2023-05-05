@@ -19,6 +19,7 @@ header{
     --hover-txt: var(--accent-fg-color);
     --li-bg: #204b36;
     --menu-height: 2rem;
+    min-width: fit-content;
 }
 #menu #menuDesplegable{
     background-color: var(--bg-color);
@@ -53,11 +54,15 @@ header{
     width: inherit;
     margin-left:  50vw;
     left: 0;
+    padding-right: 1em;
+    align-self: center;
+    max-width: content-box;
     max-width: 50vw;
 }
 
 #menuDesktop{
     display: flex;
+    flex: 1 1 min-content;
     justify-content: flex-end;
     align-content: center;
     text-decoration: none;
@@ -76,10 +81,14 @@ header{
     flex: 1 1 0;
     text-decoration: none;
     text-align: center;
-    margin: 0.25rem;
     display: flex;
-    align-items: center;
+    align-content: center;
+    margin: 0.1rem;
     min-width: fit-content;
+}
+
+#menuDesktop li:last-child{
+    margin-right: 0;
 }
 #menuDesktop li:hover {
     font-size: 120%;
