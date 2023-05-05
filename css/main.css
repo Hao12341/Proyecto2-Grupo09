@@ -54,13 +54,22 @@
     border-radius: 8px;
     padding: 0.8rem 1.5rem;
 }
-#bajar{
-    scroll-behavior: smooth;
-    scroll-margin-block-start: 3rem;
+#arrow-container {
+  }
+  
+#triangulo {
+    margin-top: 100px;
+    border-style: solid;
+    border-width: 25px 25px 0 25px;
+    border-color: white transparent transparent transparent;
+  }
+  
+#destination{
+    
+    margin-top: 4rem;
 }
-
 .titulo{
-    margin-top: 40px;
+    margin-top: 4rem;
     text-align: center;
     color: black;
     font-size: 2.5rem;
@@ -97,8 +106,10 @@
     font-weight: bolder;
     border-radius: 8px;
     padding: 0.8rem 1.5rem;
+    margin-top: 17px;
 }
 #InfoEmpresa{
+    margin-top: 88px;
     border: none;
     border-top: 5px solid black;
     border-bottom: 5px solid black;
@@ -132,3 +143,14 @@ footer{
     margin-top: 1.3rem;
     margin-bottom: 1.5rem;
 }
+#redes{
+    padding: 0.4rem;
+    display:flex;
+    justify-content: space-around;
+}
+img {
+    width: 30px;
+  }
+  
+
+  
