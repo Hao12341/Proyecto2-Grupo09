@@ -322,8 +322,23 @@ p{
 
 }
 
-#problema{
-
+#problemahumedad{
+    padding: 10px;
+    font-size: 20px;
 }
-
-
+#problematemperatura{
+    padding: 10px;
+    font-size: 20px;
+}
+#problemaph{
+    padding: 10px;
+    font-size: 20px;
+}
+#problemasal{
+    padding: 10px;
+    font-size: 20px;
+}
+#problemaluz{
+    padding: 10px;
+    font-size: 20px;
+}
