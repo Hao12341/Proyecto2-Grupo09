@@ -13,6 +13,7 @@ body {
     background-size: cover;
     background-blend-mode: normal;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 
@@ -47,9 +48,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 30vw;
-    min-width: max-content;
+    min-width: min-content;
     height: 60vh;
-    padding: 30px;
+    padding: 20px;
 }
 
 .inputCajaTexto {
