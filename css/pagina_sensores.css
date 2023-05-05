@@ -188,7 +188,7 @@ header{
 
 #contenedorMenuDesktop{
     width: inherit;
-    margn-left:  50vw;
+    margin-left:  50vw;
     flex: 1 1 0;
     left: 0;
     padding-right: 1em;
