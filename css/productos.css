@@ -54,6 +54,9 @@ body{
     align-items: center;
     flex-direction: column;
 }
+#iconosBanner , #contenedorContenedorDesktop{
+    display: none;
+}
 
 .botonSolicitarPresupuesto {
     display: flex;
