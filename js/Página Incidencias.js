@@ -4,6 +4,7 @@ function showPopUp1() {
     var popUp = document.getElementById("popUpBox1");
     // Cambia la propiedad display a block para hacerlo visible
     popUp.style.display = "block";
+
 }
 
 // Función para ocultar el pop-up
