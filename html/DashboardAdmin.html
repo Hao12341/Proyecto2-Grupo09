@@ -5,58 +5,61 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">     <!-- Para ajustar el ancho a la anchura del dispositivo que ejecute esta página, funcione en navegadores safari anteriores a la versión 9, inicia la escala en 1 -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">                                       <!-- Hacer compatible con el navegador edge -->
     <link rel="stylesheet" type="text/css" href="../css/DashboardAdmin.css">                              <!-- Enlace a la hoja de estilos CSS de DashboardAdmin -->
-    <link rel="stylesheet" type="text/css" href="../css/header2.css">                              <!-- Enlace a la hoja de estilos CSS de DashboardAdminMenu-->
-    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="../css/header2.css">                              <!-- Enlace a la hoja de estilos CSS de header-->
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">                            <!-- Enlace a la hoja de estilos CSS globales-->
     <title>Dashboard Administrador</title>
 
 </head>
 <body>
-<!-- Empezar a copiar de aquí -->
+<!-- Empieza el Header/BANNER -->
 <header class="Encabezado" role="banner">
     <!-- Esto es el encabezado que actuará de banner-->
-    <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
-                                                          alt="Logo de la empresa"></a>
-        <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+    <!-- Empieza la etiqueta nav-->
+    <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>   <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+        <!-- Contenedor de los elementos del banner en vista ordenador -->
         <div id="contenedorContenedorDesktop">
             <div id="separador"></div>
             <div id="contenedorMenuDesktop">
                 <ul id="menuDesktop">
-                    <li><a href="#Avisos">Avisos</a></li>
-                    <li><a href="#CerrarSesion">Cerrar Sesión</a></li>
+                    <li><a href="../html/Página%20Incidencias.html">Avisos</a></li>
+                    <li><a href="../html/login.html">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>
+        <!-- Fin Contenedor de los elementos del banner en vista ordenador -->
 
+        <!-- Contenedor de menu hamburguesa en vista movil -->
         <ul id="menuDesplegable">
-            <li><a href="#Avisos">Avisos</a></li>
-            <li><a href="#CerrarSesion">Cerrar Sesión</a></li>
+            <li><a href="../html/Página%20Incidencias.html">Avisos</a></li>
+            <li><a href="../html/login.html">Cerrar Sesión</a></li>
         </ul>
+        <!--FIN Contenedor de menu hamburguesa en vista movil -->
 
-
-
+        <!-- Contenedor de iconos del BANNER -->
         <div id="iconosBanner">
-            <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+            <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
             <div class="hamburguesa">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
         </div>
+        <!--FIN Contenedor de iconos del BANNER -->
     </nav>
+    <!-- FIN etiqueta Nav-->
 </header>
+<!-- FIN Header-->
+<!-- script que hace funcionar el menu desplegable-->
 <script src="../js/menu.js"></script>
-<!-- Acabar de copiar aquí-->
-
-</header>
-<script src="../js/menu.js"></script>
+<!-- FIN del script-->
+<!-- Inicio de la etiqueta section-->
 <section class="InicioAdmin" id="InicioAdmin"><!-- Inicio Sección Dashboard Administrador-->
-
-    <div>
-        <div class="filtro">
-            <div class="encabezado">
-       <h1>Usuarios Dados De Alta</h1></div>
-            <div class="opciones-filtro"><button>
-                <label for="Campo">Filtrar por campo:</label>
+    <div> <!-- DIV que contiene el h1, el filtrado y la tabla-->
+        <div class="filtro">    <!-- DIV que contiene el h1, el filtrado y la tabla-->
+            <div class="encabezado">    <!-- DIV que contiene el h1-->
+       <h1>Usuarios Dados De Alta</h1></div>    <!-- FIN DIV que contiene el h1-->
+            <div class="opciones-filtro"><button>       <!-- el filtrado -->
+                <label for="Campo">Filtrar por campo:</label>       <!-- Nombre y descripción del filtro-->
                 <select name="Campo" id="Campo">
                     <option value="NombreUsuario">Nombre Usuario</option>
                     <option value="Email">Email</option>
@@ -64,15 +67,19 @@
                 </select>
                 <img src="../img/filtrar.png" alt="filtro">
             </button></div></div>
+        <!-- Inicio tabla-->
         <table>
+            <!-- Fila superior-->
             <thead>
             <tr>
-                <th><p>Nombre Usuario</p></th>
-                <th><p>Email</p></th>
-                <th><p>Teléfono </p></th>
-                <th>Acciones</th>
+                <th><h3>Nombre Usuario</h3></th>
+                <th><h3>Email</h3></th>
+                <th><h3>Teléfono </h3></th>
+                <th><h3>Acciones</h3></th>
             </tr>
             </thead>
+            <!-- FIN fila superior-->
+            <!-- Inicio contenido tabla-->
             <tr>
                 <td>Manuel Pérez López</td>
                 <td>manperlo@gamil.com</td>
@@ -208,9 +215,12 @@
                     <div><img src="../img/boton-x%20(2).png" alt="borrar"></div>
                 </div></td>
             </tr>
-
+            <!-- FIN contenido tabla-->
         </table>
+        <!-- FIN tabla-->
     </div>
+    <!-- FIN DIV que tiene h1, filtrado y tabla-->
 </section>
+<!-- FIN section-->
 </body>
 </html>
