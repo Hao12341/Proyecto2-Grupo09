@@ -100,8 +100,8 @@ p{
     top: 50%; /* Centrado vertical */
     left: 50%; /* Centrado horizontal */
     transform: translate(-50%, -50%); /* Ajuste de centrado */
-    width: 1500px; /* Ancho del pop-up */
-    height: 800px; /* Alto del pop-up */
+    width: 800px; /* Ancho del pop-up */
+    height: 1700px; /* Alto del pop-up */
     background-color: #ffffff; /* Color de fondo */
     border: 2px solid #000000; /* Borde */
     z-index: 9999; /* Z-index para estar por encima de otros elementos */
@@ -240,8 +240,8 @@ p{
 }
 
 #cosohumedad{
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     padding: 10px;
     border: 1px solid black;
     display: flex;
@@ -258,7 +258,7 @@ p{
 
 
 #cososal{
-    width: 400px;
+    width: 300px;
     height: 300px;
     padding: 10px;
     border: 1px solid black;
