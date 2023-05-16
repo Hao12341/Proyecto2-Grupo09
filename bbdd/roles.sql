@@ -1,15 +1,13 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 16-05-2023 a las 17:22:50
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+/*
+-- Query: SELECT * FROM gti09.roles
+LIMIT 0, 1000
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+-- Date: 2023-05-16 16:56
+*/
+INSERT INTO `roles` (`IdRol`,`Rol`) VALUES (1,'Administrador');
+INSERT INTO `roles` (`IdRol`,`Rol`) VALUES (2,'Comercial');
+INSERT INTO `roles` (`IdRol`,`Rol`) VALUES (3,'Tecnico');
+INSERT INTO `roles` (`IdRol`,`Rol`) VALUES (4,'Usuario');
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
