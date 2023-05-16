@@ -10,6 +10,7 @@ async function login(event) {
 
     event.preventDefault();
     const formData = new FormData(event.target);
+    console.log(formData)
 
     const respuesta = await fetch('api/sesion/', {
         method: 'post',
