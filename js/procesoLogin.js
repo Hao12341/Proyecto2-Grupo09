@@ -19,6 +19,7 @@ async function login(event) {
     if (respuesta.ok) {
         // redirigimos a la página correspondiente
         const data = await respuesta.json()
+        console.log(data)
         switch (data.rol) {
             case 1:
                 location.href = "../html/DashboardAdmin.html"
