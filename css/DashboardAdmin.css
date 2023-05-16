@@ -1,5 +1,6 @@
+/*Import fuente roboto*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+/*Estilos generales*/
 * {
     text-decoration: none;
     color: inherit;
@@ -8,8 +9,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*Variables con color asignado*/
 :root{
-    --main-bg-color: #0ef106;
+    --main-bg-color: #ffffff;
     --main-fg-color: #092a09;
     --contrast-bg-color: #b4f68e;
     --contrast-fg-color: #007935;
@@ -77,10 +79,12 @@ table {
     border-top-right-radius: 1em;
 
 }
+/*Para dar borde redondeado a las esquinas superiores y fondo blanco*/
 thead th {
     background-color: #fffffe;
     color: black;
 }
+
 thead th:nth-child(1) {
     background-color: #fffffe;
     padding: 10px;
@@ -92,12 +96,13 @@ thead th:nth-child(4){
     background-color: #fffffe;
     border-top-right-radius: 1em;
 }
+
 th{
     border: 1px solid #092a09;
     text-align: center;
 
 
-}
+}/*-------------------------------------------------------------------------*/
 tr td{
     border-collapse: collapse;
 }
@@ -107,13 +112,14 @@ td {
     text-align: left;
     padding: 8px;
 }
-
+/*Fondo en dos colores de las celdas alternando filas*/
 tr:nth-child(even) {
     background-color: #04291c;
 }
 tr:nth-child(odd) {
     background-color: #65946F;
 }
+/*------------------------------------------------------*/
 .imagen{
     display: flex;
     flex-direction: row;

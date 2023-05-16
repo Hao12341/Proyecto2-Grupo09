@@ -1,0 +1,114 @@
+/*aqui empieza el diseñode la tabla*/
+#datosgrafica{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+th:nth-child(1){
+    width: 20%;
+}
+th:nth-child(2){
+    width: 10%;
+}
+th:nth-child(3){
+    width: 15%;
+}
+th:nth-child(4){
+    width: 10%;
+}
+th:nth-child(5){
+    width: 10%;
+}
+th:nth-child(6){
+    width: 10%;
+}
+table tr td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 1em;
+    font-size: 30px;
+    padding-bottom: 1em;
+
+}
+thead tr th{
+    text-align: center;
+    background: #00ff00;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 40px;
+}
+tbody tr:nth-child(odd){
+    background-color: lightgreen;
+}
+tbody tr:nth-child(even){
+    background-color: #61c561;
+}
+tfoot th{
+    width: 100%;
+    font-size: 40px;
+    padding: 0em;
+    background-color: #a7ff99;
+    align-items: center;
+}
+
+/*aqui termina el diseño de la tabla */
+/* aqui hay diseño de textos e imagenes*/
+
+.bienvenida{
+    text-align: center;
+    font-size: 70px;
+    margin-top: 70px;
+}
+.medidas{
+    text-align: center;
+    font-size: 70px;
+}
+.historial{
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+}
+
+#imagen{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border: 3px solid black;
+}
+
+/*aqui esta el diseño de las mistas desplegables */
+#huertos{
+    font-size: 50px;
+    display: block;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 4px solid black;
+}
+
+#sensores{
+    font-size: 50px;
+    display: block;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 4px solid black;
+}
+option{
+    font-size: 30px;
+    margin-right: 2px;
+    text-align: center;
+}
+#tabla{
+    padding: 5px;
+    font-size: 16px;
+    margin: auto;
+}
+/*aqui acaba el diseño de las listas desplegables */
