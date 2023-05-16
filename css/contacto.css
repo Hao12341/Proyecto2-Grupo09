@@ -13,6 +13,7 @@ body {
     background-size: cover;
     background-blend-mode: normal;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 
@@ -24,6 +25,7 @@ body {
 }
 
 #Título{
+    font-size: 28px;
     display: block;
     padding: 2rem;
 }
@@ -46,10 +48,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30vw;
-    min-width: max-content;
+    width: 70vw;
+    min-width: min-content;
     height: 60vh;
-    padding: 30px;
+    padding: 20px;
 }
 
 .inputCajaTexto {
@@ -61,20 +63,36 @@ body {
 
 
 #containerCheckbox{
-    padding-top: 20px;
+    width: 250px;
+    padding-top: 10px;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
 }
 
 #containerCheckbox a {
     color: black;
 }
+
+#obligatorio{
+    display: flex;
+    justify-content: left;
+}
+
+#caracteres{
+    display: flex;
+    justify-content: right;
+}
+#textoobligatorio{
+    font-size: 12px;
+}
+
+
 /* Boton Enviar */
 #botonEnvio{
     padding: 10px 20px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     margin: 10px auto;
@@ -92,5 +110,8 @@ textarea {
     overflow: visible;
 }
 
+#textoEnvío{
+    font-size: 12px;
+}
 
 

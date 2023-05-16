@@ -15,7 +15,7 @@
 
 <body>
     <header class="header" > <!-- Esto es el encabezado que actuará de banner-->
-        <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg"
+        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
                                                               alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
 
         </nav>
@@ -24,7 +24,7 @@
     <section>
         <div class="Caja-Inicio">
             <div class="formulario">
-                <form>
+                <form id="form">
                     <h2>Inicia sesión</h2>
                     <div class="inputs">
                         <h3>Email</h3>
@@ -37,7 +37,9 @@
                     <div class="recordarContraseña">
                         <a href="#" id="olvido-contraseña">He olvidado mi contraseña</a>
                     </div>
-                    <div class="botonInicioSesion"> <button>Iniciar sesión</button></div>
+                    <div class="botonInicioSesion">
+                            <button type="submit">Iniciar sesión</button>
+                    </div>
 
                 </form>
             </div>
@@ -70,6 +72,7 @@
     </section>
 
     <script src="../js/login.js"></script>
+    <script src="../js/procesoLogin.js"></script>
 
 
 </body>
