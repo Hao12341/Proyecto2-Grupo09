@@ -70,12 +70,17 @@
         <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta..."
                   rows="1" onkeyup="contarCaracteres(this)" id="maximoCaracteres" maxlength="250"></textarea>
 
-        <div>
+        <div id="caracteres">
             <span id="contador">0</span>/250
         </div>
 
 
         <!-- Acaba parte escribir formulario-->
+
+        <!--Marcar cuales son necesarias de rellenar-->
+        <div id="obligatorio">
+            <p id="textoobligatorio">Los campos marcados con <b>*</b> han de ser rellenados</p>
+        </div>
 
         <!-- Empiezan checkbox y botón de envío -->
         <div id="containerCheckbox">
