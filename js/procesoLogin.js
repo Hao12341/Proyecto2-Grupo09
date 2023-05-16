@@ -4,9 +4,6 @@ document.getElementById("form").addEventListener('submit', login);
 
 
 async function login(event) {
-    // eliminamos el mensaje de error previo, si lo hay
-    const output = document.getElementById("output");
-    output.classList.remove("error");
 
     event.preventDefault();
     const formData = new FormData(event.target);
