@@ -25,6 +25,7 @@ body {
 }
 
 #Título{
+    font-size: 28px;
     display: block;
     padding: 2rem;
 }
@@ -47,7 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30vw;
+    width: 70vw;
     min-width: min-content;
     height: 60vh;
     padding: 20px;
@@ -62,7 +63,7 @@ body {
 
 
 #containerCheckbox{
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     align-items: flex-start;
     justify-content: center;

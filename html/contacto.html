@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto</title>
+    <script src="../js/contacto.js"></script>
+    <script src="../js/menu.js"></script>
+
 </head>
 <body>
     <!-- Esto es el encabezado que actuará de banner-->
@@ -49,14 +52,14 @@
             </div>
         </nav>
     </header>
-    <script src="../js/menu.js"></script>
+
     <div id="ContenedorNoHeader">
     <div><h1 id="Título"> Contacta con nosotros</h1></div>
     <form id="Formulario" action="#" method="post">
     <!-- Empieza Caja Formulario -->
     <div class="divBlanco" id="contenedorGris">
         <!-- Empieza Parte Escribir Formulario-->
-        <h3>Nombre y apellidos*</h3><input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos">
+        <h3>Nombre y Apellidos*</h3><input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos">
 
         <h3>Email*</h3><input required class="inputCajaTexto" id="email" type="email" placeholder="Email">
 
@@ -65,9 +68,13 @@
         <h3>Escribe aquí tu consulta*</h3>
 
         <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta..."
-                  rows="1">
+                  rows="1" onkeyup="contarCaracteres(this)" id="maximoCaracteres" maxlength="250"></textarea>
 
-        </textarea>
+        <div>
+            <span id="contador">0</span>/250
+        </div>
+
+
         <!-- Acaba parte escribir formulario-->
 
         <!-- Empiezan checkbox y botón de envío -->
@@ -94,37 +101,6 @@
     </div>
     </form>
     </div>
-<!-- Funcionalidad Pop-Up -->
-<script>
-
-    // Declaración de Variables
-    const botonEnvio = document.getElementById("botonEnvio")
-    const textoEnvío = document.getElementById("textoEnvío")
-    const Formulario = document.getElementById("Formulario")
-
-    // Simulación de estado del envío
-    const EnvioExitoso = true
-
-    //Funcion para cerrar el PopUp
-
-    //Funcion de activación del PopUp y cambio de atributos de los elementos dentro del mismo
-    Formulario.addEventListener('submit', (event) => {
-        event.preventDefault()
-        if (EnvioExitoso) {
-            textoEnvío.innerText = "El formulario se ha enviado correctamente"
-            setTimeout(()=> {
-                window.location.replace("../index.html")
-            }, 1000)
-
-        }else{
-            textoEnvío.innerText = "El formulario no se ha podido enviar correctamente. Por favor intentelo más tarde"
-        }
-
-
-        //Formulario.submit()
-    })
-</script>
-<!-- Acaba funcionalidad PopUp -->
 
 </body>
 </html>
