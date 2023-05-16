@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto</title>
-    <script src="../js/contacto.js"></script>
+
     <script src="../js/menu.js"></script>
 
 </head>
@@ -68,24 +68,31 @@
         <h3>Escribe aquí tu consulta*</h3>
 
         <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta..."
-                  rows="1" onkeyup="contarCaracteres(this)" id="maximoCaracteres" maxlength="250"></textarea>
+                  rows="1" onkeyup="contarCaracteres(this)" maxlength="250"></textarea>
 
-        <div>
+        <div id="caracteres">
             <span id="contador">0</span>/250
         </div>
 
 
         <!-- Acaba parte escribir formulario-->
 
+        <!--Marcar cuales son necesarias de rellenar-->
+        <div id="obligatorio">
+            <p id="textoobligatorio">Los campos marcados con <b>*</b> han de ser rellenados</p>
+        </div>
+
         <!-- Empiezan checkbox y botón de envío -->
         <div id="containerCheckbox">
             <input type="checkbox" id="checkboxTerminos" class="checkbox" required>
             <label for="checkboxTerminos">
+                <div>
                 <p id="terminosServicio">Acepto los
                     <a href="#">
                         <p>Términos y condiciones del servicio</p>
                      </a>
                 </p>
+                </div>
             </label>
         </div>
 
@@ -101,6 +108,6 @@
     </div>
     </form>
     </div>
-
+    <script src="../js/contacto.js"></script>
 </body>
 </html>
