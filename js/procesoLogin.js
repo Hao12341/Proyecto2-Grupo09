@@ -18,7 +18,15 @@ async function login(event) {
     // si el resultado de la petición es OK (i.e. código HTTP 200)
     if (respuesta.ok) {
         // redirigimos a la página correspondiente
-        location.href = '../html/paginasensores.html';
+        switch (respuesta.rol) {
+            case 1:
+                location.href = "../html/DashboardAdmin.html"
+                break
+
+            default:
+                location.href = "../html/perfil.html"
+        }
+
     } else {
         // si no, mostramos un mensaje de error
         output.innerText = "Credenciales no válidas";
