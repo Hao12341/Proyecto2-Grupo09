@@ -2,7 +2,7 @@
 switch ($_SERVER['REQUEST_METHOD']) {
     case 'GET':
         session_start();
-        if(!isset($_SESSION['email'])) {
+        if(!isset($_SESSION['user'])) {
             http_response_code(401);
         } else {
             http_response_code(200);
@@ -49,8 +49,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
             $salida = [];
             $salida['id'] = $registro['id'];
-            $salida['nombre'] = $registro['nombre'];
-            $salida['rol'] = $registro['rol'];
+            $salida['email'] = $registro['email'];
+            $salida['rol'] = $registro['Rol'];
 
             http_response_code(200);
 

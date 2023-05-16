@@ -18,7 +18,8 @@ async function login(event) {
     // si el resultado de la petición es OK (i.e. código HTTP 200)
     if (respuesta.ok) {
         // redirigimos a la página correspondiente
-        switch (respuesta.rol) {
+        const data = await respuesta.json()
+        switch (data.rol) {
             case 1:
                 location.href = "../html/DashboardAdmin.html"
                 break
