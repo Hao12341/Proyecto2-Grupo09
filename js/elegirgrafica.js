@@ -4,10 +4,10 @@ const imagen = document.getElementById('imagen');
 
 function cambiarHuerto(){
     const huerto= huertos.value;
-    imagen.src = 'gr_h1/' + huerto + '_sal.png'
+    imagen.src = '../img/gr_h1/' + huerto + '_sal.png'
 }
 function cambiarImagen() {
     const huerto = huertos.value;
     const sensor = sensores.value;
-    imagen.src = 'gr_h1/' + huerto + '_' + sensor + '.png'
+    imagen.src = '../img/gr_h1/' + huerto + '_' + sensor + '.png'
 }
