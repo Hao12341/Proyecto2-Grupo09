@@ -68,7 +68,7 @@ section {
 /* Estilos para el contenedor del formulario */
 .Caja-Inicio {
     position: relative;
-    height: 400px;
+    height: 450px;
     background-color: rgba(252, 252, 252, 0.9);
     padding: 30px;
     border-radius: 15px;
@@ -129,6 +129,10 @@ button:hover {
     text-decoration: underline;
 }
 
+#textoError{
+    font-size: 2vh;
+}
+
 /* Estilos del popup */
 .popup {
     position: fixed;
@@ -181,3 +185,4 @@ button:hover {
 
 
 }
+
