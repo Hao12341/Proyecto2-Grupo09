@@ -40,7 +40,7 @@
                 <li><a href="../html/login.html">Cerrar sesión</a></li>
             </ul>
 
-
+-
 
             <div id="iconosBanner">
                 <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
@@ -63,8 +63,12 @@
             </div>
             <div class="perfil">
                 <div class="perfil-img">
-                    <img src="../img/imagen-perfil.jpeg" alt="Foto de perfil">
-                </div>
+                    <img id="img-perfil" src="../img/imagen-perfil.jpeg" alt="Foto de perfil">
+                    <div class="file-input-wrapper">
+                      <button class="custom-file-button" onclick="document.getElementById('myFileInput').click()">Editar imagen</button>
+                      <input type="file" id="myFileInput" class="custom-file-input">
+                    </div>
+                  </div>
                 <div class="perfil-info">
                     <dl>
                         <div>
@@ -82,27 +86,27 @@
                         <div>
                             <dt>Mis huertos:</dt>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br> 
+                                <div class="texto">Huerto 1: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
-                                 <div class="boton">
+                                <div class="boton">
                                     <a href="paginasensores.html"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
                         <div>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br> 
+                                <div class="texto">Huerto 1: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
-                                 <div class="boton">
+                                <div class="boton">
                                     <a href="paginasensores.html"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
-                        <div >
+                        <div>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br> 
+                                <div class="texto">Huerto 1: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
-                                 <div class="boton">
+                                <div class="boton">
                                     <a href="paginasensores.html"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
@@ -113,6 +117,8 @@
             </div>
         </div>
     </div>
+    <script src="../js/perfil.js"></script>
+
 </body>
 </div>
 
