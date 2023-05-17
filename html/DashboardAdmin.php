@@ -6,7 +6,7 @@ if(isset($_SESSION['user'])) {
     // si no existe redirigir al login
     $json = json_encode($_SESSION ['user']);
     $data = json_decode($json,true);
-    if($data['rol'] != 1){
+    if($data['idRol'] != 1){
         header('Location: ../');
     }
 }else{
