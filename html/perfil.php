@@ -1,3 +1,20 @@
+<?php
+/* Comprobar que hay una sesión creada y que contiene un campo 'user' */
+session_start();
+
+if(isset($_SESSION['user'])) {
+    // si no existe redirigir al login
+    $json = json_encode($_SESSION ['user']);
+    $data = json_decode($json,true);
+    if($data['rol'] != 4){
+        header('Location: ../');
+    }
+}else{
+    header('Location: ../');
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,8 +41,8 @@
                 <div id="contenedorMenuDesktop">
                     <ul id="menuDesktop">
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../html/perfil.html">Mi perfil</a></li>
-                        <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+                        <li><a href="perfil.php">Mi perfil</a></li>
+                        <li><a href="paginasensores.php">Mis sensores</a></li>
                         <li><a href="../html/contacto.html">Contáctanos</a></li>
                         <li><a href="../html/login.html">Cerrar sesión</a></li>
                     </ul>
@@ -34,8 +51,8 @@
 
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../html/perfil.html">Mi perfil</a></li>
-                <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+                <li><a href="perfil.php">Mi perfil</a></li>
+                <li><a href="paginasensores.php">Mis sensores</a></li>
                 <li><a href="../html/contacto.html">Contáctanos</a></li>
                 <li><a href="../html/login.html">Cerrar sesión</a></li>
             </ul>
@@ -89,7 +106,7 @@
                                 <div class="texto">Huerto 1: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
                                 <div class="boton">
-                                    <a href="paginasensores.html"><button type="button">Huerto</button></a>
+                                    <a href="paginasensores.php"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
@@ -98,7 +115,7 @@
                                 <div class="texto">Huerto 1: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
                                 <div class="boton">
-                                    <a href="paginasensores.html"><button type="button">Huerto</button></a>
+                                    <a href="paginasensores.php"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
@@ -107,7 +124,7 @@
                                 <div class="texto">Huerto 1: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
                                 <div class="boton">
-                                    <a href="paginasensores.html"><button type="button">Huerto</button></a>
+                                    <a href="paginasensores.php"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
