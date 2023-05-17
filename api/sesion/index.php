@@ -30,8 +30,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $sql = "SELECT `usuarios`.`id`, 
-       `usuarios.email`, 
+        $sql = "SELECT `usuarios`.`IdUsuario`, 
+       `usuarios`.`email`, 
        `roles`.`idRol`, 
        `roles`.`Rol` 
 	FROM `usuarios` 
@@ -48,9 +48,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $_SESSION['user'] = $registro;
 
             $salida = [];
-            $salida['id'] = $registro['id'];
+            $salida['id'] = $registro['IdUsuario'];
             $salida['email'] = $registro['email'];
-            $salida['rol'] = $registro['Rol'];
+            $salida['rol'] = $registro['idRol'];
 
             http_response_code(200);
 
