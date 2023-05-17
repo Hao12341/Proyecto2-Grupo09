@@ -8,34 +8,22 @@
     height: 100%;
     text-align: center;
 }
-th:nth-child(1){
-    width: 20%;
+#datosgrafica>th:nth-child(1){
+    width: 50%;
 }
-th:nth-child(2){
-    width: 10%;
+#datosgrafica>th:nth-child(2){
+    width: 50%;
 }
-th:nth-child(3){
-    width: 15%;
-}
-th:nth-child(4){
-    width: 10%;
-}
-th:nth-child(5){
-    width: 10%;
-}
-th:nth-child(6){
-    width: 10%;
-}
-table tr td{
+#datosgrafica tr td{
     text-align: center;
     border: 1px solid black;
     border-collapse: collapse;
     padding-top: 1em;
     font-size: 30px;
     padding-bottom: 1em;
-
 }
-thead tr th{
+
+#datosgrafica>thead tr th{
     text-align: center;
     background: #00ff00;
     border: 2px solid black;
@@ -44,13 +32,232 @@ thead tr th{
     padding-top: 1em;
     font-size: 40px;
 }
-tbody tr:nth-child(odd){
+/*estilo tabla de sal*/
+#tablasal{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+#tablasal>th:nth-child(1){
+    width: 20%;
+}
+#tablasal>th:nth-child(2){
+    width: 10%;
+}
+#tablasal>th:nth-child(3){
+    width: 15%;
+}
+
+
+#tablasal tr td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 1em;
+    font-size: 30px;
+    padding-bottom: 1em;
+
+}
+#tablasal>thead tr th{
+    text-align: center;
+    background: #00ff00;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 40px;
+}
+#tablasal>tbody tr:nth-child(odd){
     background-color: lightgreen;
 }
-tbody tr:nth-child(even){
+#tablasal>tbody tr:nth-child(even){
     background-color: #61c561;
 }
-tfoot th{
+/*estilo tabla humedad*/
+#tablahumedad{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+#tablahumedad>th:nth-child(1){
+    width: 20%;
+}
+#tablahumedad>th:nth-child(2){
+    width: 10%;
+}
+#tablahumedad>th:nth-child(3){
+    width: 15%;
+}
+
+
+#tablahumedad tr td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 1em;
+    font-size: 30px;
+    padding-bottom: 1em;
+
+}
+#tablahumedad>thead tr th{
+    text-align: center;
+    background: #00ff00;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 40px;
+}
+#tablahumedad>tbody tr:nth-child(odd){
+    background-color: lightgreen;
+}
+#tablahumedad>tbody tr:nth-child(even){
+    background-color: #61c561;
+}
+/*estilo tabla temperatura*/
+#tablatemp{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+#tablatemp>th:nth-child(1){
+    width: 20%;
+}
+#tablatemp>th:nth-child(2){
+    width: 10%;
+}
+#tablatemp>th:nth-child(3){
+    width: 15%;
+}
+
+
+#tablatemp tr td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 1em;
+    font-size: 30px;
+    padding-bottom: 1em;
+
+}
+#tablatemp>thead tr th{
+    text-align: center;
+    background: #00ff00;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 40px;
+}
+#tablatemp>tbody tr:nth-child(odd){
+    background-color: lightgreen;
+}
+#tablatemp>tbody tr:nth-child(even){
+    background-color: #61c561;
+}
+/*estilo tabla luz*/
+#tablaluz{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+#tablaluz>th:nth-child(1){
+    width: 20%;
+}
+#tablaluz>th:nth-child(2){
+    width: 10%;
+}
+#tablaluz>th:nth-child(3){
+    width: 15%;
+}
+
+
+#tablaluz tr td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 1em;
+    font-size: 30px;
+    padding-bottom: 1em;
+
+}
+#tablaluz>thead tr th{
+    text-align: center;
+    background: #00ff00;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 40px;
+}
+#tablaluz>tbody tr:nth-child(odd){
+    background-color: lightgreen;
+}
+#tablaluz>tbody tr:nth-child(even){
+    background-color: #61c561;
+}
+/*tabla de pH*/
+#tablapH{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    height: 100%;
+    text-align: center;
+}
+#tablapH>th:nth-child(1){
+    width: 20%;
+}
+#tablapH>th:nth-child(2){
+    width: 10%;
+}
+#tablapH>th:nth-child(3){
+    width: 15%;
+}
+
+
+#tablapH tr td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 1em;
+    font-size: 30px;
+    padding-bottom: 1em;
+
+}
+#tablapH>thead tr th{
+    text-align: center;
+    background: #00ff00;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 40px;
+}
+#tablapH>tbody tr:nth-child(odd){
+    background-color: lightgreen;
+}
+#tablapH>tbody tr:nth-child(even){
+    background-color: #61c561;
+}
+tfoot th {
     width: 100%;
     font-size: 40px;
     padding: 0em;
@@ -70,7 +277,13 @@ tfoot th{
     text-align: center;
     font-size: 70px;
 }
-.historial{
+.titulotablas{
+    display: flex;
+    align-items: center;
+    place-items: center;
+}
+
+.tabla{
     text-align: center;
     font-size: 50px;
     margin: auto;
