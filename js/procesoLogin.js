@@ -40,7 +40,7 @@ async function login(event) {
     } else {
         // si no, mostramos un mensaje de error
         // para cambiar, texto abajo contraseña
-        output.innerText = "Credenciales no válidas";
+        document.getElementById("textoError").innerText = "Credenciales no válidas";
         output.classList.add("error");
     }
 }
