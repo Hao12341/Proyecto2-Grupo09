@@ -1,3 +1,21 @@
+<?php
+/* Comprobar que hay una sesión creada y que contiene un campo 'user' */
+session_start();
+
+if(isset($_SESSION['user'])) {
+    // si no existe redirigir al login
+    $json = json_encode($_SESSION ['user']);
+    $data = json_decode($json,true);
+    if($data['rol'] != 1){
+        header('Location: ../');
+    }
+}else{
+    header('Location: ../');
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
