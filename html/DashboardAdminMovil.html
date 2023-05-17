@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">     <!-- Para ajustar el ancho a la anchura del dispositivo que ejecute esta página, funcione en navegadores safari anteriores a la versión 9, inicia la escala en 1 -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">                                       <!-- Hacer compatible con el navegador edge -->
+    <link rel="stylesheet" type="text/css" href="../css/header2.css">                              <!-- Enlace a la hoja de estilos CSS de header-->
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">                            <!-- Enlace a la hoja de estilos CSS globales-->
+    <title>Dashboard Administrador</title>
+
+</head>
+<body>
+<div class="contenedor">
+<!-- Empieza el Header/BANNER -->
+<header class="Encabezado" role="banner">
+    <!-- Esto es el encabezado que actuará de banner-->
+    
+    <!-- Empieza la etiqueta nav-->
+
+    <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>   <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+
+        <!-- Contenedor de los elementos del banner en vista ordenador -->
+        <div id="contenedorContenedorDesktop">
+            <div id="separador"></div>
+            <div id="contenedorMenuDesktop">
+                <ul id="menuDesktop">
+                    <li><a href="../html/Página%20Incidencias.html">Avisos</a></li>
+                    <li><a href="../html/login.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Fin Contenedor de los elementos del banner en vista ordenador -->
+
+        <!-- Contenedor de menu hamburguesa en vista movil -->
+        <ul id="menuDesplegable">
+            <li><a href="../html/Página%20Incidencias.html">Avisos</a></li>
+            <li><a href="../html/login.html">Cerrar Sesión</a></li>
+        </ul>
+        <!--FIN Contenedor de menu hamburguesa en vista movil -->
+
+        <!-- Contenedor de iconos del BANNER -->
+        <div id="iconosBanner">
+            <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!--FIN Contenedor de iconos del BANNER -->
+    </nav>
+    <!-- FIN etiqueta Nav-->
+</header>
+<!-- FIN Header-->
+<!-- script que hace funcionar el menu desplegable-->
+<script src="../js/menu.js"></script>
+<!-- FIN del script-->
+<!-- Inicio de la etiqueta section-->
+<div class="bienvenido"><h1>Bienvenid@ Admin</h1></div>
+<div class="botonesAccion"><p>Usuarios</p>
+    <img src="../img/anadir.png">   <img src="../img/simbolo-de-herramienta-llena-de-filtro.png"> <img src="../img/lupa.png">
+</div>
+    <section class="tabla">
+        <table>
+            <tr>
+                <td>ID: 0001</td>
+                <td>Nombre: Pedro Porro</td>
+                <td><button onclick="">Ver Más</button></td>
+            </tr>
+            <tr>
+                <td>ID: 0001</td>
+                <td>Nombre: Pedro Porro</td>
+                <td><button onclick="">Ver Más</button></td>
+            </tr>
+            <tr>
+                <td>ID: 0001</td>
+                <td>Nombre: Pedro Porro</td>
+                <td><button onclick="">Ver Más</button></td>
+            </tr>
+        </table>
+    </section>
+</div>
+</body>
+</html>
