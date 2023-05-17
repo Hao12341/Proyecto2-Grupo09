@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/header2.css">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/productos.css">
-    <title>Productos</title>
+    <link rel="stylesheet" href="../css/productos2.css">
+    <title>Document</title>
 </head>
+
+
 <body>
 
+<!-- Empezar a copiar de aquí -->
 <header class="Encabezado" role="banner">
     <!-- Esto es el encabezado que actuará de banner-->
     <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
@@ -21,27 +23,27 @@
             <div id="separador"></div>
             <div id="contenedorMenuDesktop">
                 <ul id="menuDesktop">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../html/perfil.html">Mi perfil</a></li>
-                    <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+                    <li><a href="#Contacto">Inicio</a></li>
+                    <li><a href="#Perfil">Mi perfil</a></li>
+                    <li><a href="#Sensores">Mis sensores</a></li>
                     <li><a href="../html/contacto.html">Contáctanos</a></li>
-                    <li><a href="../html/login.html">Cerrar sesión</a></li>
+                    <li><a href="#CerrarSesion">Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>
 
         <ul id="menuDesplegable">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../">Mi perfil</a></li>
-            <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+            <li><a href="#Contacto">Inicio</a></li>
+            <li><a href="#Perfil">Mi perfil</a></li>
+            <li><a href="#Sensores">Mis sensores</a></li>
             <li><a href="../html/contacto.html">Contáctanos</a></li>
-            <li><a href="../html/login.html">Cerrar sesión</a></li>
+            <li><a href="#CerrarSesion">Cerrar sesión</a></li>
         </ul>
 
 
 
         <div id="iconosBanner">
-            <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+            <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
             <div class="hamburguesa">
                 <div></div>
                 <div></div>
@@ -52,97 +54,90 @@
 </header>
 <script src="../js/menu.js"></script>
 
-<section>
-   <div class="todo">
-      <div class="pagina1">
-       <div class="PackSensores">
-            <div>
-                <h2>Pack de sensores</h2>
-                <div class="espacio"></div>
-                <img class="fotos" src="../img/CajaPackSensores.jpg" alt="Caja pack de sensores"/>
-                <div class="espacio"></div>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi, cumque dolorem esse illo nisi odio quis reprehenderit similique. Alias amet cumque dicta ipsum laudantium nihil optio sit sunt vero.</p>
-               <div class="botonesProductos">
-                   <div class="botonVerMas">
-                       <form action="#espacio">
-                           <button type="submit">Ver más</button>
-                       </form>
-                   </div>
-                   <div class="botonSolicitarPresupuesto">
-                       <form action="../html/contacto.html">
-                           <button type="submit">Solicitar Presupuesto</button>
-                       </form>
 
-                   </div>
-               </div>
-
-            </div>
-       </div>
-    </div>
-
-<div class="espacio" id="espacio"></div>
-
-    <div class="pagina2">
-        <div class="espacio"></div>
-        <div id="contenidopack"><h2>Contenido del Pack</h2></div>
-        <div class="espacio"></div>
-        <div class="Sensor" id="SensorLuz">
-            <h3>Sensor de Luz</h3>
-            <div class="espacio"></div>
-            <img class="fotos" src="../img/foto_sensor_de_luz.jpg" alt="Sensor de luz"/>
-            <div class="espacio"></div>
-            <p>Este sensor muestra los datos que recibe de la luz que detecta a su alrededor,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
+<div >
+    <div class="todo">
+        <div class="nuestroProducto">
+        <h1>Nuestro Producto</h1>
+        <img class="fotos" src="../img/CajaPackSensores.jpg" alt="Caja pack de sensores"/>
+        <p>Nuestro sistema de monitorización almacena los sensores necesarios en una caja de alta resistencia capaz de resistir todas las condiciones. </p>
+        <p2>En la caja podrás encontrar sensores de humedad, temperatura, luminosidad, salinidad y de pH.</p2>
 
         </div>
+
+    <div class="sensores">
+    <h2>Sensor de Luminosidad</h2>
+    <img class="fotos" src="../img/foto_sensor_de_luz.jpg" alt="Sensor de luminosidad"/>
+    <p>Un sensor de luz es un dispositivo con la capacidad
+        de detectar la cantidad de luz presente en su entorno.
+        Cuando la luz contacta con el sensor, genera una pequeña
+        corriente eléctrica. Cuanta más luz haya, mayor será la
+        corriente generada</p>
     </div>
-       <div class="espacio"></div>
-       <div class="Sensor" id="SensorHumedad">
-           <h3>Sensor de Humedad</h3>
-           <div class="espacio"></div>
-           <img class="fotos" src="../img/foto_sensor_de_humedad.jpg"/>
-           <div class="espacio"></div>
-           <p>EsEste sensor muestra los datos que recibe de la humedad que detecta a su alrededor,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-       </div>
 
-<div class="espacio"></div>
+    <div class="sensores">
+    <h2>Sensor de Humedad</h2>
+    <img class="fotos" src="../img/foto_sensor_de_humedad.jpg" alt="Sensor de humedad"/>
+    <p>El sensor de humedad se utiliza para medir la
+        cantidad de humedad o vapor de agua presente en el aire
+        o en un objeto. Los cambios en las medidas se convierten
+        en corrientes que podemos usar para controlar y monitorear
+        la humedad de diversos entornos.</p>
+    </div>
 
-       <div class="Sensor" id="SensorTemperaturaen">
-           <h3>Sensor de Temperatura</h3>
-           <div class="espacio"></div>
-           <img class="fotos" src="../img/foto_sensor_de_temperatura.jpg"/>
-           <div class="espacio"></div>
-           <p>Este sensor muestra los datos que recibe de la temperatura que detecta a su alrededor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-       </div>
+    <div class="sensores">
+    <h2>Sensor de Temperatura</h2>
+    <img class="fotos" src="../img/foto_sensor_de_temperatura.jpg" alt="Sensor de temperatura"/>
+    <p>Un sensor de temperatura es un dispositivo para
+        medir la temperatura de su entorno. Se generan corrientes
+        electricas con los cambios de temperatura que se utilizan
+        para monitorizar.</p>
+    </div>
 
-<div class="espacio"></div>
+    <div class="sensores">
+    <h2>Sensor de pH</h2>
+    <img class="fotos" src="../img/foto_sensor_de_ph.jpg" alt="Sensor de pH"/>
+    <p>Un sensor de pH es un dispositivo utilizado para medir
+        la acidez de un sustancia líquida. Detecta los cambios de
+        en el nivel y lo convierte en una lectura, lo cual nos
+        permite controlar el pH en diferentes entornos.</p>
+    </div>
 
-       <div class="Sensor" id="SensorSalinidad">
-           <h3>Sensor de Salinidad</h3>
-           <div class="espacio"></div>
-           <img class="fotos" src="../img/foto_sensor_de_salinidad.jpeg"/>
-           <div class="espacio"></div>
-           <p>Este sensor muestra los datos que recibe de la temperatura que detecta a su alrededor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-       </div>
+    <div class="sensores">
+    <h2>Sensor de Salinidad</h2>
+    <img class="fotos" src="../img/foto_sensor_de_salinidad.jpeg"/>
+    <p>El sensor de salinidad es un dispositivo utilizado
+        para  medir medir la cantidad de sal disuelta en un
+        líquido. Permitiendo detectar el valor de salinidad
+        basado en las corrientes que genera según cambia.</p>
+    </div>
 
-<div class="espacio"></div>
-
-       <div class="Sensor" id="SensorPH">
-           <h3>Sensor de PH</h3>
-           <div class="espacio"></div>
-           <img class="fotos" src="../img/foto_sensor_de_ph.jpg"/>
-           <div class="espacio"></div>
-           <p>Este sensor muestra los datos que recibe de la temperatura que detecta a su alrededor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor.</p>
-
-       </div>
-
-
-       <form action="../html/contacto.html">
-           <button id="botonContacto" type="submit"> Contáctanos </button>
-       </form>
-
-   </div>
+    <div class="sensores2">
+        <h2>Nuestra Página</h2>
+        <img class="fotoweb" src="../img/pagina_web.jpg">
+        <p>Con nuestra web tienes acceso a todos los datos de los sensores en tu huerto, para que el control y monitorización de este sea lo más práctico posible.</p>
+        <p2>También puedes ver los valores que han detectado los sensores desde que fueron instalados para poder ver con facilidad el desarrollo y lo que necesita en cada momento.</p2>
+        <p>Además podrás controlar varios huertos desde una misma web alternando fácilmente entre gráficas.</p>
+    </div>
 
 
-</section>
+        <div class="sensores">
+            <h2>Tus datos</h2>
+            <img class="fotos" src="../img/fotorandomdatos.jpg"/>
+            <p>Contamos con un sistema de almacenación de datos, donde todos los datos de tus sensores permanecerán almacenados de manera permanente y podrás tener acceso a ellos en cualquier momento.</p>
+        </div>
+
+        <div class="contacto">
+
+            <h2>Contacto</h2>
+            <h3>¿Quieres más información?</h3>
+            <p>No dudes en contactarnos ,estaremos encantados de atenderte</p>
+            <a href="contacto.html"><button id="call-to-action">CONTACTANOS</button></a>
+        </div>
+
+
+    </div>
+
+</div>
 </body>
 </html>
