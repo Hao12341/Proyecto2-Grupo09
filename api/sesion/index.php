@@ -9,14 +9,14 @@ switch ($_SERVER['REQUEST_METHOD']) {
             header('Access-Control-Allow-Origin: *');
             header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE');
             header('Content-Type: application/json; charset=utf-8');
-            echo json_encode($_SESSION ['email']);
+            echo json_encode($_SESSION ['user']);
         }
         break;
     case 'POST':
-        $bbdd_servidor = 'localhost';
-        $bbdd_nombre = 'gti09';
-        $bbdd_user = 'root';
-        $bbdd_password = '';
+        $bbdd_servidor = 'aesccar.upv.edu.es';
+        $bbdd_nombre = 'aesccar_gti09';
+        $bbdd_user = 'aesccar_user';
+        $bbdd_password = 'SQLUser@2023';
 
         try {
             $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre);
