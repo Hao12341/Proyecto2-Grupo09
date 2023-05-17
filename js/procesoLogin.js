@@ -30,7 +30,7 @@ async function login(event) {
                 location.href = "../html/Página Incidencias.html"
                 break
             case "4":
-                location.href = "../html/paginasensores.html"
+                location.href = "../html/paginasensores.php"
                 break
 
             default:
