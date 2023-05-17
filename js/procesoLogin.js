@@ -23,11 +23,11 @@ async function login(event) {
         console.log(typeof data)
         switch (data.rol) {
             case "1":
-                location.href = "../html/DashboardAdmin.html"
+                location.href = "../html/DashboardAdmin.php"
                 break
 
             case "3":
-                location.href = "../html/Página Incidencias.html"
+                location.href = "../html/Página Incidencias.php"
                 break
             case "4":
                 location.href = "../html/paginasensores.php"

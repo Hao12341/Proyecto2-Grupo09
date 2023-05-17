@@ -42,7 +42,7 @@ if(isset($_SESSION['user'])) {
         <div id="contenedorMenuDesktop">
             <ul id="menuDesktop">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../html/perfil.html">Mi perfil</a></li>
+                <li><a href="perfil.php">Mi perfil</a></li>
                 <li><a href="paginasensores.php">Mis sensores</a></li>
                 <li><a href="../html/contacto.html">Contáctanos</a></li>
                 <li><a href="../html/login.html">Cerrar sesión</a></li>
@@ -52,7 +52,7 @@ if(isset($_SESSION['user'])) {
 
     <ul id="menuDesplegable">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../html/perfil.html">Mi perfil</a></li>
+        <li><a href="perfil.php">Mi perfil</a></li>
         <li><a href="paginasensores.php">Mis sensores</a></li>
         <li><a href="../html/contacto.html">Contáctanos</a></li>
         <li><a href="../html/login.html">Cerrar sesión</a></li>
