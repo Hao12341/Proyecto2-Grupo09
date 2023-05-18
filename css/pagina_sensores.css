@@ -1,12 +1,11 @@
-/*aqui empieza el diseñode la tabla*/
 .datosgrafica{
     border-collapse: collapse;
     table-layout: fixed;
     width: 100%;
-    border: 2px dotted black;
-    height: 100%;
+    border: 0.02vw dotted black;
+    height: 100vh;
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: 0.6vh;
 }
 .datosgrafica>th:nth-child(1){
     width: 50%;
@@ -16,29 +15,28 @@
 }
 .datosgrafica tr th{
     text-align: center;
-    border: 1px dotted black;
+    border: 0.01vw dotted black;
     border-collapse: collapse;
-    padding-top: 0.2em;
-    font-size: 80px;
-    padding-bottom: 0.2em;
+    padding-top: 0.2vh;
+    font-size: 8vw;
+    padding-bottom: 0.2vh;
     margin: auto;
 }
 
-
 .datosgrafica tr th p {
-    font-size: 40px;
+    font-size: 4vw;
     padding: 0px;
 }
 .datosgrafica tr th h2 {
-    font-size: 60px;
+    font-size: 6vw;
 }
 .historial{
     border-collapse: collapse;
     table-layout: fixed;
     width: 80%;
-    border: 2px solid black;
+    border: 0.02vw solid black;
     margin: 0 auto;
-    height: 100%;
+    height: 100vh;
     text-align: center;
 }
 .historial>th:nth-child(1){
@@ -53,21 +51,21 @@
 
 .historial tr td{
     text-align: center;
-    border: 1px solid black;
+    border: 0.01vw solid black;
     border-collapse: collapse;
-    padding-top: 1em;
-    font-size: 30px;
-    padding-bottom: 1em;
+    padding-top: 0.1vh;
+    font-size: 3vw;
+    padding-bottom: 0.1vh;
 
 }
 .historial>thead tr th{
     text-align: center;
     background: #f3ebe5;
-    border: 2px solid black;
+    border: 0.02vw solid black;
     border-collapse: collapse;
-    padding-bottom: 1em;
-    padding-top: 1em;
-    font-size: 40px;
+    padding-bottom: 0.1vh;
+    padding-top: 0.1vh;
+    font-size: 4vw;
 }
 .historial>tbody tr:nth-child(odd){
     background-color: lightgreen;
@@ -77,24 +75,24 @@
 }
 tfoot p {
     width: 100%;
-    font-size: 40px;
-    padding: 0em;
+    font-size: 4vw;
+    padding: 0vh;
     background-color: #f3ebe5;
     align-items: center;
 }
 tfoot td button{
-    width: 90px;
-    height: 120px;
+    width: 9vw;
+    height: 12vw;
     position: center;
     background-color: #f3ebe5;
 }
 tfoot td button img{
-    width: 90px;
-    height: 120px;
+    width: 9vw;
+    height: 12vw;
 }
 tfoot{
     background-color: #f3ebe5;
-    border-radius: 15px;
+    border-radius: 1.5vw;
 }
 .tablasal-oculta {
     display: none;
@@ -103,18 +101,17 @@ tfoot{
     display: table;
 }
 
-
-/*aqui termina el diseño de la tabla */
-/* aqui hay diseño de textos e imagenes*/
+/*aqui termina el diseño de la tabla*/
+/*aqui hay diseño de textos e imagenes*/
 
 .bienvenida{
     text-align: center;
-    font-size: 70px;
-    margin-top: 70px;
+    font-size: 7vw;
+    margin-top: 7vh;
 }
 .medidas{
     text-align: center;
-    font-size: 70px;
+    font-size: 7vw;
 }
 .titulotablas{
     display: flex;
@@ -122,51 +119,51 @@ tfoot{
     place-items: center;
 }
 .tabla{
-    font-size: 50px;
+    font-size: 5vw;
     margin: auto;
-    padding: 5px;
+    padding: 0.5vw;
 }
 #imagen{
     width: 100%;
     display: block;
     margin: auto;
-    border: 0px solid black;
-    height: 900px;
+    border: 0vw solid black;
+    height: 90vh;
 
 }
 
 /*aqui esta el diseño de las mistas desplegables */
 #huertos{
-    font-size: 50px;
+    font-size: 5vw;
     display: block;
     margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 4px solid black;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border: 0.04vw solid black;
 }
 
 .boton {
-    font-size: 50px;
+    font-size: 5vw;
     display: block;
     margin: auto;
 }
 #sensores{
-    font-size: 50px;
+    font-size: 5vw;
     display: block;
-    margin-top: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 4px solid black;
+    margin-top: 2.5vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border: 0.04vw solid black;
     position: absolute;
 }
 option{
-    font-size: 30px;
-    margin-right: 2px;
+    font-size: 3vw;
+    margin-right: 2vw;
     text-align: center;
 }
 #tabla{
     padding: 0px;
-    font-size: 50px;
+    font-size: 5vw;
     margin: auto;
 }
 /*aqui acaba el diseño de las listas desplegables */
