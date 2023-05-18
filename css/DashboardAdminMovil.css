@@ -7,7 +7,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 /*Variables con color asignado*/
 :root{
@@ -19,7 +18,7 @@
     --accent-fg-color: #fffffe;
 }
 body {
-    background-image: url("../img/Fondo.jpeg");
+    background-color: white;
     color: var(--main-fg-color);
 }
 html {
@@ -27,4 +26,67 @@ html {
 }
 .bienvenido{
     margin-top: 80px;
+}
+.InicioAdmin{
+    padding: 1rem;
+}
+.titulo{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+button{
+    color: black;
+}
+#Campo{
+    color: black;
+
+}
+label{
+    display: inline-block;
+    margin-bottom: 0rem;
+    padding: 0.5rem;
+    background-color: var(--main-fg-color);
+    border-radius: 5px;
+    color: white;
+}
+.imagen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filtrar{
+    background: #204b36;
+    padding: 5px;
+}
+img{
+    vertical-align: middle;
+
+}
+.anadir{
+    padding: 0.5rem;
+    width: 25px;
+    height: 25px;
+}
+
+.opciones-filtro{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    margin-left: 15px;
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: white;
+    background-color: #65946F;
+    border-color: #204b36;
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #1e7e34;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
 }
