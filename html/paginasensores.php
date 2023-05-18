@@ -73,34 +73,25 @@ if(isset($_SESSION['user'])) {
 <script src="../js/menu.js"></script><br>
 <!--acaba contenido del header-->
 
-<h1 class="bienvenida"> bienvenido usuario</h1>
+<h1 class="bienvenida"> Bienvenido usuario</h1>
 
 <div id="graficas" >
     <h1 class="medidas">MEDIDAS</h1>
-    <select name="huertos" id="huertos" onchange="cambiarImagen()" ondurationchange="cambiarHuerto()">
+    <select name="huertos" id="huertos" onchange="cambiarImagen(); tablagrafica()">
         <option value="h1">huerto 1</option>
         <option value="h2">huerto 2</option>
         <option value="h3">huerto 3</option>
     </select><br>
-    <select name="sensores" id="sensores" onchange="cambiarImagen()">
-        <option value="sal">salinidad</option>
-        <option value="hum">humedad</option>
-        <option value="ph">pH</option>
-        <option value="temp">temperatura</option>
-        <option value="luz">luminosidad</option>
-    </select><br>
+
 </div> <br>
-
-<img id="imagen" src="../img/gr_h1/h1_sal.png" alt="grafica"><br>
-
-<table id="datosgrafica">
+<table class="datosgrafica" id="huerto1">
     <tr>
         <th>
-            <p>humedad</p>
+            <p>Humedad</p>
             <h2>36%</h2>
         </th>
         <th>
-            <p>temperatura</p>
+            <p>Temperatura</p>
             <h2>25ºC</h2>
         </th>
     </tr>
@@ -110,22 +101,97 @@ if(isset($_SESSION['user'])) {
             <h2>6.3</h2>
         </th>
         <th>
-            <p>luminosidad</p>
+            <p>Luminosidad</p>
             <h2>BAJA</h2>
         </th>
     </tr>
     <tr>
         <th>
-            <p>salinidad</p>
+            <p>Salinidad</p>
             <h2>10%</h2>
         </th>
         <th>
-            <p>estado general</p>
-            <h2>OPTIMO</h2>
+            <p>Última actualización</p>
+            <h2>22:00</h2>
         </th>
     </tr>
 </table>
-<div class="titulotablas" >
+<table class="datosgrafica" id="huerto2" style="display: none;">
+    <tr>
+        <th>
+            <p>Humedad</p>
+            <h2>33%</h2>
+        </th>
+        <th>
+            <p>Temperatura</p>
+            <h2>23ºC</h2>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <p>pH</p>
+            <h2>6.5</h2>
+        </th>
+        <th>
+            <p>Luminosidad</p>
+            <h2>ALTA</h2>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <p>Salinidad</p>
+            <h2>15%</h2>
+        </th>
+        <th>
+            <p>Última actualización</p>
+            <h2>22:05</h2>
+        </th>
+    </tr>
+</table>
+<table class="datosgrafica" id="huerto3" style="display:none; ">
+    <tr>
+        <th>
+            <p>Humedad</p>
+            <h2>40%</h2>
+        </th>
+        <th>
+            <p>Temperatura</p>
+            <h2>20ºC</h2>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <p>pH</p>
+            <h2>6.1</h2>
+        </th>
+        <th>
+            <p>Luminosidad</p>
+            <h2>MEDIA</h2>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <p>Salinidad</p>
+            <h2>20%</h2>
+        </th>
+        <th>
+            <p>Última actualización</p>
+            <h2>21:55</h2>
+        </th>
+    </tr>
+</table>
+<select name="sensores" id="sensores" onchange="cambiarImagen()">
+    <option value="sal">salinidad</option>
+    <option value="hum">humedad</option>
+    <option value="ph">pH</option>
+    <option value="temp">temperatura</option>
+    <option value="luz">luminosidad</option>
+</select><br>
+<img id="imagen" src="../img/gr_h1/h1_sal.png" alt="grafica"><br>
+
+<button class="boton" onscroll="clickHandler()"><a href="#titulotablas">MÁS INFORMACIÓN</a></button>
+<br>
+<div class="titulotablas" id="titulotablas">
     <h1 class="tabla">historial de medidas</h1>
     <select id="tabla" onchange="cambiarTabla()" >
         <option value="tablasal">salinidad</option>
@@ -137,7 +203,7 @@ if(isset($_SESSION['user'])) {
 
 <!--aqui empieza la tabla-->
 
-<table id="tablasal">
+<table id="tablasal" class="historial">
     <thead>
     <tr>
         <th>fecha</th>
@@ -147,37 +213,37 @@ if(isset($_SESSION['user'])) {
     </thead>
     <tr>
         <td>2023/04/16</td>
-        <td>08:00</td>
+        <td>22:00</td>
         <td>24.76</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>09:00</td>
+        <td>21:00</td>
         <td>16.62</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>10:00</td>
+        <td>20:00</td>
         <td>13.85</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>11:00</td>
+        <td>19:00</td>
         <td>35.27</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>12:00</td>
+        <td>18:00</td>
         <td>8.57</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>13:00</td>
+        <td>17:00</td>
         <td>29.78</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>14:00</td>
+        <td>16:00</td>
         <td>38.91</td>
     </tr>
     <tr>
@@ -187,41 +253,231 @@ if(isset($_SESSION['user'])) {
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>16:00</td>
+        <td>14:00</td>
         <td>7.23</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>17:00</td>
+        <td>13:00</td>
         <td>2.93</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>18:00</td>
+        <td>12:00</td>
         <td>35.06</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>19:00</td>
+        <td>11:00</td>
         <td>8.38</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>20:00</td>
+        <td>10:00</td>
         <td>31.4</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>21:00</td>
+        <td>09:00</td>
         <td>28.1</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>22:00</td>
+        <td>08:00</td>
         <td>1.21</td>
     </tr>
+    <tfoot >
+    <td></td>
+    <th>
+        <p>1 de 3</p>
+    </th>
+    <td><button id="botonderechasal1"><img src="../img/flecha_derecha.png" onclick="siguientesal()"></button></td>
+    </tfoot>
+</table >
+<table id="tablasal1" class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>sal(g/l)</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/16</td>
+        <td>07:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>06:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>05:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>04:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>03:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>01:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>00:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>23:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>22:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>21:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>20:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>19:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>18:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>17:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>16:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdasal2"><img src="../img/flecha_izquierda.png" onclick="primerasal()"></button></td>
+    <th>
+        <p>2 de 3</p>
+    </th>
+    <td><button id="botonderechasal2"><img src="../img/flecha_derecha.png" onclick="ultimasal()"></button></td>
+    </tfoot>
 </table>
-<table id="tablahumedad" style="display: none;">
+<table id="tablasal2" class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>sal(g/l)</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/15</td>
+        <td>15:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>14:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>13:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>12:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>11:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>10:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>09:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>08:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>07:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>06:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>05:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>04:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>03:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>02:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>01:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdasal3"><img src="../img/flecha_izquierda.png" onclick="segundasal()"></button></td>
+    <th>
+        <p>3 de 3</p>
+    </th>
+    <td></td>
+    </tfoot>
+</table >
+
+<table id="tablahumedad" class="historial" style="display: none;">
     <thead>
     <tr>
         <th>fecha</th>
@@ -231,81 +487,271 @@ if(isset($_SESSION['user'])) {
     </thead>
     <tr>
         <td>2023/04/16</td>
-        <td>08:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>09:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>10:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>11:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>12:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>13:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>14:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>15:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>16:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>17:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>18:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>19:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>20:00</td>
-        <td></td>
+        <td>22:00</td>
+        <td>24.76</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
         <td>21:00</td>
-        <td></td>
+        <td>16.62</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>22:00</td>
-        <td></td>
+        <td>20:00</td>
+        <td>13.85</td>
     </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>19:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>18:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>17:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>16:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>15:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>14:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>13:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>12:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>11:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>10:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>09:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>08:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td></td>
+    <th>
+        <p>1 de 3</p>
+    </th>
+    <td><button id="botonderechahum1"><img src="../img/flecha_derecha.png" onclick="siguientehum()"></button></td>
+    </tfoot>
 </table>
-<table id="tablaluz" style="display: none;">
+<table id="tablahumedad1" class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>humedad</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/16</td>
+        <td>07:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>06:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>05:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>04:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>03:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>01:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>00:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>23:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>22:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>21:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>20:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>19:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>18:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>17:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>16:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdahum2"><img src="../img/flecha_izquierda.png" onclick="primerahum()"></button></td>
+    <th>
+        <p>2 de 3</p>
+    </th>
+    <td><button id="botonderechahum2"><img src="../img/flecha_derecha.png" onclick="ultimahum()"></button></td>
+    </tfoot>
+</table>
+<table id="tablahumedad2" class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>humedad</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/15</td>
+        <td>15:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>14:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>13:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>12:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>11:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>10:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>09:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>08:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>07:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>06:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>05:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>04:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>03:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>02:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>01:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdahum3"><img src="../img/flecha_izquierda.png" onclick="segundahum()"></button></td>
+    <th>
+        <p>3 de 3</p>
+    </th>
+    <td></td>
+    </tfoot>
+</table>
+
+<table id="tablaluz" class="historial" style="display: none;">
     <thead>
     <tr>
         <th>fecha</th>
@@ -315,81 +761,271 @@ if(isset($_SESSION['user'])) {
     </thead>
     <tr>
         <td>2023/04/16</td>
-        <td>08:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>09:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>10:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>11:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>12:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>13:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>14:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>15:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>16:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>17:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>18:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>19:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>20:00</td>
-        <td></td>
+        <td>22:00</td>
+        <td>24.76</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
         <td>21:00</td>
-        <td></td>
+        <td>16.62</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>22:00</td>
-        <td></td>
+        <td>20:00</td>
+        <td>13.85</td>
     </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>19:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>18:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>17:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>16:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>15:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>14:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>13:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>12:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>11:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>10:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>09:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>08:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td></td>
+    <th>
+        <p>1 de 3</p>
+    </th>
+    <td><button id="botonderechaluz"><img src="../img/flecha_derecha.png" onclick="siguienteluz()"></button></td>
+    </tfoot>
 </table>
-<table id="tablapH" style="display: none;">
+<table id="tablaluz1" class="historial" style="display: none;">
+<thead>
+<tr>
+    <th>fecha</th>
+    <th>hora</th>
+    <th>luminosidad</th>
+</tr>
+</thead>
+    <tr>
+        <td>2023/04/16</td>
+        <td>07:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>06:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>05:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>04:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>03:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>01:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>00:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>23:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>22:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>21:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>20:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>19:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>18:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>17:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>16:00</td>
+        <td>1.21</td>
+    </tr>
+<tfoot>
+<td><button id="botonizquierdaluz1"><img src="../img/flecha_izquierda.png" onclick="primeraluz()"></button> </td>
+<th>
+    <p>2 de 3</p>
+</th>
+<td><button id="botonderechaluz1"><img src="../img/flecha_derecha.png" onclick="ultimaluz()"></button></td>
+</tfoot>
+</table>
+<table id="tablaluz2" class="historial" style="display: none;">
+<thead>
+<tr>
+    <th>fecha</th>
+    <th>hora</th>
+    <th>luminosidad</th>
+</tr>
+</thead>
+    <tr>
+        <td>2023/04/15</td>
+        <td>15:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>14:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>13:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>12:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>11:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>10:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>09:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>08:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>07:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>06:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>05:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>04:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>03:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>02:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>01:00</td>
+        <td>1.21</td>
+    </tr>
+<tfoot>
+<td><button id="botonizquierdaluz2"><img src="../img/flecha_izquierda.png" onclick="segundaluz()"></button></td>
+<th>
+    <p>3 de 3</p>
+</th>
+<td></td>
+</tfoot>
+</table>
+
+<table id="tablapH" class="historial" style="display: none;">
     <thead>
     <tr>
         <th>fecha</th>
@@ -399,81 +1035,271 @@ if(isset($_SESSION['user'])) {
     </thead>
     <tr>
         <td>2023/04/16</td>
-        <td>08:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>09:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>10:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>11:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>12:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>13:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>14:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>15:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>16:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>17:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>18:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>19:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>20:00</td>
-        <td></td>
+        <td>22:00</td>
+        <td>24.76</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
         <td>21:00</td>
-        <td></td>
+        <td>16.62</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>22:00</td>
-        <td></td>
+        <td>20:00</td>
+        <td>13.85</td>
     </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>19:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>18:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>17:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>16:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>15:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>14:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>13:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>12:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>11:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>10:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>09:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>08:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td> </td>
+    <th>
+        <p>1 de 3</p>
+    </th>
+    <td><button id="botonderechaph"><img src="../img/flecha_derecha.png" onclick="siguienteph()"></button></td>
+    </tfoot>
 </table>
-<table id="tablatemp" style="display: none;">
+<table id="tablapH1" class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>pH</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/16</td>
+        <td>07:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>06:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>05:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>04:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>03:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>01:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>00:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>23:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>22:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>21:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>20:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>19:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>18:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>17:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>16:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdaph1"><img src="../img/flecha_izquierda.png" onclick="primeraph()"></button> </td>
+    <th>
+        <p>2 de 3</p>
+    </th>
+    <td><button id="botonderechaph1"><img src="../img/flecha_derecha.png" onclick="ultimaph()"></button></td>
+    </tfoot>
+</table>
+<table id="tablapH2" class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>pH</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/15</td>
+        <td>15:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>14:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>13:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>12:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>11:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>10:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>09:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>08:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>07:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>06:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>05:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>04:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>03:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>02:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>01:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdaph2"><img src="../img/flecha_izquierda.png" onclick="segundaph()"></button> </td>
+    <th>
+        <p>3 de 3</p>
+    </th>
+    <td></td>
+    </tfoot>
+</table>
+
+<table id="tablatemp" class="historial" style="display: none;">
     <thead>
     <tr>
         <th>fecha</th>
@@ -483,79 +1309,268 @@ if(isset($_SESSION['user'])) {
     </thead>
     <tr>
         <td>2023/04/16</td>
-        <td>08:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>09:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>10:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>11:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>12:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>13:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>14:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>15:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>16:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>17:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>18:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>19:00</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>2023/04/16</td>
-        <td>20:00</td>
-        <td></td>
+        <td>22:00</td>
+        <td>24.76</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
         <td>21:00</td>
-        <td></td>
+        <td>16.62</td>
     </tr>
     <tr>
         <td>2023/04/16</td>
-        <td>22:00</td>
-        <td></td>
+        <td>20:00</td>
+        <td>13.85</td>
     </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>19:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>18:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>17:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>16:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>15:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>14:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>13:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>12:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>11:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>10:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>09:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>08:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td> </td>
+    <th>
+        <p>1 de 3</p>
+    </th>
+    <td><button id="botonderechatemp"><img src="../img/flecha_derecha.png" onclick="siguientetemp()"></button></td>
+    </tfoot>
+</table>
+<table id="tablatemp1"  class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>temperatura</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/16</td>
+        <td>07:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>06:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>05:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>04:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>03:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>01:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/16</td>
+        <td>00:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>23:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>22:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>21:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>20:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>19:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>18:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>17:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>16:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdatemp1"><img src="../img/flecha_izquierda.png" onclick="primeratemp()"></button> </td>
+    <th>
+        <p>2 de 3</p>
+    </th>
+    <td><button id="botonderechatemp1"><img src="../img/flecha_derecha.png" onclick="ultimatemp()"></button></td>
+    </tfoot>
+</table>
+<table id="tablatemp2" class="historial" style="display: none;">
+    <thead>
+    <tr>
+        <th>fecha</th>
+        <th>hora</th>
+        <th>temperatura</th>
+    </tr>
+    </thead>
+    <tr>
+        <td>2023/04/15</td>
+        <td>15:00</td>
+        <td>24.76</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>14:00</td>
+        <td>16.62</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>13:00</td>
+        <td>13.85</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>12:00</td>
+        <td>35.27</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>11:00</td>
+        <td>8.57</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>10:00</td>
+        <td>29.78</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>09:00</td>
+        <td>38.91</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>08:00</td>
+        <td>7.6</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>07:00</td>
+        <td>7.23</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>06:00</td>
+        <td>2.93</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>05:00</td>
+        <td>35.06</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>04:00</td>
+        <td>8.38</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>03:00</td>
+        <td>31.4</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>02:00</td>
+        <td>28.1</td>
+    </tr>
+    <tr>
+        <td>2023/04/15</td>
+        <td>01:00</td>
+        <td>1.21</td>
+    </tr>
+    <tfoot>
+    <td><button id="botonizquierdatemp2"><img src="../img/flecha_izquierda.png" onclick="segundatemp()"></button> </td>
+    <th>
+        <p>3 de 3</p>
+    </th>
+    <td></td>
+    </tfoot>
 </table>
 
 <!--aqui acaba la tabla-->
