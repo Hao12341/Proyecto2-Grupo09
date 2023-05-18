@@ -56,7 +56,7 @@ if(isset($_SESSION['user'])) {
         <!-- Contenedor de menu hamburguesa en vista movil -->
         <ul id="menuDesplegable">
             <li><a href="../html/Página%20Incidencias.html">Avisos</a></li>
-            <li><a onclick="logout()">Cerrar Sesión</a></li>
+            <li><a onclick="logout()"  href="#">Cerrar Sesión</a></li>
         </ul>
         <!--FIN Contenedor de menu hamburguesa en vista movil -->
 

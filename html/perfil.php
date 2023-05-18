@@ -44,7 +44,7 @@ if(isset($_SESSION['user'])) {
                         <li><a href="perfil.php">Mi perfil</a></li>
                         <li><a href="paginasensores.php">Mis sensores</a></li>
                         <li><a href="../html/contacto.html">Contáctanos</a></li>
-                        <li><a onclick="logout()">Cerrar sesión</a></li>
+                        <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>

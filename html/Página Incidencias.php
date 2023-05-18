@@ -215,6 +215,7 @@ if(isset($_SESSION['user'])) {
   </div>
 
   </section>
+<script src="../js/cerrarSesion.js"></script>
 
 </body>
 
