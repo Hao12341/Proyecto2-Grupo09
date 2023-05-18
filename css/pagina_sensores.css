@@ -1,39 +1,38 @@
 /*aqui empieza el diseñode la tabla*/
-#datosgrafica{
+.datosgrafica{
     border-collapse: collapse;
     table-layout: fixed;
-    width: 80%;
-    border: 2px solid black;
-    margin: 0 auto;
+    width: 100%;
+    border: 2px dotted black;
     height: 100%;
     text-align: center;
-}
-#datosgrafica>th:nth-child(1){
-    width: 50%;
-}
-#datosgrafica>th:nth-child(2){
-    width: 50%;
-}
-#datosgrafica tr td{
-    text-align: center;
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding-top: 1em;
-    font-size: 30px;
     padding-bottom: 1em;
+}
+.datosgrafica>th:nth-child(1){
+    width: 50%;
+}
+.datosgrafica>th:nth-child(2){
+    width: 50%;
+}
+.datosgrafica tr th{
+    text-align: center;
+    border: 1px dotted black;
+    border-collapse: collapse;
+    padding-top: 0.2em;
+    font-size: 80px;
+    padding-bottom: 0.2em;
+    margin: auto;
 }
 
-#datosgrafica>thead tr th{
-    text-align: center;
-    background: #00ff00;
-    border: 2px solid black;
-    border-collapse: collapse;
-    padding-bottom: 1em;
-    padding-top: 1em;
+
+.datosgrafica tr th p {
     font-size: 40px;
+    padding: 0px;
 }
-
-#tablasal{
+.datosgrafica tr th h2 {
+    font-size: 60px;
+}
+.historial{
     border-collapse: collapse;
     table-layout: fixed;
     width: 80%;
@@ -42,18 +41,17 @@
     height: 100%;
     text-align: center;
 }
-#tablasal>th:nth-child(1){
+.historial>th:nth-child(1){
     width: 20%;
 }
-#tablasal>th:nth-child(2){
+.historial>th:nth-child(2){
     width: 10%;
 }
-#tablasal>th:nth-child(3){
+.historial>th:nth-child(3){
     width: 15%;
 }
 
-
-#tablasal tr td{
+.historial tr td{
     text-align: center;
     border: 1px solid black;
     border-collapse: collapse;
@@ -62,28 +60,49 @@
     padding-bottom: 1em;
 
 }
-#tablasal>thead tr th{
+.historial>thead tr th{
     text-align: center;
-    background: #00ff00;
+    background: #f3ebe5;
     border: 2px solid black;
     border-collapse: collapse;
     padding-bottom: 1em;
     padding-top: 1em;
     font-size: 40px;
 }
-#tablasal>tbody tr:nth-child(odd){
+.historial>tbody tr:nth-child(odd){
     background-color: lightgreen;
 }
-#tablasal>tbody tr:nth-child(even){
+.historial>tbody tr:nth-child(even){
     background-color: #61c561;
 }
-tfoot th {
+tfoot p {
     width: 100%;
     font-size: 40px;
     padding: 0em;
-    background-color: #a7ff99;
+    background-color: #f3ebe5;
     align-items: center;
 }
+tfoot td button{
+    width: 90px;
+    height: 120px;
+    position: center;
+    background-color: #f3ebe5;
+}
+tfoot td button img{
+    width: 90px;
+    height: 120px;
+}
+tfoot{
+    background-color: #f3ebe5;
+    border-radius: 15px;
+}
+.tablasal-oculta {
+    display: none;
+}
+.tablasal-activa{
+    display: table;
+}
+
 
 /*aqui termina el diseño de la tabla */
 /* aqui hay diseño de textos e imagenes*/
@@ -101,21 +120,19 @@ tfoot th {
     display: flex;
     align-items: center;
     place-items: center;
-
-
-
 }
 .tabla{
-    text-align: center;
     font-size: 50px;
     margin: auto;
+    padding: 5px;
 }
-
 #imagen{
-    width: 80%;
+    width: 100%;
     display: block;
     margin: auto;
-    border: 3px solid black;
+    border: 0px solid black;
+    height: 900px;
+
 }
 
 /*aqui esta el diseño de las mistas desplegables */
@@ -128,13 +145,19 @@ tfoot th {
     border: 4px solid black;
 }
 
-#sensores{
+.boton {
     font-size: 50px;
     display: block;
     margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+}
+#sensores{
+    font-size: 50px;
+    display: block;
+    margin-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 4px solid black;
+    position: absolute;
 }
 option{
     font-size: 30px;
@@ -142,8 +165,8 @@ option{
     text-align: center;
 }
 #tabla{
-    padding: 5px;
-    font-size: 16px;
+    padding: 0px;
+    font-size: 50px;
     margin: auto;
 }
 /*aqui acaba el diseño de las listas desplegables */
