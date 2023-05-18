@@ -37,6 +37,7 @@ if(isset($_SESSION['user'])) {
 
 
 </head>
+
 <body>
 
 <header class="Encabezado" role="banner">
@@ -62,7 +63,7 @@ if(isset($_SESSION['user'])) {
       <li><a href="#Perfil">Mi perfil</a></li>
       <li><a href="#Sensores">Mis sensores</a></li>
       <li><a href="../html/contacto.html">Contáctanos</a></li>
-      <li><a href="#CerrarSesion">Cerrar sesión</a></li>
+      <li><a onclick="logout()">Cerrar sesión</a></li>
     </ul>
 
 
