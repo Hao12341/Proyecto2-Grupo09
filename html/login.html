@@ -24,21 +24,24 @@
     <section>
         <div class="Caja-Inicio">
             <div class="formulario">
-                <form action="perfil.html">
+                <form id="form">
                     <h2>Inicia sesión</h2>
                     <div class="inputs">
                         <h3>Email</h3>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                     </div>
                     <div class="inputs">
                         <h3>Contraseña</h3>
-                        <input type="password" required>
+                        <input name="password" type="password" required>
                     </div>
                     <div class="recordarContraseña">
                         <a href="#" id="olvido-contraseña">He olvidado mi contraseña</a>
                     </div>
                     <div class="botonInicioSesion">
                             <button type="submit">Iniciar sesión</button>
+                    </div>
+                    <div>
+                        <p id="textoError"></p>
                     </div>
 
                 </form>
@@ -72,6 +75,7 @@
     </section>
 
     <script src="../js/login.js"></script>
+    <script src="../js/procesoLogin.js"></script>
 
 
 </body>

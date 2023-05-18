@@ -40,8 +40,8 @@ h1 {
 .perfil {
     display: flex;
     flex-direction: column;
-    height: 680px;
-    background-color: rgba(212, 212, 212, 0.9);
+    height: 700px;
+    background-color: rgba(215, 215, 215, 0.9);
     border: 2px solid rgba(212, 212, 212, 0.9);
     border-radius: 20px;
     width: 500px;
@@ -62,10 +62,6 @@ h1 {
     margin-bottom: 15px;
 }
 
-.perfil-img:hover {
-    filter: brightness(0.5);
-    cursor: pointer;
-}
 
 .perfil-info {
     display: flex;
@@ -123,8 +119,8 @@ table td:nth-child(2) {
     .perfil {
         display: flex;
         flex-direction: column;
-        height: 600px;
-        background-color: rgba(212, 212, 212, 0.9);
+        height: 670px;
+        background-color: rgba(215, 215, 215, 0.9);
         border: 2px solid rgba(212, 212, 212, 0.9);
         border-radius: 20px;
         width: 300px;
@@ -135,20 +131,43 @@ table td:nth-child(2) {
 
     .perfil-img {
         display: flex;
+        flex-direction: column;
     }
+
+    .custom-file-button {
+        background-color: #04291C;
+        color: white;
+        padding: 7px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 12px;
+        margin-bottom: 10px;
+
+      }
+    
+      /* Estilos para ocultar el botón de archivo predeterminado */
+      .file-input-wrapper {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+      }
+    
+      .file-input-wrapper input[type="file"] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
 
     .perfil img {
         border-radius: 20%;
         margin-right: 20px;
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         margin-bottom: 10px;
         margin-top: 5px;
-    }
-
-    .perfil-img:hover {
-        filter: brightness(0.5);
-        cursor: pointer;
     }
 
 
@@ -161,7 +180,7 @@ table td:nth-child(2) {
 
 
     .perfil dd {
-        width: 250px;
+        width: 290px;
         border: 2px solid white;
         background-color: white;
         border-radius: 10px;
@@ -183,4 +202,44 @@ table td:nth-child(2) {
     table td:nth-child(2) {
         padding: 5px;
     }
+
+    button {
+        background-color: #04291C;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 12px;
+        cursor: pointer;
+        display: block;
+    }
+
+    button:hover {
+        background-color: #65946F;
+    }
+
+    .huertos {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .boton {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .texto {
+        display: flex;
+        width: 70%;
+        align-self: end;
+    }
+
+
+    #myFileInput{
+        z-index: 0;
+    }
+
 }
