@@ -1,9 +1,0 @@
-
-
-
-
-
-            NOMBRE EN AESCCAR.UPV.EDU.ES
-
-            user: aesccar_user
-            password: SQLUser@2023

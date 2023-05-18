@@ -52,19 +52,3 @@ function cambiarImagen(){
         image.src="../img/gr_h1/h3_ph.png"
     }
 }
-
-const boton = document.querySelectorAll(".boton");
-
-for (const boton of boton){
-    boton.addEventListener("click".clickHandler);
-}
-
-function clickHandler (e){
-    e.preventDefault();
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop;
-    scroll({
-        top: offsetTop,
-        behavior: "smooth"
-    })
-}
