@@ -53,7 +53,6 @@ if(isset($_SESSION['user'])) {
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="perfil.php">Mi perfil</a></li>
                 <li><a href="paginasensores.php">Mis sensores</a></li>
-                <li><a href="../html/contacto.html">Contáctanos</a></li>
                 <li><a onclick="logout()">Cerrar sesión</a></li>
             </ul>
 
@@ -98,7 +97,7 @@ if(isset($_SESSION['user'])) {
                         </div>
                         <div>
                             <dt>Teléfono:</dt>
-                            <dd>555-555-5555</dd>
+                            <dd>555 555 5555</dd>
                         </div>
                         <div>
                             <dt>Mis huertos:</dt>
