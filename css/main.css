@@ -34,7 +34,7 @@
 
 #sublogo{
     align-self: center; 
-    padding: 0em 6em 3em 6em;
+    padding: 0em 6em 2rem 6em;
     clear: both;
     width: auto;
     color: white;
@@ -44,7 +44,7 @@
     font-size: 0.9em;
 }
 #call-to-action{
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     background-color: black;
     color: white;
     border: none;
@@ -75,37 +75,19 @@
 }
 .texto{
     margin-bottom: 0.9rem;
-    padding: 1rem 4rem 0rem 4rem;
+    padding: 1rem 2rem 1rem 2rem;
     color: black;
     font-size: 1rem;
-    text-align: center;
+    text-align: justify;
 }
 #Foto_Producto{
     display: flex;
     margin: auto;
     height: 50vh;
-    width: 90vw;
+    width: 100vw;
     clear: both;
 }
-#CajaExplicacion {
-    display: flex;
-    width: 90vw; /* ancho fijo */
-    height: 10.2rem;
-    margin: auto; /* centrar horizontalmente */
-}
-#Bto{
-    margin: auto;
-}
-#Boton_Explicacion{
-    font-size: 1rem;
-    background-color: black;
-    color: white;
-    border: none;
-    font-weight: bolder;
-    border-radius: 8px;
-    padding: 0.8rem 1.5rem;
-    margin-top: 17px;
-}
+
 #InfoEmpresa{
     margin-top: 88px;
     border: none;
@@ -114,7 +96,6 @@
 }
 #InfoEmpresa > p {
     text-align: center;
-
 }
 #ContactoPie{
     margin-top: 1rem;

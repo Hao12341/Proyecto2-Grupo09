@@ -1,3 +1,20 @@
+<?php
+/* Comprobar que hay una sesión creada y que contiene un campo 'user' */
+session_start();
+
+if(isset($_SESSION['user'])) {
+    // si no existe redirigir al login
+    $json = json_encode($_SESSION ['user']);
+    $data = json_decode($json,true);
+    if($data['idRol'] != 4){
+        header('Location: ../');
+    }
+}else{
+    header('Location: ../');
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,20 +41,20 @@
                 <div id="contenedorMenuDesktop">
                     <ul id="menuDesktop">
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../html/perfil.html">Mi perfil</a></li>
-                        <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+                        <li><a href="perfil.php">Mi perfil</a></li>
+                        <li><a href="paginasensores.php">Mis sensores</a></li>
                         <li><a href="../html/contacto.html">Contáctanos</a></li>
-                        <li><a href="../html/login.html">Cerrar sesión</a></li>
+                        <li><a onclick="logout()">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>
 
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../html/perfil.html">Mi perfil</a></li>
-                <li><a href="../html/paginasensores.html">Mis sensores</a></li>
+                <li><a href="perfil.php">Mi perfil</a></li>
+                <li><a href="paginasensores.php">Mis sensores</a></li>
                 <li><a href="../html/contacto.html">Contáctanos</a></li>
-                <li><a href="../html/login.html">Cerrar sesión</a></li>
+                <li><a onclick="logout()">Cerrar sesión</a></li>
             </ul>
 
 
@@ -63,8 +80,12 @@
             </div>
             <div class="perfil">
                 <div class="perfil-img">
-                    <img src="../img/imagen-perfil.jpeg" alt="Foto de perfil">
-                </div>
+                    <img id="img-perfil" src="../img/imagen-perfil.jpeg" alt="Foto de perfil">
+                    <div class="file-input-wrapper">
+                      <button class="custom-file-button" onclick="document.getElementById('myFileInput').click()">Editar imagen</button>
+                      <input type="file" id="myFileInput" class="custom-file-input">
+                    </div>
+                  </div>
                 <div class="perfil-info">
                     <dl>
                         <div>
@@ -82,28 +103,28 @@
                         <div>
                             <dt>Mis huertos:</dt>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br> 
+                                <div class="texto">Huerto 1: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
-                                 <div class="boton">
-                                    <a href="paginasensores.html"><button type="button">Huerto</button></a>
+                                <div class="boton">
+                                    <a href="paginasensores.php"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
                         <div>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br> 
+                                <div class="texto">Huerto 2: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
-                                 <div class="boton">
-                                    <a href="paginasensores.html"><button type="button">Huerto</button></a>
+                                <div class="boton">
+                                    <a href="paginasensores.php"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
-                        <div >
+                        <div>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br> 
+                                <div class="texto">Huerto 3: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
-                                 <div class="boton">
-                                    <a href="paginasensores.html"><button type="button">Huerto</button></a>
+                                <div class="boton">
+                                    <a href="paginasensores.php"><button type="button">Huerto</button></a>
                                 </div>
                             </dd>
                         </div>
@@ -113,6 +134,9 @@
             </div>
         </div>
     </div>
+    <script src="../js/perfil.js"></script>
+    <script src="../js/cerrarSesion.js"></script>
+
 </body>
 </div>
 
