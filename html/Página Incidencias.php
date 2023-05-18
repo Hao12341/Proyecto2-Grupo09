@@ -52,7 +52,7 @@ if(isset($_SESSION['user'])) {
           <li><a href="#Perfil">Mi perfil</a></li>
           <li><a href="#Sensores">Mis sensores</a></li>
           <li><a href="../html/contacto.html">Contáctanos</a></li>
-          <li><a onclick="logout()">Cerrar sesión</a></li>
+          <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>
