@@ -112,7 +112,7 @@ if(isset($_SESSION['user'])) {
                         </div>
                         <div>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br>
+                                <div class="texto">Huerto 2: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
                                 <div class="boton">
                                     <a href="paginasensores.php"><button type="button">Huerto</button></a>
@@ -121,7 +121,7 @@ if(isset($_SESSION['user'])) {
                         </div>
                         <div>
                             <dd class="huertos">
-                                <div class="texto">Huerto 1: <br>
+                                <div class="texto">Huerto 3: <br>
                                     Dirección: CalleFalsa 123, Springfield</div>
                                 <div class="boton">
                                     <a href="paginasensores.php"><button type="button">Huerto</button></a>
