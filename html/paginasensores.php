@@ -54,8 +54,7 @@ if(isset($_SESSION['user'])) {
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="perfil.php">Mi perfil</a></li>
         <li><a href="paginasensores.php">Mis sensores</a></li>
-        <li><a href="../html/contacto.html">Contáctanos</a></li>
-        <li><a href="../html/login.html">Cerrar sesión</a></li>
+        <li><a href="#" onclick="logout()">Cerrar sesión</a></li>
     </ul>
 
 
@@ -1572,7 +1571,9 @@ if(isset($_SESSION['user'])) {
     <td></td>
     </tfoot>
 </table>
+<script src="elegirgrafica.js"></script>
+<script src="../js/cerrarSesion.js"></script>
 
 <!--aqui acaba la tabla-->
-</body><script src="elegirgrafica.js"></script>
+</body>
 </html>
