@@ -41,8 +41,9 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`usuarios` (
   `Dirección` VARCHAR(75) NOT NULL,
   `UserName` VARCHAR(75) NOT NULL,
   `Teléfono` INT(9) NOT NULL,
+  `DNI` VARCHAR(9) NULL,
   PRIMARY KEY (`IdUsuario`, `Rol`),
-  INDEX `Rol` (`Rol` ASC) ,
+  INDEX `Rol` (`Rol` ASC),
   CONSTRAINT `usuarios_ibfk_1`
     FOREIGN KEY (`Rol`)
     REFERENCES `aesccar_gti09`.`roles` (`IdRol`)
@@ -119,8 +120,8 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`sensores` (
   `Estado` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`IdSensor`, `NumSonda`, `Unidades`),
   UNIQUE INDEX `TipoSensor` (`TipoSensor` ASC),
-  INDEX `NumSonda` (`NumSonda` ASC) ,
-  INDEX `Unidades` (`Unidades` ASC) ,
+  INDEX `NumSonda` (`NumSonda` ASC),
+  INDEX `Unidades` (`Unidades` ASC),
   CONSTRAINT `sensores_ibfk_1`
     FOREIGN KEY (`NumSonda`)
     REFERENCES `aesccar_gti09`.`sondas` (`IdSonda`),
@@ -235,6 +236,21 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`Mediciones` (
     REFERENCES `aesccar_gti09`.`sensores` (`IdSensor` , `NumSonda` , `Unidades`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `aesccar_gti09`.`Solicitudes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`Solicitudes` (
+  `idSolicitudes` INT NOT NULL AUTO_INCREMENT,
+  `NombreApellidos` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Telefono` INT NULL,
+  `Consulta` VARCHAR(250) NOT NULL,
+  `Estado` TINYINT NULL,
+  PRIMARY KEY (`idSolicitudes`),
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC))
 ENGINE = InnoDB;
 
 
