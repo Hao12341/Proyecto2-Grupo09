@@ -43,7 +43,7 @@ if(isset($_SESSION['user'])) {
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="perfil.php">Mi perfil</a></li>
                         <li><a href="paginasensores.php">Mis sensores</a></li>
-                        <li><a href="../html/contacto.html">Contáctanos</a></li>
+                        <li><a href="o.html">Contáctanos</a></li>
                         <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
@@ -59,8 +59,8 @@ if(isset($_SESSION['user'])) {
 
 
             <div id="iconosBanner">
-                <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
-                        alt="Perfil Log In"></a>
+                <a id="Login" href="tml"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                                              alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
                     <div></div>
