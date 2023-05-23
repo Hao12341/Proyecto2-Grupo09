@@ -46,8 +46,8 @@ if(isset($_SESSION['user'])) {
             <div id="separador"></div>
             <div id="contenedorMenuDesktop">
                 <ul id="menuDesktop">
-                    <li><a href="../html/Página%20Incidencias.html">Avisos</a></li>
-                    <li><a href="../html/login.html">Cerrar Sesión</a></li>
+                    <li><a href="/Página%20Incidencias.html">Avisos</a></li>
+                    <li><a href="tml">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>
@@ -55,14 +55,14 @@ if(isset($_SESSION['user'])) {
 
         <!-- Contenedor de menu hamburguesa en vista movil -->
         <ul id="menuDesplegable">
-            <li><a href="../html/Página%20Incidencias.html">Avisos</a></li>
+            <li><a href="/Página%20Incidencias.html">Avisos</a></li>
             <li><a onclick="logout()"  href="#">Cerrar Sesión</a></li>
         </ul>
         <!--FIN Contenedor de menu hamburguesa en vista movil -->
 
         <!-- Contenedor de iconos del BANNER -->
         <div id="iconosBanner">
-            <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+            <a id="Login" href="tml"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
             <div class="hamburguesa">
                 <div></div>
                 <div></div>
