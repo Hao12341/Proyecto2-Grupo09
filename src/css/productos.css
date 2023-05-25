@@ -30,7 +30,7 @@ html{
     width: 100vw;
 }
 body{
-    background-image: url("../img/FondoInicioSesion.jpeg");
+    background-image: url("src/img/FondoInicioSesion.jpeg");
     background-position: top right;
     background-size: cover;
     background-blend-mode: normal;
@@ -187,7 +187,7 @@ form{
 
     .pagina1{
         min-height: 100vh;
-        background-image: url(../img/FondoInicioSesion.jpeg);
+        background-image: url(src/img/FondoInicioSesion.jpeg);
         background-position: center;
         background-size: cover;
     }
