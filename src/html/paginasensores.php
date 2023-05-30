@@ -22,7 +22,7 @@ if(isset($_SESSION['user'])) {
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/pagina_sensores.css">
     <title>pagina sensores</title>
-    <script src="js/Chart.bundle.js"></script>
+    <script src="../js/Chart.bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../js/cambiartabla.js"></script>
     <script src="../js/elegirgrafica.js"></script>
@@ -44,8 +44,8 @@ if(isset($_SESSION['user'])) {
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="perfil.php">Mi perfil</a></li>
                 <li><a href="paginasensores.php">Mis sensores</a></li>
-                <li><a href="../html/contacto.html">Contáctanos</a></li>
-                <li><a href="../html/login.html">Cerrar sesión</a></li>
+                <li><a href="o.html">Contáctanos</a></li>
+                <li><a href="tml">Cerrar sesión</a></li>
             </ul>
         </div>
     </div>
@@ -54,14 +54,13 @@ if(isset($_SESSION['user'])) {
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="perfil.php">Mi perfil</a></li>
         <li><a href="paginasensores.php">Mis sensores</a></li>
-        <li><a href="../html/contacto.html">Contáctanos</a></li>
-        <li><a href="../html/login.html">Cerrar sesión</a></li>
+        <li><a href="#" onclick="logout()">Cerrar sesión</a></li>
     </ul>
 
 
 
     <div id="iconosBanner">
-        <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+        <a id="Login" href="tml"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
         <div class="hamburguesa">
             <div></div>
             <div></div>
@@ -1572,7 +1571,9 @@ if(isset($_SESSION['user'])) {
     <td></td>
     </tfoot>
 </table>
+<script src="../js/elegirgrafica.js"></script>
+<script src="../js/cerrarSesion.js"></script>
 
 <!--aqui acaba la tabla-->
-</body><script src="elegirgrafica.js"></script>
+</body>
 </html>

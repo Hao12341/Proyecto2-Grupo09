@@ -22,8 +22,8 @@ if(isset($_SESSION['user'])) {
 <head>
   <meta charset="UTF-8">
   <title>Incidencias</title>
-<link rel="stylesheet" href="Pagina%20Incidencias.css">
-  <script src="Página%20Incidencias.js"></script>
+<link rel="stylesheet" href="../css/Pagina%20Incidencias.css">
+  <script src="../js/Página%20Incidencias.js"></script>
 
 
   <link rel="stylesheet" type="text/css" href="../css/DashboardAdminMovil.css">
@@ -51,22 +51,22 @@ if(isset($_SESSION['user'])) {
           <li><a href="#Contacto">Inicio</a></li>
           <li><a href="#Perfil">Mi perfil</a></li>
           <li><a href="#Sensores">Mis sensores</a></li>
-          <li><a href="../html/contacto.html">Contáctanos</a></li>
-          <li><a onclick="logout()">Cerrar sesión</a></li>
+          <li><a href="o.html">Contáctanos</a></li>
+          <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
         </ul>
       </div>
     </div>
 
     <ul id="menuDesplegable">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="Página%20Incidencias.php">Página Incidencias</a></li>
+        <li><a href="Página Incidencias.php">Página Incidencias</a></li>
         <li><a onclick="logout()">Cerrar sesión</a></li>
     </ul>
 
 
 
     <div id="iconosBanner">
-      <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+      <a id="Login" href="login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
       <div class="hamburguesa">
         <div></div>
         <div></div>
@@ -215,6 +215,7 @@ if(isset($_SESSION['user'])) {
   </div>
 
   </section>
+<script src="../js/cerrarSesion.js"></script>
 
 </body>
 
