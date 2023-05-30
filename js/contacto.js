@@ -30,3 +30,5 @@ function contarCaracteres(textarea) {
     document.getElementById("contador").innerText = textarea.value.length
 }
 
+
+
