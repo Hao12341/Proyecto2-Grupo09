@@ -41,9 +41,9 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`usuarios` (
   `Dirección` VARCHAR(75) NOT NULL,
   `UserName` VARCHAR(75) NOT NULL,
   `Teléfono` INT(9) NOT NULL,
-  `DNI` VARCHAR(9) NULL,
+  `DNI` VARCHAR(9) NULL DEFAULT NULL,
   PRIMARY KEY (`IdUsuario`, `Rol`),
-  INDEX `Rol` (`Rol` ASC),
+  INDEX `Rol` (`Rol` ASC) ,
   CONSTRAINT `usuarios_ibfk_1`
     FOREIGN KEY (`Rol`)
     REFERENCES `aesccar_gti09`.`roles` (`IdRol`)
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`huertos` (
   `IdHuerto` INT(11) NOT NULL AUTO_INCREMENT,
   `UsuarioPropietario` INT(11) NOT NULL,
   `Localización` VARCHAR(45) NOT NULL,
-  `NombreHuerto` VARCHAR(45) NULL,
+  `NombreHuerto` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`IdHuerto`, `UsuarioPropietario`),
   INDEX `UsuarioPropietario` (`UsuarioPropietario` ASC),
   CONSTRAINT `huertos_ibfk_1`
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`sondas` (
   `NumHuerto` INT(11) NOT NULL,
   `Localización` VARCHAR(75) NOT NULL,
   PRIMARY KEY (`IdSonda`, `NumHuerto`),
-  INDEX `NumHuerto` (`NumHuerto` ASC),
+  INDEX `NumHuerto` (`NumHuerto` ASC) ,
   CONSTRAINT `sondas_ibfk_1`
     FOREIGN KEY (`NumHuerto`)
     REFERENCES `aesccar_gti09`.`huertos` (`IdHuerto`))
@@ -119,9 +119,8 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`sensores` (
   `Unidades` INT(11) NOT NULL,
   `Estado` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`IdSensor`, `NumSonda`, `Unidades`),
-  UNIQUE INDEX `TipoSensor` (`TipoSensor` ASC),
-  INDEX `NumSonda` (`NumSonda` ASC),
-  INDEX `Unidades` (`Unidades` ASC),
+  INDEX `NumSonda` (`NumSonda` ASC) ,
+  INDEX `Unidades` (`Unidades` ASC) ,
   CONSTRAINT `sensores_ibfk_1`
     FOREIGN KEY (`NumSonda`)
     REFERENCES `aesccar_gti09`.`sondas` (`IdSonda`),
@@ -144,11 +143,11 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`incidencias` (
   `NivelGravedad` INT(11) NOT NULL,
   `Descripción` VARCHAR(45) NOT NULL,
   `NumSensor` INT(11) NOT NULL,
-  `Estado` VARCHAR(45) NULL,
-  `FechaIni` DATETIME NULL,
-  `FechaFin` DATETIME NULL,
+  `Estado` VARCHAR(45) NULL DEFAULT NULL,
+  `FechaIni` DATETIME NULL DEFAULT NULL,
+  `FechaFin` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`IdIncidencias`, `NivelGravedad`, `NumSensor`),
-  INDEX `NumSensor` (`NumSensor` ASC),
+  INDEX `NumSensor` (`NumSensor` ASC) ,
   CONSTRAINT `incidencias_ibfk_1`
     FOREIGN KEY (`NumSensor`)
     REFERENCES `aesccar_gti09`.`sensores` (`IdSensor`))
@@ -166,14 +165,35 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`instalaciones` (
   `IdSonda` INT(11) NOT NULL,
   `NumHuerto` INT(11) NOT NULL,
   PRIMARY KEY (`IdHuerto`, `IdSonda`, `NumHuerto`),
-  INDEX `IdHuerto` (`IdHuerto` ASC),
-  INDEX `fk_instalaciones_sondas1_idx` (`IdSonda` ASC, `NumHuerto` ASC),
-  CONSTRAINT `instalaciones_ibfk_1`
-    FOREIGN KEY (`IdHuerto`)
-    REFERENCES `aesccar_gti09`.`huertos` (`IdHuerto`),
+  INDEX `IdHuerto` (`IdHuerto` ASC) ,
+  INDEX `fk_instalaciones_sondas1_idx` (`IdSonda` ASC, `NumHuerto` ASC) ,
   CONSTRAINT `fk_instalaciones_sondas1`
     FOREIGN KEY (`IdSonda` , `NumHuerto`)
     REFERENCES `aesccar_gti09`.`sondas` (`IdSonda` , `NumHuerto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `instalaciones_ibfk_1`
+    FOREIGN KEY (`IdHuerto`)
+    REFERENCES `aesccar_gti09`.`huertos` (`IdHuerto`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `aesccar_gti09`.`mediciones`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`mediciones` (
+  `idMediciones` INT(11) NOT NULL,
+  `fecha` DATETIME NULL DEFAULT NULL,
+  `IdSensor` INT(11) NOT NULL,
+  `NumSonda` INT(11) NOT NULL,
+  `Unidades` INT(11) NOT NULL,
+  `Medida` DECIMAL(10,2) NULL DEFAULT NULL,
+  PRIMARY KEY (`idMediciones`, `IdSensor`, `NumSonda`, `Unidades`),
+  INDEX `fk_Mediciones_sensores1_idx` (`IdSensor` ASC, `NumSonda` ASC, `Unidades` ASC) ,
+  CONSTRAINT `fk_Mediciones_sensores1`
+    FOREIGN KEY (`IdSensor` , `NumSonda` , `Unidades`)
+    REFERENCES `aesccar_gti09`.`sensores` (`IdSensor` , `NumSonda` , `Unidades`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -195,9 +215,33 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
--- Table `aesccar_gti09`.`TecnicoEncargado`
+-- Table `aesccar_gti09`.`solicitudes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`TecnicoEncargado` (
+CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`solicitudes` (
+  `idSolicitudes` INT(11) NOT NULL AUTO_INCREMENT,
+  `NombreApellidos` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Telefono` INT(11) NULL DEFAULT NULL,
+  `Consulta` VARCHAR(250) NOT NULL,
+  `Estado` TINYINT(4) NULL DEFAULT NULL,
+  `usuarios_IdUsuario` INT(11) NOT NULL,
+  `usuarios_Rol` INT(11) NOT NULL,
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) ,
+  PRIMARY KEY (`idSolicitudes`, `usuarios_IdUsuario`, `usuarios_Rol`),
+  INDEX `fk_solicitudes_usuarios1_idx` (`usuarios_IdUsuario` ASC, `usuarios_Rol` ASC) ,
+  CONSTRAINT `fk_solicitudes_usuarios1`
+    FOREIGN KEY (`usuarios_IdUsuario` , `usuarios_Rol`)
+    REFERENCES `aesccar_gti09`.`usuarios` (`IdUsuario` , `Rol`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `aesccar_gti09`.`tecnicoencargado`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`tecnicoencargado` (
   `Tecnico` INT(11) NOT NULL,
   `IdIncidencias` INT(11) NOT NULL,
   `NivelGravedad` INT(11) NOT NULL,
@@ -217,41 +261,6 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`TecnicoEncargado` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
-
--- -----------------------------------------------------
--- Table `aesccar_gti09`.`Mediciones`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`Mediciones` (
-  `idMediciones` INT NOT NULL,
-  `fecha` DATETIME NULL,
-  `IdSensor` INT(11) NOT NULL,
-  `NumSonda` INT(11) NOT NULL,
-  `Unidades` INT(11) NOT NULL,
-  `Medida` DECIMAL(10,2) NULL,
-  PRIMARY KEY (`idMediciones`, `IdSensor`, `NumSonda`, `Unidades`),
-  INDEX `fk_Mediciones_sensores1_idx` (`IdSensor` ASC, `NumSonda` ASC, `Unidades` ASC),
-  CONSTRAINT `fk_Mediciones_sensores1`
-    FOREIGN KEY (`IdSensor` , `NumSonda` , `Unidades`)
-    REFERENCES `aesccar_gti09`.`sensores` (`IdSensor` , `NumSonda` , `Unidades`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `aesccar_gti09`.`Solicitudes`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`Solicitudes` (
-  `idSolicitudes` INT NOT NULL AUTO_INCREMENT,
-  `NombreApellidos` VARCHAR(45) NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `Telefono` INT NULL,
-  `Consulta` VARCHAR(250) NOT NULL,
-  `Estado` TINYINT NULL,
-  PRIMARY KEY (`idSolicitudes`),
-  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC))
-ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
