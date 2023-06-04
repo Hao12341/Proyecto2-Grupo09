@@ -1,0 +1,14 @@
+
+
+
+Gente no se hacer yaml asi que hasta que sepa aqui va la api
+
+apiSensores
+Get: api/sensores/
+
+devuelve
+JSON [
+    fecha
+    Medicion
+    tipoMedida
+    ]
