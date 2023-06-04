@@ -1,3 +1,4 @@
+
 /**
  * Ordena las medidas por fecha de más antigua a más reciente
  *  @param mediciones JSON con los parámetros de medida
@@ -5,9 +6,13 @@
  */
  function ordenarJSONFecha(mediciones) {
     // Ordena el json por fecha
-    mediciones = mediciones.sort( function (a,b) {
-        return a.fecha - b.fecha
-    })
+    mediciones.sort(function(a, b) {
+        const fechaA = new Date(a.fecha);
+        const fechaB = new Date(b.fecha);
+        return fechaA - fechaB;
+    });
+    console.log("objeto ordenadissimo hermano")
+    console.log(mediciones)
     return mediciones
 
  }
@@ -36,13 +41,15 @@
          }
 
      })
+    console.log("crearejeX")
+    console.log(ejeX)
      return ejeX
  }
 
 /**
  * Dada unas mediciones, ordena el ejeX según la fecha y añade valores al ejeY correspondientes con estas
  * @param mediciones
- * @returns {*[]}
+ * @returns {{medicion: *[], ejeX: *[]}}
  */
 
 function crearDataset(mediciones) {
@@ -61,8 +68,39 @@ function crearDataset(mediciones) {
      // la encuentra, devuelve su index, y añadimos la Medicion
      // de ese index quedadno relacionado con la fecha
     medicion = ejeX.map((fecha) => {
-         return mediciones[mediciones.indexOf(fecha)].Medicion
+         return mediciones[mediciones.findIndex((element => {
+             return element.fecha === fecha;
+
+         }))].medida
      })
 
-    return {ejeX,medicion}
+    console.log({ejeX,medicion})
+
+    return  {ejeX,medicion}
  }
+
+/**
+ *
+ * @param idGrafica
+ * @param datos
+ * @param opciones
+ */
+ function crearGrafica(idGrafica, datos,opciones,label) {
+    let dataset = crearDataset(datos)
+     let datosGrafica = {
+        labels: dataset.ejeX,
+         datasets: [
+             {
+                 label: label,
+                 data: dataset.medicion
+             }
+         ]
+     }
+     let ctx = document.getElementById(idGrafica)
+    let grafica = new Chart (ctx, {
+        type: 'line',
+        data: datosGrafica,
+        options: opciones
+    })
+ }
+
