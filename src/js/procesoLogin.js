@@ -11,7 +11,7 @@ async function login(event) {
     const formData = new FormData(event.target);
     console.log(formData)
 
-    const respuesta = await fetch('../api/sesion/', {
+    const respuesta = await fetch('../api/sesion', {
         method: 'post',
         body: formData
     })
