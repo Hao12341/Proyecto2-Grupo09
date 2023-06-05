@@ -303,6 +303,9 @@ components:
           idSensor:
             type: integer
             description: id del sensor averiado
+          tipoSensor:
+            type: string
+            description: Tipo de sensor averiado
           idUsuario:
             type: integer
             description: id del usuario con la avería
