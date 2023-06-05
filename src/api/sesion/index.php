@@ -13,29 +13,20 @@ switch ($_SERVER['REQUEST_METHOD']) {
         }
         break;
     case 'POST':
-        $bbdd_servidor = 'aesccar.upv.edu.es';
-        $bbdd_nombre = 'aesccar_gti09';
-        $bbdd_user = 'aesccar_user';
-        $bbdd_password = 'SQLUser@2023';
-
-        try {
-            $connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre);
-        } catch (Exception $e) {
-            http_response_code(500);
-            die("Error: " . mysqli_connect_errno() . " " . mysqli_connect_error());
-        }
-
-        mysqli_query($connexion, 'SET NAMES utf8mb4');
+        // Incluir el archivo de conexión a la BBDD.
+        // Verificamos la variable $conexion para ocultar errores en PHPStorm
+        require_once '../includes/connexion.php';
+        if(!isset($connexion)) die();
 
         $email = $_POST['email'];
         $password = $_POST['password'];
 
         $sql = "SELECT `usuarios`.`IdUsuario`, 
-       `usuarios`.`email`, 
-       `roles`.`idRol`, 
-       `roles`.`Rol` 
+       `usuarios`.`Nombre`, 
+       `roles`.`IdRol` as `idRol`, 
+       `roles`.`rol` 
 	FROM `usuarios` 
-		INNER JOIN `roles` ON `usuarios`.`Rol` = `roles`.`idRol`
+		INNER JOIN `roles` ON `usuarios`.`rol` = `roles`.`IdRol`
 	WHERE `usuarios`.`email` = '$email' AND `usuarios`.`Contraseña` = '$password'";
 
 
@@ -49,7 +40,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
             $salida = [];
             $salida['id'] = $registro['IdUsuario'];
-            $salida['email'] = $registro['email'];
+            $salida['Nombre'] = $registro['Nombre'];
             $salida['rol'] = $registro['idRol'];
 
             http_response_code(200);
