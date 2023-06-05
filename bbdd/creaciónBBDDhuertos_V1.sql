@@ -14,13 +14,13 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema aesccar_gti09
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `aesccar_gti09` DEFAULT CHARACTER SET utf8mb4 ;
-USE `aesccar_gti09` ;
+CREATE SCHEMA IF NOT EXISTS hbelrev_gti09 DEFAULT CHARACTER SET utf8mb4 ;
+USE hbelrev_gti09 ;
 
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`roles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`roles` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`roles` (
   `IdRol` INT(11) NOT NULL AUTO_INCREMENT,
   `Rol` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`IdRol`))
@@ -32,7 +32,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`usuarios` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`usuarios` (
   `IdUsuario` INT(11) NOT NULL AUTO_INCREMENT,
   `Rol` INT(11) NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`usuarios` (
   INDEX `Rol` (`Rol` ASC) ,
   CONSTRAINT `usuarios_ibfk_1`
     FOREIGN KEY (`Rol`)
-    REFERENCES `aesccar_gti09`.`roles` (`IdRol`)
+    REFERENCES hbelrev_gti09.`roles` (`IdRol`)
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 8
@@ -56,7 +56,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`huertos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`huertos` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`huertos` (
   `IdHuerto` INT(11) NOT NULL AUTO_INCREMENT,
   `UsuarioPropietario` INT(11) NOT NULL,
   `Localización` VARCHAR(45) NOT NULL,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`huertos` (
   INDEX `UsuarioPropietario` (`UsuarioPropietario` ASC),
   CONSTRAINT `huertos_ibfk_1`
     FOREIGN KEY (`UsuarioPropietario`)
-    REFERENCES `aesccar_gti09`.`usuarios` (`IdUsuario`))
+    REFERENCES hbelrev_gti09.`usuarios` (`IdUsuario`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -73,7 +73,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`sondas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`sondas` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`sondas` (
   `IdSonda` INT(11) NOT NULL AUTO_INCREMENT,
   `NumHuerto` INT(11) NOT NULL,
   `Localización` VARCHAR(75) NOT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`sondas` (
   INDEX `NumHuerto` (`NumHuerto` ASC) ,
   CONSTRAINT `sondas_ibfk_1`
     FOREIGN KEY (`NumHuerto`)
-    REFERENCES `aesccar_gti09`.`huertos` (`IdHuerto`))
+    REFERENCES hbelrev_gti09.`huertos` (`IdHuerto`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -89,7 +89,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`unidades`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`unidades` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`unidades` (
   `IdUnidades` INT(11) NOT NULL AUTO_INCREMENT,
   `Unidad` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`IdUnidades`))
@@ -100,7 +100,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`tipossensores`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`tipossensores` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`tipossensores` (
   `IdTipoSensor` INT(11) NOT NULL AUTO_INCREMENT,
   `TipoSensor` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`IdTipoSensor`, `TipoSensor`))
@@ -111,7 +111,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`sensores`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`sensores` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`sensores` (
   `IdSensor` INT(11) NOT NULL AUTO_INCREMENT,
   `NumSonda` INT(11) NOT NULL,
   `TipoSensor` INT(11) NOT NULL,
@@ -123,13 +123,13 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`sensores` (
   INDEX `Unidades` (`Unidades` ASC) ,
   CONSTRAINT `sensores_ibfk_1`
     FOREIGN KEY (`NumSonda`)
-    REFERENCES `aesccar_gti09`.`sondas` (`IdSonda`),
+    REFERENCES hbelrev_gti09.`sondas` (`IdSonda`),
   CONSTRAINT `sensores_ibfk_2`
     FOREIGN KEY (`Unidades`)
-    REFERENCES `aesccar_gti09`.`unidades` (`IdUnidades`),
+    REFERENCES hbelrev_gti09.`unidades` (`IdUnidades`),
   CONSTRAINT `sensores_ibfk_4`
     FOREIGN KEY (`TipoSensor`)
-    REFERENCES `aesccar_gti09`.`tipossensores` (`IdTipoSensor`))
+    REFERENCES hbelrev_gti09.`tipossensores` (`IdTipoSensor`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -137,7 +137,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`incidencias`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`incidencias` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`incidencias` (
   `IdIncidencias` INT(11) NOT NULL AUTO_INCREMENT,
   `TipoIncidencia` VARCHAR(45) NOT NULL,
   `NivelGravedad` INT(11) NOT NULL,
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`incidencias` (
   INDEX `NumSensor` (`NumSensor` ASC) ,
   CONSTRAINT `incidencias_ibfk_1`
     FOREIGN KEY (`NumSensor`)
-    REFERENCES `aesccar_gti09`.`sensores` (`IdSensor`))
+    REFERENCES hbelrev_gti09.`sensores` (`IdSensor`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -158,7 +158,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`instalaciones`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`instalaciones` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`instalaciones` (
   `IdHuerto` INT(11) NOT NULL,
   `FechaInicio` DATE NULL DEFAULT NULL,
   `FechaFin` DATE NULL DEFAULT NULL,
@@ -169,12 +169,12 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`instalaciones` (
   INDEX `fk_instalaciones_sondas1_idx` (`IdSonda` ASC, `NumHuerto` ASC) ,
   CONSTRAINT `fk_instalaciones_sondas1`
     FOREIGN KEY (`IdSonda` , `NumHuerto`)
-    REFERENCES `aesccar_gti09`.`sondas` (`IdSonda` , `NumHuerto`)
+    REFERENCES hbelrev_gti09.`sondas` (`IdSonda` , `NumHuerto`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `instalaciones_ibfk_1`
     FOREIGN KEY (`IdHuerto`)
-    REFERENCES `aesccar_gti09`.`huertos` (`IdHuerto`))
+    REFERENCES hbelrev_gti09.`huertos` (`IdHuerto`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -182,7 +182,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`mediciones`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`mediciones` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`mediciones` (
   `idMediciones` INT(11) NOT NULL,
   `fecha` DATETIME NULL DEFAULT NULL,
   `IdSensor` INT(11) NOT NULL,
@@ -193,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`mediciones` (
   INDEX `fk_Mediciones_sensores1_idx` (`IdSensor` ASC, `NumSonda` ASC, `Unidades` ASC) ,
   CONSTRAINT `fk_Mediciones_sensores1`
     FOREIGN KEY (`IdSensor` , `NumSonda` , `Unidades`)
-    REFERENCES `aesccar_gti09`.`sensores` (`IdSensor` , `NumSonda` , `Unidades`)
+    REFERENCES hbelrev_gti09.`sensores` (`IdSensor` , `NumSonda` , `Unidades`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -203,13 +203,13 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`nivelgravedad`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`nivelgravedad` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`nivelgravedad` (
   `IdNivelGravedad` INT(11) NOT NULL AUTO_INCREMENT,
   `Valor` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`IdNivelGravedad`),
   CONSTRAINT `nivelgravedad_ibfk_1`
     FOREIGN KEY (`IdNivelGravedad`)
-    REFERENCES `aesccar_gti09`.`incidencias` (`IdIncidencias`))
+    REFERENCES hbelrev_gti09.`incidencias` (`IdIncidencias`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -217,7 +217,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`solicitudes`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`solicitudes` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`solicitudes` (
   `idSolicitudes` INT(11) NOT NULL AUTO_INCREMENT,
   `NombreApellidos` VARCHAR(45) NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
@@ -231,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`solicitudes` (
   INDEX `fk_solicitudes_usuarios1_idx` (`usuarios_IdUsuario` ASC, `usuarios_Rol` ASC) ,
   CONSTRAINT `fk_solicitudes_usuarios1`
     FOREIGN KEY (`usuarios_IdUsuario` , `usuarios_Rol`)
-    REFERENCES `aesccar_gti09`.`usuarios` (`IdUsuario` , `Rol`)
+    REFERENCES hbelrev_gti09.`usuarios` (`IdUsuario` , `Rol`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -241,7 +241,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `aesccar_gti09`.`tecnicoencargado`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`tecnicoencargado` (
+CREATE TABLE IF NOT EXISTS hbelrev_gti09.`tecnicoencargado` (
   `Tecnico` INT(11) NOT NULL,
   `IdIncidencias` INT(11) NOT NULL,
   `NivelGravedad` INT(11) NOT NULL,
@@ -251,12 +251,12 @@ CREATE TABLE IF NOT EXISTS `aesccar_gti09`.`tecnicoencargado` (
   INDEX `fk_incidencias_has_usuarios_incidencias1_idx` (`IdIncidencias` ASC, `NivelGravedad` ASC, `NumSensor` ASC),
   CONSTRAINT `fk_incidencias_has_usuarios_incidencias1`
     FOREIGN KEY (`IdIncidencias` , `NivelGravedad` , `NumSensor`)
-    REFERENCES `aesccar_gti09`.`incidencias` (`IdIncidencias` , `NivelGravedad` , `NumSensor`)
+    REFERENCES hbelrev_gti09.`incidencias` (`IdIncidencias` , `NivelGravedad` , `NumSensor`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_incidencias_has_usuarios_usuarios1`
     FOREIGN KEY (`Tecnico`)
-    REFERENCES `aesccar_gti09`.`usuarios` (`IdUsuario`)
+    REFERENCES hbelrev_gti09.`usuarios` (`IdUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
