@@ -21,9 +21,8 @@
 
 h1 {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 0px;
     padding: 0.5em;
     color: #04291c;
     height: 15px;
@@ -40,28 +39,18 @@ h1 {
 .perfil {
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 500px;
     background-color: rgba(215, 215, 215, 0.9);
     border: 2px solid rgba(212, 212, 212, 0.9);
     border-radius: 20px;
-    width: 500px;
+    width: 31vw;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 1em;
 }
-
-.perfil-img {
-    display: flex;
+dl{
+    margin-top: 10px;
 }
-
-.perfil img {
-    border-radius: 20%;
-    margin-right: 20px;
-    width: 130px;
-    height: 130px;
-    margin-bottom: 15px;
-}
-
 
 .perfil-info {
     display: flex;
@@ -71,12 +60,19 @@ h1 {
 }
 
 .perfil dd {
-    width: 450px;
+    width: 29vw;
     border: 2px solid white;
     background-color: white;
     border-radius: 10px;
     font-size: 16px;
     padding: 0.3em;
+}
+
+.bi-person-square {
+    font-size: 7rem;
+    font-weight: 100;
+
+    color: #65946F;
 }
 
 .perfil dt {
@@ -92,9 +88,99 @@ h1 {
 table td:nth-child(2) {
     padding: 5px;
 }
+dialog{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    padding: 2em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    width: 40vw;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+#edit{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+    width: 40vw;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+dialog input {
+    margin-bottom: 10px;
+    margin: 0 auto;
+    margin-left: -.7rem;
 
+}
+
+dialog button {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: -.7rem;
+
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+}
+
+.boton-cancelar {
+    margin-left: 2rem;
+}
+button {
+    background-color: #04291C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    display: block;
+}
+
+button:hover {
+    background-color: #65946F;
+}
+
+.huertos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton {
+    display: flex;
+
+}
+
+.texto {
+    display: flex;
+    width: 70%;
+    align-self: end;
+}
+
+
+#myFileInput {
+    z-index: 0;
+}
 
 @media(max-width: 590px) {
+    dialog{
+
+        width: 70vw;
+    }
+    #edit{
+    
+        width: 70vw;
+        height: 15vh;
+  
+    }
     section {
         display: flex;
         justify-content: center;
@@ -107,19 +193,13 @@ table td:nth-child(2) {
 
     }
 
-    h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-        color: #04291C;
-    }
+
 
 
     .perfil {
         display: flex;
         flex-direction: column;
-        height: 670px;
+        height: 500px;
         background-color: rgba(215, 215, 215, 0.9);
         border: 2px solid rgba(212, 212, 212, 0.9);
         border-radius: 20px;
@@ -144,31 +224,24 @@ table td:nth-child(2) {
         font-size: 12px;
         margin-bottom: 10px;
 
-      }
-    
-      /* Estilos para ocultar el botón de archivo predeterminado */
-      .file-input-wrapper {
+    }
+
+    /* Estilos para ocultar el botón de archivo predeterminado */
+    .file-input-wrapper {
         overflow: hidden;
         position: relative;
         display: inline-block;
-      }
-    
-      .file-input-wrapper input[type="file"] {
+    }
+
+    .file-input-wrapper input[type="file"] {
         font-size: 100px;
         position: absolute;
         left: 0;
         top: 0;
         opacity: 0;
-      }
-
-    .perfil img {
-        border-radius: 20%;
-        margin-right: 20px;
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
-        margin-top: 5px;
     }
+
+
 
 
     .perfil-info {
@@ -238,7 +311,7 @@ table td:nth-child(2) {
     }
 
 
-    #myFileInput{
+    #myFileInput {
         z-index: 0;
     }
 
