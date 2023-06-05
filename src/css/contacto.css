@@ -48,7 +48,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 70vw;
+    width: 40vw;
     min-width: min-content;
     height: 60vh;
     padding: 20px;
@@ -59,7 +59,7 @@ body {
     border: none;
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding-left: 1em;
+    padding-left: 0.5em;
 }
 
 
@@ -87,6 +87,10 @@ body {
 #textoobligatorio{
     font-size: 12px;
 }
+#DivBoton{
+    display: flex;
+    flex: center;
+}
 
 
 /* Boton Enviar */
@@ -113,6 +117,42 @@ textarea {
 
 #textoEnvío{
     font-size: 12px;
+}
+
+#Nombre {
+    width: 18vw;
+}
+
+
+@media screen and (max-width: 600px) {
+    #Nombre {
+        width: auto;
+        font-size: 16px;
+    }
+}
+
+#email {
+    width: 18vw;
+}
+
+
+@media screen and (max-width: 600px) {
+    #email {
+        width: auto;
+        font-size: 16px;
+    }
+}
+
+#tel {
+    width: 9vw;
+}
+
+
+@media screen and (max-width: 600px) {
+    #tel {
+        width: auto;
+        font-size: 16px;
+    }
 }
 
 
