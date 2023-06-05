@@ -1,0 +1,317 @@
+openapi: 3.0.3
+info:
+  title: Proyecto02-Grupo09
+  description: Proyecto02-Grupo09
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /sesion:
+    get:
+      summary: Devuelve la sesión activa, si existe
+      tags:
+        - público
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+        '401':
+          description: No existe sesión.
+        '5XX':
+          description: Error del servidor.
+    post:
+      summary: Crea una sesión para un usuario.
+      tags:
+        - público
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                password:
+                  type: string
+              required:
+                - nombre
+                - password
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+        '401':
+          description: No autorizado
+        '5XX':
+          description: Error del servidor.
+    delete:
+      summary: Elimina la sesión
+      tags:
+        - público
+      responses:
+        '200':
+          description: OK
+        '5XX':
+          description: Error del servidor.
+  /usuarios:
+    get:
+      summary: Devuelve todos los usuarios
+      tags:
+        - administrador
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Usuario'
+        '401':
+          description: No autorizado
+        '5XX':
+          description: Error del servidor.
+    post:
+      summary: Crea un usuario
+      tags:
+        - administrador
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                password:
+                  type: string
+                rol:
+                  type: integer
+              required:
+                - nombre
+                - password
+                - rol
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: No autorizado
+        '5XX':
+          description: Error del servidor.
+  /usuarios/{id}:
+    get:
+      summary: Obtiene las propiedades del usuario {id}
+      tags:
+        - administrador
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico del usuario
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+        '401':
+          description: No autorizado
+        '404':
+          description: No se encontró el usuario.
+        '5XX':
+          description: Error del servidor.
+    put:
+      summary: Modifica las propiedades del usuario {id}
+      tags:
+        - administrador
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico del usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: No autorizado
+        '404':
+          description: No se encontró el usuario.
+        '5XX':
+          description: Error del servidor.
+    delete:
+      summary: Elimina el usuario {id}
+      tags:
+        - administrador
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico del usuario
+      responses:
+        '200':
+          description: OK
+        '401':
+          description: No autorizado
+        '404':
+          description: No se encontró el usuario.
+        '5XX':
+          description: Error del servidor.
+  /medidas/{id,fechaSTART,fechaEND}:
+    get:
+      summary: Devuelve todas les medidas de un determinado usuario
+      tags:
+        - usuario
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico del usuario
+        - in: path
+          name: fechaSTART
+          schema:
+            type: object
+          required: false
+          description: DATE fecha inicio de búsqueda
+        - in: path
+          name: fechaEND
+          schema:
+            type: object
+          required: false
+          description: DATE fecha fin de búsqueda
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/medidas"
+        '401':
+          description: No autorizado
+        '404':
+          description: Usuario no encontrado, Medidas no encontradas
+        '5XX':
+          description: Error del servidor
+  /averias/:
+    get:
+      summary: Devuelve todas las averías
+      tags:
+        - técnico
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Avería"
+        '401':
+          description: No autorizado
+        '404':
+          description: Ninguna avería encontrada
+        '5XX':
+          description: Error del servidor
+    put:
+      summary: Actualiza una avería
+      tags:
+        - técnico
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Avería"
+      responses:
+        200:
+          description: OK
+        '401':
+          description: No autorizado
+        '404':
+          description: Avería no encontrada
+        '5XX':
+          description: Error del servidor
+
+
+
+components:
+  schemas:
+      medidas:
+        type: object
+        properties:
+          fecha:
+            type: string
+            description: fecha de la medida
+          medida:
+            type: number
+            description: valor de la medida
+          tipoMedida:
+            type: string
+            description: tipo de la medida (ph, sal, etc)
+
+      Usuario:
+        type: object
+        properties:
+          id:
+            type: integer
+            description: id del usuario
+          nombre:
+            type: string
+            description: nombre del usuario
+          idRol:
+            type: integer
+            description: id del rol del usuario
+          rol:
+            type: string
+            description: nombre del rol del usuario
+
+      Avería:
+        type: object
+        properties:
+          id:
+            type: integer
+            description: id de la avería
+          tipoIncidencias:
+            type: string
+            description: Tipo de la incidencia
+          nivelGravedad:
+            type: integer
+            description: Nivel de gravedad de la avería
+          estado:
+            type: string
+            description: Estado de resolución en el cual se encuentra la avería
+          idSensor:
+            type: integer
+            description: id del sensor averiado
+          idUsuario:
+            type: integer
+            description: id del usuario con la avería
+          usuario:
+            type: string
+            description: Usuario con la avería
+          idSonda:
+            type: integer
+            description: id de la Sonda con la avería
+          idHuerto:
+            type: integer
+            description: id del huerto con el sensor averiado
