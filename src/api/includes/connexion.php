@@ -1,8 +1,8 @@
 <?php
-$bbdd_servidor = 'aesccar.upv.edu.es';
-$bbdd_nombre = 'aesccar_gti09';
-$bbdd_user = 'aesccar_user';
-$bbdd_password = 'SQLUser@2023';
+$bbdd_servidor = 'sql8.freesqldatabase.com';
+$bbdd_nombre = 'sql8624327';
+$bbdd_user = 'sql8624327';
+$bbdd_password = 'T9iDtrYzyY';
 
 try {
 	$connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre);
