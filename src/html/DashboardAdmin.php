@@ -38,6 +38,7 @@ if (isset($_SESSION['user'])) {
 
 </head>
 
+
 <body>
     <!-- Empieza el Header/BANNER -->
     <header class="Encabezado" role="banner">
@@ -94,9 +95,9 @@ if (isset($_SESSION['user'])) {
                 <div class="input-group">
                     <div class="buscador">
                         <input type="text" class="form-control" id="buscar-input" placeholder="Nombre" aria-label=""
-                        aria-describedby="basic-addon1">
-                    <button class="btn btn-outline-secondary" type="button" id="buscar-btn">Buscar</button>
-                    
+                            aria-describedby="basic-addon1">
+                        <button class="btn btn-outline-secondary" type="button" id="buscar-btn">Buscar</button>
+
                         <!-- <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button">Buscar</button>
                         </div> -->
@@ -106,22 +107,27 @@ if (isset($_SESSION['user'])) {
                     </button>
                 </div>
             </div>
-            <!-- Inicio pop up de anyadir usuario -->
-            <dialog id="popup">
-                <input type="text" class="form-control" placeholder="Correo">
-                <input type="text" class="form-control" placeholder="Nombre">
-                <input type="password" class="form-control" placeholder="Contraseña">
-                <br>
+        </div>
+        <!-- Inicio pop up de anyadir usuario -->
+        <dialog id="popup">
+            <div class="forms">
+                <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo">
+                <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre">
+                <input type="password" class="form-control-sm" id="formpopup" placeholder="Contraseña">
+            </div>
+            <br>
+            <div class="rol">
                 <label>Rol: <select name="idRol">
                         <option value="1">Administrador</option>
                         <option value="2">Usuario</option>
                     </select>
                 </label>
-                <br>
-                <button class="btn btn-outline-secondary" type="button">Añadir</button>
-                <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">Cancelar</button>
-            </dialog>
-        </div>
+            </div>
+            <br>
+            <button class="btn btn-outline-secondary" type="button">Añadir</button>
+            <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">Cancelar</button>
+        </dialog>
+
 
 
         <div class="pestañas">
@@ -142,7 +148,7 @@ if (isset($_SESSION['user'])) {
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Jose Javier Sesma</th>
+                        <th>Jose Miguel Sesma</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -214,7 +220,7 @@ if (isset($_SESSION['user'])) {
                     <tr>
                         <th>Jose Javier Sesma</th>
                         <td>jojase@gamil.com</td>
-                        <td>555266223</td>
+                        <td>985266223</td>
                         <td class="acciones">
                             <div class="imagen">
                                 <button type="button" class="boton-editar">
@@ -477,35 +483,30 @@ if (isset($_SESSION['user'])) {
         </div>
         </div>
         <!-- Inicio pop up de edicion de usuario -->
+
         <dialog id="editUsuario">
             <form onsubmit="enviarEditarUsuario(event)">
-                <input type="text" class="form-control" placeholder="Correo">
-                <input type="text" class="form-control" placeholder="Nombre">
-                <input type="password" class="form-control" placeholder="Contraseña">
+                <div class="forms">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre">
+                    <input type="password" class="form-control-sm" id="formpopup" placeholder="Contraseña">
+                </div>
                 <br>
-                <label>Rol: <select name="idRol">
-                        <option value="1">Administrador</option>
-                        <option value="2">Usuario</option>
-                    </select>
-                </label>
+                <div class="rol">
+                    <label>Rol: <select name="idRol">
+                            <option value="1">Administrador</option>
+                            <option value="2">Usuario</option>
+                        </select>
+                    </label>
+                </div>
                 <br>
                 <button class="btn btn-outline-secondary" type="button" id="anyadir">Editar</button>
-
                 <button class="btn btn-outline-secondary" type="button" id="cancelar"
                     onclick="return cerrarEditarUsuarioDialog()">Cancelar</button>
             </form>
         </dialog>
 
     </section>
-
-
-
-
-
-
-
-
-
 
     <!-- <nav aria-label="...">
             <ul class="pagination">
@@ -528,7 +529,6 @@ if (isset($_SESSION['user'])) {
     <!-- FIN DIV que tiene h1, filtrado y tabla-->
     </section>
     <!-- FIN section-->
-    <!-- FIN section-->
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -536,9 +536,7 @@ if (isset($_SESSION['user'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-    <script src="../js/cerrarSesion.js"></script>
-    <script src="../js/admin.js"></script>
-
+    <script src="index.js"></script>
 </body>
 
 </html>
