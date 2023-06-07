@@ -45,69 +45,6 @@ html {
     margin-bottom: 10px;
 }
 
-button {
-    color: black;
-}
-
-#Campo {
-    color: black;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: 0rem;
-    padding: 0.5rem;
-    background-color: var(--main-fg-color);
-    border-radius: 5px;
-    color: white;
-}
-
-.imagen {
-    display: flex;
-    flex-direction: row;
-    margin-left: 5px;
-}
-
-.filtrar {
-    background: #204b36;
-    padding: 5px;
-}
-
-img {
-    vertical-align: middle;
-
-}
-
-.anadir {
-    padding: 0.5rem;
-    width: 25px;
-    height: 25px;
-}
-
-.opciones-filtro {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-    margin-left: 15px;
-}
-
-.page-item.active .page-link {
-    z-index: 3;
-    color: white;
-    background-color: var(--contrast-bg-color);
-    border-color: var(--contrast-fg-color);
-}
-
-.page-link {
-    position: relative;
-    display: block;
-    padding: 0.5rem 0.75rem;
-    margin-left: -1px;
-    line-height: 1.25;
-    color: var(--contrast-bg-color);
-    background-color: var(--accent-fg-color);
-    border: 1px solid #dee2e6;
-}
 
 .bienvenido {
     margin-top: 4rem;
@@ -127,15 +64,11 @@ img {
 }
 
 
-
 .input-group {
     display: flex;
-    /* Alinear en el eje horizontal */
     align-items: center;
-    /* Alinear verticalmente al centro */
     margin-bottom: 1rem;
     width: 50vw;
-
 
 }
 
@@ -144,6 +77,7 @@ img {
     margin-right: 20px;
     /* Espacio entre los elementos */
 }
+
 
 .buscador {
     width: 18rem;
@@ -183,6 +117,10 @@ img {
     background-color: transparent;
 }
 
+/* --------------------------
+---Estilos de la tabla---
+------------------------- */
+
 th {
     font-size: 12px;
 }
@@ -190,6 +128,84 @@ th {
 td {
     font-size: 12px;
 }
+
+.pestaña {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 1px solid #092a09;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    background-color: var(--contrast-bg-color);
+}
+
+.pestañas {
+    display: flex;
+    align-items: center;
+}
+
+
+.pestaña.active {
+    background-color: var(--contrast-fg-color);
+    /* Otros estilos de pestaña activa */
+}
+
+.tabla td.acciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* --------------------------
+---Estilos de los botones de la tabla---
+------------------------- */
+.imagen {
+    font-size: 1.4rem;
+    justify-content: space-between;
+}
+
+.imagen :nth-child(2) {
+    color: #b03737;
+}
+
+.bi-pencil-square {
+    cursor: pointer;
+}
+
+
+#editUsuario::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+}
+
+.boton-editar,
+.boton-quitar {
+    color: #000000;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+
+}
+
+.boton-editar:focus,
+.boton-quitar:focus {
+    outline: 0;
+}
+
+.boton-editar:hover,
+.boton-quitar:hover {
+    background-color: transparent;
+}
+
+.boton-editar {
+    margin-left: auto;
+    margin-right: .8rem;
+}
+
+
+/* --------------------------
+---Estilos de los POP-UPS---
+------------------------- */
 
 dialog {
     top: 50%;
@@ -201,17 +217,23 @@ dialog {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 10px;
     text-align: center;
-    justify-content: center;
-    width: 50vw;
 }
 
+
+
+/* --------------------------
+---Estilos de POP-UP editar usuario---
+------------------------- */
+#editUsuario {
+    width: 40vw;
+}
 
 #editUsuario input[type="text"],
 #editUsuario input[type="password"],
 #editUsuario select {
     display: block;
-    width: 85%;
-    margin-bottom: 10px;
+    width: 80%;
+    margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 20px;
@@ -219,12 +241,12 @@ dialog {
 
 }
 
-#editUsuario label {
+#editUsuario .rol {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     color: black;
-    margin-bottom: -30px;
+    margin-top: 1rem;
 }
 
 #editUsuario button.btn {
@@ -249,53 +271,19 @@ dialog {
     color: #ffffff;
 }
 
-.pestaña {
-    padding: 8px 15px;
-    font-size: 14px;
-    border: 1px solid #092a09;
-    border-radius: 5px 5px 0 0;
-    color: white;
-    background-color: var(--contrast-bg-color);
-}
-
-.pestañas {
-    display: flex;
-    align-items: center;
-}
-
-
-.pestaña.active {
-    background-color: var(--contrast-fg-color);
-    /* Otros estilos de pestaña activa */
-}
-
-
-.imagen {
-    font-size: 1.4rem;
-    justify-content: space-between;
-}
-
-.imagen :nth-child(2) {
-    color: #b03737;
-}
-
-.bi-pencil-square {
-    cursor: pointer;
-}
-
-
-
-#editUsuario::backdrop {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(3px);
+/* --------------------------
+---Estilos de POP-UP añadir usuario---
+------------------------- */
+#popup {
+    width: 40vw;
 }
 
 #popup input[type="text"],
 #popup input[type="password"],
 #popup select {
     display: block;
-    width: 85%;
-    margin-bottom: 10px;
+    width: 80%;
+    margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 20px;
@@ -303,12 +291,12 @@ dialog {
 
 }
 
-#popup label {
+#popup .rol {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     color: black;
-    margin-bottom: -30px;
+    margin-top: 1rem;
 }
 
 #popup button.btn {
@@ -333,99 +321,26 @@ dialog {
     color: #ffffff;
 }
 
+/* --------------------------
+-------------------------------
+-------------------------------
+---Estilos vista de telefono---
+-------------------------------
+--------------------------------
+------------------------- */
 
-/* #popup label {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    margin-bottom: -30px;
-} */
-
-
-.boton-editar,
-.boton-quitar {
-    color: #000000;
-    background-color: transparent;
-    border: 0;
-    font-size: 1.5rem;
-
-}
-
-.boton-editar:focus,
-.boton-quitar:focus {
-    outline: 0;
-}
-
-.tabla td.acciones {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-
-.boton-editar {
-    margin-left: auto;
-    margin-right: .8rem;
-}
-
-.contenedor-bloque-editar {
-    display: flex;
-    height: 3rem;
-    margin: 1rem 0;
-}
-
-.contenedor-bloque-editar input[type="text"] {
-    border: 0;
-    border-radius: 5px 0 0 5px;
-    padding: 1rem;
-}
-
-.contenedor-bloque-editar input[type="submit"] {
-
-    border: 0;
-    border-radius: 0 5px 5px 0;
-    background: var(--principal);
-    color: #fff;
-
-}
-
-
-
-/* //////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////// */
 @media (max-width: 600px) {
     .InicioAdmin {
         padding: 1rem;
         padding-left: 0rem;
     }
-
-    label {
-        display: inline-block;
-        margin-bottom: 0rem;
-        padding: 0.5rem;
-        background-color: var(--main-fg-color);
-        border-radius: 5px;
-        color: white;
-    }
-
     .imagen {
         display: flex;
         flex-direction: row;
         margin-left: 5px;
     }
 
-    .filtrar {
-        background: #204b36;
-        padding: 5px;
-    }
 
-    img {
-        vertical-align: middle;
-
-    }
 
     .anadir {
         padding: 0.5rem;
@@ -447,17 +362,7 @@ dialog {
         border-color: var(--contrast-fg-color);
     }
 
-    .page-link {
-        position: relative;
-        display: block;
-        padding: 0.5rem 0.75rem;
-        margin-left: -1px;
-        line-height: 1.25;
-        color: var(--contrast-bg-color);
-        background-color: var(--accent-fg-color);
-        border: 1px solid #dee2e6;
-    }
-
+    
     .bienvenido {
         margin-top: 4rem;
     }
@@ -530,8 +435,35 @@ dialog {
         font-size: 12px;
     }
 
-     dialog {
-      
+    /* --------------------------
+---Estilos de los POP-UPS---
+------------------------- */
+
+    dialog {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        text-align: center;
+    }
+
+
+
+    /* --------------------------
+---Estilos de POP-UP editar usuario---
+------------------------- */
+    #editUsuario {
+        width: 80vw;
+    }
+
+    /* --------------------------
+---Estilos de POP-UP añadir usuario---
+------------------------- */
+    #popup {
         width: 80vw;
     }
 
@@ -560,10 +492,6 @@ dialog {
         /* Otros estilos de pestaña activa */
     }
 
-    .imagen {
-        font-size: 1.4rem;
-        justify-content: space-between;
-    }
 
     .imagen :nth-child(2) {
         color: #b03737;
@@ -571,50 +499,6 @@ dialog {
 
     .bi-pencil-square {
         cursor: pointer;
-    }
-
-
-    /* 
-    #editUsuario label {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(255, 255, 255);
-        color: black;
-        margin-bottom: -30px;
-    }
-
-    #editUsuario input[type="text"],
-    #editUsuario select {
-        padding: 5px;
-    } */
-
-    #popup label {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(255, 255, 255);
-        color: black;
-        margin-top: -30px;
-    }
-
-    .boton-editar,
-    .boton-quitar {
-        color: #000000;
-        background-color: transparent;
-        border: 0;
-        font-size: 1.5rem;
-        margin: 0;
-
-    }
-
-    .boton-editar:focus,
-    .boton-quitar:focus {
-        outline: 0;
-    }
-
-
-    .boton-editar {
-        margin-left: auto;
-        margin-right: .8rem;
     }
 
 }
