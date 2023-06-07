@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="css/header2.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Huerto hidropónico Grupo 09</title>
+    <script>
+    document.getElementById("arrow-container").addEventListener("click", function() {
+        if (window.innerWidth <= 1230) {
+          window.location.href = "#destination";
+        } else {
+          window.location.href = "#Empresa";
+        }
+      });
+    </script>     
 </head>
 
 
@@ -51,6 +60,7 @@
     <script src="js/menu.js"></script>
         
     <!------------------------------------------ /Header------------------------------------------>
+
     <!-- Fondo a -->
     <nav id="Foto-Landing">
     <!-- Eslogan -->
@@ -73,7 +83,7 @@
     <div id="destination">a</div>
 
     <!-- Producto -->
-    
+    <section id="Empresa">
     <section class="titulos" id="informacion">
         <h1 class="titulo">Quienes somos</h1>
 
@@ -88,7 +98,7 @@
        <!-- Producto -->
     <img id="Foto_Producto" src="img/temporal.jpg" alt="Foto producto completo">
        <!-- FinProducto -->
-    
+    </section>
 
        
     <section id="InfoEmpresa">
@@ -116,4 +126,5 @@
 
     <!-- Fin footer -->
 </body>
+
 </html>

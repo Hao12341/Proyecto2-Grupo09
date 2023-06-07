@@ -65,6 +65,7 @@
 }
 #destination{
     color: white;
+    opacity: 0 ;
 }
 .titulo{
     margin-top: 50px;
@@ -133,3 +134,43 @@ img {
   
 
   
+  @media (min-width: 1230px) {
+
+    #Empresa{
+        display: flex;
+        justify-content:first baseline;
+    }
+    .titulo{
+        margin-top: 50px;
+        text-align: center;
+        color: black;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .texto{
+        margin-bottom: 0.9rem;
+        padding: 1rem 2rem 1rem 2rem;
+        color: black;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+    #Foto_Producto{
+        display: flex;
+        margin: auto;
+        padding: 0 3rem 0 0;
+        height: 100vh;
+        width: 70vw;
+        clear: both;
+    }
+    #destination{
+        color: blue;
+        display: none;
+    }
+    #InfoEmpresa{
+        margin-top: 0px;
+        border: none;
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+    }
+
+}
