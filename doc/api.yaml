@@ -251,17 +251,17 @@ paths:
           description: Avería no encontrada
         '5XX':
           description: Error del servidor
-  /huertos/:
+
+  /huertos/{id}:
     get:
       summary: obtiene todos los huertos de un usuario
-      tags:
-       - usuario
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Usuario"
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico del huerto
       responses:
         200:
           description: OK
@@ -271,7 +271,6 @@ paths:
           description: Id de usuario no encontrado
         5XX:
           description: Error interno del servidor
-  /huertos/{id}:
     put:
       summary: Actualiza los datos del huerto
       tags:

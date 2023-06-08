@@ -1,4 +1,13 @@
-POST http://localhost/Proyecto2-Grupo09/src/api/sesion/
+POST http://localhost/Proyecto2-Grupo09/src/api/sesion/index.php
 Content-Type: application/x-www-form-urlencoded
 
 email=cesar@gmail.com&password=1234
+### Recoger datos huerto
+GET http://localhost/Proyecto2-Grupo09/src/api/huertos/1
+####Cambiar Nombre huerti
+PUT http://localhost/Proyecto2-Grupo09/src/api/huertos/1
+Content-Type: application/json
+
+
+{"Nombre":"AA"}
+###
