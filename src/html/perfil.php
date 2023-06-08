@@ -49,7 +49,7 @@ if (isset($_SESSION['user'])) {
                     <ul id="menuDesktop">
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="paginasensores.php">Mis sensores</a></li>
-                        <li><a href="login.html">Cerrar sesión</a></li>
+                        <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +57,8 @@ if (isset($_SESSION['user'])) {
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="paginasensores.php">Mis sensores</a></li>
-                <li><a href="login.html">Cerrar sesión</a></li>
+                <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+                
             </ul>
 
 

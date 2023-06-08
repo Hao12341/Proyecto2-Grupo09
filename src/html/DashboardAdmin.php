@@ -50,14 +50,15 @@ if (isset($_SESSION['user'])) {
                 <div id="contenedorMenuDesktop">
                     <ul id="menuDesktop">
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../index.html">Cerrar sesión</a></li>
+                        <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>
 
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html">Cerrar sesión</a></li>
+                <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+        
             </ul>
 
 

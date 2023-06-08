@@ -70,21 +70,17 @@
 
 }
 
-
-
 p{
     margin: 10px
 }
-.achuchu{
-    font-size: 30px;
+.botonCerrar{
+    font-size: 70px;
+    margin-right: 40px;
 }
 
 .BienvenidoJL{
     font-size: 100px;
 }
-
-
-
 
 .btn{
     font-size: 25px;
@@ -97,353 +93,93 @@ p{
     align-items: center;
     justify-content: center;
     margin-right: 30px;
-
-
 }
 
-#Usuario1{
-    font-size: 30px;
-    padding: 10px;
-}
-#Usuario2{
-    font-size: 30px;
-    padding: 10px;
-}
-#Usuario3{
-    font-size: 30px;
-    padding: 10px;
-}
-#Usuario4{
-    font-size: 30px;
-    padding: 10px;
-}
-#Usuario5{
+.Usuario{
     font-size: 30px;
     padding: 10px;
 }
 
-#prioridad1{
+.Prioridad{
     font-size: 30px;
     padding: 10px;
 }
-#prioridad2{
-    font-size: 30px;
-    padding: 10px;
-}
-#prioridad3{
-    font-size: 30px;
-    padding: 10px;
-}
-#prioridad4{
-    font-size: 30px;
-    padding: 10px;
-}
-#prioridad5{
-    font-size: 30px;
-    padding: 10px;
-}
-
-
 
 
 /* Estilo del pop-up */
-#popUpBox1 {
+#popUpBox{
     display: none; /* Estado inicial oculto */
     position: fixed; /* Posición fija */
     top: 50%; /* Centrado vertical */
     left: 50%; /* Centrado horizontal */
     transform: translate(-50%, -50%); /* Ajuste de centrado */
-    width: 800px; /* Ancho del pop-up */
-    height: 1700px; /* Alto del pop-up */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
-
-}
-
-/* Estilo del contenido del pop-up */
-#popUpContent1 {
-    padding: 20px; /* Relleno */
-    text-align: center; /* Alineación de texto */
-
-}
-
-/* Estilo del icono de cerrar */
-#closeIcon1 {
-    position: absolute; /* Posición absoluta */
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
-    font-size: 20px; /* Tamaño de fuente */
-    cursor: pointer; /* Cursor de puntero */
-}
-
-/* Estilo del pop-up */
-#popUpBox2 {
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    width: 800px; /* Ancho del pop-up */
-    height: 1700px; /* Alto del pop-up */
     background-color: #ffffff; /* Color de fondo */
     border: 2px solid #000000; /* Borde */
     z-index: 9999; /* Z-index para estar por encima de otros elementos */
     border-radius: 20px;
 }
 
-/* Estilo del contenido del pop-up */
-#popUpContent2 {
-    padding: 20px; /* Relleno */
-    text-align: center; /* Alineación de texto */
+/* Estilos para dispositivos móviles */
+@media (max-width: 1300px) {
+    #popUpBox {
+        width: 900px; /* Ancho del pop-up para dispositivos de escritorio */
+        height: 1700px; /* Alto del pop-up para dispositivos de escritorio */
+    }
 }
 
-/* Estilo del icono de cerrar */
-#closeIcon2 {
-    position: absolute; /* Posición absoluta */
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
-    font-size: 20px; /* Tamaño de fuente */
-    cursor: pointer; /* Cursor de puntero */
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 1000px) {
+    #popUpBox {
+        width: 1200px; /* Ancho del pop-up para dispositivos de escritorio */
+        height: 900px; /* Alto del pop-up para dispositivos de escritorio */
+    }
 }
 
-/* Estilo del pop-up */
-#popUpBox3 {
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    width: 800px; /* Ancho del pop-up */
-    height: 1700px; /* Alto del pop-up */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
 
-}
+
 
 
 /* Estilo del contenido del pop-up */
-#popUpContent3 {
+.popUpContent{
     padding: 20px; /* Relleno */
     text-align: center; /* Alineación de texto */
-}
 
-/* Estilo del icono de cerrar */
-#closeIcon3 {
-    position: absolute; /* Posición absoluta */
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
-    font-size: 20px; /* Tamaño de fuente */
-    cursor: pointer; /* Cursor de puntero */
 }
-
-/* Estilo del pop-up */
-#popUpBox4 {
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    width: 800px; /* Ancho del pop-up */
-    height: 1700px; /* Alto del pop-up */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
-}
-
-/* Estilo del contenido del pop-up */
-#popUpContent4 {
-    padding: 20px; /* Relleno */
-    text-align: center; /* Alineación de texto */
-}
-
-/* Estilo del icono de cerrar */
-#closeIcon4 {
-    position: absolute; /* Posición absoluta */
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
-    font-size: 20px; /* Tamaño de fuente */
-    cursor: pointer; /* Cursor de puntero */
-}
-
-
-/* Estilo del pop-up */
-#popUpBox5 {
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    width: 800px; /* Ancho del pop-up */
-    height: 1700px; /* Alto del pop-up */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
-}
-
-/* Estilo del contenido del pop-up */
-#popUpContent5 {
-    padding: 20px; /* Relleno */
-    text-align: center; /* Alineación de texto */
-}
-
-/* Estilo del icono de cerrar */
-#closeIcon5 {
-    position: absolute; /* Posición absoluta */
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
-    font-size: 20px; /* Tamaño de fuente */
-    cursor: pointer; /* Cursor de puntero */
-}
-
-#Incidencia1{
-    font-size: 50px;
-}
-#Incidencia2{
-    font-size: 50px;
-}
-#Incidencia3{
-    font-size: 50px;
-}
-#Incidencia4{
-    font-size: 50px;
-}
-#Incidencia5{
+/* Contenido de dentro del Pop-Up*/
+.Incidencia{
     font-size: 50px;
 }
 
 
-#problema1{
-    font-size: 25px;
-}
-#problema2{
-    font-size: 25px;
-}
-#problema3{
-    font-size: 25px;
-}
-#problema4{
-    font-size: 25px;
-}
-#problema5{
+.Problema{
     font-size: 25px;
 }
 
-
-
-
-
-#cosohumedad{
-    width: 500px;
-    height: 500px;
-    padding: 10px;
-    border: 3px solid black;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 15px;
-
-
-}
-#SensorHumedad{
-     display: flex;
-     justify-content: center;
-     font-size: 50px;
-     padding: 45px;
- }
-
-
-#cososal{
-    width: 500px;
-    height: 500px;
-    padding: 10px;
-    border: 3px solid black;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 15px;
-
-}
-#SensorSal{
+.SensorInfo{
     display: flex;
     justify-content: center;
     font-size: 50px;
     padding: 45px;
 }
 
-#cosotemperatura{
-    width: 500px;
-    height: 500px;
-    padding: 10px;
-    border: 3px solid black;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 15px;
-
-}
-#SensorTemperatura{
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    padding: 45px;
-}
-
-#cosoph{
-    width: 500px;
-    height: 500px;
-    padding: 10px;
-    border: 3px solid black;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 15px;
-}
-#SensorPH{
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    padding: 45px;
-}
-
-
-#cosoluz{
-    width: 500px;
-    height: 500px;
-    padding: 10px;
-    border: 3px solid black;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 15px;
-
-}
-#SensorLuz{
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    padding: 45px;
-
-}
-
-#problemahumedad{
+.InfoProblema{
     padding: 10px;
     font-size: 30px;
 }
-#problematemperatura{
-    padding: 10px;
-    font-size: 30px;
+/* Estilo del icono de cerrar */
+
+
+.closeIcon{
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
 }
-#problemaph{
-    padding: 10px;
-    font-size: 30px;
+
+.BotonX{
+    padding-right: 2rem;
+    padding-top: 1rem;
 }
-#problemasal{
-    padding: 10px;
-    font-size: 30px;
-}
-#problemaluz{
-    padding: 10px;
-    font-size: 30px;
-}
+
 
