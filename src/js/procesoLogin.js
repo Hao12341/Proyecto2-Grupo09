@@ -34,7 +34,7 @@ async function login(event) {
                 break
 
             default:
-                location.href = "../index.html"
+                location.href = "../html/index.html"
         }
 
     } else {
