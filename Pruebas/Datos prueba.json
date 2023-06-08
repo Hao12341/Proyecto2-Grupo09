@@ -1,0 +1,5 @@
+[{"id":1,"tipoIncidencias":"agua","nivelGravedad":"Baja","estado":"Solucionado","idSensor":69,"tipoSensor":"sal","idUsuario":37,"usuario":"Luisa","diección":"Room 1697","idSonda":21,"idHuerto":8},
+  {"id":2,"tipoIncidencias":"Rotura del sensor","nivelGravedad":"Grave","estado":"Solucionado","idSensor":45,"tipoSensor":"agua","idUsuario":47,"usuario":"Cesar","diección":"Room 508","idSonda":10,"idHuerto":81},
+  {"id":3,"tipoIncidencias":"agua","nivelGravedad":"Grave","estado":"Solucionado","idSensor":67,"tipoSensor":"ph","idUsuario":86,"usuario":"Alejandro","diección":"12th Floor","idSonda":81,"idHuerto":31},
+  {"id":4,"tipoIncidencias":"agua","nivelGravedad":"Media","estado":"Solucionado","idSensor":72,"tipoSensor":"calor","idUsuario":52,"usuario":"Cesar","diección":"PO Box 60321","idSonda":31,"idHuerto":25},
+  {"id":5,"tipoIncidencias":"Firualis","nivelGravedad":"Alta","estado":"Solucionado","idSensor":84,"tipoSensor":"sal","idUsuario":55,"usuario":"Maria","diección":"Apt 295","idSonda":13,"idHuerto":69}]
