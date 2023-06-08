@@ -10,20 +10,21 @@ if($_SESSION['user']['idRol'] !== "1") {
 	die();
 }
 
-require_once 'includes/connexion.php';
+require_once '../includes/connexion.php';
 if (!isset($connexion)) die();
 
-$sql = "SELECT `usuarios`.`id`, 
-       `usuarios`.`nombre`, 
-       `roles`.`id` as `idRol`, 
+$sql = "SELECT `usuarios`.`IdUsuario`, 
+       `usuarios`.`nombre`,
+       `usuarios`.email,
+       `roles`.`IdRol` as `idRol`, 
        `roles`.`rol` 
 	FROM `usuarios` 
-		INNER JOIN `roles` ON `usuarios`.`rol` = `roles`.`id`";
+		INNER JOIN `roles` ON `usuarios`.`rol` = `roles`.`IdRol`";
 
 // Si hay parámetros en el path
 if (count($peticion->parametrosPath()) > 0) {
 	// ejecutamos la sentencia SQL añadiéndole el filtrado por la id
-	$result = mysqli_query($connexion, $sql . " WHERE `usuarios`.`id` = " . intval($peticion->parametrosPath()[0]));
+	$result = mysqli_query($connexion, $sql . " WHERE `usuarios`.`IdUsuario` = " . intval($peticion->parametrosPath()[0]));
 	// como solo esperamos un resultado, lo ponemos como salida
 	$salida = mysqli_fetch_assoc($result);
 } else {
