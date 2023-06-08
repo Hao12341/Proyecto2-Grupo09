@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login2.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+
+
+    <title>Inicio de sesión</title>
+</head>
+
+
+<body>
+ 
+    <header class="header" > <!-- Esto es el encabezado que actuará de banner-->
+        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
+                                                              alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+
+
+        </nav>
+
+    </header>
+    <section>
+        <div class="Caja-Inicio">
+            <div class="formulario">
+                <form id="form">
+                    <h2>Inicia sesión</h2>
+                    <div class="inputs">
+                        <h3>Email</h3>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="inputs">
+                        <h3>Contraseña</h3>
+                        <input name="password" type="password" required>
+                    </div>
+                    <div class="recordarContraseña">
+                        <a href="#" id="olvido-contraseña">He olvidado mi contraseña</a>
+                    </div>
+                    <div class="botonInicioSesion">
+                        <button type="submit">Iniciar sesión</button>
+                    </div>
+                    <div>
+                        <p id="textoError"></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- Pop up para cambiar la contraseña -->
+        <div id="popup" class="popup" style="display: none;">
+            <div class="popup-contenido">
+                <span class="cerrar" id="cerrar">&times;</span>
+                <h4 class="titulo-recuperar">¿Quieres recuperar tu contraseña?</h4>
+                <p class="recuperar">Introduce el correo electrónico asociado a tu cuenta, y recibirás un correo con los
+                    pasos a seguir.</p>
+                <form id="form2">
+                    <div class="inputs">
+                        <h3>Email</h3>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="botonInicioSesion">
+                        <button type="submit">Enviar</button>
+                    </div>
+
+                    <!-- <div class="botonInicioSesion"> <button type="submit">Enviar</button></div> -->
+
+                </form>
+            </div>
+        </div>
+
+        <!-- Pop up envio correcto -->
+        <div id="popupEnvio" class="popup" style="display: none;">
+            <div class="popup-contenido">
+                <h4 class="titulo-recuperar">Se ha enviado correctamente</h4>
+                <div class="cerrarBoton"><button type="submit" id="cerraBoton">Cerrar</button></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/login.js"></script>
+    <script src="../js/procesoLogin.js"></script>
+
+
+</body>
+
+</html>
