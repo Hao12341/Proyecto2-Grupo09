@@ -10,14 +10,14 @@ if($_SESSION['user']['idRol'] !== "1") {
 	die();
 }
 
-require_once 'includes/connexion.php';
+require_once '../includes/connexion.php';
 if (!isset($connexion)) die();
 
 $nombre = $peticion->parametrosPost()['nombre'];
 $password = $peticion->parametrosPost()['password'];
 $rol = $peticion->parametrosPost()['rol'];
 
-$sql = "INSERT INTO `usuarios`(`nombre`, `password`, `rol`) 
+$sql = "INSERT INTO `usuarios`(`nombre`, `Contraseña`, `rol`) 
 		VALUES ('$nombre','$password',$rol)";
 
 // Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
