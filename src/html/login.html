@@ -14,9 +14,11 @@
 
 
 <body>
+ 
     <header class="header" > <!-- Esto es el encabezado que actuará de banner-->
         <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
                                                               alt="Logo de la empresa"></a><!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+
 
         </nav>
 
@@ -38,7 +40,7 @@
                         <a href="#" id="olvido-contraseña">He olvidado mi contraseña</a>
                     </div>
                     <div class="botonInicioSesion">
-                            <button type="submit">Iniciar sesión</button>
+                        <button type="submit">Iniciar sesión</button>
                     </div>
                     <div>
                         <p id="textoError"></p>
@@ -51,15 +53,19 @@
         <div id="popup" class="popup" style="display: none;">
             <div class="popup-contenido">
                 <span class="cerrar" id="cerrar">&times;</span>
-                <h4>¿Quieres recuperar tu contraseña?</h4>
-                <p>Introduce el correo electrónico asociado a tu cuenta, y recibirás un correo con la contraseña.</p>
-                <form>
+                <h4 class="titulo-recuperar">¿Quieres recuperar tu contraseña?</h4>
+                <p class="recuperar">Introduce el correo electrónico asociado a tu cuenta, y recibirás un correo con los
+                    pasos a seguir.</p>
+                <form id="form2">
                     <div class="inputs">
                         <h3>Email</h3>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="botonInicioSesion">
+                        <button type="submit">Enviar</button>
                     </div>
 
-                    <div class="botonInicioSesion"> <button type="submit" class="envio">Enviar</button></div>
+                    <!-- <div class="botonInicioSesion"> <button type="submit">Enviar</button></div> -->
 
                 </form>
             </div>
@@ -68,8 +74,8 @@
         <!-- Pop up envio correcto -->
         <div id="popupEnvio" class="popup" style="display: none;">
             <div class="popup-contenido">
-                <h4>Se ha enviado correctamente</h4>
-                    <div class="cerrarBoton"><button type="submit" id="cerraBoton">Cerrar</button></div>
+                <h4 class="titulo-recuperar">Se ha enviado correctamente</h4>
+                <div class="cerrarBoton"><button type="submit" id="cerraBoton">Cerrar</button></div>
             </div>
         </div>
     </section>

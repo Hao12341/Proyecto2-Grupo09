@@ -1,6 +1,8 @@
 /*Import fuente roboto*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /*Estilos generales*/
+
 * {
     text-decoration: none;
     color: inherit;
@@ -8,85 +10,495 @@
     margin: 0;
     padding: 0;
 }
+
 /*Variables con color asignado*/
-:root{
+:root {
     --main-bg-color: #ffffff;
     --main-fg-color: #092a09;
-    --contrast-bg-color: #b4f68e;
-    --contrast-fg-color: #007935;
+    --contrast-bg-color: #65946F;
+    --contrast-fg-color: #204b36;
     --accent-bg-color: #092a09;
     --accent-fg-color: #fffffe;
 }
+
 body {
     background-color: white;
     color: var(--main-fg-color);
 }
+
 html {
     scroll-behavior: smooth;
 }
-.bienvenido{
-    margin-top: 80px;
+
+
+.bienvenido {
+    margin-top: 0px;
+    margin-bottom: -30px;
 }
-.InicioAdmin{
+
+.InicioAdmin {
     padding: 1rem;
 }
-.titulo{
+
+.titulo {
     margin-top: 50px;
     margin-bottom: 10px;
 }
-button{
-    color: black;
-}
-#Campo{
-    color: black;
 
+
+.bienvenido {
+    margin-top: 4rem;
 }
-label{
-    display: inline-block;
-    margin-bottom: 0rem;
-    padding: 0.5rem;
-    background-color: var(--main-fg-color);
-    border-radius: 5px;
-    color: white;
+
+.boton-buscar:focus {
+    outline: 0;
 }
-.imagen{
+
+
+.boton-anyadir {
+    font-size: 2.3rem;
+    background-color: transparent;
+    border: none;
+    color: var(--contrast-bg-color);
+    margin-left: 3rem;
+}
+
+
+.input-group {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.filtrar{
-    background: #204b36;
-    padding: 5px;
-}
-img{
-    vertical-align: middle;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 50vw;
 
 }
-.anadir{
-    padding: 0.5rem;
-    width: 25px;
-    height: 25px;
+
+.input-group-append button,
+.input-group-append i {
+    margin-right: 20px;
+    /* Espacio entre los elementos */
 }
 
-.opciones-filtro{
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-    margin-left: 15px;
+
+.buscador {
+    width: 18rem;
+    display: flex;
+    /* Alinear en el eje horizontal */
+    align-items: center;
+    /* Alinear verticalmente al centro */
 }
-.page-item.active .page-link {
-    z-index: 3;
+
+.btn-outline-secondary {
+    color: #65946F;
+    border-color: #65946F;
+}
+
+.form-control {
+    height: 2rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.btn-outline-secondary {
+    height: 2rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--contrast-bg-color);
+}
+
+.boton-anyadir {
+    font-size: 2.3rem;
+    background-color: transparent;
+    border: none;
+    color: var(--contrast-bg-color);
+}
+
+.boton-anyadir:hover {
+    background-color: transparent;
+}
+
+/* --------------------------
+---Estilos de la tabla---
+------------------------- */
+
+th {
+    font-size: 12px;
+}
+
+td {
+    font-size: 12px;
+}
+
+.pestaña {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 1px solid #092a09;
+    border-radius: 5px 5px 0 0;
     color: white;
-    background-color: #65946F;
-    border-color: #204b36;
+    background-color: var(--contrast-bg-color);
 }
-.page-link {
-    position: relative;
+
+.pestañas {
+    display: flex;
+    align-items: center;
+}
+
+
+.pestaña.active {
+    background-color: var(--contrast-fg-color);
+    /* Otros estilos de pestaña activa */
+}
+
+.tabla td.acciones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* --------------------------
+---Estilos de los botones de la tabla---
+------------------------- */
+.imagen {
+    font-size: 1.4rem;
+    justify-content: space-between;
+}
+
+.imagen :nth-child(2) {
+    color: #b03737;
+}
+
+.bi-pencil-square {
+    cursor: pointer;
+}
+
+
+#editUsuario::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+}
+
+.boton-editar,
+.boton-quitar {
+    color: #000000;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+
+}
+
+.boton-editar:focus,
+.boton-quitar:focus {
+    outline: 0;
+}
+
+.boton-editar:hover,
+.boton-quitar:hover {
+    background-color: transparent;
+}
+
+.boton-editar {
+    margin-left: auto;
+    margin-right: .8rem;
+}
+
+
+/* --------------------------
+---Estilos de los POP-UPS---
+------------------------- */
+
+dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* --------------------------
+---Estilos de POP-UP editar usuario---
+------------------------- */
+#editUsuario {
+    width: 40vw;
+}
+
+#editUsuario input[type="text"],
+#editUsuario input[type="password"],
+#editUsuario select {
     display: block;
-    padding: 0.5rem 0.75rem;
-    margin-left: -1px;
-    line-height: 1.25;
-    color: #1e7e34;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+
+}
+
+#editUsuario .rol {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    margin-top: 1rem;
+}
+
+#editUsuario button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#editUsuario button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#editUsuario button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    color: #ffffff;
+}
+
+/* --------------------------
+---Estilos de POP-UP añadir usuario---
+------------------------- */
+#popup {
+    width: 40vw;
+}
+
+#popup input[type="text"],
+#popup input[type="password"],
+#popup select {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+
+}
+
+#popup .rol {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    margin-top: 1rem;
+}
+
+#popup button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#popup button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#popup button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    color: #ffffff;
+}
+
+/* --------------------------
+-------------------------------
+-------------------------------
+---Estilos vista de telefono---
+-------------------------------
+--------------------------------
+------------------------- */
+
+@media (max-width: 600px) {
+    .InicioAdmin {
+        padding: 1rem;
+        padding-left: 0rem;
+    }
+    .imagen {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5px;
+    }
+
+
+
+    .anadir {
+        padding: 0.5rem;
+        width: 25px;
+        height: 25px;
+    }
+
+    .opciones-filtro {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
+        margin-left: 15px;
+    }
+
+    .page-item.active .page-link {
+        z-index: 3;
+        color: white;
+        background-color: var(--contrast-bg-color);
+        border-color: var(--contrast-fg-color);
+    }
+
+    
+    .bienvenido {
+        margin-top: 4rem;
+    }
+
+    .boton-buscar:focus {
+        outline: 0;
+    }
+
+    .input-group {
+        display: flex;
+        /* Alinear en el eje horizontal */
+        align-items: center;
+        /* Alinear verticalmente al centro */
+        margin-bottom: 1rem;
+        width: 100vw;
+        margin-left: 0vw;
+
+    }
+
+    .input-group-append button,
+    .input-group-append i {
+        margin-right: 20px;
+        /* Espacio entre los elementos */
+    }
+
+    .buscador {
+        width: 18rem;
+        display: flex;
+        /* Alinear en el eje horizontal */
+        align-items: center;
+        /* Alinear verticalmente al centro */
+    }
+
+    .btn-outline-secondary {
+        color: #65946F;
+        border-color: #65946F;
+    }
+
+    .form-control {
+        height: 2rem;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .btn-outline-secondary {
+        height: 2rem;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .btn-outline-secondary:hover {
+        background-color: var(--contrast-bg-color);
+    }
+
+    .boton-anyadir {
+        font-size: 2.3rem;
+        background-color: transparent;
+        border: none;
+        color: var(--contrast-bg-color);
+        margin-left: 3rem;
+    }
+
+    .boton-anyadir:hover {
+        background-color: transparent;
+    }
+
+    th {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 12px;
+    }
+
+    /* --------------------------
+---Estilos de los POP-UPS---
+------------------------- */
+
+    dialog {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        text-align: center;
+    }
+
+
+
+    /* --------------------------
+---Estilos de POP-UP editar usuario---
+------------------------- */
+    #editUsuario {
+        width: 80vw;
+    }
+
+    /* --------------------------
+---Estilos de POP-UP añadir usuario---
+------------------------- */
+    #popup {
+        width: 80vw;
+    }
+
+
+
+    .boton-cancelar {
+        margin-left: 2rem;
+    }
+
+    .pestaña {
+        padding: 8px 15px;
+        font-size: 14px;
+        border: 1px solid #092a09;
+        border-radius: 5px 5px 0 0;
+        color: white;
+        background-color: var(--contrast-bg-color);
+    }
+
+    .pestañas {
+        display: flex;
+        align-items: center;
+    }
+
+    .pestaña.active {
+        background-color: var(--contrast-fg-color);
+        /* Otros estilos de pestaña activa */
+    }
+
+
+    .imagen :nth-child(2) {
+        color: #b03737;
+    }
+
+    .bi-pencil-square {
+        cursor: pointer;
+    }
+
 }
