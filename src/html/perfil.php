@@ -124,18 +124,13 @@ if (isset($_SESSION['user'])) {
 
 
 
-    <script src="../js/HuertoInternet.js">
+<script src="../js/perfil.js"></script>
     </script>
 
     <script>
-
-        let objectHuertos = "[{\"idHuerto\":1,\"Nombre\":\"Gabriel\",\"Dirección\":\"55 Doe Crossing Point\"},\n" +
-            "{\"idHuerto\":2,\"Nombre\":\"Fidole\",\"Dirección\":\"174 Mesta Point\"},\n" +
-            "{\"idHuerto\":3,\"Nombre\":\"King\",\"Dirección\":\"9 Kinsman Drive\"}]"
-        let huertos = JSON.parse(objectHuertos)
-        PonerHuertos(huertos)
+        PonerHuertos()
     </script>
-    <script src="../js/perfil.js"></script>
+
     <script src="../js/cerrarSesion.js"></script>
 </body>
 
