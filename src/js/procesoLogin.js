@@ -5,13 +5,13 @@ document.getElementById("form").addEventListener('submit', login);
 
 async function login(event) {
     // eliminamos el mensaje de error previo, si lo hay
-    const output = document.getElementById("form");
+    const output = document.getElementById("textoError");
 
     event.preventDefault();
     const formData = new FormData(event.target);
     console.log(formData)
 
-    const respuesta = await fetch('../api/sesion', {
+    const respuesta = await fetch('../api/sesion/index.php', {
         method: 'post',
         body: formData
     })
@@ -34,7 +34,7 @@ async function login(event) {
                 break
 
             default:
-                location.href = "../index.html"
+                location.href = "../html/index.html"
         }
 
     } else {

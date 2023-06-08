@@ -1,5 +1,5 @@
-const editar = document.getElementById('editar');
-const cancelarBtn = document.getElementById('cancelar-btn');
+const editar = document.querySelectorAll('.editar');
+const cancelarBtn = document.querySelectorAll('.cancelar-btn');
 const popup = document.getElementById('popup');
 
 
