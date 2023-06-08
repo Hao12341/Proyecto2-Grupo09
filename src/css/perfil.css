@@ -39,16 +39,17 @@ h1 {
 .perfil {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 67vh;
     background-color: rgba(215, 215, 215, 0.9);
     border: 2px solid rgba(212, 212, 212, 0.9);
     border-radius: 20px;
-    width: 31vw;
+    width: 32vw;
     justify-content: center;
     align-items: center;
     padding: 1em;
 }
-dl{
+
+dl {
     margin-top: 10px;
 }
 
@@ -88,7 +89,15 @@ dl{
 table td:nth-child(2) {
     padding: 5px;
 }
-dialog{
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-self: end;
+}
+
+/* dialog{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -133,7 +142,7 @@ dialog::backdrop {
 
 .boton-cancelar {
     margin-left: 2rem;
-}
+} */
 button {
     background-color: #04291C;
     color: #fff;
@@ -169,18 +178,370 @@ button:hover {
 #myFileInput {
     z-index: 0;
 }
+dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+}
 
+/* ////////////////////////////////////
+estilos seccion editar
+/////////////////////////////////// */
+#edit {
+    width: 40vw;
+}
+
+#edit input[type="text"],
+#edit input[type="password"] {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+
+}
+
+
+#edit button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#edit button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#edit button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    color: #ffffff;
+}
+/* ////////////////////////////////////
+estilos seccion econfirmar editar
+/////////////////////////////////// */
+#popup {
+    width: 40vw;
+}
+
+#popup input[type="text"],
+#popup input[type="password"] {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+
+}
+
+
+#popup button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#popup button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#popup button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    color: #ffffff;
+}
+#popup h3{
+    font-size: 1rem;
+    padding: 1rem;
+}
+.form-control {
+    display: block;
+    width: 85%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+/* //////////////////////////////////////////////////////////
+Estilos enlace de telefono a pc 
+////////////////////////////////////////////////////////// */
+@media(max-width: 900px) {
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 0.5em;
+    color: #04291c;
+    height: 15px;
+
+}
+
+.titulo {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    padding: 0.1em;
+
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    background-color: rgba(215, 215, 215, 0.9);
+    border: 2px solid rgba(212, 212, 212, 0.9);
+    border-radius: 20px;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+dl {
+    margin-top: 10px;
+}
+
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.perfil dd {
+    width: 55vw;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 0.3em;
+}
+
+.bi-person-square {
+    font-size: 7rem;
+    font-weight: 100;
+
+    color: #65946F;
+}
+
+.perfil dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.perfil dd {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+table td:nth-child(2) {
+    padding: 5px;
+}
+
+button {
+    background-color: #04291C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    display: block;
+}
+
+button:hover {
+    background-color: #65946F;
+}
+
+.huertos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton {
+    display: flex;
+
+}
+
+.texto {
+    display: flex;
+    width: 70%;
+    align-self: end;
+}
+
+
+#myFileInput {
+    z-index: 0;
+}
+dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+}
+
+}
+
+/* ////////////////////////////////////
+estilos seccion editar
+/////////////////////////////////// */
+#edit {
+    width: 40vw;
+}
+
+#edit input[type="text"],
+#edit input[type="password"] {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+
+}
+
+
+#edit button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#edit button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#edit button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    color: #ffffff;
+}
+/* ////////////////////////////////////
+estilos seccion econfirmar editar
+/////////////////////////////////// */
+#popup {
+    width: 40vw;
+}
+
+#popup input[type="text"],
+#popup input[type="password"] {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 1rem;
+
+}
+
+
+#popup button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#popup button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#popup button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    color: #ffffff;
+}
+#popup h3{
+    font-size: 1rem;
+    padding: 1rem;
+}
+.form-control {
+    display: block;
+    width: 85%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+
+
+/* /////////////////////////////////////
+EStilos telefono
+//////////////////////////////////////// */
 @media(max-width: 590px) {
-    dialog{
+    dialog {
 
         width: 70vw;
     }
-    #edit{
-    
+
+    #edit {
+
         width: 70vw;
-        height: 15vh;
-  
+        height: 25vh;
     }
+    #popup {
+
+        width: 70vw;
+        height: 25vh;
+    }
+
     section {
         display: flex;
         justify-content: center;
@@ -306,6 +667,7 @@ button:hover {
 
     .texto {
         display: flex;
+        flex-direction: column;
         width: 70%;
         align-self: end;
     }
