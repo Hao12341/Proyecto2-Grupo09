@@ -97,52 +97,6 @@ table td:nth-child(2) {
     align-self: end;
 }
 
-/* dialog{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: none;
-    padding: 2em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
-    width: 40vw;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-}
-#edit{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: none;
-    padding: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
-    width: 40vw;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-}
-dialog input {
-    margin-bottom: 10px;
-    margin: 0 auto;
-    margin-left: -.7rem;
-
-}
-
-dialog button {
-    width: 100%;
-    margin-top: 10px;
-    margin-left: -.7rem;
-
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(3px);
-}
-
-.boton-cancelar {
-    margin-left: 2rem;
-} */
 button {
     background-color: #04291C;
     color: #fff;
@@ -178,6 +132,7 @@ button:hover {
 #myFileInput {
     z-index: 0;
 }
+
 dialog {
     top: 50%;
     left: 50%;
@@ -231,6 +186,7 @@ estilos seccion editar
     background-color: #65946F;
     color: #ffffff;
 }
+
 /* ////////////////////////////////////
 estilos seccion econfirmar editar
 /////////////////////////////////// */
@@ -272,10 +228,12 @@ estilos seccion econfirmar editar
     background-color: #65946F;
     color: #ffffff;
 }
-#popup h3{
+
+#popup h3 {
     font-size: 1rem;
     padding: 1rem;
 }
+
 .form-control {
     display: block;
     width: 85%;
@@ -289,8 +247,43 @@ estilos seccion econfirmar editar
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  }
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* ////////////////////////////////////
+estilos seccion notificacion
+/////////////////////////////////// */
+#estado {
+    width: 40vw;
+}
+
+#estado h3 {
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+
+#estado button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#estado button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#estado button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    color: #ffffff;
+}
 
 /* //////////////////////////////////////////////////////////
 Estilos enlace de telefono a pc 
@@ -298,123 +291,124 @@ Estilos enlace de telefono a pc
 @media(max-width: 900px) {
 
 
-h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
-    padding: 0.5em;
-    color: #04291c;
-    height: 15px;
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        padding: 0.5em;
+        color: #04291c;
+        height: 15px;
 
-}
+    }
 
-.titulo {
-    margin-bottom: 5px;
-    margin-top: 20px;
-    padding: 0.1em;
+    .titulo {
+        margin-bottom: 5px;
+        margin-top: 20px;
+        padding: 0.1em;
 
-}
+    }
 
-.perfil {
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-    background-color: rgba(215, 215, 215, 0.9);
-    border: 2px solid rgba(212, 212, 212, 0.9);
-    border-radius: 20px;
-    width: 60vw;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-}
+    .perfil {
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        background-color: rgba(215, 215, 215, 0.9);
+        border: 2px solid rgba(212, 212, 212, 0.9);
+        border-radius: 20px;
+        width: 60vw;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+    }
 
-dl {
-    margin-top: 10px;
-}
+    dl {
+        margin-top: 10px;
+    }
 
-.perfil-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-grow: 1;
-}
+    .perfil-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-grow: 1;
+    }
 
-.perfil dd {
-    width: 55vw;
-    border: 2px solid white;
-    background-color: white;
-    border-radius: 10px;
-    font-size: 16px;
-    padding: 0.3em;
-}
+    .perfil dd {
+        width: 55vw;
+        border: 2px solid white;
+        background-color: white;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 0.3em;
+    }
 
-.bi-person-square {
-    font-size: 7rem;
-    font-weight: 100;
+    .bi-person-square {
+        font-size: 7rem;
+        font-weight: 100;
 
-    color: #65946F;
-}
+        color: #65946F;
+    }
 
-.perfil dt {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+    .perfil dt {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
 
-.perfil dd {
-    margin: 0;
-    margin-bottom: 10px;
-}
+    .perfil dd {
+        margin: 0;
+        margin-bottom: 10px;
+    }
 
-table td:nth-child(2) {
-    padding: 5px;
-}
+    table td:nth-child(2) {
+        padding: 5px;
+    }
 
-button {
-    background-color: #04291C;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 12px;
-    cursor: pointer;
-    display: block;
-}
+    button {
+        background-color: #04291C;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 12px;
+        cursor: pointer;
+        display: block;
+    }
 
-button:hover {
-    background-color: #65946F;
-}
+    button:hover {
+        background-color: #65946F;
+    }
 
-.huertos {
-    display: flex;
-    justify-content: space-between;
-}
+    .huertos {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.boton {
-    display: flex;
+    .boton {
+        display: flex;
 
-}
+    }
 
-.texto {
-    display: flex;
-    width: 70%;
-    align-self: end;
-}
+    .texto {
+        display: flex;
+        width: 70%;
+        align-self: end;
+    }
 
 
-#myFileInput {
-    z-index: 0;
-}
-dialog {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: none;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    text-align: center;
-}
+    #myFileInput {
+        z-index: 0;
+    }
+
+    dialog {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: none;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        text-align: center;
+    }
 
 }
 
@@ -459,6 +453,7 @@ estilos seccion editar
     background-color: #65946F;
     color: #ffffff;
 }
+
 /* ////////////////////////////////////
 estilos seccion econfirmar editar
 /////////////////////////////////// */
@@ -500,10 +495,12 @@ estilos seccion econfirmar editar
     background-color: #65946F;
     color: #ffffff;
 }
-#popup h3{
+
+#popup h3 {
     font-size: 1rem;
     padding: 1rem;
 }
+
 .form-control {
     display: block;
     width: 85%;
@@ -517,10 +514,44 @@ estilos seccion econfirmar editar
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  }
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* ////////////////////////////////////
+estilos seccion notificacion
+/////////////////////////////////// */
+#estado {
+    width: 40vw;
+}
+
+#estado h3 {
+    font-size: 1rem;
+    padding: 1rem;
+}
 
 
+#estado button.btn {
+    background-color: #65946F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 80%;
+
+}
+
+#estado button.btn-outline-secondary {
+    background-color: transparent;
+    color: #65946F;
+    border: 1px solid #65946F;
+}
+
+#estado button.btn-outline-secondary:hover {
+    background-color: #65946F;
+    background-color: #65946F;
+    color: #ffffff;
+}
 
 /* /////////////////////////////////////
 EStilos telefono
@@ -536,6 +567,7 @@ EStilos telefono
         width: 70vw;
         height: 25vh;
     }
+
     #popup {
 
         width: 70vw;
@@ -676,5 +708,21 @@ EStilos telefono
     #myFileInput {
         z-index: 0;
     }
+
+    /* ////////////////////////////////////
+  estilos seccion notificacion
+  /////////////////////////////////// */
+    #estado {
+
+        width: 70vw;
+        height: 25vh;
+    }
+
+    #estado h3 {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+
 
 }
