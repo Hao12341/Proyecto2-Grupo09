@@ -278,6 +278,9 @@ components:
           nombre:
             type: string
             description: nombre del usuario
+          email:
+            type: string
+            description: email de usuario
           idRol:
             type: integer
             description: id del rol del usuario
