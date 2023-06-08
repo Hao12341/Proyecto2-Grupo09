@@ -90,6 +90,13 @@ table td:nth-child(2) {
     padding: 5px;
 }
 
+.texto {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-self: end;
+}
+
 /* dialog{
     top: 50%;
     left: 50%;
@@ -660,6 +667,7 @@ EStilos telefono
 
     .texto {
         display: flex;
+        flex-direction: column;
         width: 70%;
         align-self: end;
     }
