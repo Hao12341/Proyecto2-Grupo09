@@ -72,6 +72,7 @@ if(isset($_SESSION['user'])) {
     </nav>
 </header>
 <script src="../js/menu.js"></script>
+<script src="../js/cerrarSesion.js"></script>
 
 <section>
     <div id="Bienvenido"><h1 class="BienvenidoJL">Bienvenido Técnico</h1></div>
