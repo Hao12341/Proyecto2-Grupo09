@@ -1,5 +1,5 @@
-insert into unidades (IdUnidades, Unidad) values (1, 'g/L');
-insert into unidades (IdUnidades, Unidad) values (2, 'ph');
-insert into unidades (IdUnidades, Unidad) values (3, '%');
-insert into unidades (IdUnidades, Unidad) values (4, 'Lúmenes');
-insert into unidades (IdUnidades, Unidad) values (5, 'ºC');
+INSERT INTO `unidades` (`IdUnidades`,`Unidad`) VALUES (1,'g/L');
+INSERT INTO `unidades` (`IdUnidades`,`Unidad`) VALUES (2,'ph');
+INSERT INTO `unidades` (`IdUnidades`,`Unidad`) VALUES (3,'%');
+INSERT INTO `unidades` (`IdUnidades`,`Unidad`) VALUES (4,'Lúmenes');
+INSERT INTO `unidades` (`IdUnidades`,`Unidad`) VALUES (5,'ºC');
