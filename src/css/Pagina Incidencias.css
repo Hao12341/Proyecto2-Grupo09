@@ -28,7 +28,6 @@
 }
 #Cuadrao{
     width: 900px;
-    height: 1200px;
     margin: 0 auto;
     display: flex;
     align-items:center ;
@@ -58,6 +57,10 @@
 
 }
 
+.cantidad{
+
+}
+
 .incidencias{
     width: 900px;
     height: 150px;
@@ -79,7 +82,7 @@ p{
 }
 
 .BienvenidoJL{
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .btn{
@@ -95,12 +98,12 @@ p{
     margin-right: 30px;
 }
 
-.Usuario{
+.Cliente{
     font-size: 30px;
     padding: 10px;
 }
 
-.Prioridad{
+.Gravedad{
     font-size: 30px;
     padding: 10px;
 }
@@ -125,61 +128,263 @@ p{
         width: 900px; /* Ancho del pop-up para dispositivos de escritorio */
         height: 1700px; /* Alto del pop-up para dispositivos de escritorio */
     }
+    /* Estilo del contenido del pop-up */
+    .popUpContent{
+        padding: 20px; /* Relleno */
+        text-align: center; /* Alineación de texto */
+
+    }
+    /* Contenido de dentro del Pop-Up*/
+    .información{
+        padding-top: 2rem;
+    }
+
+    .tituloIncidencia{
+        font-size: 70px;
+    }
+
+    #nombreUsuario{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .Cliente{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    .estado{
+        font-size: 25px;
+    }
+
+    #textoIdUsuario {
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .idUsuario{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #dirección{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .direcciónUsuario{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #textoIdHuerto{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .idHuerto{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #textoIdSonda{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .idSonda{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #textoIdSensor{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+
+    }
+
+    .idSensor{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+
+    .Usuario{
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        padding: 1rem;
+    }
+
+    .InfoProblema{
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    /* Estilo del icono de cerrar */
+
+    .closeIcon{
+        position: absolute; /* Posición absoluta */
+        top: 10px; /* Distancia desde arriba */
+        right: 10px; /* Distancia desde la derecha */
+        font-size: 20px; /* Tamaño de fuente */
+        cursor: pointer; /* Cursor de puntero */
+    }
+
+    .BotonX{
+        padding-right: 2rem;
+        padding-top: 1rem;
+    }
+
 }
 
-/* Estilos para dispositivos de escritorio */
+/* ===================== Estilos para dispositivos de escritorio =============*/
 @media (min-width: 1000px) {
     #popUpBox {
         width: 1200px; /* Ancho del pop-up para dispositivos de escritorio */
         height: 900px; /* Alto del pop-up para dispositivos de escritorio */
     }
-}
 
 
 
-
-
-/* Estilo del contenido del pop-up */
-.popUpContent{
+    /* Estilo del contenido del pop-up */
+    .popUpContent{
     padding: 20px; /* Relleno */
     text-align: center; /* Alineación de texto */
+    }
 
-}
-/* Contenido de dentro del Pop-Up*/
-.Incidencia{
-    font-size: 50px;
-}
+    /* Contenido de dentro del Pop-Up*/
+    .información{
+        padding-top: 2rem;
+    }
+
+    .tituloIncidencia{
+        font-size: 40px;
+    }
+
+    #nombreUsuario{
+        font-size: 24px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .Cliente{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    .estado{
+        font-size: 25px;
+    }
+
+    #textoIdUsuario {
+        font-size: 24px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .idUsuario{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #dirección{
+        font-size: 24px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .direcciónUsuario{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #textoIdHuerto{
+         font-size: 24px;
+         display: flex;
+        padding: 2rem;
+     }
+
+    .idHuerto{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #textoIdSonda{
+        font-size: 24px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .idSonda{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    #textoIdSensor{
+        font-size: 24px;
+        display: flex;
+        padding: 2rem;
+    }
+
+    .idSensor{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
+    }
+
+    .tipoSensor{
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        padding:0rem;
+    }
 
 
-.Problema{
-    font-size: 25px;
-}
+    .Usuario{
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        padding: 2rem;
+    }
 
-.SensorInfo{
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-    padding: 45px;
-}
-
-.InfoProblema{
-    padding: 10px;
-    font-size: 30px;
-}
-/* Estilo del icono de cerrar */
+    .InfoProblema{
+        padding: 10px;
+        font-size: 30px;
+    }
 
 
-.closeIcon{
-    position: absolute; /* Posición absoluta */
-    top: 10px; /* Distancia desde arriba */
-    right: 10px; /* Distancia desde la derecha */
-    font-size: 20px; /* Tamaño de fuente */
-    cursor: pointer; /* Cursor de puntero */
-}
+    /* Estilo del icono de cerrar */
 
-.BotonX{
-    padding-right: 2rem;
-    padding-top: 1rem;
-}
 
+    .closeIcon{
+        position: absolute; /* Posición absoluta */
+        top: 10px; /* Distancia desde arriba */
+        right: 10px; /* Distancia desde la derecha */
+        font-size: px; /* Tamaño de fuente */
+        cursor: pointer; /* Cursor de puntero */
+    }
+
+    .BotonX{
+        padding-right: 3rem;
+        padding-top: 1rem;
+    }
+    }
 
