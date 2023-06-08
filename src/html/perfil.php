@@ -123,7 +123,7 @@ if (isset($_SESSION['user'])) {
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
-    <script src="../js/perfil.js"></script>
+
     <script src="../js/cerrarSesion.js"></script>
     <script src="../js/HuertoInternet.js">
     </script>
@@ -133,9 +133,10 @@ if (isset($_SESSION['user'])) {
         let objectHuertos = "[{\"id\":1,\"Nombre\":\"Gabriel\",\"Dirección\":\"55 Doe Crossing Point\"},\n" +
             "{\"id\":2,\"Nombre\":\"Fidole\",\"Dirección\":\"174 Mesta Point\"},\n" +
             "{\"id\":3,\"Nombre\":\"King\",\"Dirección\":\"9 Kinsman Drive\"}]"
-        let  huertos = JSON.parse(objectHuertos)
+        let huertos = JSON.parse(objectHuertos)
         PonerHuertos(huertos)
     </script>
+    <script src="../js/perfil.js"></script>
 </body>
 
 
