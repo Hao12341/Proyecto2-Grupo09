@@ -1,8 +1,8 @@
 <?php
-$bbdd_servidor = 'localhost';
-$bbdd_nombre = 'test_login';
-$bbdd_user = 'root';
-$bbdd_password = '';
+$bbdd_servidor = 'sql8.freesqldatabase.com';
+$bbdd_nombre = 'sql8624327';
+$bbdd_user = 'sql8624327';
+$bbdd_password = 'T9iDtrYzyY';
 
 try {
 	$connexion = mysqli_connect($bbdd_servidor, $bbdd_user, $bbdd_password, $bbdd_nombre);
