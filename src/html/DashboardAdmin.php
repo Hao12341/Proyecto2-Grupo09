@@ -43,40 +43,37 @@ if (isset($_SESSION['user'])) {
     <!-- Empieza el Header/BANNER -->
     <header class="Encabezado" role="banner">
         <!-- Esto es el encabezado que actuará de banner-->
-        <!-- Empieza la etiqueta nav-->
         <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
             <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
-            <!-- Contenedor de los elementos del banner en vista ordenador -->
             <div id="contenedorContenedorDesktop">
                 <div id="separador"></div>
                 <div id="contenedorMenuDesktop">
                     <ul id="menuDesktop">
-                        <li><a href="/Página%20Incidencias.html">Avisos</a></li>
-                        <li><a href="tml">Cerrar Sesión</a></li>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="Página Incidencias.php">Incidencias</a></li>
+                        <li><a href="login.html">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>
-            <!-- Fin Contenedor de los elementos del banner en vista ordenador -->
 
-            <!-- Contenedor de menu hamburguesa en vista movil -->
             <ul id="menuDesplegable">
-                <li><a href="/Página%20Incidencias.html">Avisos</a></li>
-                <li><a onclick="logout()" href="#">Cerrar Sesión</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="Página Incidencias.php">Incidencias</a></li>
+                <li><a href="login.html">Cerrar sesión</a></li>
             </ul>
-            <!--FIN Contenedor de menu hamburguesa en vista movil -->
 
-            <!-- Contenedor de iconos del BANNER -->
+
+
             <div id="iconosBanner">
-                <a id="Login" href="tml"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                        alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <!--FIN Contenedor de iconos del BANNER -->
         </nav>
-        <!-- FIN etiqueta Nav-->
     </header>
     <!-- FIN Header-->
     <!-- script que hace funcionar el menu desplegable-->
