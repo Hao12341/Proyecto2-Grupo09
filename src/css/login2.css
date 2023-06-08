@@ -38,9 +38,10 @@ h3 {
     margin-left: 5px;
 }
 
-h4 {
+.titulo-recuperar{
     margin-bottom: 2em;
     text-align: center;
+    font-size: 1rem;
 }
 
 h5 {
@@ -49,9 +50,9 @@ h5 {
 
 }
 
-p {
+.recuperar{
     margin-bottom: 20px;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 section {
