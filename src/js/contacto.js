@@ -1,4 +1,4 @@
-<<<<<<< HEAD:js/contacto.js
+
 
 // Declaración de Variables
 const botonEnvio = document.getElementById("botonEnvio")
@@ -33,7 +33,7 @@ function contarCaracteres(textarea) {
 
 
 
-=======
+
 
 // Declaración de Variables
 const botonEnvio = document.getElementById("botonEnvio")
@@ -66,4 +66,3 @@ function contarCaracteres(textarea) {
     document.getElementById("contador").innerText = textarea.value.length
 }
 
->>>>>>> develop:src/js/contacto.js
