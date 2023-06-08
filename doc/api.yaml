@@ -329,11 +329,7 @@ components:
             description: nombre del usuario
           email:
             type: string
-<<<<<<< HEAD
-            description: email de usuario
-=======
             description: correo del usuario
->>>>>>> develop
           idRol:
             type: integer
             description: id del rol del usuario

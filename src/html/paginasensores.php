@@ -33,6 +33,9 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1/dist/chartjs-adapter-luxon.umd.min.js"></script>
 
 
     <link rel="stylesheet" href="../css/pagina_sensores.css">
@@ -284,8 +287,10 @@ if (isset($_SESSION['user'])) {
 
                 <div class="tab-panels">
                     <section id="humedad" class="tab-panel">
-                        <h2>humedad</h2>
-                        <canvas id="graficahumedad"></canvas>
+                        <div><h2>humedad</h2>
+                            <canvas id="graficahumedad" width="400" height="400"></canvas>
+                        </div>
+
                     </section>
                     <section id="salinidad" class="tab-panel">
                         <h2>salinidad</h2>
@@ -329,6 +334,81 @@ if (isset($_SESSION['user'])) {
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
 <script src="../js/admin.js"></script>
+<script src="../js/grafica.js"></script>
+
+<script>
+
+    addEventListener("load", () => {
+        console.log("caca")
+        let
+            opciones = {
+                plugins: {
+                        plugins: {
+                            title: {
+                                display: false,
+                            }
+                        },
+                        responsive: true,
+
+                    tooltip: {
+                        backgroundColor: '#fff',
+                        titleColor: '#000',
+                        titleAlign: 'center',
+                        bodyColor: '#333',
+                        borderColor: '#666',
+                        borderWidth: 1,
+                    }
+                }
+            };
+        let json = "[{\"fecha\":\"2022-08-06\",\"medida\":56.08,\"tipoMedida\":\"Temperatura\"},\n" +
+            "{\"fecha\":\"2023-01-25\",\"medida\":0.89,\"tipoMedida\":\"Luz\"},\n" +
+            "{\"fecha\":\"2022-11-27\",\"medida\":86.31,\"tipoMedida\":\"Luz\"},\n" +
+            "{\"fecha\":\"2023-04-12\",\"medida\":15.88,\"tipoMedida\":\"Temperatura\"},\n" +
+            "{\"fecha\":\"2022-08-06\",\"medida\":80.38,\"tipoMedida\":\"ph\"},\n" +
+            "{\"fecha\":\"2022-12-27\",\"medida\":70.85,\"tipoMedida\":\"Humedad\"},\n" +
+            "{\"fecha\":\"2023-03-27\",\"medida\":36.28,\"tipoMedida\":\"Temperatura\"},\n" +
+            "{\"fecha\":\"2022-08-03\",\"medida\":75.38,\"tipoMedida\":\"Temperatura\"},\n" +
+            "{\"fecha\":\"2022-10-03\",\"medida\":94.82,\"tipoMedida\":\"Sal\"},\n" +
+            "{\"fecha\":\"2022-06-10\",\"medida\":29.66,\"tipoMedida\":\"Sal\"},\n" +
+            "{\"fecha\":\"2022-10-10\",\"medida\":30.81,\"tipoMedida\":\"Sal\"},\n" +
+            "{\"fecha\":\"2022-07-15\",\"medida\":84.5,\"tipoMedida\":\"ph\"},\n" +
+            "{\"fecha\":\"2023-04-10\",\"medida\":78.8,\"tipoMedida\":\"ph\"},\n" +
+            "{\"fecha\":\"2022-11-18\",\"medida\":80.25,\"tipoMedida\":\"Humedad\"},\n" +
+            "{\"fecha\":\"2022-06-29\",\"medida\":9.72,\"tipoMedida\":\"Luz\"},\n" +
+            "{\"fecha\":\"2023-03-14\",\"medida\":65.22,\"tipoMedida\":\"Humedad\"},\n" +
+            "{\"fecha\":\"2022-07-24\",\"medida\":36.95,\"tipoMedida\":\"Sal\"},\n" +
+            "{\"fecha\":\"2023-01-28\",\"medida\":79.48,\"tipoMedida\":\"Temperatura\"},\n" +
+            "{\"fecha\":\"2023-03-04\",\"medida\":47.21,\"tipoMedida\":\"ph\"},\n" +
+            "{\"fecha\":\"2022-12-04\",\"medida\":87.23,\"tipoMedida\":\"Humedad\"},\n" +
+            "{\"fecha\":\"2022-08-10\",\"medida\":32.04,\"tipoMedida\":\"Sal\"},\n" +
+            "{\"fecha\":\"2022-08-01\",\"medida\":79.71,\"tipoMedida\":\"Temperatura\"},\n" +
+            "{\"fecha\":\"2023-02-17\",\"medida\":44.11,\"tipoMedida\":\"ph\"},\n" +
+            "{\"fecha\":\"2022-10-07\",\"medida\":77.11,\"tipoMedida\":\"Humedad\"},\n" +
+            "{\"fecha\":\"2022-08-25\",\"medida\":0.22,\"tipoMedida\":\"Temperatura\"},\n" +
+            "{\"fecha\":\"2022-07-21\",\"medida\":25.62,\"tipoMedida\":\"ph\"},\n" +
+            "{\"fecha\":\"2022-12-16\",\"medida\":23.13,\"tipoMedida\":\"Luz\"},\n" +
+            "{\"fecha\":\"2022-08-04\",\"medida\":41.74,\"tipoMedida\":\"Humedad\"},\n" +
+            "{\"fecha\":\"2022-08-27\",\"medida\":64.84,\"tipoMedida\":\"Luz\"},\n" +
+            "{\"fecha\":\"2022-12-05\",\"medida\":80.13,\"tipoMedida\":\"Sal\"}]"
+        console.log("array JSON")
+        console.log(json)
+        let data = JSON.parse(json)
+        console.log("objeto parseadisimo")
+        console.log(data)
+        crearGrafica("graficahumedad",data,opciones,"humedad","Humedad")
+        crearGrafica("graficasalinidad",data,opciones,"Sal","Sal")
+        crearGrafica("graficatemperatura",data,opciones,"Temperatura","Temperatura")
+        crearGrafica("graficaph",data,opciones,"ph","ph")
+        crearGrafica("graficaluz",data,opciones,"Luz","Luz")
+
+
+    })
+
+
+
+
+
+</script>
 
 <!--aqui acaba la tabla-->
 </body>
