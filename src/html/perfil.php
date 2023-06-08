@@ -38,18 +38,17 @@ if (isset($_SESSION['user'])) {
 
 
 <body>
-    <header class="Encabezado" role="banner">
+<header class="Encabezado" role="banner">
         <!-- Esto es el encabezado que actuará de banner-->
-        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
+        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
+                                                              alt="Logo de la empresa"></a>
             <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
             <div id="contenedorContenedorDesktop">
                 <div id="separador"></div>
                 <div id="contenedorMenuDesktop">
                     <ul id="menuDesktop">
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="perfil.php">Mi perfil</a></li>
                         <li><a href="paginasensores.php">Mis sensores</a></li>
-                        <li><a href="o.html">Contáctanos</a></li>
                         <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
@@ -57,15 +56,15 @@ if (isset($_SESSION['user'])) {
 
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="perfil.php">Mi perfil</a></li>
                 <li><a href="paginasensores.php">Mis sensores</a></li>
-                <li><a onclick="logout()">Cerrar sesión</a></li>
+                <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+                
             </ul>
 
 
 
             <div id="iconosBanner">
-                <a id="Login" href="tml"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
                     <div></div>
@@ -109,8 +108,8 @@ if (isset($_SESSION['user'])) {
                     <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">NO</button>
                 </dialog>
                 <dialog id="edit">
-                    <input type="text" class="form-control-sm" placeholder="Nombre del huerto">
-                    <button class="btn btn-outline-secondary" type="button">EDITAR</button>
+                    <input type="text" class="form-control-sm" id="nombreHuerto" placeholder="Nombre del huerto">
+                    <button class="btn btn-outline-secondary" id="botonEditar" type="button">EDITAR</button>
                     <button class="btn btn-outline-secondary" type="button" id="cancel">Cancelar</button>
                 </dialog>
             </div>
@@ -124,19 +123,20 @@ if (isset($_SESSION['user'])) {
         crossorigin="anonymous"></script>
 
 
-    <script src="../js/cerrarSesion.js"></script>
+
     <script src="../js/HuertoInternet.js">
     </script>
 
     <script>
 
-        let objectHuertos = "[{\"id\":1,\"Nombre\":\"Gabriel\",\"Dirección\":\"55 Doe Crossing Point\"},\n" +
-            "{\"id\":2,\"Nombre\":\"Fidole\",\"Dirección\":\"174 Mesta Point\"},\n" +
-            "{\"id\":3,\"Nombre\":\"King\",\"Dirección\":\"9 Kinsman Drive\"}]"
+        let objectHuertos = "[{\"idHuerto\":1,\"Nombre\":\"Gabriel\",\"Dirección\":\"55 Doe Crossing Point\"},\n" +
+            "{\"idHuerto\":2,\"Nombre\":\"Fidole\",\"Dirección\":\"174 Mesta Point\"},\n" +
+            "{\"idHuerto\":3,\"Nombre\":\"King\",\"Dirección\":\"9 Kinsman Drive\"}]"
         let huertos = JSON.parse(objectHuertos)
         PonerHuertos(huertos)
     </script>
     <script src="../js/perfil.js"></script>
+    <script src="../js/cerrarSesion.js"></script>
 </body>
 
 
