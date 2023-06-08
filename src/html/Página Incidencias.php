@@ -20,201 +20,109 @@ if(isset($_SESSION['user'])) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Incidencias</title>
-<link rel="stylesheet" href="../css/Pagina%20Incidencias.css">
-  <script src="../js/Página%20Incidencias.js"></script>
+    <meta charset="UTF-8">
+    <title>Incidencias</title>
+    <link rel="stylesheet" href="Pagina%20Incidencias.css">
+    <script src="Página%20Incidencias.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="../css/DashboardAdminMovil.css">
+    <link rel="stylesheet" href="../css/header2.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" href="../css/Pagina%20Incidencias.css">
+    <link rel="stylesheet" href="../css/estilos.css">
 
-  <link rel="stylesheet" type="text/css" href="../css/DashboardAdminMovil.css">
-  <link rel="stylesheet" href="../css/header2.css">
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
-  <link rel="stylesheet" href="../css/Pagina%20Incidencias.css">
-  <link rel="stylesheet" href="../css/estilos.css">
-
-  <script src="../js/Página%20Incidencias.js"></script>
+    <script src="../js/Página%20Incidencias.js"></script>
 
 
 </head>
-
 <body>
 
 <header class="Encabezado" role="banner">
-  <!-- Esto es el encabezado que actuará de banner-->
-  <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg"
-                                                     alt="Logo de la empresa"></a>
-    <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
-    <div id="contenedorContenedorDesktop">
-      <div id="separador"></div>
-      <div id="contenedorMenuDesktop">
-        <ul id="menuDesktop">
-          <li><a href="#Contacto">Inicio</a></li>
-          <li><a href="#Perfil">Mi perfil</a></li>
-          <li><a href="#Sensores">Mis sensores</a></li>
-          <li><a href="o.html">Contáctanos</a></li>
-          <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+    <!-- Esto es el encabezado que actuará de banner-->
+    <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
+                                                          alt="Logo de la empresa"></a>
+        <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+        <div id="contenedorContenedorDesktop">
+            <div id="separador"></div>
+            <div id="contenedorMenuDesktop">
+                <ul id="menuDesktop">
+                    <li><a href="#Contacto">Inicio</a></li>
+                    <li><a href="#Perfil">Mi perfil</a></li>
+                    <li><a href="#Sensores">Mis sensores</a></li>
+                    <li><a href="../html/contacto.html">Contáctanos</a></li>
+                    <li><a href="#CerrarSesion">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="menuDesplegable">
+            <li><a href="#Contacto">Inicio</a></li>
+            <li><a href="#Perfil">Mi perfil</a></li>
+            <li><a href="#Sensores">Mis sensores</a></li>
+            <li><a href="../html/contacto.html">Contáctanos</a></li>
+            <li><a href="#CerrarSesion">Cerrar sesión</a></li>
         </ul>
-      </div>
-    </div>
-
-    <ul id="menuDesplegable">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="Página Incidencias.php">Página Incidencias</a></li>
-        <li><a onclick="logout()">Cerrar sesión</a></li>
-    </ul>
 
 
-
-    <div id="iconosBanner">
-      <a id="Login" href="login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
-      <div class="hamburguesa">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-  </nav>
+        <div id="iconosBanner">
+            <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                                                         alt="Perfil Log In"></a>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
 </header>
 <script src="../js/menu.js"></script>
 
 <section>
-  <div id="Bienvenido"><h1 class="BienvenidoJL">Bienvenido Técnico</h1></div>
-  <div id="contenedor">
-    <div id="Cuadrao">
-      <div id="anuncio-incidencias">
-        <p id="NumerodeIncidencias">Número de Incidencias: <b>5</b></p>
-      </div>
+    <div id="Bienvenido"><h1 class="BienvenidoJL">Bienvenido Técnico</h1></div>
+    <div id="contenedor">
+        <div id="Cuadrao">
+            <div id="anuncio-incidencias">
+                <p id="NumerodeIncidencias">Número de Incidencias: <b>5</b></p>
+            </div>
 
-      <div class="incidencias">
-        <div>
-        <p id="Usuario1"><b>Usuario: </b>Alberto Pérez </p>
-        <p id="prioridad1"><b>Prioridad de Incidencia: </b><b style="color:#b70101">Urgente</b></p>
+            <div class="incidencias">
+                <div>
+                    <p class="Usuario"><b>Usuario: </b>Alberto Pérez </p>
+                    <p class="Prioridad"><b>Prioridad de Incidencia: </b><b style="color:#b70101">Urgente</b></p>
+                </div>
+                <button class="btn" onclick="showPopUp()">Ver Más</button>
+                <!-- Elemento que contiene el pop-up -->
+                <div id="popUpBox">
+                    <!-- Contenido del pop-up -->
+                    <div class="popUpContent">
+                        <h1 class="Incidencia">Incidencia</h1>
+                        <p class="Problema">El problemas consiste en: "Insertar Problema Relacionado"</p>
+                        <p class="SensorInfo">Sensor de Humedad Averiado</p>
+                        <p class="InfoProblema">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+                            autem doloribus, ducimus exercitationem facilis fuga fugiat hic id impedit itaque iure minus
+                            nulla odio quaerat qui recusandae totam ullam voluptatibus?</p>
+
+
+                    </div>
+                    <!-- Icono de cerrar -->
+                    <span class="closeIcon" onclick="hidePopUp()">
+            <div class="BotonX">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-square"
+                   viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </div>
+          </span>
+                </div>
+            </div>
         </div>
-        <button class="btn" onclick="showPopUp1()">Ver Más</button>
-        <!-- Elemento que contiene el pop-up -->
-        <div id="popUpBox1">
-          <!-- Contenido del pop-up -->
-          <div id="popUpContent1">
-            <h1 id="Incidencia1">Incidencia</h1>
-            <p id="problema1">El problemas consiste en: "Insertar Problema Relacionado"</p>
-            <img id="cosohumedad" src="../img/foto_sensor_de_humedad.jpg">
-            <p id="SensorHumedad">Sensor de Humedad Averiado</p>
-            <p id="problemahumedad">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem doloribus, ducimus exercitationem facilis fuga fugiat hic id impedit itaque iure minus nulla odio quaerat qui recusandae totam ullam voluptatibus?</p>
-
-
-          </div>
-          <!-- Icono de cerrar -->
-          <span id="closeIcon1" onclick="hidePopUp1()"><p class="achuchu"><b>X</b></p></span>
-        </div>
-        </div>
-
-
-
-      <div class="incidencias">
-        <div>
-        <p id="Usuario2"><b>Usuario: </b>Javier Ruperez</p>
-        <p id="prioridad2"><b>Prioridad de Incidencia: </b><b style="color:red">Alta</b></p>
-        </div>
-        <button class="btn" onclick="showPopUp2()">Ver Más</button>
-        <!-- Elemento que contiene el pop-up -->
-        <div id="popUpBox2">
-          <!-- Contenido del pop-up -->
-          <div id="popUpContent2">
-            <h1 id="Incidencia2">Incidencia</h1>
-            <p id="problema2">El problemas consiste en: "Insertar Problema Relacionado"</p>
-            <img id="cosotemperatura" src="../img/foto_sensor_de_temperatura.jpg">
-            <p id="SensorTemperatura">Sensor de Temperatura Averiado</p>
-            <p id="problematemperatura">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem doloribus, ducimus exercitationem facilis fuga fugiat hic id impedit itaque iure minus nulla odio quaerat qui recusandae totam ullam voluptatibus?</p>
-
-          </div>
-          <!-- Icono de cerrar -->
-          <span id="closeIcon2" onclick="hidePopUp2()"><p class="achuchu"><b>X</b></p></span>
-        </div>
-      </div>
-
-
-
-
-      <div class="incidencias">
-        <div>
-        <p id="Usuario3"><b>Usuario: </b>Alex Escrivá</p>
-        <p id="prioridad3"><b>Prioridad de Incidencia: </b><b style="color:red">Alta</b></p>
-        </div>
-        <button class="btn" onclick="showPopUp3()">Ver Más</button>
-        <!-- Elemento que contiene el pop-up -->
-        <div id="popUpBox3">
-          <!-- Contenido del pop-up -->
-          <div id="popUpContent3">
-            <h1 id="Incidencia3">Incidencia</h1>
-            <p id="problema3">El problemas consiste en: "Insertar Problema Relacionado"</p>
-            <img id="cososal" src="../img/foto_sensor_de_salinidad.jpeg">
-            <p id="SensorSal">Sensor de Salinidad Averiado</p>
-            <p id="problemasal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem doloribus, ducimus exercitationem facilis fuga fugiat hic id impedit itaque iure minus nulla odio quaerat qui recusandae totam ullam voluptatibus?</p>
-
-
-          </div>
-          <!-- Icono de cerrar -->
-          <span id="closeIcon3" onclick="hidePopUp3()"><p class="achuchu"><b>X</b></p></span>
-        </div>
-      </div>
-
-
-
-
-
-
-
-      <div class="incidencias">
-        <div>
-          <p id="Usuario4"><b>Usuario: </b>César Herrero </p>
-          <p id="prioridad4"><b>Prioridad de Incidencia: </b><b style="color:orange">Media</b></p>
-        </div>
-        <button class="btn" onclick="showPopUp4()">Ver Más</button>
-        <!-- Elemento que contiene el pop-up -->
-        <div id="popUpBox4">
-          <!-- Contenido del pop-up -->
-          <div id="popUpContent4">
-            <h1 id="Incidencia4">Incidencia</h1>
-            <p id="problema4">El problemas consiste en: "Insertar Problema Relacionado"</p>
-            <img id="cosoph" src="../img/foto_sensor_de_ph.jpg">
-            <p id="SensorPH">Sensor de PH Averiado</p>
-            <p id="problemaph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem doloribus, ducimus exercitationem facilis fuga fugiat hic id impedit itaque iure minus nulla odio quaerat qui recusandae totam ullam voluptatibus?</p>
-
-          </div>
-          <!-- Icono de cerrar -->
-          <span id="closeIcon4" onclick="hidePopUp4()"><p class="achuchu"><b>X</b></p></span>
-        </div>
-      </div>
-
-
-
-
-      <div class="incidencias">
-        <div>
-        <p id="Usuario5"><b>Usuario: </b>Hugo Belda</p>
-        <p id="prioridad5"><b>Prioridad de Incidencia: </b><b style="color:green">Baja</b></p>
-        </div>
-        <button class="btn" onclick="showPopUp5()">Ver Más</button>
-        <!-- Elemento que contiene el pop-up -->
-        <div id="popUpBox5">
-          <!-- Contenido del pop-up -->
-          <div id="popUpContent5">
-            <h1 id="Incidencia5">Incidencia</h1>
-            <p id="problema5">El problemas consiste en: "Insertar Problema Relacionado"</p>
-            <img id="cosoluz" src="../img/foto_sensor_de_luz.jpg">
-            <p id="SensorLuz">FotoSensor Averiado</p>
-            <p id="problemaluz">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem doloribus, ducimus exercitationem facilis fuga fugiat hic id impedit itaque iure minus nulla odio quaerat qui recusandae totam ullam voluptatibus?</p>
-          </div>
-          <!-- Icono de cerrar -->
-          <span id="closeIcon5" onclick="hidePopUp5()"><p class="achuchu"><b>X</b></p></span>
-        </div>
-      </div>
-      </div>
     </div>
     </div>
-  </div>
+    </div>
 
-  </section>
+</section>
+
 <script src="../js/cerrarSesion.js"></script>
 
 </body>
