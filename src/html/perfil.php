@@ -135,7 +135,7 @@ if (isset($_SESSION['user'])) {
                     <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">NO</button>
                 </dialog>
                 <dialog id="edit">
-                    <input type="text" class="form-control" placeholder="Nombre del huerto">
+                <input type="text" class="form-control-sm" placeholder="Nombre del huerto">
                     <button class="btn btn-outline-secondary" type="button">EDITAR</button>
                     <button class="btn btn-outline-secondary" type="button" id="cancel">Cancelar</button>
                 </dialog>
