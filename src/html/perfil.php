@@ -104,8 +104,10 @@ if (isset($_SESSION['user'])) {
                             <div>
 
                                 <dd class="huertos">
-                                    <p class="TituloHuerto"> Huerto 1:</p> <br>
-                                    <p class="direccion"> Dirección: CalleFalsa 123, Springfield</p>
+                                    <div class="texto">
+                                        <p class="TituloHuerto"> Huerto 1:</p> <br>
+                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield</p>
+                                    </div>
                                     <div class="boton botonHUerto">
                                         <button type="button" id="editar">Editar</button>
                                     </div>
@@ -124,8 +126,11 @@ if (isset($_SESSION['user'])) {
                             </div>
                             <div>
                                 <dd class="huertos">
-                                    <p class="TituloHuerto"> Huerto 3:</p> <br>
-                                    <p class="direccion"> Dirección: CalleFalsa 123, Springfield </p>
+                                    <div class="texto">
+                                        <p class="TituloHuerto"> Huerto 3:</p> <br>
+                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield </p>
+                                    </div>
+
                                     <div class="boton botonHUerto">
                                         <button type="button" id="editar">Editar</button>
                                     </div>
