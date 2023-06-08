@@ -41,8 +41,8 @@ if(isset($_SESSION['user'])) {
 
 <header class="Encabezado" role="banner">
   <!-- Esto es el encabezado que actuará de banner-->
-  <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
-                                                        alt="Logo de la empresa"></a>
+  <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg"
+                                                     alt="Logo de la empresa"></a>
     <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
     <div id="contenedorContenedorDesktop">
       <div id="separador"></div>
@@ -58,7 +58,7 @@ if(isset($_SESSION['user'])) {
     </div>
 
     <ul id="menuDesplegable">
-        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="Página Incidencias.php">Página Incidencias</a></li>
         <li><a onclick="logout()">Cerrar sesión</a></li>
     </ul>

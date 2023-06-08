@@ -58,6 +58,21 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin-top: 35px;
+    margin-bottom: 5rem;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p3 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 35px;
     font-size: 20px;
     display: flex;
     justify-content: center;

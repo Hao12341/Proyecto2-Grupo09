@@ -44,7 +44,7 @@ if (isset($_SESSION['user'])) {
     <header class="Encabezado" role="banner">
         <!-- Esto es el encabezado que actuará de banner-->
         <!-- Empieza la etiqueta nav-->
-        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
+        <nav id="menu"><a id="Logo" href="index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
             <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
             <!-- Contenedor de los elementos del banner en vista ordenador -->
             <div id="contenedorContenedorDesktop">
