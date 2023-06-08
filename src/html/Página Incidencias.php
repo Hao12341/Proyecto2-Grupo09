@@ -26,7 +26,7 @@ if(isset($_SESSION['user'])) {
     <script src="Página%20Incidencias.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/DashboardAdminMovil.css">
-    <link rel="stylesheet" href="../css/header2.css">
+    <link rel="stylesheet" href="../css/header2.css ">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" href="../css/PaginaIncidencias.css">
     <link rel="stylesheet" href="../css/estilos.css">
@@ -81,7 +81,7 @@ if(isset($_SESSION['user'])) {
                 <p id="NumerodeIncidencias">Número de Incidencias: <b class="cantidad"></b></p>
             </div>
 
-            <div class="incidencias">
+            <div id="incidencias"class="incidencias">
                 <div>
                     <p class="Cliente"><b>Usuario: </b></p>
                     <p class="Gravedad"><b>Prioridad de Incidencia: </b><b class="nivel" style="color:#b70101">Urgente</b></p>
@@ -121,7 +121,14 @@ if(isset($_SESSION['user'])) {
 </section>
 
 <script src="../js/cerrarSesion.js"></script>
-
+<script src="../js/TecnicoBBDD.js"></script>
+<script>
+   let tuputamafre = "[{"id":1,"tipoIncidencias":"agua","nivelGravedad":"Baja","estado":"Solucionado","idSensor":69,"tipoSensor":"sal","idUsuario":37,"usuario":"Luisa","diección":"Room 1697","idSonda":21,"idHuerto":8},
+   {"id":2,"tipoIncidencias":"Rotura del sensor","nivelGravedad":"Grave","estado":"Solucionado","idSensor":45,"tipoSensor":"agua","idUsuario":47,"usuario":"Cesar","diección":"Room 508","idSonda":10,"idHuerto":81},
+   {"id":3,"tipoIncidencias":"agua","nivelGravedad":"Grave","estado":"Solucionado","idSensor":67,"tipoSensor":"ph","idUsuario":86,"usuario":"Alejandro","diección":"12th Floor","idSonda":81,"idHuerto":31},
+   {"id":4,"tipoIncidencias":"agua","nivelGravedad":"Media","estado":"Solucionado","idSensor":72,"tipoSensor":"calor","idUsuario":52,"usuario":"Cesar","diección":"PO Box 60321","idSonda":31,"idHuerto":25},
+   {"id":5,"tipoIncidencias":"Firualis","nivelGravedad":"Alta","estado":"Solucionado","idSensor":84,"tipoSensor":"sal","idUsuario":55,"usuario":"Maria","diección":"Apt 295","idSonda":13,"idHuerto":69}]"
+</script>
 </body>
 
 </html>
