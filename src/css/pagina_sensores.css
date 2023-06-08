@@ -24,8 +24,7 @@ canvas{
     display: flex;
     flex-direction: column;
     height: min-content;
-    min-height: 80vh;
-    width: 100%;
+    width: 100vw;
 }
 .medidas{
     text-align: center;
@@ -392,7 +391,7 @@ button{
         margin-left: 3vw;
     }
     .historialhide{
-        display: table-column;
+       display: table-column;
         justify-content: center;
         table-layout: fixed;
 
