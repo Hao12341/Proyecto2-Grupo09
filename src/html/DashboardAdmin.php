@@ -432,8 +432,12 @@ if (isset($_SESSION['user'])) {
         <dialog id="editUsuario">
             <form onsubmit="enviarEditarUsuario(event)">
                 <div class="forms">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo: jojase@gamil.com">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre: Inés Vidal Ruiz">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="DNI: 00000000A">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Usuario: Ines">
+
+
                     <input type="password" class="form-control-sm" id="formpopup" placeholder="Contraseña">
                 </div>
                 <br>
