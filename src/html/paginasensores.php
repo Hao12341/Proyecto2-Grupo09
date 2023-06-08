@@ -25,7 +25,7 @@ if(isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pagina sensores</title>
     <script src="js/Chart.bundle.js"></script>
-    <script src="../js/cambiartabla.js"></script>
+    <script src="../js/elegir_tabla.js"></script>
     <script src="../js/elegirgrafica.js"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
