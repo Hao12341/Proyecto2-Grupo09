@@ -58,7 +58,7 @@ if (isset($_SESSION['user'])) {
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
-        
+
             </ul>
 
 
@@ -144,7 +144,22 @@ if (isset($_SESSION['user'])) {
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Jose Miguel Sesma</th>
+                        <th>Alejandro García Moreno
+                        </th>
+                        <td>jojase@gamil.com</td>
+                        <td>985266223</td>
+                        <td class="acciones">
+                            <div class="imagen">
+                                <button type="button" class="boton-editar">
+                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
+                                </button>
+                                <button type="button" class="boton-quitar">
+                                    <i class="bi bi-x-circle"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Marta Rodríguez López </th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -186,7 +201,7 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Jose Javier Sesma</th>
+                        <th>Laura González Hernández</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -200,7 +215,7 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Jose Javier Sesma</th>
+                        <th>Sergio Navarro Torres</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -214,7 +229,7 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Jose Javier Sesma</th>
+                        <th>Jorge Herrera Mora</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -228,7 +243,21 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Jose Javier Sesma</th>
+                        <th>Isabel Ramírez Ramos</th>
+                        <td>jojase@gamil.com</td>
+                        <td>985266223</td>
+                        <td class="acciones">
+                            <div class="imagen">
+                                <button type="button" class="boton-editar">
+                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
+                                </button>
+                                <button type="button" class="boton-quitar">
+                                    <i class="bi bi-x-circle"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Daniel Vargas Mendoza</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -259,7 +288,7 @@ if (isset($_SESSION['user'])) {
                 </thead>
                 <tbody>
                     <tr>
-                        <th>David Pérez Tomás</th>
+                        <th>Nuria Martínez Castro</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -287,7 +316,7 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>David Pérez Tomás</th>
+                        <th>Raquel Gómez Navarro</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -315,7 +344,8 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>David Pérez Tomás</th>
+                        <th>Alberto Peña Soto
+                        </th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -328,34 +358,7 @@ if (isset($_SESSION['user'])) {
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <th>David Pérez Tomás</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>David Pérez Tomás</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
+
 
                 </tbody>
 
@@ -374,7 +377,7 @@ if (isset($_SESSION['user'])) {
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Jose ggg Sesma</th>
+                        <th>Juan Medina Rivas</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -402,7 +405,7 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Jose Javier Sesma</th>
+                        <th>Inés Vidal Ruiz</th>
                         <td>jojase@gamil.com</td>
                         <td>985266223</td>
                         <td class="acciones">
@@ -416,61 +419,7 @@ if (isset($_SESSION['user'])) {
                         </td>
                     </tr>
                     <tr>
-                        <th>Jose Javier Sesma</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jose Javier Sesma</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jose Javier Sesma</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jose Javier Sesma</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
+
 
                 </tbody>
 
@@ -483,8 +432,12 @@ if (isset($_SESSION['user'])) {
         <dialog id="editUsuario">
             <form onsubmit="enviarEditarUsuario(event)">
                 <div class="forms">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo: jojase@gamil.com">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre: Inés Vidal Ruiz">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="DNI: 00000000A">
+                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Usuario: Ines">
+
+
                     <input type="password" class="form-control-sm" id="formpopup" placeholder="Contraseña">
                 </div>
                 <br>
@@ -532,9 +485,18 @@ if (isset($_SESSION['user'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+<<<<<<< HEAD
+    <script src="../js/cerrarSesion.js"></script>
+    <script src="../js/devuelveUsuariosAdmin.js"></script>
+
+=======
     <script src="../js/admin.js"></script>
+<<<<<<< HEAD
+>>>>>>> develop
+=======
     <script src="../js/cerrarSesion.js"></script>
 
+>>>>>>> develop
 </body>
 
 </html>
