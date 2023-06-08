@@ -194,3 +194,8 @@ header{
 *, ::after, ::before{
     box-sizing: initial;
 }
+
+
+#menuDesktop li:hover a {
+    color: #65946f; /* Cambia el color deseado al pasar el ratón por encima */
+}
