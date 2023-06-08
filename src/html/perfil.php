@@ -100,42 +100,6 @@ if (isset($_SESSION['user'])) {
                         </div>
                         <dt>Mis huertos:</dt>
                         <div id="ContenedorHuertos">
-
-                            <div>
-
-                                <dd class="huertos">
-                                    <div class="texto">
-                                        <p class="TituloHuerto"> Huerto 1:</p> <br>
-                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield</p>
-                                    </div>
-                                    <div class="boton botonHUerto">
-                                        <button type="button" id="editar">Editar</button>
-                                    </div>
-                                </dd>
-                            </div>
-                            <div>
-                                <dd class="huertos">
-                                    <div class="texto">
-                                        <p class="TituloHuerto"> Huerto 2:</p> <br>
-                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield </p>
-                                    </div>
-                                    <div class="boton botonHUerto">
-                                        <button type="button" id="editar">Editar</button>
-                                    </div>
-                                </dd>
-                            </div>
-                            <div>
-                                <dd class="huertos">
-                                    <div class="texto">
-                                        <p class="TituloHuerto"> Huerto 3:</p> <br>
-                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield </p>
-                                    </div>
-
-                                    <div class="boton botonHUerto">
-                                        <button type="button" id="editar">Editar</button>
-                                    </div>
-                                </dd>
-                            </div>
                         </div>
                     </dl>
                 </div>
@@ -159,10 +123,21 @@ if (isset($_SESSION['user'])) {
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
-    <script src="../js/perfil.js"></script>
-    <script src="../js/cerrarSesion.js"></script>
 
+    <script src="../js/cerrarSesion.js"></script>
+    <script src="../js/HuertoInternet.js">
+    </script>
+
+    <script>
+
+        let objectHuertos = "[{\"id\":1,\"Nombre\":\"Gabriel\",\"Dirección\":\"55 Doe Crossing Point\"},\n" +
+            "{\"id\":2,\"Nombre\":\"Fidole\",\"Dirección\":\"174 Mesta Point\"},\n" +
+            "{\"id\":3,\"Nombre\":\"King\",\"Dirección\":\"9 Kinsman Drive\"}]"
+        let huertos = JSON.parse(objectHuertos)
+        PonerHuertos(huertos)
+    </script>
+    <script src="../js/perfil.js"></script>
 </body>
-</div>
+
 
 </html>

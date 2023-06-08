@@ -10,14 +10,14 @@ if($_SESSION['user']['idRol'] !== "1") {
 	die();
 }
 
-require_once 'includes/connexion.php';
+require_once '../includes/connexion.php';
 if (!isset($connexion)) die();
 
 $id = intval($peticion->parametrosPath()[0]);
 $nombre = $peticion->parametrosBody()->nombre;
 $rol = intval($peticion->parametrosBody()->idRol);
 
-$sql = "UPDATE `usuarios` SET `nombre`='$nombre',`rol`=$rol WHERE `id` = $id";
+$sql = "UPDATE `usuarios` SET `nombre`='$nombre',`rol`=$rol WHERE `IdUsuario` = $id";
 
 // Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
 try {

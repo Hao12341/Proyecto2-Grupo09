@@ -10,12 +10,12 @@ if($_SESSION['user']['idRol'] !== "1") {
 	die();
 }
 
-require_once 'includes/connexion.php';
+require_once '../includes/connexion.php';
 if (!isset($connexion)) die();
 
 $id = intval($peticion->parametrosPath()[0]);
 
-$sql = "DELETE FROM `usuarios` WHERE `id` = $id";
+$sql = "DELETE FROM `usuarios` WHERE `IdUsuario` = $id";
 
 // Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
 try {
