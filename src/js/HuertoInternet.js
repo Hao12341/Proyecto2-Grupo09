@@ -1,12 +1,23 @@
+/**
+ * Esta funcion realiza un GET con los parámetros del huerto del usuario
+ * correspondiente
+ * @param idUsuario el id del Usuario del huerto
+ * @returns {Promise<any>} devuelve un objeto cuando la promesa haya acabado
+ * @constructor
+ */
 
-
-
-
+//TODO: Falta obtener idUsuario
  async function GetHuertos(idUsuario) {
     const promesa = await fetch("../api/huertos" + idUsuario)
      return await promesa.json()
  }
 
+/**
+ * Está funcion crea tablas HTML que guardan la información
+ * de los huertos proporcionada
+ * @param huertos Objeto que contiene idHuerto, Nombre y Dirección
+ * @constructor
+ */
  function PonerHuertos(huertos) {
     const contenedorHuerto = document.getElementById("ContenedorHuertos")
     huertos.forEach( (huerto) => {
@@ -29,8 +40,11 @@
                             boton.innerText = "Editar"
                             boton.type = "button"
                             boton.classList.add("editar")
+                            boton.id =huerto.idHuerto
 
 
 
     })
  }
+
+
