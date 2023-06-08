@@ -369,6 +369,9 @@ components:
           usuario:
             type: string
             description: Usuario con la avería
+          dirección:
+            type: string
+            description: dirección postal del usuario
           idSonda:
             type: integer
             description: id de la Sonda con la avería

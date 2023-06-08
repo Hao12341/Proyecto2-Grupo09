@@ -47,9 +47,7 @@ if (isset($_SESSION['user'])) {
                 <div id="contenedorMenuDesktop">
                     <ul id="menuDesktop">
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="perfil.php">Mi perfil</a></li>
                         <li><a href="paginasensores.php">Mis sensores</a></li>
-                        <li><a href="o.html">Contáctanos</a></li>
                         <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
@@ -57,15 +55,16 @@ if (isset($_SESSION['user'])) {
 
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="perfil.php">Mi perfil</a></li>
                 <li><a href="paginasensores.php">Mis sensores</a></li>
-                <li><a onclick="logout()">Cerrar sesión</a></li>
+                <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+
             </ul>
 
 
 
             <div id="iconosBanner">
-                <a id="Login" href="tml"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                        alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
                     <div></div>
@@ -109,9 +108,13 @@ if (isset($_SESSION['user'])) {
                     <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">NO</button>
                 </dialog>
                 <dialog id="edit">
-                    <input type="text" class="form-control-sm" placeholder="Nombre del huerto">
-                    <button class="btn btn-outline-secondary" type="button">EDITAR</button>
+                    <input type="text" class="form-control-sm" id="nombreHuerto" placeholder="Nombre del huerto">
+                    <button class="btn btn-outline-secondary" id="botonEditar" type="button">EDITAR</button>
                     <button class="btn btn-outline-secondary" type="button" id="cancel">Cancelar</button>
+                </dialog>
+                <dialog id="estado">
+                    <h3></h3>
+                    <button class="btn btn-outline-secondary" type="button" id="cancel">Aceptar</button>
                 </dialog>
             </div>
         </div>
@@ -123,19 +126,21 @@ if (isset($_SESSION['user'])) {
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
 
-    <script src="../js/perfil.js"></script>
-    <script src="../js/cerrarSesion.js"></script>
+
+
     <script src="../js/HuertoInternet.js">
     </script>
 
     <script>
 
-        let objectHuertos = "[{\"id\":1,\"Nombre\":\"Gabriel\",\"Dirección\":\"55 Doe Crossing Point\"},\n" +
-            "{\"id\":2,\"Nombre\":\"Fidole\",\"Dirección\":\"174 Mesta Point\"},\n" +
-            "{\"id\":3,\"Nombre\":\"King\",\"Dirección\":\"9 Kinsman Drive\"}]"
-        let  huertos = JSON.parse(objectHuertos)
+        let objectHuertos = "[{\"idHuerto\":1,\"Nombre\":\"Gabriel\",\"Dirección\":\"55 Doe Crossing Point\"},\n" +
+            "{\"idHuerto\":2,\"Nombre\":\"Fidole\",\"Dirección\":\"174 Mesta Point\"},\n" +
+            "{\"idHuerto\":3,\"Nombre\":\"King\",\"Dirección\":\"9 Kinsman Drive\"}]"
+        let huertos = JSON.parse(objectHuertos)
         PonerHuertos(huertos)
     </script>
+    <script src="../js/perfil.js"></script>
+    <script src="../js/cerrarSesion.js"></script>
 </body>
 
 
