@@ -251,6 +251,56 @@ paths:
           description: Avería no encontrada
         '5XX':
           description: Error del servidor
+  /huertos/:
+    get:
+      summary: obtiene todos los huertos de un usuario
+      tags:
+       - usuario
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Usuario"
+      responses:
+        200:
+          description: OK
+        401:
+          description: No autorizado
+        404:
+          description: Id de usuario no encontrado
+        5XX:
+          description: Error interno del servidor
+  /huertos/{id}:
+    put:
+      summary: Actualiza los datos del huerto
+      tags:
+        - usuario
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico del huerto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Huerto"
+      responses:
+        200:
+          description: OK
+        401:
+          description: No autorizado
+        404:
+          description: Id no encontrado
+        5XX:
+          description: Error interno del servidor
+
+
+
 
 
 
@@ -278,6 +328,13 @@ components:
           nombre:
             type: string
             description: nombre del usuario
+          email:
+            type: string
+<<<<<<< HEAD
+            description: email de usuario
+=======
+            description: correo del usuario
+>>>>>>> develop
           idRol:
             type: integer
             description: id del rol del usuario
@@ -312,9 +369,25 @@ components:
           usuario:
             type: string
             description: Usuario con la avería
+          dirección:
+            type: string
+            description: dirección postal del usuario
           idSonda:
             type: integer
             description: id de la Sonda con la avería
           idHuerto:
             type: integer
             description: id del huerto con el sensor averiado
+      Huerto:
+        type: object
+        properties:
+          idHuerto:
+            type: integer
+            description: id del Huerto
+          Nombre:
+            type: string
+            description: Nombre del huerto
+          Dirección:
+            type: string
+            description: Dirección del huerto
+

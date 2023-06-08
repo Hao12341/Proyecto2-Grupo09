@@ -17,3 +17,19 @@ document.querySelectorAll("#menu ul a").forEach(
     }
 )
 /*FIN DE Instrucción de interacción del menu hamburguesa, si clicas en las barras y tiene asignada la propiedad "activo", se la retira*/
+
+
+//esto es para cambiar el color de los botones al hacer hover con el ratón
+window.addEventListener('DOMContentLoaded', (event) => {
+    const menuItems = document.querySelectorAll('#menuDesktop li');
+
+    menuItems.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+            item.querySelector('a').style.color = '#65946f'; /* Cambia el color deseado */
+        });
+
+        item.addEventListener('mouseout', () => {
+            item.querySelector('a').style.color = ''; /* Restablece el color predeterminado */
+        });
+    });
+});
