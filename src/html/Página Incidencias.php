@@ -22,13 +22,13 @@ if(isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <title>Incidencias</title>
-    <link rel="stylesheet" href="Pagina%20Incidencias.css">
+    <link rel="stylesheet" href="PaginaIncidencias.css">
     <script src="Página%20Incidencias.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/DashboardAdminMovil.css">
     <link rel="stylesheet" href="../css/header2.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" href="../css/Pagina%20Incidencias.css">
+    <link rel="stylesheet" href="../css/PaginaIncidencias.css">
     <link rel="stylesheet" href="../css/estilos.css">
 
     <script src="../js/Página%20Incidencias.js"></script>
@@ -92,18 +92,18 @@ if(isset($_SESSION['user'])) {
                     <!-- Contenido del pop-up -->
                     <div class="popUpContent">
                         <div class="información">
-                            <h1 class="tituloIncidencia"> Incidencia</h1>
-                            <p id="nombreUsuario">Nombre del Usuario: <p class="Cliente"></p></p>
-                            <p id="textoIdUsuario">ID Usuario :<p class="idUsuario"></p></p>
-                            <p id="dirección">Dirección :<p class="direcciónUsuario"></p></p>
-                            <p id="textoIdHuerto">ID Huerto :<p class="idHuerto"></p></p>
-                            <p id="textoIdSonda">ID Sonda :<p class="idSonda"></p></p>
-                            <p id="textoIdSensor">ID Sensor : <p class="idSensor"></p></p>
+                            <h1 class="tituloIncidencia" id="tituloAveria"></h1>
+                            <p id="nombreUsuario">Nombre del Usuario: <p id="Cliente"></p></p>
+                            <p id="textoIdUsuario">ID Usuario :<p id="idUsuario"></p></p>
+                            <p id="dirección">Dirección :<p id="direcciónUsuario"></p></p>
+                            <p id="textoIdHuerto">ID Huerto :<p id="idHuerto"></p></p>
+                            <p id="textoIdSonda">ID Sonda :<p id="idSonda"></p></p>
+                            <p id="textoIdSensor">ID Sensor : <p id="idSensor"></p></p>
                         </div>
                     </div>
                     <!-- Icono de cerrar -->
                     <span class="closeIcon" onclick="hidePopUp()">
-            <div class="BotonX">
+                <div class="BotonX">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-square"
                    viewBox="0 0 16 16">
                 <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
