@@ -1,0 +1,201 @@
+
+/*
+                    HEADER.CSS
+ */
+
+
+ /* Estilos del header */
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+    z-index: 20;
+}
+#menu{
+    --bg-color: white;
+    --txt-color: white;
+    --hover-bg: var(--accent-bg-color);
+    --hover-txt: var(--accent-fg-color);
+    --li-bg: #204b36;
+    --menu-height: 2rem;
+    min-width: fit-content;
+}
+#menu #menuDesplegable{
+    background-color: var(--bg-color);
+    position: absolute;
+    top: var(--menu-height);
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%) scaleY(0);
+    transition: .5s;
+    z-index: auto;
+    margin-top: 17px;
+}
+
+#menu.activo>#menuDesplegable{
+
+    transform: translateY(0) scaleY(1);
+
+}
+
+#separador{
+    width: 10rem;
+    flex: 1 1 0;
+}
+
+#contenedorContenedorDesktop{
+    display: flex;
+    justify-content: flex-end;
+    width: inherit;
+}
+
+#contenedorMenuDesktop{
+    width: inherit;
+    margin-left:  50vw;
+    left: 0;
+    padding-right: 1em;
+    align-self: center;
+    max-width: content-box;
+    max-width: 50vw;
+}
+
+#menuDesktop{
+    display: flex;
+    flex: 1 1 min-content;
+    justify-content: flex-end;
+    align-content: center;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 1vh;
+
+}
+
+#menuDesktop li a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+#menuDesktop li {
+    flex: 1 1 0;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    margin: 0.1rem;
+    min-width: fit-content;
+}
+
+#menuDesktop li:last-child{
+    margin-right: 0;
+}
+#menuDesktop li:hover {
+    font-size: 120%;
+}
+
+
+#menuDesplegable li{
+    padding: .5em;
+    text-align: center;
+    border: 1px solid white;
+    background-color: var(--li-bg);
+    color: var(--txt-color);
+}
+#menuDesplegable li a {
+    text-decoration: none;
+}
+
+#menu a{
+    color: white;
+}
+#Logo img{
+    width: 7.7rem;
+    height: 4.7rem;
+}
+#menu {
+    background-color: var(--bg-color);
+    color: black;
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5em;
+    position: fixed;
+    width: 100%;
+}
+.hamburguesa {
+    width: 2em;
+    height: 2em;
+    padding: 10px;
+    cursor: pointer;
+   padding-top:  9px;
+
+
+}
+.hamburguesa div{
+    background-color: black;
+    width: 2em;
+    height: .3em;
+    margin: .3em auto;
+    transition: .5s;
+    z-index: -1;
+}
+#Login{
+    width: 2em;
+    height: 2em;
+    padding: 10px;
+    cursor: pointer;
+    flex: 1 1 0;
+}
+
+
+#menu.activo .hamburguesa div:nth-child(2){
+    opacity: 0;
+}
+
+#menu.activo .hamburguesa div:nth-child(1){
+    transform: translateY(.6em) rotate(45deg);
+}
+#menu.activo .hamburguesa div:nth-child(3){
+    transform: translateY(-.6em) rotate(-45deg);
+}
+#iconosBanner{
+    padding-top: 10px;
+    margin-bottom: 1.5rem;
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 60px;
+
+
+
+}
+
+@media (max-width: 1230px) {
+        #contenedorContenedorDesktop{
+            display: none;
+        }
+}
+
+@media (min-width: 1230px) {
+    #iconosBanner {
+        display: none;
+    }
+
+}
+
+
+#iconoLogin{
+    width: 2rem;
+    height: 2rem;
+}
+*, ::after, ::before{
+    box-sizing: initial;
+}
+
+
+#menuDesktop li:hover a {
+    color: #65946f; /* Cambia el color deseado al pasar el ratón por encima */
+}
