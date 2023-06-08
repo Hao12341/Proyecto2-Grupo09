@@ -38,10 +38,9 @@ if (isset($_SESSION['user'])) {
 
 
 <body>
-<header class="Encabezado" role="banner">
+    <header class="Encabezado" role="banner">
         <!-- Esto es el encabezado que actuará de banner-->
-        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
-                                                              alt="Logo de la empresa"></a>
+        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
             <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
             <div id="contenedorContenedorDesktop">
                 <div id="separador"></div>
@@ -58,13 +57,14 @@ if (isset($_SESSION['user'])) {
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="paginasensores.php">Mis sensores</a></li>
                 <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
-                
+
             </ul>
 
 
 
             <div id="iconosBanner">
-                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                        alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
                     <div></div>
@@ -111,6 +111,10 @@ if (isset($_SESSION['user'])) {
                     <input type="text" class="form-control-sm" id="nombreHuerto" placeholder="Nombre del huerto">
                     <button class="btn btn-outline-secondary" id="botonEditar" type="button">EDITAR</button>
                     <button class="btn btn-outline-secondary" type="button" id="cancel">Cancelar</button>
+                </dialog>
+                <dialog id="estado">
+                    <h3></h3>
+                    <button class="btn btn-outline-secondary" type="button" id="cancel">Aceptar</button>
                 </dialog>
             </div>
         </div>
