@@ -10,7 +10,7 @@ if($_SESSION['user']['idRol'] !== "1") {
 	die();
 }
 
-require_once '../includes/connexion.php';
+require_once 'includes/connexion.php';
 if (!isset($connexion)) die();
 
 $sql = "SELECT `usuarios`.`IdUsuario`, 
