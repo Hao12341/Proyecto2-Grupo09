@@ -98,35 +98,45 @@ if (isset($_SESSION['user'])) {
                             <dt>Teléfono:</dt>
                             <dd>555 555 5555</dd>
                         </div>
-                        <div>
-                            <dt>Mis huertos:</dt>
-                            <dd class="huertos">
-                                <div class="texto">Huerto 1: <br>
-                                    Dirección: CalleFalsa 123, Springfield</div>
-                                <div class="boton">
-                                    <button type="button" id="editar">Editar</button>
-                                </div>
-                            </dd>
-                        </div>
-                        <div>
-                            <dd class="huertos">
-                                <div class="texto">Huerto 2: <br>
-                                    Dirección: CalleFalsa 123, Springfield</div>
-                                <div class="boton">
-                                    <button type="button" id="editar">Editar</button>
-                                </div>
-                            </dd>
-                        </div>
-                        <div>
-                            <dd class="huertos">
-                                <div class="texto">Huerto 3: <br>
-                                    Dirección: CalleFalsa 123, Springfield</div>
-                                <div class="boton">
-                                    <button type="button" id="editar">Editar</button>
-                                </div>
-                            </dd>
-                        </div>
+                        <dt>Mis huertos:</dt>
+                        <div id="ContenedorHuertos">
 
+                            <div>
+
+                                <dd class="huertos">
+                                    <div class="texto">
+                                        <p class="TituloHuerto"> Huerto 1:</p> <br>
+                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield</p>
+                                    </div>
+                                    <div class="boton botonHUerto">
+                                        <button type="button" id="editar">Editar</button>
+                                    </div>
+                                </dd>
+                            </div>
+                            <div>
+                                <dd class="huertos">
+                                    <div class="texto">
+                                        <p class="TituloHuerto"> Huerto 2:</p> <br>
+                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield </p>
+                                    </div>
+                                    <div class="boton botonHUerto">
+                                        <button type="button" id="editar">Editar</button>
+                                    </div>
+                                </dd>
+                            </div>
+                            <div>
+                                <dd class="huertos">
+                                    <div class="texto">
+                                        <p class="TituloHuerto"> Huerto 3:</p> <br>
+                                        <p class="direccion"> Dirección: CalleFalsa 123, Springfield </p>
+                                    </div>
+
+                                    <div class="boton botonHUerto">
+                                        <button type="button" id="editar">Editar</button>
+                                    </div>
+                                </dd>
+                            </div>
+                        </div>
                     </dl>
                 </div>
                 <dialog id="popup">
@@ -135,7 +145,7 @@ if (isset($_SESSION['user'])) {
                     <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">NO</button>
                 </dialog>
                 <dialog id="edit">
-                    <input type="text" class="form-control" placeholder="Nombre del huerto">
+                    <input type="text" class="form-control-sm" placeholder="Nombre del huerto">
                     <button class="btn btn-outline-secondary" type="button">EDITAR</button>
                     <button class="btn btn-outline-secondary" type="button" id="cancel">Cancelar</button>
                 </dialog>
