@@ -88,9 +88,6 @@ if (isset($_SESSION['user'])) {
         <h1 class="medidas">MIS SENSORES</h1>
         <div id="graficas">
             <select name="huertos" id="huertos" onchange="cambiarImagen(); tablagrafica()">
-                <option value="h1">huerto 1</option>
-                <option value="h2">huerto 2</option>
-                <option value="h3">huerto 3</option>
             </select><br>
             <div id="ultimaactualizacion">
                 <h2>última actualización:</h2>
@@ -335,11 +332,13 @@ if (isset($_SESSION['user'])) {
     crossorigin="anonymous"></script>
 <script src="../js/admin.js"></script>
 <script src="../js/grafica.js"></script>
+<script src="../js/HuertoInternet.js"></script>
 
 <script>
 
     addEventListener("load", () => {
-        console.log("caca")
+        ponerHuertosTitulo()
+
         let
             opciones = {
                 plugins: {
@@ -360,54 +359,15 @@ if (isset($_SESSION['user'])) {
                     }
                 }
             };
-        let json = "[{\"fecha\":\"2022-08-06\",\"medida\":56.08,\"tipoMedida\":\"Temperatura\"},\n" +
-            "{\"fecha\":\"2023-01-25\",\"medida\":0.89,\"tipoMedida\":\"Luz\"},\n" +
-            "{\"fecha\":\"2022-11-27\",\"medida\":86.31,\"tipoMedida\":\"Luz\"},\n" +
-            "{\"fecha\":\"2023-04-12\",\"medida\":15.88,\"tipoMedida\":\"Temperatura\"},\n" +
-            "{\"fecha\":\"2022-08-06\",\"medida\":80.38,\"tipoMedida\":\"ph\"},\n" +
-            "{\"fecha\":\"2022-12-27\",\"medida\":70.85,\"tipoMedida\":\"Humedad\"},\n" +
-            "{\"fecha\":\"2023-03-27\",\"medida\":36.28,\"tipoMedida\":\"Temperatura\"},\n" +
-            "{\"fecha\":\"2022-08-03\",\"medida\":75.38,\"tipoMedida\":\"Temperatura\"},\n" +
-            "{\"fecha\":\"2022-10-03\",\"medida\":94.82,\"tipoMedida\":\"Sal\"},\n" +
-            "{\"fecha\":\"2022-06-10\",\"medida\":29.66,\"tipoMedida\":\"Sal\"},\n" +
-            "{\"fecha\":\"2022-10-10\",\"medida\":30.81,\"tipoMedida\":\"Sal\"},\n" +
-            "{\"fecha\":\"2022-07-15\",\"medida\":84.5,\"tipoMedida\":\"ph\"},\n" +
-            "{\"fecha\":\"2023-04-10\",\"medida\":78.8,\"tipoMedida\":\"ph\"},\n" +
-            "{\"fecha\":\"2022-11-18\",\"medida\":80.25,\"tipoMedida\":\"Humedad\"},\n" +
-            "{\"fecha\":\"2022-06-29\",\"medida\":9.72,\"tipoMedida\":\"Luz\"},\n" +
-            "{\"fecha\":\"2023-03-14\",\"medida\":65.22,\"tipoMedida\":\"Humedad\"},\n" +
-            "{\"fecha\":\"2022-07-24\",\"medida\":36.95,\"tipoMedida\":\"Sal\"},\n" +
-            "{\"fecha\":\"2023-01-28\",\"medida\":79.48,\"tipoMedida\":\"Temperatura\"},\n" +
-            "{\"fecha\":\"2023-03-04\",\"medida\":47.21,\"tipoMedida\":\"ph\"},\n" +
-            "{\"fecha\":\"2022-12-04\",\"medida\":87.23,\"tipoMedida\":\"Humedad\"},\n" +
-            "{\"fecha\":\"2022-08-10\",\"medida\":32.04,\"tipoMedida\":\"Sal\"},\n" +
-            "{\"fecha\":\"2022-08-01\",\"medida\":79.71,\"tipoMedida\":\"Temperatura\"},\n" +
-            "{\"fecha\":\"2023-02-17\",\"medida\":44.11,\"tipoMedida\":\"ph\"},\n" +
-            "{\"fecha\":\"2022-10-07\",\"medida\":77.11,\"tipoMedida\":\"Humedad\"},\n" +
-            "{\"fecha\":\"2022-08-25\",\"medida\":0.22,\"tipoMedida\":\"Temperatura\"},\n" +
-            "{\"fecha\":\"2022-07-21\",\"medida\":25.62,\"tipoMedida\":\"ph\"},\n" +
-            "{\"fecha\":\"2022-12-16\",\"medida\":23.13,\"tipoMedida\":\"Luz\"},\n" +
-            "{\"fecha\":\"2022-08-04\",\"medida\":41.74,\"tipoMedida\":\"Humedad\"},\n" +
-            "{\"fecha\":\"2022-08-27\",\"medida\":64.84,\"tipoMedida\":\"Luz\"},\n" +
-            "{\"fecha\":\"2022-12-05\",\"medida\":80.13,\"tipoMedida\":\"Sal\"}]"
-        console.log("array JSON")
-        console.log(json)
-        let data = JSON.parse(json)
-        console.log("objeto parseadisimo")
-        console.log(data)
-        crearGrafica("graficahumedad",data,opciones,"humedad","Humedad")
-        crearGrafica("graficasalinidad",data,opciones,"Sal","Sal")
-        crearGrafica("graficatemperatura",data,opciones,"Temperatura","Temperatura")
-        crearGrafica("graficaph",data,opciones,"ph","ph")
-        crearGrafica("graficaluz",data,opciones,"Luz","Luz")
+
+        crearGrafica("graficahumedad",opciones,"humedad","Humedad")
+        crearGrafica("graficasalinidad",opciones,"Sal","Sal")
+        crearGrafica("graficatemperatura",opciones,"Temperatura","Temperatura")
+        crearGrafica("graficaph",opciones,"ph","ph")
+        crearGrafica("graficaluz",opciones,"Luz","Luz")
 
 
     })
-
-
-
-
-
 </script>
 
 <!--aqui acaba la tabla-->

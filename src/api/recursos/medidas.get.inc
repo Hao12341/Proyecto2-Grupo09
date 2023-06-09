@@ -13,13 +13,18 @@ if($_SESSION['user']['idRol'] !== "4") {
 require_once "includes/connexion.php";
 if (!isset($connexion)) die();
 
-$idUsuario = intval($peticion->parametrosPath()[0]);
+$idHuerto = intval($peticion->parametrosPath()[0]);
 
-if($idUsuario === 0)
-{
-    http_response_code(400);
-    die();
+
+$sql = "SELECT mediciones.fecha, mediciones.Medida, unidades.Unidad
+FROM mediciones 
+JOIN sensores ON mediciones.idMediciones = sensores.idMediciones
+JOIN unidades ON sensores.Unidades = unidades.IdUnidades
+JOIN sondas ON sensores.NumSonda = sondas.IdSonda
+WHERE sondas.NumHuerto = $idHuerto";
+
+$result = mysqli_query($connexion,$sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    $salida[] = $row;
 }
-
-
 

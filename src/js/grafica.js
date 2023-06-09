@@ -1,4 +1,12 @@
 
+
+async function fetchMedidas (numeroHuerto) {
+    let response = await fetch("../api/sesion/medidas/" + numeroHuerto)
+    return await response.json()
+}
+
+
+
 /**
  * Ordena las medidas por fecha de más antigua a más reciente
  *  @param mediciones JSON con los parámetros de medida
@@ -84,7 +92,8 @@ function crearDataset(mediciones,magintud) {
  * @param label
  * @param magnitud
  */
- function crearGrafica(idGrafica, datos,opciones,label,magnitud) {
+ async function crearGrafica(idGrafica,opciones,label,magnitud) {
+     let datos = await fetchMedidas('1')
     let dataset = crearDataset(datos,magnitud)
 
      let datosGrafica = {
@@ -104,3 +113,12 @@ function crearDataset(mediciones,magintud) {
     })
  }
 
+async function crearTablas (idTabla,magnitud) {
+     let datos = await fetchMedidas('1')
+    let dataset = crearDataset(datos,magnitud)
+    dataset.forEach((dataRow) => {
+        let tabla = document.getElementById(idTabla)
+        let tableRow = tabla.appendChild(document.createElement("tr"))
+        let array = Object.keys(dataRow)
+    })
+}

@@ -177,7 +177,7 @@ paths:
           description: No se encontró el usuario.
         '5XX':
           description: Error del servidor.
-  /medidas/{id,fechaSTART,fechaEND}:
+  /medidas/{id}:
     get:
       summary: Devuelve todas les medidas de un determinado usuario
       tags:
@@ -188,19 +188,7 @@ paths:
           schema:
             type: integer
           required: true
-          description: Id numérico del usuario
-        - in: path
-          name: fechaSTART
-          schema:
-            type: object
-          required: false
-          description: DATE fecha inicio de búsqueda
-        - in: path
-          name: fechaEND
-          schema:
-            type: object
-          required: false
-          description: DATE fecha fin de búsqueda
+          description: Id numérico del huerto
       responses:
         '200':
           description: OK

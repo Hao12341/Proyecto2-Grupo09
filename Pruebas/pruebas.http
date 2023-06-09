@@ -11,6 +11,4 @@ Content-Type: application/json
 
 {"Nombre":"AA"}
 ###
-email=javierruperez13@gamil.com&password=1234
-###
-GET  http://localhost/Proyecto2-Grupo09/src/api/usuarios/
+GET  http://localhost/Proyecto2-Grupo09/src/api/medidas/4
