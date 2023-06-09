@@ -18,7 +18,7 @@ async function GetHuertos(idUsuario) {
  * @constructor
  */
 async function PonerHuertos() {
-    let huertos = await GetHuertos('1')
+    let huertos = await GetHuertos('4')
     const contenedorHuerto = document.getElementById("ContenedorHuertos")
     huertos.forEach( (huerto) => {
         let cajaHuerto = contenedorHuerto.appendChild(document.createElement("div"))

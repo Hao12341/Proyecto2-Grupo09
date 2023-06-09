@@ -33,6 +33,9 @@ if (isset($_SESSION['user'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1/dist/chartjs-adapter-luxon.umd.min.js"></script>
 
 
     <link rel="stylesheet" href="../css/pagina_sensores.css">
@@ -85,9 +88,6 @@ if (isset($_SESSION['user'])) {
         <h1 class="medidas">MIS SENSORES</h1>
         <div id="graficas">
             <select name="huertos" id="huertos" onchange="cambiarImagen(); tablagrafica()">
-                <option value="h1">huerto 1</option>
-                <option value="h2">huerto 2</option>
-                <option value="h3">huerto 3</option>
             </select><br>
             <div id="ultimaactualizacion">
                 <h2>última actualización:</h2>
@@ -284,8 +284,10 @@ if (isset($_SESSION['user'])) {
 
                 <div class="tab-panels">
                     <section id="humedad" class="tab-panel">
-                        <h2>humedad</h2>
-                        <canvas id="graficahumedad"></canvas>
+                        <div><h2>humedad</h2>
+                            <canvas id="graficahumedad" width="400" height="400"></canvas>
+                        </div>
+
                     </section>
                     <section id="salinidad" class="tab-panel">
                         <h2>salinidad</h2>
@@ -329,6 +331,44 @@ if (isset($_SESSION['user'])) {
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
 <script src="../js/admin.js"></script>
+<script src="../js/grafica.js"></script>
+<script src="../js/HuertoInternet.js"></script>
+
+<script>
+
+    addEventListener("load", () => {
+        ponerHuertosTitulo()
+
+        let
+            opciones = {
+                plugins: {
+                        plugins: {
+                            title: {
+                                display: false,
+                            }
+                        },
+                        responsive: true,
+
+                    tooltip: {
+                        backgroundColor: '#fff',
+                        titleColor: '#000',
+                        titleAlign: 'center',
+                        bodyColor: '#333',
+                        borderColor: '#666',
+                        borderWidth: 1,
+                    }
+                }
+            };
+
+        crearGrafica("graficahumedad",opciones,"humedad","Humedad")
+        crearGrafica("graficasalinidad",opciones,"Sal","Sal")
+        crearGrafica("graficatemperatura",opciones,"Temperatura","Temperatura")
+        crearGrafica("graficaph",opciones,"ph","ph")
+        crearGrafica("graficaluz",opciones,"Luz","Luz")
+
+
+    })
+</script>
 
 <!--aqui acaba la tabla-->
 </body>
