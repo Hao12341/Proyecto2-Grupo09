@@ -30,22 +30,6 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
--- Table `sql8624327`.`solicitudes`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sql8624327`.`solicitudes` (
-  `idSolicitudes` INT(11) NOT NULL AUTO_INCREMENT,
-  `NombreApellidos` VARCHAR(45) NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `Telefono` INT(11) NULL DEFAULT NULL,
-  `Consulta` VARCHAR(250) NOT NULL,
-  `Estado` TINYINT(4) NULL DEFAULT NULL,
-  PRIMARY KEY (`idSolicitudes`),
-  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4;
-
-
--- -----------------------------------------------------
 -- Table `sql8624327`.`usuarios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sql8624327`.`usuarios` (
@@ -58,19 +42,12 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`usuarios` (
   `UserName` VARCHAR(75) NOT NULL,
   `Teléfono` INT(9) NOT NULL,
   `DNI` VARCHAR(9) NULL DEFAULT NULL,
-  `solicitudes_idSolicitudes` INT(11) NOT NULL,
-  PRIMARY KEY (`IdUsuario`, `Rol`, `solicitudes_idSolicitudes`),
-  INDEX `Rol` (`Rol` ASC),
-  INDEX `fk_usuarios_solicitudes1_idx` (`solicitudes_idSolicitudes` ASC),
+  PRIMARY KEY (`IdUsuario`, `Rol`),
+  INDEX `Rol` (`Rol` ASC) ,
   CONSTRAINT `usuarios_ibfk_1`
     FOREIGN KEY (`Rol`)
     REFERENCES `sql8624327`.`roles` (`IdRol`)
-    ON UPDATE CASCADE,
-  CONSTRAINT `fk_usuarios_solicitudes1`
-    FOREIGN KEY (`solicitudes_idSolicitudes`)
-    REFERENCES `sql8624327`.`solicitudes` (`idSolicitudes`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 21
 DEFAULT CHARACTER SET = utf8mb4;
@@ -85,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`huertos` (
   `Localización` VARCHAR(45) NOT NULL,
   `NombreHuerto` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`IdHuerto`, `UsuarioPropietario`),
-  INDEX `UsuarioPropietario` (`UsuarioPropietario` ASC),
+  INDEX `UsuarioPropietario` (`UsuarioPropietario` ASC) ,
   CONSTRAINT `huertos_ibfk_1`
     FOREIGN KEY (`UsuarioPropietario`)
     REFERENCES `sql8624327`.`usuarios` (`IdUsuario`))
@@ -136,32 +113,18 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
--- Table `sql8624327`.`mediciones`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `sql8624327`.`mediciones` (
-  `idMediciones` INT(11) NOT NULL,
-  `fecha` DATETIME NULL DEFAULT NULL,
-  `Medida` DECIMAL(10,2) NULL DEFAULT NULL,
-  PRIMARY KEY (`idMediciones`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4;
-
-
--- -----------------------------------------------------
 -- Table `sql8624327`.`sensores`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sql8624327`.`sensores` (
   `IdSensor` INT(11) NOT NULL AUTO_INCREMENT,
-  `idMediciones` INT(11) NOT NULL,
   `Unidades` INT(11) NOT NULL,
   `NumSonda` INT(11) NOT NULL,
   `TipoSensor` INT(11) NOT NULL,
   `Estado` VARCHAR(20) NOT NULL,
-  PRIMARY KEY (`IdSensor`, `idMediciones`, `Unidades`, `NumSonda`),
-  INDEX `NumSonda` (`NumSonda` ASC),
-  INDEX `Unidades` (`Unidades` ASC),
-  INDEX `sensores_ibfk_4` (`TipoSensor` ASC),
-  INDEX `fk_sensores_mediciones1_idx` (`idMediciones` ASC),
+  PRIMARY KEY (`IdSensor`, `Unidades`, `NumSonda`),
+  INDEX `NumSonda` (`NumSonda` ASC) ,
+  INDEX `Unidades` (`Unidades` ASC) ,
+  INDEX `sensores_ibfk_4` (`TipoSensor` ASC) ,
   CONSTRAINT `sensores_ibfk_1`
     FOREIGN KEY (`NumSonda`)
     REFERENCES `sql8624327`.`sondas` (`IdSonda`),
@@ -170,12 +133,7 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`sensores` (
     REFERENCES `sql8624327`.`unidades` (`IdUnidades`),
   CONSTRAINT `sensores_ibfk_4`
     FOREIGN KEY (`TipoSensor`)
-    REFERENCES `sql8624327`.`tipossensores` (`IdTipoSensor`),
-  CONSTRAINT `fk_sensores_mediciones1`
-    FOREIGN KEY (`idMediciones`)
-    REFERENCES `sql8624327`.`mediciones` (`idMediciones`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `sql8624327`.`tipossensores` (`IdTipoSensor`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 41
 DEFAULT CHARACTER SET = utf8mb4;
@@ -194,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`incidencias` (
   `FechaIni` DATETIME NULL DEFAULT NULL,
   `FechaFin` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`IdIncidencias`, `NivelGravedad`, `NumSensor`),
-  INDEX `NumSensor` (`NumSensor` ASC),
+  INDEX `NumSensor` (`NumSensor` ASC) ,
   CONSTRAINT `incidencias_ibfk_1`
     FOREIGN KEY (`NumSensor`)
     REFERENCES `sql8624327`.`sensores` (`IdSensor`))
@@ -203,7 +161,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
--- Table `aesccar_gti09`.`instalaciones`
+-- Table `sql8624327`.`instalaciones`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sql8624327`.`instalaciones` (
   `IdHuerto` INT(11) NOT NULL,
@@ -212,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`instalaciones` (
   `IdSonda` INT(11) NOT NULL,
   `NumHuerto` INT(11) NOT NULL,
   PRIMARY KEY (`IdHuerto`, `IdSonda`, `NumHuerto`),
-  INDEX `IdHuerto` (`IdHuerto` ASC),
+  INDEX `IdHuerto` (`IdHuerto` ASC) ,
   INDEX `fk_instalaciones_sondas1_idx` (`IdSonda` ASC, `NumHuerto` ASC),
   CONSTRAINT `fk_instalaciones_sondas1`
     FOREIGN KEY (`IdSonda` , `NumHuerto`)
@@ -222,6 +180,27 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`instalaciones` (
   CONSTRAINT `instalaciones_ibfk_1`
     FOREIGN KEY (`IdHuerto`)
     REFERENCES `sql8624327`.`huertos` (`IdHuerto`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
+-- Table `sql8624327`.`mediciones`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sql8624327`.`mediciones` (
+  `idMediciones` INT(11) NOT NULL,
+  `fecha` DATETIME NULL DEFAULT NULL,
+  `Medida` DECIMAL(10,2) NULL DEFAULT NULL,
+  `Unidades` INT(11) NOT NULL,
+  `IdSensor` INT(11) NOT NULL,
+  `NumSonda` INT(11) NOT NULL,
+  PRIMARY KEY (`idMediciones`, `Unidades`, `IdSensor`, `NumSonda`),
+  INDEX `fk_mediciones_sensores1_idx` (`IdSensor` ASC, `Unidades` ASC, `NumSonda` ASC),
+  CONSTRAINT `fk_mediciones_sensores1`
+    FOREIGN KEY (`IdSensor` , `Unidades` , `NumSonda`)
+    REFERENCES `sql8624327`.`sensores` (`IdSensor` , `Unidades` , `NumSonda`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
@@ -241,6 +220,30 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 
 -- -----------------------------------------------------
+-- Table `sql8624327`.`solicitudes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `sql8624327`.`solicitudes` (
+  `idSolicitudes` INT(11) NOT NULL AUTO_INCREMENT,
+  `NombreApellidos` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Telefono` INT(11) NULL DEFAULT NULL,
+  `Consulta` VARCHAR(250) NOT NULL,
+  `Estado` TINYINT(4) NULL DEFAULT NULL,
+  `IdUsuario` INT(11) NOT NULL,
+  `Rol` INT(11) NOT NULL,
+  PRIMARY KEY (`idSolicitudes`, `IdUsuario`, `Rol`),
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC),
+  INDEX `fk_solicitudes_usuarios1_idx` (`IdUsuario` ASC, `Rol` ASC) ,
+  CONSTRAINT `fk_solicitudes_usuarios1`
+    FOREIGN KEY (`IdUsuario` , `Rol`)
+    REFERENCES `sql8624327`.`usuarios` (`IdUsuario` , `Rol`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4;
+
+
+-- -----------------------------------------------------
 -- Table `sql8624327`.`tecnicoencargado`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sql8624327`.`tecnicoencargado` (
@@ -249,8 +252,8 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`tecnicoencargado` (
   `NivelGravedad` INT(11) NOT NULL,
   `NumSensor` INT(11) NOT NULL,
   PRIMARY KEY (`Tecnico`, `IdIncidencias`, `NivelGravedad`, `NumSensor`),
-  INDEX `fk_incidencias_has_usuarios_usuarios1_idx` (`Tecnico` ASC),
-  INDEX `fk_incidencias_has_usuarios_incidencias1_idx` (`IdIncidencias` ASC, `NivelGravedad` ASC, `NumSensor` ASC),
+  INDEX `fk_incidencias_has_usuarios_usuarios1_idx` (`Tecnico` ASC) ,
+  INDEX `fk_incidencias_has_usuarios_incidencias1_idx` (`IdIncidencias` ASC, `NivelGravedad` ASC, `NumSensor` ASC) ,
   CONSTRAINT `fk_incidencias_has_usuarios_incidencias1`
     FOREIGN KEY (`IdIncidencias` , `NivelGravedad` , `NumSensor`)
     REFERENCES `sql8624327`.`incidencias` (`IdIncidencias` , `NivelGravedad` , `NumSensor`)
