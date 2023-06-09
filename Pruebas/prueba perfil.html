@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Perfil</title>
+</head>
+<body>
+
+<div id="ContenedorHuertos">
+    123
+
+</div>
+
+<script src="../src/js/HuertoInternet.js">
+</script>
+
+<script>
+
+    let objectHuertos = "[{\"id\":1,\"Nombre\":\"Gabriel\",\"Direción\":\"55 Doe Crossing Point\"},\n" +
+        "{\"id\":2,\"Nombre\":\"Fidole\",\"Direción\":\"174 Mesta Point\"},\n" +
+        "{\"id\":3,\"Nombre\":\"King\",\"Direción\":\"9 Kinsman Drive\"},\n" +
+        "{\"id\":4,\"Nombre\":\"Chelsie\",\"Direción\":\"60243 Cardinal Trail\"},\n" +
+        "{\"id\":5,\"Nombre\":\"David\",\"Direción\":\"88 Atwood Circle\"}]"
+    let  huertos = JSON.parse(objectHuertos)
+    PonerHuertos(huertos)
+</script>
+
+</body>
+</html>
