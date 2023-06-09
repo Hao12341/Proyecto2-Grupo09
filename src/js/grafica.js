@@ -1,7 +1,7 @@
 
 
 async function fetchMedidas (numeroHuerto) {
-    let response = await fetch("../api/sesion/medidas/" + numeroHuerto)
+    let response = await fetch("../api/medidas/" + numeroHuerto)
     return await response.json()
 }
 
@@ -70,7 +70,7 @@ function crearDataset(mediciones,magintud) {
      let ejeX = crearEjeX(mediciones)
 
     let filtrado = mediciones.filter((valor) => {
-        if (valor.tipoMedida !== magintud){
+        if (valor.Unidad !== magintud){
             return false
 
         }else {
@@ -93,7 +93,7 @@ function crearDataset(mediciones,magintud) {
  * @param magnitud
  */
  async function crearGrafica(idGrafica,opciones,label,magnitud) {
-     let datos = await fetchMedidas('1')
+     let datos = await fetchMedidas(4)
     let dataset = crearDataset(datos,magnitud)
 
      let datosGrafica = {
@@ -101,7 +101,7 @@ function crearDataset(mediciones,magintud) {
          datasets: [
              {
                  label: label,
-                 data: dataset.map((objeto) => objeto.medida)
+                 data: dataset.map((objeto) => objeto.Medida)
              }
          ]
      }
@@ -119,6 +119,6 @@ async function crearTablas (idTabla,magnitud) {
     dataset.forEach((dataRow) => {
         let tabla = document.getElementById(idTabla)
         let tableRow = tabla.appendChild(document.createElement("tr"))
-        let array = Object.keys(dataRow)
+            let
     })
 }
