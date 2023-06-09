@@ -55,7 +55,7 @@ if (isset($_SESSION['user'])) {
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="perfil.php">Mi perfil</a></li>
 
-                        < <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+                         <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>
@@ -364,7 +364,7 @@ if (isset($_SESSION['user'])) {
         crearGrafica("graficasalinidad",opciones,"Sal","Sal")
         crearGrafica("graficatemperatura",opciones,"Temperatura","Temperatura")
         crearGrafica("graficaph",opciones,"ph","ph")
-        crearGrafica("graficaluz",opciones,"Luz","Luz")
+        crearGrafica("graficaluz",opciones,"Luz","Lúmenes")
 
 
     })
