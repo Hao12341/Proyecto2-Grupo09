@@ -13,9 +13,9 @@ if($_SESSION['user']['idRol'] !== "4") {
 require_once "includes/connexion.php";
 if (!isset($connexion)) die();
 
-$idUsuario = intval($peticion->parametrosPath()[0]);
+$idHuerto = intval($peticion->parametrosPath()[0]);
 
-if($idUsuario === 0)
+if($idHuerto === 0)
 {
     http_response_code(400);
     die();
@@ -27,7 +27,7 @@ $sql = "SELECT `huertos`.`IdHuerto` AS `id`,
 
 FROM `huertos`
          INNER JOIN `usuarios` `u` on `huertos`.`UsuarioPropietario` = `u`.`IdUsuario`
-WHERE `u`.`IdUsuario` = $idUsuario" ;
+WHERE `u`.`IdUsuario` = $idHuerto" ;
 
 
     $result = mysqli_query($connexion,$sql);
