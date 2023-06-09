@@ -17,4 +17,4 @@ JOIN tipossensores ON sensores.TipoSensor = tipossensores.IdTipoSensor
 JOIN sondas ON sensores.NumSonda = sondas.IdSonda
 JOIN huertos ON sondas.NumHuerto = huertos.IdHuerto
 JOIN usuarios ON huertos.UsuarioPropietario = usuarios.IdUsuario
-WHERE incidencias.NivelGravedad = 5;
+WHERE incidencias.NivelGravedad = 4;
