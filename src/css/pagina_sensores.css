@@ -283,6 +283,8 @@ button{
 .historial tr td p {
     text-align: center;
     font-size: 14px;
+    margin-bottom: 3vw;
+    margin-top: 3vw;
 }
 
 .tab-historico{
