@@ -13,27 +13,28 @@
 
 <body>
 
-
+                                                    <!-- Empezar a copiar de aquí -->
     <header class="Encabezado" role="banner">
         <!-- Esto es el encabezado que actuará de banner-->
-        <nav id="menu"><a id="Logo" href="index.html"><img src="img/logo.svg"
-                    alt="Logo de la empresa"></a>
+        <nav id="menu"><a id="Logo" href="index.html"><img src="img/logo.svg"alt="Logo de la empresa"></a>
             <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
             <div id="contenedorContenedorDesktop">
                 <div id="separador"></div>
                 <div id="contenedorMenuDesktop">
                     <ul id="menuDesktop">
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="html/productos.html">Productos</a></li>
-                        <li><a href="html/contacto.html">Contáctanos</a></li>
+                        <li><a href="html/productos.html">Producto</a></li>
+                        <li><a href="html/contacto.html">Contactanos</a></li>
+                        <li><a href="html/login.html">Iniciar sesión</a></li>
                     </ul>
                 </div>
             </div>
 
             <ul id="menuDesplegable">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="html/productos.html">Productos</a></li>
-                <li><a href="html/contacto.html">Contáctanos</a></li>
+                <li><a href="html/productos.html">Producto</a></li>
+                <li><a href="html/contacto.html">Contactanos</a></li>
+                
             </ul>
 
 
@@ -48,9 +49,9 @@
             </div>
         </nav>
     </header>
-
-        
-    <!------------------------------------------ /Header------------------------------------------>
+    <script src="js/menu.js"></script>
+    <script src="js/cerrarSesion.js"></script>
+                                                    <!-- Acabar de copiar aquí-->
     <!-- Fondo a -->
     <nav id="Foto-Landing">
     <!-- Eslogan -->
@@ -65,32 +66,52 @@
     <a href="html/productos.html"><button id="call-to-action">Nuestros Productos</button></a>
 
     <div id="arrow-container">
-        <a href="#destination">
+        <a id="Posicion" href="#destination">
           <div id="triangulo"></div>
         </a>
     </div>
     </nav>
     <div id="destination">a</div>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var posicionLink = document.getElementById("Posicion");
+
+            function changeLink() {
+                if (window.innerWidth <= 1230) {
+                    posicionLink.setAttribute("href", "#destination");
+                } else {
+                    posicionLink.setAttribute("href", "#Empresa");
+                }
+            }
+
+            changeLink(); // Llamar a la función cuando se carga la página inicialmente
+
+            window.addEventListener('resize', changeLink); // Llamar a la función cuando se redimensiona la ventana
+        });
+    </script>
+
     <!-- Producto -->
-    
-    <section class="titulos" id="informacion">
-        <h1 class="titulo">Quienes somos</h1>
+        <section id="Empresa">
+        <section class="titulos" id="informacion">
+            <h1 class="titulo">Quienes somos</h1>
 
-        <p class="texto">Somos un equipo apasionado por la tecnología y comprometido con el desarrollo sostenible. Nuestra misión es brindar soluciones innovadoras que ayuden a mejorar la eficiencia y la productividad.
-            Queremos proporcinarte los datos de tus plantaciones, para que puedas tomar mejores decisiones.
-        </p>
+            <p class="texto">Somos un equipo apasionado por la tecnología y comprometido con el desarrollo sostenible. Nuestra misión es brindar soluciones innovadoras que ayuden a mejorar la eficiencia y la productividad.
+                Queremos proporcinarte los datos de tus plantaciones, para que puedas tomar mejores decisiones.
+            </p>
 
-       
-    </section>
+        
+        </section>
     <!-- Fin información -->
     
        <!-- Producto -->
     <img id="Foto_Producto" src="img/temporal.jpg" alt="Foto producto completo">
        <!-- FinProducto -->
-       <!-- Footer --><footer>
+    </section>
 
-       
+       <!-- Footer -->
+  
+    <footer>
     <section id="InfoEmpresa">
     <p id="ContactoPie">Contacto</p>
     <p class="Simple">TEL:999 999 999</p>
@@ -103,10 +124,7 @@
         <a href="https://www.instagram.com/tu_pagina"><img src="img/icons8-instagram.svg" alt="Instagram"></a>
         <a href="https://www.twitter.com/tu_pagina"><img src="img/icons8-twitter.svg" alt="Twitter"></a>
     </nav>
-    </section>
 
-
-       
 
         <p>Copyright © 2023 GTI Inc. Todos los derechos reservados.</p>
         <p>Política de privacidad | Términos de uso | Información legal</p>
@@ -115,5 +133,4 @@
 
     <!-- Fin footer -->
 </body>
-<script src="js/menu.js"></script>
 </html>

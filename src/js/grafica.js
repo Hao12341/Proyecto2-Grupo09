@@ -1,4 +1,12 @@
 
+
+async function fetchMedidas (numeroHuerto) {
+    let response = await fetch("../api/sesion/medidas/" + numeroHuerto)
+    return await response.json()
+}
+
+
+
 /**
  * Ordena las medidas por fecha de más antigua a más reciente
  *  @param mediciones JSON con los parámetros de medida
@@ -49,10 +57,11 @@
 /**
  * Dada unas mediciones, ordena el ejeX según la fecha y añade valores al ejeY correspondientes con estas
  * @param mediciones
- * @returns {{medicion: *[], ejeX: *[]}}
+ * @param magintud
+ * @returns {*[]}
  */
 
-function crearDataset(mediciones) {
+function crearDataset(mediciones,magintud) {
      //ordenamos las mediciones por fecha
      mediciones = ordenarJSONFecha(mediciones)
 
@@ -60,23 +69,19 @@ function crearDataset(mediciones) {
 
      let ejeX = crearEjeX(mediciones)
 
-     //Array para almacenar los valores de las ordenadas
-     let medicion;
+    let filtrado = mediciones.filter((valor) => {
+        if (valor.tipoMedida !== magintud){
+            return false
 
-     // Esta map devuelve por cada valor de la fecha su correspondiente
-     // en el objeto, buscando esta fecha en las mediciones,
-     // la encuentra, devuelve su index, y añadimos la Medicion
-     // de ese index quedadno relacionado con la fecha
-    medicion = ejeX.map((fecha) => {
-         return mediciones[mediciones.findIndex((element => {
-             return element.fecha === fecha;
+        }else {
+            return true
+        }
+    })
 
-         }))].medida
-     })
+    console.log(filtrado)
 
-    console.log({ejeX,medicion})
 
-    return  {ejeX,medicion}
+    return  filtrado
  }
 
 /**
@@ -84,19 +89,23 @@ function crearDataset(mediciones) {
  * @param idGrafica
  * @param datos
  * @param opciones
+ * @param label
+ * @param magnitud
  */
- function crearGrafica(idGrafica, datos,opciones,label) {
-    let dataset = crearDataset(datos)
+ async function crearGrafica(idGrafica,opciones,label,magnitud) {
+     let datos = await fetchMedidas('1')
+    let dataset = crearDataset(datos,magnitud)
+
      let datosGrafica = {
-        labels: dataset.ejeX,
+        labels: dataset.map((objeto) => objeto.fecha),
          datasets: [
              {
                  label: label,
-                 data: dataset.medicion
+                 data: dataset.map((objeto) => objeto.medida)
              }
          ]
      }
-     let ctx = document.getElementById(idGrafica)
+     let ctx = document.getElementById(idGrafica).getContext('2d')
     let grafica = new Chart (ctx, {
         type: 'line',
         data: datosGrafica,
@@ -104,3 +113,12 @@ function crearDataset(mediciones) {
     })
  }
 
+async function crearTablas (idTabla,magnitud) {
+     let datos = await fetchMedidas('1')
+    let dataset = crearDataset(datos,magnitud)
+    dataset.forEach((dataRow) => {
+        let tabla = document.getElementById(idTabla)
+        let tableRow = tabla.appendChild(document.createElement("tr"))
+        let array = Object.keys(dataRow)
+    })
+}
