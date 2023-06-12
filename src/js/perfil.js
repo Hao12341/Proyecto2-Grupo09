@@ -1,82 +1,141 @@
-const editar = document.getElementsByClassName('editar');
-const cancelarBtn = document.getElementById('cancelar-btn');
-const popup = document.getElementById('popup');
+/**
+ * Esta funcion realiza un GET con los parámetros del huerto del usuario
+ * correspondiente
+ * @param idUsuario el id del Usuario del huerto
+ * @returns {Promise<any>} devuelve un objeto cuando la promesa haya acabado
+ * @constructor
+ */
 
-let huertoId = 0
-
-Array.from(editar).forEach((edit) => {
-    edit.addEventListener('click', async function (event) {
-        popup.showModal();
-        huertoId = event.target.id
-    });
-});
-
-
-cancelarBtn.addEventListener('click', function () {
-    popup.close();
-});
-
-
-const si = document.getElementById('correcto');
-const cancelar = document.getElementById('cancel');
-const editHuerto = document.getElementById('edit');
-const botonEdit = document.getElementById('botonEditar')
-
-
-
-si.addEventListener('click', function () {
-    editHuerto.showModal();
-    popup.close();
-
-
-});
-botonEdit.addEventListener('click', (event) => {
-    PutHuertos(event.target)
-})
-
-cancelar.addEventListener('click', function () {
-    editHuerto.close();
-    popup.close();
-
-});
-
-async function PutHuertos(boton) {
-    let nombreHuerto = document.getElementById("nombreHuerto").value
-    let formData = new FormData
-    console.log(huertoId)
-    formData.append("idHuerto", huertoId )
-    formData.append("Nombre", nombreHuerto)
-    console.log(formData)
-    //TODO: Poner el backend en marcha
-
-    /*let promesaPut = await fetch("../api/huertos/" + huertoId, {
-        method: 'post',
-        body: formData
-    })
-    let textoRespuesta
-    switch (promesaPut) {
-
-        case promesaPut.ok === true :
-            textoRespuesta = "Se han enviado los datos correctamente"
-            break
-        case promesaPut.status === 401:
-            textoRespuesta = "El huerto que usted intenta cambiar no le pertenece"
-            break
-        default:
-            textoRespuesta = "Ha habido un error inesperado en el cambio de nombre del huerto"
-    }
-
-     */
-
-    let botonAceptar
-    botonAceptar.addEventListener('click', () => {
-        location.reload()
-    })
-
-
-
-
-
-
+async function GetHuertos(idUsuario) {
+    const promesa = await fetch("../api/huertos/" + idUsuario)
+    return await promesa.json()
 }
+
+/**
+ * Está funcion crea tablas HTML que guardan la información
+ * de los huertos proporcionada
+ * @param huertos Objeto que contiene idHuerto, Nombre y Dirección
+ * @constructor
+ */
+async function PonerHuertos() {
+    let huertos = await GetHuertos('4')
+    const contenedorHuerto = document.getElementById("ContenedorHuertos")
+    huertos.forEach( (huerto) => {
+        let cajaHuerto = contenedorHuerto.appendChild(document.createElement("div"))
+        let cajaHuerto2 = cajaHuerto.appendChild(document.createElement("dd"))
+        cajaHuerto2.classList.add("huertos")
+        let texto = cajaHuerto2.appendChild(document.createElement("div"))
+        texto.classList.add("texto")
+        let tituloHueto = texto.appendChild(document.createElement("p"))
+        tituloHueto.classList.add("TituloHuerto")
+        tituloHueto.innerText = huerto.Nombre
+        let direccionHuerto = texto.appendChild(document.createElement("p"))
+        direccionHuerto.classList.add("direccion")
+        direccionHuerto.innerText = huerto.Dirección
+        let botonHuerto = cajaHuerto2.appendChild(document.createElement("div"))
+        botonHuerto.classList.add("boton")
+        botonHuerto.classList.add("botonHUerto")
+        let boton = botonHuerto.appendChild(document.createElement("button"))
+
+        boton.innerText = "Editar"
+        boton.type = "button"
+        boton.classList.add("editar")
+        boton.id = huerto.idHuerto
+
+        const editar = document.getElementsByClassName('editar');
+        const cancelarBtn = document.getElementById('cancelar-btn');
+        const popup = document.getElementById('popup');
+
+        let huertoId = 0
+
+        Array.from(editar).forEach((edit) => {
+            edit.addEventListener('click', async function (event) {
+                popup.showModal();
+                huertoId = event.target.id
+            });
+        });
+
+
+        cancelarBtn.addEventListener('click', function () {
+            popup.close();
+        });
+
+
+        const si = document.getElementById('correcto');
+        const cancelar = document.getElementById('cancel');
+        const editHuerto = document.getElementById('edit');
+        const botonEdit = document.getElementById('botonEditar')
+
+
+
+        si.addEventListener('click', function () {
+            editHuerto.showModal();
+            popup.close();
+
+
+        });
+        botonEdit.addEventListener('click', () => {
+            PutHuertos()
+        })
+
+        cancelar.addEventListener('click', function () {
+            editHuerto.close();
+            popup.close();
+
+        });
+
+        async function PutHuertos() {
+            let nombreHuerto = document.getElementById("nombreHuerto").value
+            console.log(huertoId)
+            let obejtoPUT = {idHuerto: huertoId, Nombre: nombreHuerto}
+            //TODO: Poner el backend en marcha
+            console.log(JSON.stringify(obejtoPUT))
+
+            let promesaPut = await fetch("../api/huertos/" + huertoId, {
+                method: 'put',
+                body: JSON.stringify(obejtoPUT)
+            })
+            let textoRespuesta
+            switch (promesaPut) {
+
+                case promesaPut.ok === true :
+                    textoRespuesta = "Se han enviado los datos correctamente"
+                    break
+                case promesaPut.status === 401:
+                    textoRespuesta = "El huerto que usted intenta cambiar no le pertenece"
+                    break
+                default:
+                    textoRespuesta = "Ha habido un error inesperado en el cambio de nombre del huerto"
+            }
+
+
+
+            /*let botonAceptar
+            botonAceptar.addEventListener('click', () => {
+                location.reload()
+            }) */
+
+
+
+
+
+
+
+
+
+        }
+})
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
