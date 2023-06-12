@@ -62,6 +62,7 @@
 }
 
 .incidencias{
+    display: flex;
     width: 900px;
     height: 150px;
     border: 1px solid black;
@@ -100,7 +101,7 @@ p{
 
 .Cliente{
     font-size: 30px;
-    padding: 10px;
+    padding: 3rem;
 }
 
 .Gravedad{
@@ -139,6 +140,8 @@ p{
         padding-top: 2rem;
     }
 
+
+
     .tituloIncidencia{
         font-size: 70px;
     }
@@ -148,12 +151,12 @@ p{
         display: flex;
         padding: 2rem;
     }
-
-    .Cliente{
+    #nombreUsuario3{
+        font-size: 40px;
         display: flex;
-        font-size: 24px;
-        padding: 0rem;
+        padding: 2rem;
     }
+
 
     .estado{
         font-size: 25px;
@@ -228,9 +231,16 @@ p{
         padding: 1rem;
     }
 
-    .InfoProblema{
-        padding: 10px;
-        font-size: 30px;
+    #infoProblema{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+
+    }
+    .elProblema{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
     }
 
     /* Estilo del icono de cerrar */
