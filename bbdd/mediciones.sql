@@ -23,3 +23,8 @@ INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,
 INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (23,'2022-05-01 00:00:00',50.00,3,3,3);
 INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (24,'2022-06-01 00:00:00',200.00,4,4,4);
 INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (25,'2022-07-01 00:00:00',19.00,5,5,5);
+INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (26,'2022-08-01 00:00:00',13.89,1,1,1);
+INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (27,'2022-09-01 00:00:00',8.00,2,2,2);
+INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (28,'2022-10-01 00:00:00',75.00,3,3,3);
+INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (29,'2022-09-01 00:00:00',190.00,4,4,4);
+INSERT INTO `mediciones` (`idMediciones`,`fecha`,`Medida`,`Unidades`,`IdSensor`,`NumSonda`) VALUES (30,'2022-11-01 00:00:00',20.00,5,5,5);
