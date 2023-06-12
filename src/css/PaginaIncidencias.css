@@ -140,11 +140,18 @@ p{
         padding-top: 2rem;
     }
 
+
+
     .tituloIncidencia{
         font-size: 70px;
     }
 
     #nombreUsuario{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+    }
+    #nombreUsuario3{
         font-size: 40px;
         display: flex;
         padding: 2rem;
@@ -224,9 +231,16 @@ p{
         padding: 1rem;
     }
 
-    .InfoProblema{
-        padding: 10px;
-        font-size: 30px;
+    #infoProblema{
+        font-size: 40px;
+        display: flex;
+        padding: 2rem;
+
+    }
+    .elProblema{
+        display: flex;
+        font-size: 24px;
+        padding: 0rem;
     }
 
     /* Estilo del icono de cerrar */
