@@ -364,7 +364,7 @@ components:
       Huerto:
         type: object
         properties:
-          idHuerto:
+          id:
             type: integer
             description: id del Huerto
           Nombre:
