@@ -192,17 +192,18 @@ if (isset($_SESSION['user'])) {
     <!-- Inicio pop up de edicion de usuario -->
 
     <dialog id="editUsuario">
-        <form onsubmit="enviarEditarUsuario()">
+        <form id="editarUsuarioForm">
             <div class="forms">
-                <input type="text" class="form-control-sm" id="emailEditar" placeholder="Correo: jojase@gamil.com" required>
-                <input type="text" class="form-control-sm" id="nombreEditar" placeholder="Nombre: Inés Vidal Ruiz" required>
-                <input type="text" class="form-control-sm" id="dniEditar" placeholder="DNI: 00000000A" required>
-                <input type="text" class="form-control-sm" id="usernameEditar" placeholder="Usuario: Ines" required>
-                <input type="password" class="form-control-sm" id="passwordEditar" placeholder="Contraseña" required>
-                <input type="text" class="form-control-sm" id="direccionEditar" placeholder="Dirección" required>
+                <input type="text" name="email" class="form-control-sm" id="emailEditar" placeholder="Correo: jojase@gamil.com" required>
+                <input type="text" name="nombre" class="form-control-sm" id="nombreEditar" placeholder="Nombre: Inés Vidal Ruiz" required>
+                <input type="text" name="DNI" class="form-control-sm" id="dniEditar" placeholder="DNI: 00000000A" required>
+                <input type="text" name="username" class="form-control-sm" id="usernameEditar" placeholder="Usuario: Ines" required>
+                <input type="password" name="password" class="form-control-sm" id="passwordEditar" placeholder="Contraseña" required>
+                <input type="text" name="direccion" class="form-control-sm" id="direccionEditar" placeholder="Dirección" required>
+                <div id="idRolEditar"></div>
             </div>
             <br>
-            <button class="btn btn-outline-secondary" type="button" id="anyadir">Editar</button>
+            <button class="btn btn-outline-secondary" type="submit" id="anyadir">Editar</button>
             <button class="btn btn-outline-secondary" type="button" id="cancelar"
                     onclick="return cerrarEditarUsuarioDialog()">Cancelar
             </button>
@@ -249,17 +250,7 @@ if (isset($_SESSION['user'])) {
 
 <script src="../js/adminBBDD.js"></script>
 <script>
-
     crearTodasTablas()
-    //Iniciador cambio nombre
-    let botonesEditar = document.getElementsByClassName("boton-editar")
-    console.log(botonesEditar)
-    Array.from(botonesEditar).forEach( (botonEditar) => {
-        botonEditar.addEventListener('click', async function (event) {
-            console.log("hola esto deberia ponerse cuando abro el popup de editar")
-            await ponerDatosActualizarUsuarios(event)
-        });
-    })
 </script>
 
 </body>

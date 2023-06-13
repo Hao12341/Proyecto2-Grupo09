@@ -15,9 +15,14 @@ if (!isset($connexion)) die();
 
 $id = intval($peticion->parametrosPath()[0]);
 $objeto = json_decode(file_get_contents('php://input'));
-$nombre = $objeto->Nombre;
+$nombre = $objeto->nombre;
 
-$sql = "UPDATE `huertos` SET `NombreHuerto` = '$nombre'  WHERE `huertos`.`IdHuerto` = '$id'";
+
+
+
+$sql = "UPDATE `huertos` SET `NombreHuerto` = '$nombre'
+                 
+                 WHERE `huertos`.`IdHuerto` = '$id'";
 try {
     mysqli_query($connexion, $sql);
     http_response_code(200);

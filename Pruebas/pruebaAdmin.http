@@ -19,7 +19,7 @@ nombre=Desgraciado Jiménez&password=1234&rol=4&email=cojones@gamil.com&direcci�
 PUT http://localhost/Proyecto2-Grupo09/src/api/usuarios/31
 Content-Type: application/json
 
-{"nombre": "Miguelito Calamardo","idRol": "4","DNI": "20962032A","password": "1234", "direccion": "Calle de la amargura nº123"}
+{"nombre": "Miguelito Calamardo","idRol": "4","DNI": "20962032A","password": "1234", "direccion": "Calle de la amargura nº123", "username": "coco", "email": "coco@gmail.com"}
 
 ### Eliminar señor Jiménez
 
