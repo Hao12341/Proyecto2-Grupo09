@@ -123,5 +123,31 @@ async function ponerDatosActualizarUsuarios (event) {
     document.getElementById("usernameEditar").value = usuario.username
     document.getElementById("passwordEditar").value = usuario.password
     document.getElementById("direccionEditar").value = usuario.email
+    document.getElementById("idRolEditar").value = usuario.id
+    return idUsuario
 }
 
+
+async function actualizarDatos (event) {
+      let idUsuario = parseInt(document.getElementById("idRolEditar").value)
+    console.log(idUsuario)
+    event.preventDefault()
+    const formData = new FormData(event.target);
+    console.log("formData con todas las cosas del form"+formData)
+    const usuarios = {};
+    for (const [key, value] of formData.entries()) {
+        usuarios[key] = value;
+    }
+    console.log("usuarios en objeto:" +usuarios)
+     let usuariosJSON =  JSON.stringify(usuarios);
+    console.log("usuarios en json:" + usuariosJSON)
+    let promesa = await fetch("../api/usuarios/" + idUsuario, {
+        method: 'put',
+        body: usuariosJSON
+    })
+    //TODO: Añadir funcionalidad al popup de prevenir la edición sin querer
+    location.reload()
+}
+
+
+document.getElementById("editarUsuarioForm").addEventListener('submit',actualizarDatos)
