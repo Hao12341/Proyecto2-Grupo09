@@ -16,8 +16,12 @@ if (!isset($connexion)) die();
 $sql = "SELECT `usuarios`.`IdUsuario`, 
        `usuarios`.`nombre`,
        `usuarios`.email,
+       `usuarios`.`DNI`,
+       `usuarios`.`Contraseña` as `password`,
+       `usuarios`.`Teléfono` as `telefono`,
        `roles`.`IdRol` as `idRol`, 
        `roles`.`rol` 
+        
 	FROM `usuarios` 
 		INNER JOIN `roles` ON `usuarios`.`rol` = `roles`.`IdRol`";
 
