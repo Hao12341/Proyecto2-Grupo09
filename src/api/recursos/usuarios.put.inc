@@ -16,8 +16,13 @@ if (!isset($connexion)) die();
 $id = intval($peticion->parametrosPath()[0]);
 $nombre = $peticion->parametrosBody()->nombre;
 $rol = intval($peticion->parametrosBody()->idRol);
+$DNI = $peticion->parametrosBody()->DNI;
+$password = $peticion->parametrosBody()->password;
 
-$sql = "UPDATE `usuarios` SET `nombre`='$nombre',`rol`=$rol WHERE `IdUsuario` = $id";
+
+$sql = "UPDATE `usuarios` SET `nombre`='$nombre',`rol`=$rol,
+               `DNI`='$DNI', `Contraseña` = '$password'
+                  WHERE `IdUsuario` = '$id'";
 
 // Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
 try {
