@@ -16,10 +16,10 @@ nombre=Desgraciado Jiménez&password=1234&rol=4&email=cojones@gamil.com&direcci�
 
 ### Actualizar un usuario
 
-PUT http://localhost/Proyecto2-Grupo09/src/api/usuarios/30
+PUT http://localhost/Proyecto2-Grupo09/src/api/usuarios/31
 Content-Type: application/json
 
-{"nombre": "Felicidad Jiménez","idRol": "4","DNI": "20962032","password": "1234"}
+{"nombre": "Miguelito Calamardo","idRol": "4","DNI": "20962032A","password": "1234", "direccion": "Calle de la amargura nº123"}
 
 ### Eliminar señor Jiménez
 

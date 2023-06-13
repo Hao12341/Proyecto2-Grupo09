@@ -13,7 +13,7 @@ if($_SESSION['user']['idRol'] !== "1") {
 require_once 'includes/connexion.php';
 if (!isset($connexion)) die();
 
-$sql = "SELECT `usuarios`.`IdUsuario`, 
+$sql = "SELECT `usuarios`.`IdUsuario` as `id`, 
        `usuarios`.`nombre`,
        `usuarios`.email,
        `usuarios`.`DNI`,

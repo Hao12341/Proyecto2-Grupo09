@@ -8,6 +8,12 @@
       console.log(usuarios)
       return usuarios
   }
+  async function getUsuariosId(id) {
+    const promesa = await fetch("../api/usuarios/" + parseInt(id))
+      let usuarios = await promesa.json()
+      console.log(usuarios)
+      return usuarios
+  }
 
 
 function separarPorRol (usuarios,RolID) {
@@ -38,10 +44,15 @@ function separarPorRol (usuarios,RolID) {
                             let botonEditar = botones.appendChild(document.createElement("button"))
                                 botonEditar.type = "button"
                                 botonEditar.classList.add("boton-editar")
+                                botonEditar.value = usuario.id
                                 let imagen1 = botonEditar.appendChild(document.createElement("i"))
                                     imagen1.classList.add("bi")
                                     imagen1.classList.add("bi-pencil-square")
-                                    imagen1.onclick = abrirEditarUsuarioDialog
+                                    imagen1.value = usuario.id
+                                    imagen1.onclick = async function () {
+                                        abrirEditarUsuarioDialog();
+                                        await ponerDatosActualizarUsuarios(event)
+                                    }
                             let botonEliminar = botones.appendChild(document.createElement("button"))
                                 botonEliminar.type = "button"
                                 botonEliminar.classList.add("boton-quitar")
@@ -67,3 +78,49 @@ async function crearTodasTablas () {
     crearTabla("tablaTecnico",usuariosTecnico)
     crearTabla("tablaAdmin",usuariosAdmin)
 }
+
+async function postUsuarios (event) {
+      event.preventDefault()
+    const formData = new FormData(event.target);
+    console.log(formData)
+    let promesa = await fetch("../api/usuarios",{
+        method: 'post',
+        body: formData
+    })
+    let textoEstadoEnvio
+    switch (promesa.status) {
+        case 200:
+            textoEstadoEnvio = "Se ha creado el usuario correctamente"
+            break
+        case 500:
+            textoEstadoEnvio ="Ha habido un error en el servidor"
+            break
+        case 401:
+            textoEstadoEnvio = "No se tienen los permisos necesarios"
+            break
+    }
+    console.log(textoEstadoEnvio)
+    //TODO: Poner texto del estado de envío en el popup correspondiente
+    location.reload()
+}
+
+
+//llamada funcion añadir usuarios
+
+document.getElementById("formAñadir").addEventListener("submit", postUsuarios)
+
+
+
+//PUT
+
+async function ponerDatosActualizarUsuarios (event) {
+    let idUsuario = parseInt(event.target.value)
+    let usuario = await getUsuariosId(idUsuario)
+    document.getElementById("emailEditar").innerText = usuario.email
+    document.getElementById("nombreEditar").innerText = usuario.email
+    document.getElementById("dniEditar").innerText = usuario.email
+    document.getElementById("usernameEditar").innerText = usuario.email
+    document.getElementById("passwordEditar").innerText = usuario.email
+    document.getElementById("direccionEditar").innerText = usuario.email
+}
+
