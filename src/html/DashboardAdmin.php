@@ -133,7 +133,7 @@ if (isset($_SESSION['user'])) {
         </div>
 
         <div id="tabla1" class="tabla">
-            <table class="table table-striped">
+            <table id="tablaUser" class="table table-striped">
                 <thead>
                     <tr>
                         <th>Nombre Usuario</th>
@@ -142,142 +142,12 @@ if (isset($_SESSION['user'])) {
                         <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th>Alejandro García Moreno
-                        </th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Marta Rodríguez López </th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jose Javier Sesma</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jose Javier Sesma</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Laura González Hernández</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Sergio Navarro Torres</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jorge Herrera Mora</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Isabel Ramírez Ramos</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Daniel Vargas Mendoza</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-
-                </tbody>
 
                 <!-- FIN contenido tabla-->
             </table>
         </div>
         <div id="tabla2" class="tabla" style="display: none;">
-            <table class="table table-striped">
+            <table id="tablaTecnico" class="table table-striped">
                 <thead>
                     <tr>
                         <th>Nombre Usuario</th>
@@ -287,86 +157,13 @@ if (isset($_SESSION['user'])) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>Nuria Martínez Castro</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>David Pérez Tomás</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Raquel Gómez Navarro</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>David Pérez Tomás</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Alberto Peña Soto
-                        </th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-
-
                 </tbody>
 
                 <!-- FIN contenido tabla-->
             </table>
         </div>
         <div id="tabla3" class="tabla" style="display: none;">
-            <table class="table table-striped">
+            <table id="tablaAdmin" class="table table-striped">
                 <thead>
                     <tr>
                         <th>Nombre Usuario</th>
@@ -376,51 +173,6 @@ if (isset($_SESSION['user'])) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>Juan Medina Rivas</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Jose Javier Sesma</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Inés Vidal Ruiz</th>
-                        <td>jojase@gamil.com</td>
-                        <td>985266223</td>
-                        <td class="acciones">
-                            <div class="imagen">
-                                <button type="button" class="boton-editar">
-                                    <i class="bi bi-pencil-square" onclick="abrirEditarUsuarioDialog()"></i>
-                                </button>
-                                <button type="button" class="boton-quitar">
-                                    <i class="bi bi-x-circle"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-
-
                 </tbody>
 
                 <!-- FIN contenido tabla-->
@@ -485,18 +237,19 @@ if (isset($_SESSION['user'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-<<<<<<< HEAD
     <script src="../js/cerrarSesion.js"></script>
     <script src="../js/devuelveUsuariosAdmin.js"></script>
 
-=======
+
     <script src="../js/admin.js"></script>
-<<<<<<< HEAD
->>>>>>> develop
-=======
+
     <script src="../js/cerrarSesion.js"></script>
 
->>>>>>> develop
+    <script src="../js/adminBBDD.js"></script>
+    <script>
+        crearTodasTablas()
+    </script>
+
 </body>
 
 </html>
