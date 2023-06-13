@@ -1,0 +1,26 @@
+POST http://localhost/Proyecto2-Grupo09/src/api/sesion/index.php
+Content-Type: application/x-www-form-urlencoded
+
+email=javierruperez13@gamil.com&password=1234
+
+### Devolver todos los usuarios
+
+GET http://localhost/Proyecto2-Grupo09/src/api/usuarios
+
+### Crear un usuario
+
+POST http://localhost/Proyecto2-Grupo09/src/api/usuarios
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Desgraciado Jiménez&password=1234&rol=4&email=cojones@gamil.com&dirección=Calle de la amargura 123&telefono=123456789&DNI=20962030&username=desjim
+
+### Actualizar un usuario
+
+PUT http://localhost/Proyecto2-Grupo09/src/api/usuarios/30
+Content-Type: application/json
+
+{"nombre": "Felicidad Jiménez","idRol": "4","DNI": "20962032","password": "1234"}
+
+### Eliminar señor Jiménez
+
+DELETE http://localhost/Proyecto2-Grupo09/src/api/usuarios/26

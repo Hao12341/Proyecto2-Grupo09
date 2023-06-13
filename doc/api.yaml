@@ -95,10 +95,23 @@ paths:
                   type: string
                 rol:
                   type: integer
+                email:
+                  type: string
+                dirección:
+                  type: string
+                telefono:
+                  type: string
+                DNI:
+                  type: string
+                username:
+                  type: string
               required:
                 - nombre
                 - password
                 - rol
+                - email
+                - username
+                - telefono
       responses:
         '200':
           description: OK
@@ -318,12 +331,19 @@ components:
           email:
             type: string
             description: correo del usuario
+          DNI:
+            type: string
+            description: Documento nacional de Identidad del usuario
+          telefono:
+            type: string
+            description: Teléfono del usuario
           idRol:
             type: integer
             description: id del rol del usuario
           rol:
             type: string
             description: nombre del rol del usuario
+
 
       Avería:
         type: object
