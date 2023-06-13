@@ -49,9 +49,10 @@ function separarPorRol (usuarios,RolID) {
                                     imagen1.classList.add("bi")
                                     imagen1.classList.add("bi-pencil-square")
                                     imagen1.value = usuario.id
-                                    imagen1.onclick = async function () {
+                                    imagen1.onclick = async function (event) {
+                                        await ponerDatosActualizarUsuarios(event);
                                         abrirEditarUsuarioDialog();
-                                        await ponerDatosActualizarUsuarios(event)
+
                                     }
                             let botonEliminar = botones.appendChild(document.createElement("button"))
                                 botonEliminar.type = "button"
@@ -116,11 +117,11 @@ document.getElementById("formAñadir").addEventListener("submit", postUsuarios)
 async function ponerDatosActualizarUsuarios (event) {
     let idUsuario = parseInt(event.target.value)
     let usuario = await getUsuariosId(idUsuario)
-    document.getElementById("emailEditar").innerText = usuario.email
-    document.getElementById("nombreEditar").innerText = usuario.email
-    document.getElementById("dniEditar").innerText = usuario.email
-    document.getElementById("usernameEditar").innerText = usuario.email
-    document.getElementById("passwordEditar").innerText = usuario.email
-    document.getElementById("direccionEditar").innerText = usuario.email
+    document.getElementById("emailEditar").value = usuario.email
+    document.getElementById("nombreEditar").value = usuario.nombre
+    document.getElementById("dniEditar").value = usuario.DNI
+    document.getElementById("usernameEditar").value = usuario.username
+    document.getElementById("passwordEditar").value = usuario.password
+    document.getElementById("direccionEditar").value = usuario.email
 }
 
