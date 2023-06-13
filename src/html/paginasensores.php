@@ -360,9 +360,9 @@ if (isset($_SESSION['user'])) {
                 }
             };
 
-        crearGrafica("graficahumedad",opciones,"humedad","Humedad")
-        crearGrafica("graficasalinidad",opciones,"Sal","Sal")
-        crearGrafica("graficatemperatura",opciones,"Temperatura","Temperatura")
+        crearGrafica("graficahumedad",opciones,"humedad","%")
+        crearGrafica("graficasalinidad",opciones,"Sal","g/L")
+        crearGrafica("graficatemperatura",opciones,"Temperatura","ºC")
         crearGrafica("graficaph",opciones,"ph","ph")
         crearGrafica("graficaluz",opciones,"Luz","Lúmenes")
 

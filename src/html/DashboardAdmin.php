@@ -25,7 +25,7 @@ if (isset($_SESSION['user'])) {
     <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hacer compatible con el navegador edge -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <link rel="stylesheet" type="text/css" href="../css/DashboardAdminMovil.css">
@@ -40,215 +40,227 @@ if (isset($_SESSION['user'])) {
 
 
 <body>
-    <!-- Empieza el Header/BANNER -->
-    <header class="Encabezado" role="banner">
-        <!-- Esto es el encabezado que actuará de banner-->
-        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
-            <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
-            <div id="contenedorContenedorDesktop">
-                <div id="separador"></div>
-                <div id="contenedorMenuDesktop">
-                    <ul id="menuDesktop">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <ul id="menuDesplegable">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
-
-            </ul>
-
-
-
-            <div id="iconosBanner">
-                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
-                        alt="Perfil Log In"></a>
-                <div class="hamburguesa">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- FIN Header-->
-    <!-- script que hace funcionar el menu desplegable-->
-    <script src="../js/menu.js"></script>
-    <!-- FIN del script-->
-    <!-- Inicio de la etiqueta section-->
-    <section class="InicioAdmin" id="InicioAdmin"><!-- Inicio Sección Dashboard Administrador-->
-        <div class="bienvenido">
-            <h1>Bienvenido Admin</h1>
-        </div>
-        <div class="contenedor">
-            <div class="Busqueda">
-                <div class="titulo">
-                    <h1>Usuarios</h1>
-                </div>
-                <div class="input-group">
-                    <div class="buscador">
-                        <input type="text" class="form-control" id="buscar-input" placeholder="Nombre" aria-label=""
-                            aria-describedby="basic-addon1">
-                        <button class="btn btn-outline-secondary" type="button" id="buscar-btn">Buscar</button>
-
-                        <!-- <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Buscar</button>
-                        </div> -->
-                    </div>
-                    <button type="button" class="boton-anyadir" id="anyadir-btn">
-                        <i class="bi bi-plus-square" id="anyadir"></i>
-                    </button>
-                </div>
+<!-- Empieza el Header/BANNER -->
+<header class="Encabezado" role="banner">
+    <!-- Esto es el encabezado que actuará de banner-->
+    <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
+        <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+        <div id="contenedorContenedorDesktop">
+            <div id="separador"></div>
+            <div id="contenedorMenuDesktop">
+                <ul id="menuDesktop">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+                </ul>
             </div>
         </div>
-        <!-- Inicio pop up de anyadir usuario -->
-        <dialog id="popup">
+
+        <ul id="menuDesplegable">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+
+        </ul>
+
+
+        <div id="iconosBanner">
+            <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                                                 alt="Perfil Log In"></a>
+            <div class="hamburguesa">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- FIN Header-->
+<!-- script que hace funcionar el menu desplegable-->
+<script src="../js/menu.js"></script>
+<!-- FIN del script-->
+<!-- Inicio de la etiqueta section-->
+<section class="InicioAdmin" id="InicioAdmin"><!-- Inicio Sección Dashboard Administrador-->
+    <div class="bienvenido">
+        <h1>Bienvenido Admin</h1>
+    </div>
+    <div class="contenedor">
+        <div class="Busqueda">
+            <div class="titulo">
+                <h1>Usuarios</h1>
+            </div>
+            <div class="input-group">
+                <div class="buscador">
+                    <input type="text" class="form-control" id="buscar-input" placeholder="Nombre" aria-label=""
+                           aria-describedby="basic-addon1">
+                    <button class="btn btn-outline-secondary" type="button" id="buscar-btn">Buscar</button>
+
+                    <!-- <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                    </div> -->
+                </div>
+                <button type="button" class="boton-anyadir" id="anyadir-btn">
+                    <i class="bi bi-plus-square" id="anyadir"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Inicio pop up de anyadir usuario -->
+    <dialog id="popup">
+        <form id="formAñadir" onsubmit="postUsuarios()">
             <div class="forms">
-                <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo">
-                <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre">
-                <input type="password" class="form-control-sm" id="formpopup" placeholder="Contraseña">
+                <input type="text" name="email" class="form-control-sm" id="correoAñadir" placeholder="Correo" required>
+                <input type="text" name="username" class="form-control-sm" id="usernameAñadir" placeholder="Username" required>
+                <input type="text" name="nombre" class="form-control-sm" id="nombreAñadir" placeholder="Nombre" required>
+                <input type="password" name="password" class="form-control-sm" id="contraseñaAañadir" placeholder="Contraseña" required>
+                <input type="tel" name="telefono" class="form-control-sm" id="telefonoAñadir" placeholder="Teléfono" pattern="[0-9]{9}"
+                       required>
+                <!--TODO: arreglar css campos que no sean texto-->
+                <input type="text" name="DNI" class="form-control-sm" id="DNIAñadir" placeholder="DNI">
+                <input type="text" name="dirección" class="form-control-sm" id="direccionAñadir" placeholder="Dirección">
+
             </div>
             <br>
             <div class="rol">
-                <label>Rol: <select name="idRol">
+                <label>Rol: <select name="rol">
                         <option value="1">Administrador</option>
-                        <option value="2">Usuario</option>
+                        <option value="3">Técnico</option>
+                        <option value="4">Usuario</option>
                     </select>
                 </label>
             </div>
+
+
             <br>
-            <button class="btn btn-outline-secondary" type="button">Añadir</button>
+            <button class="btn btn-outline-secondary" type="submit">Añadir</button>
             <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">Cancelar</button>
-        </dialog>
+        </form>
+    </dialog>
 
 
+    <div class="pestañas">
+        <button class="pestaña" id="pestaña1" onclick="mostrarTabla(1)">Usuario</button>
+        <button class="pestaña" id="pestaña2" onclick="mostrarTabla(2)">Técnico</button>
+        <button class="pestaña" id="pestaña3" onclick="mostrarTabla(3)">Administrador</button>
+    </div>
 
-        <div class="pestañas">
-            <button class="pestaña" id="pestaña1" onclick="mostrarTabla(1)">Usuario</button>
-            <button class="pestaña" id="pestaña2" onclick="mostrarTabla(2)">Técnico</button>
-            <button class="pestaña" id="pestaña3" onclick="mostrarTabla(3)">Administrador</button>
-        </div>
+    <div id="tabla1" class="tabla">
+        <table id="tablaUser" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre Usuario</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
 
-        <div id="tabla1" class="tabla">
-            <table id="tablaUser" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Nombre Usuario</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
+            <!-- FIN contenido tabla-->
+        </table>
+    </div>
+    <div id="tabla2" class="tabla" style="display: none;">
+        <table id="tablaTecnico" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre Usuario</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
 
-                <!-- FIN contenido tabla-->
-            </table>
-        </div>
-        <div id="tabla2" class="tabla" style="display: none;">
-            <table id="tablaTecnico" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Nombre Usuario</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
+            <!-- FIN contenido tabla-->
+        </table>
+    </div>
+    <div id="tabla3" class="tabla" style="display: none;">
+        <table id="tablaAdmin" class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre Usuario</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th class="accionesH">Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
 
-                <!-- FIN contenido tabla-->
-            </table>
-        </div>
-        <div id="tabla3" class="tabla" style="display: none;">
-            <table id="tablaAdmin" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Nombre Usuario</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
-                        <th class="accionesH">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
+            <!-- FIN contenido tabla-->
+        </table>
+    </div>
+    </div>
+    <!-- Inicio pop up de edicion de usuario -->
 
-                <!-- FIN contenido tabla-->
-            </table>
-        </div>
-        </div>
-        <!-- Inicio pop up de edicion de usuario -->
+    <dialog id="editUsuario">
+        <form onsubmit="enviarEditarUsuario()">
+            <div class="forms">
+                <input type="text" class="form-control-sm" id="emailEditar" placeholder="Correo: jojase@gamil.com" required>
+                <input type="text" class="form-control-sm" id="nombreEditar" placeholder="Nombre: Inés Vidal Ruiz" required>
+                <input type="text" class="form-control-sm" id="dniEditar" placeholder="DNI: 00000000A" required>
+                <input type="text" class="form-control-sm" id="usernameEditar" placeholder="Usuario: Ines" required>
+                <input type="password" class="form-control-sm" id="passwordEditar" placeholder="Contraseña" required>
+                <input type="text" class="form-control-sm" id="direccionEditar" placeholder="Dirección" required>
+            </div>
+            <br>
+            <button class="btn btn-outline-secondary" type="button" id="anyadir">Editar</button>
+            <button class="btn btn-outline-secondary" type="button" id="cancelar"
+                    onclick="return cerrarEditarUsuarioDialog()">Cancelar
+            </button>
+        </form>
+    </dialog>
 
-        <dialog id="editUsuario">
-            <form onsubmit="enviarEditarUsuario(event)">
-                <div class="forms">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Correo: jojase@gamil.com">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Nombre: Inés Vidal Ruiz">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="DNI: 00000000A">
-                    <input type="text" class="form-control-sm" id="formpopup" placeholder="Usuario: Ines">
+</section>
 
-
-                    <input type="password" class="form-control-sm" id="formpopup" placeholder="Contraseña">
-                </div>
-                <br>
-                <div class="rol">
-                    <label>Rol: <select name="idRol">
-                            <option value="1">Administrador</option>
-                            <option value="2">Usuario</option>
-                        </select>
-                    </label>
-                </div>
-                <br>
-                <button class="btn btn-outline-secondary" type="button" id="anyadir">Editar</button>
-                <button class="btn btn-outline-secondary" type="button" id="cancelar"
-                    onclick="return cerrarEditarUsuarioDialog()">Cancelar</button>
-            </form>
-        </dialog>
-
-    </section>
-
-    <!-- <nav aria-label="...">
-            <ul class="pagination">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#!" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#!">1</a></li>
-                <li class="page-item active">
-                    <a class="page-link" href="#!">2 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#!">Next</a>
-                </li>
-            </ul>
-        </nav>
-       FIN tabla-->
+<!-- <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#!" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#!">1</a></li>
+            <li class="page-item active">
+                <a class="page-link" href="#!">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#!">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#!">Next</a>
+            </li>
+        </ul>
+    </nav>
+   FIN tabla-->
 
 
-    <!-- FIN DIV que tiene h1, filtrado y tabla-->
-    </section>
-    <!-- FIN section-->
+<!-- FIN DIV que tiene h1, filtrado y tabla-->
+</section>
+<!-- FIN section-->
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
-    <script src="../js/cerrarSesion.js"></script>
-    <script src="../js/devuelveUsuariosAdmin.js"></script>
+<script src="../js/cerrarSesion.js"></script>
+<script src="../js/devuelveUsuariosAdmin.js"></script>
 
 
-    <script src="../js/admin.js"></script>
+<script src="../js/admin.js"></script>
 
-    <script src="../js/cerrarSesion.js"></script>
+<script src="../js/cerrarSesion.js"></script>
 
-    <script src="../js/adminBBDD.js"></script>
-    <script>
-        crearTodasTablas()
-    </script>
+<script src="../js/adminBBDD.js"></script>
+<script>
+
+    crearTodasTablas()
+    //Iniciador cambio nombre
+    let botonesEditar = document.getElementsByClassName("boton-editar")
+    console.log(botonesEditar)
+    Array.from(botonesEditar).forEach( (botonEditar) => {
+        botonEditar.addEventListener('click', async function (event) {
+            console.log("hola esto deberia ponerse cuando abro el popup de editar")
+            await ponerDatosActualizarUsuarios(event)
+        });
+    })
+</script>
 
 </body>
 

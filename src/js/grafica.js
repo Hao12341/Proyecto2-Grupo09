@@ -93,7 +93,7 @@ function crearDataset(mediciones,magintud) {
  * @param magnitud
  */
  async function crearGrafica(idGrafica,opciones,label,magnitud) {
-     let datos = await fetchMedidas(4)
+     let datos = await fetchMedidas(27)
     let dataset = crearDataset(datos,magnitud)
 
      let datosGrafica = {
@@ -119,6 +119,5 @@ async function crearTablas (idTabla,magnitud) {
     dataset.forEach((dataRow) => {
         let tabla = document.getElementById(idTabla)
         let tableRow = tabla.appendChild(document.createElement("tr"))
-            let
     })
 }
