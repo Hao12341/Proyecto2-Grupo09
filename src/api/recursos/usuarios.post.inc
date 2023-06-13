@@ -16,9 +16,14 @@ if (!isset($connexion)) die();
 $nombre = $peticion->parametrosPost()['nombre'];
 $password = $peticion->parametrosPost()['password'];
 $rol = $peticion->parametrosPost()['rol'];
+$email = $peticion->parametrosPost()['email'];
+$direccion = $peticion->parametrosPost()['dirección'];
+$telefono = $peticion->parametrosPost()['telefono'];
+$DNI = $peticion->parametrosPost()['DNI'];
+$username = $peticion->parametrosPost()['username'];
 
-$sql = "INSERT INTO `usuarios`(`nombre`, `Contraseña`, `rol`) 
-		VALUES ('$nombre','$password',$rol)";
+$sql = "INSERT INTO `usuarios` (Rol, Nombre, Contraseña, email, Dirección, Teléfono, DNI, UserName) 
+		VALUES ('$rol', '$nombre', '$password', '$email', '$direccion','$telefono', '$DNI', '$username' )";
 
 // Para comprobar si se ha ejecutado correctamente la sentencia usamos try ... catch
 try {
