@@ -71,7 +71,7 @@ if(isset($_SESSION['user'])) {
         crossorigin="anonymous"></script>
 <!--acaba contenido del header-->
 <div id="loquenoesheader">
-    <h1 class="bienvenida"> Bienvenido usuario</h1>
+    <h2 class="bienvenida"> Bienvenido [nombre usuario]</h2>
 
     <h1 class="medidas">MIS SENSORES</h1>
     <div id="graficas" >
