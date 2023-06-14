@@ -7,6 +7,7 @@
     padding: 0;
 }
 
+
 /*Variables con color asignado*/
 :root {
     --main-bg-color: #ffffff;
@@ -37,7 +38,7 @@ html {
     display: flex;
     align-items: center;
     padding: 50px;
-    height: 92vh;
+    height: 100vh;
 
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.3),
@@ -55,14 +56,13 @@ html {
 .text-container h1 {
     font-weight: 400;
     color: var(--main-bg-color);
-    font-size: 7rem;
+    font-size: 6rem;
 
 }
 
 .text-container p {
     font-size: 1rem;
     color: var(--main-bg-color);
-
 
 }
 
@@ -80,17 +80,16 @@ html {
 .producto-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 50px;
+    
+    padding: 20px;
     background-color: var(--accent-fg-color);
-
 
 }
 
 #triangulo {
     position: absolute;
     left: 50%;
-    transform: translateX(-70%);
+    transform: translateX(-50%);
     bottom: 3rem;
     border-style: solid;
     font-size: 4rem;
@@ -103,8 +102,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
-    background-color: var(--accent-fg-color);
+    padding: 20px;
+    background-color: var(--main-bg-color);
 
 
 }
@@ -160,14 +159,14 @@ button {
     background-color: transparent;
     position: static;
 
-    
+
 }
 
 
 .card2 {
     flex: 1;
     margin-left: 20px;
-    
+
 }
 
 .image-container2 {
@@ -209,13 +208,14 @@ img {
 @media (max-width: 768px) {
     .landing-section {
         flex-direction: column;
-        padding: 20px;
         justify-content: center;
     }
 
     .text-container,
     .image-container {
-        width: 100%;
+        width: 80vw;
+        margin-left: -30px;
+
     }
 
     .text-container h1 {
@@ -228,12 +228,10 @@ img {
 
     .producto-section {
         flex-direction: column;
-        padding: 20px;
     }
 
     .producto-section2 {
         flex-direction: column;
-        padding: 20px;
     }
 
     .image-container2 {
@@ -245,12 +243,13 @@ img {
 
     }
 
+
     .image-container3 {
         width: 100%;
     }
 
     .image-container3 img {
-        height: auto;
+        height: 40vh;
 
     }
 
@@ -315,6 +314,7 @@ p {
     padding: 0.75rem !important;
 }
 
-footer h3{
+footer h3 {
     font-size: 1rem;
 }
+
