@@ -70,7 +70,7 @@ function crearDataset(mediciones,magintud) {
      let ejeX = crearEjeX(mediciones)
 
     let filtrado = mediciones.filter((valor) => {
-        if (valor.Unidad !== magintud){
+        if (valor.tipoMedida !== magintud){
             return false
 
         }else {
@@ -78,7 +78,7 @@ function crearDataset(mediciones,magintud) {
         }
     })
 
-    console.log(filtrado)
+    console.log("objeto filtrado" + filtrado)
 
 
     return  filtrado
@@ -87,13 +87,26 @@ function crearDataset(mediciones,magintud) {
 /**
  *
  * @param idGrafica
- * @param datos
+ * @param idHuerto
  * @param opciones
  * @param label
  * @param magnitud
  */
- async function crearGrafica(idGrafica,opciones,label,magnitud) {
-     let datos = await fetchMedidas(27)
+ async function crearGrafica(idHuerto,idGrafica,opciones,label,magnitud) {
+    // Verificar si existe una instancia de gráfico asociada al canvas
+    var chartInstance = Chart.getChart(idGrafica);
+    console.log(chartInstance)
+
+    // Destruir el gráfico si existe
+    if (chartInstance) {
+        await chartInstance.destroy();
+        console.log("El gráfico se ha destruido");
+    } else {
+        console.log("No se encontró ningún gráfico para destruir");
+    }
+
+    // Crear datos gráfica
+     let datos = await fetchMedidas(idHuerto)
     let dataset = crearDataset(datos,magnitud)
 
      let datosGrafica = {
@@ -101,10 +114,12 @@ function crearDataset(mediciones,magintud) {
          datasets: [
              {
                  label: label,
-                 data: dataset.map((objeto) => objeto.Medida)
+                 data: dataset.map((objeto) => objeto.medida)
              }
          ]
      }
+
+    //obtenemos el documento donde vamos a poner la gráfica
      let ctx = document.getElementById(idGrafica).getContext('2d')
     let grafica = new Chart (ctx, {
         type: 'line',
@@ -121,3 +136,77 @@ async function crearTablas (idTabla,magnitud) {
         let tableRow = tabla.appendChild(document.createElement("tr"))
     })
 }
+
+//opciones js
+let
+    opciones = {
+        plugins: {
+            plugins: {
+                title: {
+                    display: true,
+                }
+            },
+            responsive: true,
+
+            tooltip: {
+                backgroundColor: '#fff',
+                titleColor: '#000',
+                titleAlign: 'center',
+                bodyColor: '#333',
+                borderColor: '#666',
+                borderWidth: 1,
+            }
+        }
+    };
+
+document.getElementById("huertos").addEventListener('change', disparadorCrearGraficas)
+
+async function disparadorCrearGraficas(event) {
+     let idHuerto = event.target.value
+
+     crearGrafica(idHuerto, "graficahumedad", opciones, "humedad", "Humedad")
+     crearGrafica(idHuerto,"graficasalinidad",opciones,"Sal","Sal")
+     crearGrafica(idHuerto,"graficatemperatura",opciones,"Temperatura","Temperatura")
+     crearGrafica(idHuerto,"graficaph",opciones,"ph","PH")
+     crearGrafica(idHuerto,"graficaluz",opciones,"Luz","Luz")
+}
+
+addEventListener("load", async () => {
+    ponerHuertosTitulo()
+
+    let
+        opciones = {
+            plugins: {
+                plugins: {
+                    title: {
+                        display: true,
+                    }
+                },
+                responsive: true,
+
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleAlign: 'center',
+                    bodyColor: '#333',
+                    borderColor: '#666',
+                    borderWidth: 1,
+                }
+            }
+        };
+
+    let objeto  = await getSesion()
+    let idHuerto = parseInt(objeto.IdUsuario)
+    console.log("ID usuario carga")
+    console.log(idHuerto)
+
+
+
+    crearGrafica(idHuerto,"graficahumedad",opciones,"humedad","Humedad")
+    crearGrafica(idHuerto,"graficasalinidad",opciones,"Sal","Sal")
+    crearGrafica(idHuerto,"graficatemperatura",opciones,"Temperatura","Temperatura")
+    crearGrafica(idHuerto,"graficaph",opciones,"ph","PH")
+    crearGrafica(idHuerto,"graficaluz",opciones,"Luz","Luz")
+
+
+})
