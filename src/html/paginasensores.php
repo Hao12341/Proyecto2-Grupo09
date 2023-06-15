@@ -87,7 +87,7 @@ if (isset($_SESSION['user'])) {
 
         <h1 class="medidas">MIS SENSORES</h1>
         <div id="graficas">
-            <select name="huertos" id="huertos" onchange="cambiarImagen(); tablagrafica()">
+            <select name="huertos" id="huertos" >
             </select><br>
             <div id="ultimaactualizacion">
                 <h2>última actualización:</h2>
@@ -333,42 +333,9 @@ if (isset($_SESSION['user'])) {
 <script src="../js/admin.js"></script>
 <script src="../js/grafica.js"></script>
 <script src="../js/HuertoInternet.js"></script>
-
-<script>
-
-    addEventListener("load", () => {
-        ponerHuertosTitulo()
-
-        let
-            opciones = {
-                plugins: {
-                        plugins: {
-                            title: {
-                                display: false,
-                            }
-                        },
-                        responsive: true,
-
-                    tooltip: {
-                        backgroundColor: '#fff',
-                        titleColor: '#000',
-                        titleAlign: 'center',
-                        bodyColor: '#333',
-                        borderColor: '#666',
-                        borderWidth: 1,
-                    }
-                }
-            };
-
-        crearGrafica("graficahumedad",opciones,"humedad","%")
-        crearGrafica("graficasalinidad",opciones,"Sal","g/L")
-        crearGrafica("graficatemperatura",opciones,"Temperatura","ºC")
-        crearGrafica("graficaph",opciones,"ph","ph")
-        crearGrafica("graficaluz",opciones,"Luz","Lúmenes")
+<script src="../js/sesion.js"></script>
 
 
-    })
-</script>
 
 <!--aqui acaba la tabla-->
 </body>

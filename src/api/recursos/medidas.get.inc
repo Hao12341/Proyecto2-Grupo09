@@ -16,14 +16,11 @@ if (!isset($connexion)) die();
 $idHuerto = intval($peticion->parametrosPath()[0]);
 
 
-$sql = "SELECT mediciones.fecha, mediciones.Medida, u.Unidad
-FROM mediciones
-         INNER JOIN sensores s on mediciones.IdSensor = s.IdSensor
-                                      and mediciones.Unidades = s.Unidades
-                                      and mediciones.NumSonda = s.NumSonda
-JOIN sondas s2 on s2.IdSonda = s.NumSonda
-JOIN unidades u on u.IdUnidades = s.Unidades
-WHERE s2.NumHuerto = $idHuerto";
+$sql = "SELECT fecha as fecha, medida as medida ,TipoSensor as tipoMedida  FROM mediciones
+INNER JOIN sensores on mediciones.IdSensor = sensores.IdSensor
+INNER JOIN tipossensores on sensores.IdTipoSensor = tipossensores.IdTipoSensor
+INNER JOIN sondas on sensores.NumSonda = sondas.IdSonda
+WHERE NumHuerto = $idHuerto";
 
 $result = mysqli_query($connexion,$sql);
 while ($row = mysqli_fetch_assoc($result)) {
