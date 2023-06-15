@@ -151,3 +151,30 @@ async function actualizarDatos (event) {
 
 
 document.getElementById("editarUsuarioForm").addEventListener('submit',actualizarDatos)
+
+
+// DELETE
+/**
+ * Destruye un usuario en la base de datos
+ * @param idUsuario ID del usuario a eliminar
+ */
+
+async function EliminarUsuario (idUsuario) {
+      let textoEstadoEnvio
+      const promesa = await fetch('../api/usuarios/' + idUsuario, {
+        method: 'delete'
+    });
+    switch (promesa.status) {
+        case 200:
+            textoEstadoEnvio = "Se ha eliminado el usuario correctamente"
+            break
+        case 500:
+            textoEstadoEnvio ="Ha habido un error en el servidor"
+            break
+        case 401:
+            textoEstadoEnvio = "No se tienen los permisos necesarios"
+            break
+        case 404:
+            textoEstadoEnvio = "No se ha encontrado el usuario"
+    }
+}
