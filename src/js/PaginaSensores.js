@@ -140,7 +140,7 @@ async function crearTablas(idTabla, magnitud) {
 }
 
 
-async function ultimosDatosCrear(idHuerto) {
+async function getUltimosDatos(idHuerto) {
 
     let medidas = await fetchMedidas(idHuerto)
 
@@ -148,7 +148,8 @@ async function ultimosDatosCrear(idHuerto) {
     const values = medidas[tipoMedida]; // Obté l'array de valors específic del propietari de l'objecte
     const uniqueValues = [...new Set(values)]; // Obté els valors únics de l'array
     const numUniqueValues = uniqueValues.length; // Compta el nombre de valors únics
-    let utlimasMedidas = []
+    let ultimasMedidas;
+    ultimasMedidas = [];
 
     //Vamos a recoger el último valor por cada tipo de Valor
     uniqueValues.forEach((tipoDeMedida) => {
@@ -158,14 +159,24 @@ async function ultimosDatosCrear(idHuerto) {
         medidas.forEach((medida) => {
             //miramos que sea el tipo de medida que queremos,
             if (tipoDeMedida.tipoMedida === tipoDeMedida && tipoDeMedida.fecha > utltimaFecha) {
-                ultimaMedida.fecha = medida.fecha
+                //remplazamos la fecha
+                ultimaMedida.ultima = medida.medida
 
             }
 
         })
-
+        //añadimos el tipo de Medida
+        ultimaMedida.tipoMedida = tipoDeMedida
+        ultimasMedidas.push(ultimaMedida)
     })
 
+    return ultimasMedidas
+}
+
+
+async function crearTablaUltimosDatos (medidas) {
+    let tabla = document.getElementById("huerto1")
+    let
 }
 
 //opciones js
