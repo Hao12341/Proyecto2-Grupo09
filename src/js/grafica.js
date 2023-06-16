@@ -1,4 +1,12 @@
 
+
+async function fetchMedidas (numeroHuerto) {
+    let response = await fetch("../api/medidas/" + numeroHuerto)
+    return await response.json()
+}
+
+
+
 /**
  * Ordena las medidas por fecha de más antigua a más reciente
  *  @param mediciones JSON con los parámetros de medida
@@ -49,10 +57,11 @@
 /**
  * Dada unas mediciones, ordena el ejeX según la fecha y añade valores al ejeY correspondientes con estas
  * @param mediciones
- * @returns {{medicion: *[], ejeX: *[]}}
+ * @param magintud
+ * @returns {*[]}
  */
 
-function crearDataset(mediciones) {
+function crearDataset(mediciones,magintud) {
      //ordenamos las mediciones por fecha
      mediciones = ordenarJSONFecha(mediciones)
 
@@ -60,43 +69,58 @@ function crearDataset(mediciones) {
 
      let ejeX = crearEjeX(mediciones)
 
-     //Array para almacenar los valores de las ordenadas
-     let medicion;
+    let filtrado = mediciones.filter((valor) => {
+        if (valor.tipoMedida !== magintud){
+            return false
 
-     // Esta map devuelve por cada valor de la fecha su correspondiente
-     // en el objeto, buscando esta fecha en las mediciones,
-     // la encuentra, devuelve su index, y añadimos la Medicion
-     // de ese index quedadno relacionado con la fecha
-    medicion = ejeX.map((fecha) => {
-         return mediciones[mediciones.findIndex((element => {
-             return element.fecha === fecha;
+        }else {
+            return true
+        }
+    })
 
-         }))].medida
-     })
+    console.log("objeto filtrado" + filtrado)
 
-    console.log({ejeX,medicion})
 
-    return  {ejeX,medicion}
+    return  filtrado
  }
 
 /**
  *
  * @param idGrafica
- * @param datos
+ * @param idHuerto
  * @param opciones
+ * @param label
+ * @param magnitud
  */
- function crearGrafica(idGrafica, datos,opciones,label) {
-    let dataset = crearDataset(datos)
+ async function crearGrafica(idHuerto,idGrafica,opciones,label,magnitud) {
+    // Verificar si existe una instancia de gráfico asociada al canvas
+    var chartInstance = Chart.getChart(idGrafica);
+    console.log(chartInstance)
+
+    // Destruir el gráfico si existe
+    if (chartInstance) {
+        await chartInstance.destroy();
+        console.log("El gráfico se ha destruido");
+    } else {
+        console.log("No se encontró ningún gráfico para destruir");
+    }
+
+    // Crear datos gráfica
+     let datos = await fetchMedidas(idHuerto)
+    let dataset = crearDataset(datos,magnitud)
+
      let datosGrafica = {
-        labels: dataset.ejeX,
+        labels: dataset.map((objeto) => objeto.fecha),
          datasets: [
              {
                  label: label,
-                 data: dataset.medicion
+                 data: dataset.map((objeto) => objeto.medida)
              }
          ]
      }
-     let ctx = document.getElementById(idGrafica)
+
+    //obtenemos el documento donde vamos a poner la gráfica
+     let ctx = document.getElementById(idGrafica).getContext('2d')
     let grafica = new Chart (ctx, {
         type: 'line',
         data: datosGrafica,
@@ -104,3 +128,85 @@ function crearDataset(mediciones) {
     })
  }
 
+async function crearTablas (idTabla,magnitud) {
+     let datos = await fetchMedidas('1')
+    let dataset = crearDataset(datos,magnitud)
+    dataset.forEach((dataRow) => {
+        let tabla = document.getElementById(idTabla)
+        let tableRow = tabla.appendChild(document.createElement("tr"))
+    })
+}
+
+//opciones js
+let
+    opciones = {
+        plugins: {
+            plugins: {
+                title: {
+                    display: true,
+                }
+            },
+            responsive: true,
+
+            tooltip: {
+                backgroundColor: '#fff',
+                titleColor: '#000',
+                titleAlign: 'center',
+                bodyColor: '#333',
+                borderColor: '#666',
+                borderWidth: 1,
+            }
+        }
+    };
+
+document.getElementById("huertos").addEventListener('change', disparadorCrearGraficas)
+
+async function disparadorCrearGraficas(event) {
+     let idHuerto = event.target.value
+
+     crearGrafica(idHuerto, "graficahumedad", opciones, "humedad", "Humedad")
+     crearGrafica(idHuerto,"graficasalinidad",opciones,"Sal","Sal")
+     crearGrafica(idHuerto,"graficatemperatura",opciones,"Temperatura","Temperatura")
+     crearGrafica(idHuerto,"graficaph",opciones,"ph","PH")
+     crearGrafica(idHuerto,"graficaluz",opciones,"Luz","Luz")
+}
+
+addEventListener("load", async () => {
+    ponerHuertosTitulo()
+
+    let
+        opciones = {
+            plugins: {
+                plugins: {
+                    title: {
+                        display: true,
+                    }
+                },
+                responsive: true,
+
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleAlign: 'center',
+                    bodyColor: '#333',
+                    borderColor: '#666',
+                    borderWidth: 1,
+                }
+            }
+        };
+
+    let objeto  = await getSesion()
+    let idHuerto = parseInt(objeto.IdUsuario)
+    console.log("ID usuario carga")
+    console.log(idHuerto)
+
+
+
+    crearGrafica(idHuerto,"graficahumedad",opciones,"humedad","Humedad")
+    crearGrafica(idHuerto,"graficasalinidad",opciones,"Sal","Sal")
+    crearGrafica(idHuerto,"graficatemperatura",opciones,"Temperatura","Temperatura")
+    crearGrafica(idHuerto,"graficaph",opciones,"ph","PH")
+    crearGrafica(idHuerto,"graficaluz",opciones,"Luz","Luz")
+
+
+})

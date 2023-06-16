@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+/* Estilos generales */
 
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
+
+
 
 
 /* Estilos de la sección principal */
@@ -39,11 +42,11 @@ h1 {
 .perfil {
     display: flex;
     flex-direction: column;
-    height: 67vh;
+    height: auto;
     background-color: rgba(215, 215, 215, 0.9);
     border: 2px solid rgba(212, 212, 212, 0.9);
     border-radius: 20px;
-    width: 32vw;
+    width: auto;
     justify-content: center;
     align-items: center;
     padding: 1em;
@@ -61,7 +64,7 @@ dl {
 }
 
 .perfil dd {
-    width: 29vw;
+    width: 40vw;
     border: 2px solid white;
     background-color: white;
     border-radius: 10px;
@@ -311,7 +314,7 @@ Estilos enlace de telefono a pc
     .perfil {
         display: flex;
         flex-direction: column;
-        height: 60vh;
+        height: auto;
         background-color: rgba(215, 215, 215, 0.9);
         border: 2px solid rgba(212, 212, 212, 0.9);
         border-radius: 20px;
@@ -592,7 +595,7 @@ EStilos telefono
     .perfil {
         display: flex;
         flex-direction: column;
-        height: 500px;
+        height: auto;
         background-color: rgba(215, 215, 215, 0.9);
         border: 2px solid rgba(212, 212, 212, 0.9);
         border-radius: 20px;

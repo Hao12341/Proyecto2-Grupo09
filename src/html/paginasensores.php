@@ -26,13 +26,16 @@ if (isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pagina sensores</title>
     <script src="js/Chart.bundle.js"></script>
-    <script src="../js/cambiartabla.js"></script>
+    <script src="../js/elegir_tabla.js"></script>
     <script src="../js/elegirgrafica.js"></script>
 
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1/dist/chartjs-adapter-luxon.umd.min.js"></script>
 
 
     <link rel="stylesheet" href="../css/pagina_sensores.css">
@@ -52,7 +55,7 @@ if (isset($_SESSION['user'])) {
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="perfil.php">Mi perfil</a></li>
 
-                        < <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+                         <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,6 +66,17 @@ if (isset($_SESSION['user'])) {
                 <li><a href="login.html">Cerrar sesión</a></li>
             </ul>
 
+    </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+<!--acaba contenido del header-->
+<div id="loquenoesheader">
+    <h2 class="bienvenida"> Bienvenido [nombre usuario]</h2>
 
 
             <div id="iconosBanner">
@@ -84,10 +98,7 @@ if (isset($_SESSION['user'])) {
 
         <h1 class="medidas">MIS SENSORES</h1>
         <div id="graficas">
-            <select name="huertos" id="huertos" onchange="cambiarImagen(); tablagrafica()">
-                <option value="h1">huerto 1</option>
-                <option value="h2">huerto 2</option>
-                <option value="h3">huerto 3</option>
+            <select name="huertos" id="huertos" >
             </select><br>
             <div id="ultimaactualizacion">
                 <h2>última actualización:</h2>
@@ -284,8 +295,10 @@ if (isset($_SESSION['user'])) {
 
                 <div class="tab-panels">
                     <section id="humedad" class="tab-panel">
-                        <h2>humedad</h2>
-                        <canvas id="graficahumedad"></canvas>
+                        <div><h2>humedad</h2>
+                            <canvas id="graficahumedad" width="400" height="400"></canvas>
+                        </div>
+
                     </section>
                     <section id="salinidad" class="tab-panel">
                         <h2>salinidad</h2>
@@ -329,6 +342,11 @@ if (isset($_SESSION['user'])) {
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
 <script src="../js/admin.js"></script>
+<script src="../js/grafica.js"></script>
+<script src="../js/HuertoInternet.js"></script>
+<script src="../js/sesion.js"></script>
+
+
 
 <!--aqui acaba la tabla-->
 </body>

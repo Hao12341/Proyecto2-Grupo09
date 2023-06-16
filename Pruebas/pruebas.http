@@ -1,6 +1,0 @@
-POST http://localhost/Proyecto2-Grupo09/src/api/sesion/
-Content-Type: application/x-www-form-urlencoded
-
-email=javierruperez13@gamil.com&password=1234
-###
-GET  http://localhost/Proyecto2-Grupo09/src/api/usuarios/
