@@ -19,6 +19,7 @@ async function GetHuertos(idUsuario) {
  */
 async function PonerHuertos() {
     let huertos = await GetHuertos('4')
+    console.log(huertos)
     const contenedorHuerto = document.getElementById("ContenedorHuertos")
     huertos.forEach( (huerto) => {
         let cajaHuerto = contenedorHuerto.appendChild(document.createElement("div"))
@@ -40,7 +41,8 @@ async function PonerHuertos() {
         boton.innerText = "Editar"
         boton.type = "button"
         boton.classList.add("editar")
-        boton.id = huerto.idHuerto
+        boton.id = huerto.id
+        boton.value = huerto.id
 
         const editar = document.getElementsByClassName('editar');
         const cancelarBtn = document.getElementById('cancelar-btn');
@@ -51,7 +53,7 @@ async function PonerHuertos() {
         Array.from(editar).forEach((edit) => {
             edit.addEventListener('click', async function (event) {
                 popup.showModal();
-                huertoId = event.target.id
+                huertoId = event.target.getAttribute("value")
             });
         });
 
@@ -88,7 +90,6 @@ async function PonerHuertos() {
             let nombreHuerto = document.getElementById("nombreHuerto").value
             console.log(huertoId)
             let obejtoPUT = {idHuerto: huertoId, Nombre: nombreHuerto}
-            //TODO: Poner el backend en marcha
             console.log(JSON.stringify(obejtoPUT))
 
             let promesaPut = await fetch("../api/huertos/" + huertoId, {
