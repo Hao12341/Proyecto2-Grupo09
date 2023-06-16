@@ -1,18 +1,24 @@
-
 /*
                     HEADER.CSS
  */
+/* Estilos del header */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+/* Estilos generales */
 
- /* Estilos del header */
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
-header{
-    z-index: 20;
+
+
+header {
+    position: relative;
+    z-index: 9999;
 }
-#menu{
+
+#menu {
     --bg-color: white;
     --txt-color: white;
     --hover-bg: var(--accent-bg-color);
@@ -22,7 +28,7 @@ header{
     min-width: fit-content;
 }
 
-#menu #menuDesplegable{
+#menu #menuDesplegable {
     background-color: var(--bg-color);
     position: absolute;
     top: var(--menu-height);
@@ -34,34 +40,34 @@ header{
     margin-top: 17px;
 }
 
-#menu.activo>#menuDesplegable{
+#menu.activo>#menuDesplegable {
 
     transform: translateY(0) scaleY(1);
 
 }
 
-#separador{
+#separador {
     width: 10rem;
     flex: 1 1 0;
 }
 
-#contenedorContenedorDesktop{
+#contenedorContenedorDesktop {
     display: flex;
     justify-content: flex-end;
     width: inherit;
 }
 
-#contenedorMenuDesktop{
+#contenedorMenuDesktop {
     width: inherit;
-    margin-left:  50vw;
+    margin-left: 10rem;
     left: 0;
-    padding-right: 1em;
+    padding-right: 1rem;
     align-self: center;
     max-width: content-box;
     max-width: 50vw;
 }
 
-#menuDesktop{
+#menuDesktop {
     display: flex;
     flex: 1 1 min-content;
     justify-content: flex-end;
@@ -72,48 +78,43 @@ header{
 
 }
 
-#menuDesktop li a{
+#menuDesktop li a {
     color: black;
     text-decoration: none;
     text-align: center;
 }
 
 #menuDesktop li {
-    flex: 1 1 0;
     text-decoration: none;
     text-align: center;
     display: flex;
     align-content: center;
-    margin: 0.1rem;
+    margin: 1rem;
     min-width: fit-content;
 }
 
-#menuDesktop li:last-child{
-    margin-right: 0;
-}
-#menuDesktop li:hover {
-    font-size: 120%;
-}
 
-
-#menuDesplegable li{
+#menuDesplegable li {
     padding: .5em;
     text-align: center;
     border: 1px solid white;
     background-color: var(--li-bg);
     color: var(--txt-color);
 }
+
 #menuDesplegable li a {
     text-decoration: none;
 }
 
-#menu a{
+#menu a {
     color: white;
 }
-#Logo img{
+
+#Logo img {
     width: 7.7rem;
     height: 4.7rem;
 }
+
 #menu {
     background-color: var(--bg-color);
     color: black;
@@ -125,16 +126,18 @@ header{
     position: fixed;
     width: 100%;
 }
+
 .hamburguesa {
     width: 2em;
     height: 2em;
     padding: 10px;
     cursor: pointer;
-   padding-top:  9px;
+    padding-top: 9px;
 
 
 }
-.hamburguesa div{
+
+.hamburguesa div {
     background-color: black;
     width: 2em;
     height: .3em;
@@ -142,7 +145,8 @@ header{
     transition: .5s;
     z-index: -1;
 }
-#Login{
+
+#Login {
     width: 2em;
     height: 2em;
     padding: 10px;
@@ -151,17 +155,19 @@ header{
 }
 
 
-#menu.activo .hamburguesa div:nth-child(2){
+#menu.activo .hamburguesa div:nth-child(2) {
     opacity: 0;
 }
 
-#menu.activo .hamburguesa div:nth-child(1){
+#menu.activo .hamburguesa div:nth-child(1) {
     transform: translateY(.6em) rotate(45deg);
 }
-#menu.activo .hamburguesa div:nth-child(3){
+
+#menu.activo .hamburguesa div:nth-child(3) {
     transform: translateY(-.6em) rotate(-45deg);
 }
-#iconosBanner{
+
+#iconosBanner {
     padding-top: 10px;
     margin-bottom: 1.5rem;
     align-content: center;
@@ -175,9 +181,9 @@ header{
 }
 
 @media (max-width: 970px) {
-        #contenedorContenedorDesktop{
-            display: none;
-        }
+    #contenedorContenedorDesktop {
+        display: none;
+    }
 }
 
 @media (min-width: 970px) {
@@ -188,15 +194,19 @@ header{
 }
 
 
-#iconoLogin{
+#iconoLogin {
     width: 2rem;
     height: 2rem;
 }
-*, ::after, ::before{
+
+*,
+::after,
+::before {
     box-sizing: initial;
 }
 
 
 #menuDesktop li:hover a {
-    color: #65946f; /* Cambia el color deseado al pasar el ratón por encima */
+    color: #65946f;
+    /* Cambia el color deseado al pasar el ratón por encima */
 }
