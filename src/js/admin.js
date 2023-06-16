@@ -4,7 +4,7 @@ const popup = document.getElementById('popup');
 
 const editar = document.getElementById("editUsuario");
 const anyadirBton = document.getElementById('anyadir');
-const anyadirBtn = document.getElementById('anyadir-btn');
+const eliminarBton = document.getElementById('anyadir-btn');
 const cancelarBton = document.getElementById('cancelar');
 
 function validatePhone(event) {
