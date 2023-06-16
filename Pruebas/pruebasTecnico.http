@@ -1,0 +1,13 @@
+POST http://localhost/Proyecto2-Grupo09/src/api/sesion/index.php
+Content-Type: application/x-www-form-urlencoded
+
+email=alberto@gmail.com&password=1234
+### Prueba Obtener todas las averias
+GET http://localhost/Proyecto2-Grupo09/src/api/averias
+### Prueba averia mediante ID concreto
+GET http://localhost/Proyecto2-Grupo09/src/api/averias/2
+### Prueba cambia de Estado de incidencia y fecha fin de incidencia
+PUT http://localhost/Proyecto2-Grupo09/src/api/averias/3
+Content-Type: application/json
+
+{"idEstadoIncidencia" : "1", "FechaFin" :  "2023-06-15 17:13:12"}
