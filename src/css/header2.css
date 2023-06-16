@@ -4,13 +4,16 @@
  */
  /* Estilos del header */
  
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+ /* Estilos generales */
+ 
  * {
+     font-family: 'Poppins', sans-serif;
      margin: 0;
      padding: 0;
-     font-family: 'Roboto', sans-serif;
  }
+ 
+ 
  
 header{
     z-index: 20;
