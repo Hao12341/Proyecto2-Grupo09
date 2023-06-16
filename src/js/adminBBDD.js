@@ -136,7 +136,6 @@ async function ponerDatosActualizarUsuarios (event) {
     return idUsuario
 }
 
-
 async function actualizarDatos (event) {
       let idUsuario = parseInt(document.getElementById("idRolEditar").value)
     console.log(idUsuario)
@@ -159,7 +158,7 @@ async function actualizarDatos (event) {
 }
 
 
-document.getElementById("editarUsuarioForm").addEventListener('submit',actualizarDatos)
+
 
 //Delete
 /**

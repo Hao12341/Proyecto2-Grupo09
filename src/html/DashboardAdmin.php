@@ -210,6 +210,12 @@ if (isset($_SESSION['user'])) {
         </form>
     </dialog>
 
+    <dialog id="popup">
+                    <h3>¿Quieres editar el nombre de tu huerto?</h3>
+                    <button class="btn btn-outline-secondary" id="correcto" type="button">SI</button>
+                    <button class="btn btn-outline-secondary" type="button" id="cancelar-btn">NO</button>
+                </dialog>
+
 </section>
 
 <!-- <nav aria-label="...">

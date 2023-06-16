@@ -4,7 +4,7 @@ const popup = document.getElementById('popup');
 
 const editar = document.getElementById("editUsuario");
 const anyadirBton = document.getElementById('anyadir');
-const eliminarBton = document.getElementById('anyadir-btn');
+const eliminarBton = document.getElementById('EliminarBton');
 const cancelarBton = document.getElementById('cancelar');
 
 function validatePhone(event) {
@@ -40,7 +40,16 @@ function mostrarTabla(tabla) {
     pestañaActual.classList.add("active");
 }
 
+function abrirEliminarBton() {
+    var dialog = document.getElementById("EliminarBton");
+    dialog.showModal();
+}
 
+function cerrarEliminarBton() {
+    var dialog = document.getElementById("EliminaBton");
+    dialog.close();
+    return false; 
+}
 
 function abrirEditarUsuarioDialog() {
     var dialog = document.getElementById("editUsuario");
