@@ -3,6 +3,7 @@
  * @returns {Promise<any>} Objeto con los usuarios
  */
   async function getUsuarios() {
+
     const promesa = await fetch("../api/usuarios")
       let usuarios = await promesa.json()
       console.log(usuarios)
@@ -26,8 +27,10 @@ function separarPorRol (usuarios,RolID) {
   }
 
   function crearTabla (idTabla,usuarios) {
+      // Cojemos la tabla que vamos a rellenar
       let Tabla = document.getElementById(idTabla)
       console.log("adiós")
+      //Hacemos el HTML de la página que con java script
       let tbody = Tabla.appendChild(document.createElement("tbody"))
       usuarios.forEach( (usuario) => {
           let row = tbody.appendChild(document.createElement("tr"))
