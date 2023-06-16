@@ -111,7 +111,7 @@ if (isset($_SESSION['user'])) {
                 <input type="text" name="username" class="form-control-sm" id="usernameAñadir" placeholder="Username" required>
                 <input type="text" name="nombre" class="form-control-sm" id="nombreAñadir" placeholder="Nombre" required>
                 <input type="password" name="password" class="form-control-sm" id="contraseñaAañadir" placeholder="Contraseña" required>
-                <input type="tel" name="telefono" class="form-control-sm" id="telefonoAñadir" placeholder="Teléfono" pattern="[0-9]{9}"
+                <input type="text" name="telefono" class="form-control-sm" id="telefonoAñadir" oninput="validatePhone(event)" placeholder="Teléfono"
                        required>
                 <!--TODO: arreglar css campos que no sean texto-->
                 <input type="text" name="DNI" class="form-control-sm" id="DNIAñadir" placeholder="DNI">
