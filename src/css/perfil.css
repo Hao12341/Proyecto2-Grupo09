@@ -43,7 +43,7 @@ h1 {
     background-color: rgba(215, 215, 215, 0.9);
     border: 2px solid rgba(212, 212, 212, 0.9);
     border-radius: 20px;
-    width: 32vw;
+    width: auto;
     justify-content: center;
     align-items: center;
     padding: 1em;
@@ -61,7 +61,7 @@ dl {
 }
 
 .perfil dd {
-    width: 29vw;
+    width: 40vw;
     border: 2px solid white;
     background-color: white;
     border-radius: 10px;
