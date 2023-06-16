@@ -39,7 +39,7 @@ h1 {
 .perfil {
     display: flex;
     flex-direction: column;
-    height: 67vh;
+    height: auto;
     background-color: rgba(215, 215, 215, 0.9);
     border: 2px solid rgba(212, 212, 212, 0.9);
     border-radius: 20px;
@@ -311,7 +311,7 @@ Estilos enlace de telefono a pc
     .perfil {
         display: flex;
         flex-direction: column;
-        height: 60vh;
+        height: auto;
         background-color: rgba(215, 215, 215, 0.9);
         border: 2px solid rgba(212, 212, 212, 0.9);
         border-radius: 20px;
@@ -592,7 +592,7 @@ EStilos telefono
     .perfil {
         display: flex;
         flex-direction: column;
-        height: 500px;
+        height: auto;
         background-color: rgba(215, 215, 215, 0.9);
         border: 2px solid rgba(212, 212, 212, 0.9);
         border-radius: 20px;

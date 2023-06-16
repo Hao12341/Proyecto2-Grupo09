@@ -2,9 +2,8 @@
 /*
                     HEADER.CSS
  */
-
-
  /* Estilos del header */
+ 
 * {
     margin: 0;
     padding: 0;
@@ -53,9 +52,9 @@ header{
 
 #contenedorMenuDesktop{
     width: inherit;
-    margin-left:  50vw;
+    margin-left: 10rem;
     left: 0;
-    padding-right: 1em;
+    padding-right: 1rem;
     align-self: center;
     max-width: content-box;
     max-width: 50vw;
@@ -79,20 +78,12 @@ header{
 }
 
 #menuDesktop li {
-    flex: 1 1 0;
     text-decoration: none;
     text-align: center;
     display: flex;
     align-content: center;
-    margin: 0.1rem;
+    margin: 1rem;
     min-width: fit-content;
-}
-
-#menuDesktop li:last-child{
-    margin-right: 0;
-}
-#menuDesktop li:hover {
-    font-size: 120%;
 }
 
 
