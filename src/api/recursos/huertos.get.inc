@@ -24,7 +24,6 @@ if($idHuerto === 0)
 $sql = "SELECT `huertos`.`IdHuerto` AS `id`,
        `huertos`.`NombreHuerto` AS `Nombre`,
        `huertos`.`Localización` AS `Dirección`
-
 FROM `huertos`
          INNER JOIN `usuarios` `u` on `huertos`.`UsuarioPropietario` = `u`.`IdUsuario`
 WHERE `u`.`IdUsuario` = $idHuerto" ;

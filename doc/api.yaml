@@ -95,10 +95,23 @@ paths:
                   type: string
                 rol:
                   type: integer
+                email:
+                  type: string
+                dirección:
+                  type: string
+                telefono:
+                  type: string
+                DNI:
+                  type: string
+                username:
+                  type: string
               required:
                 - nombre
                 - password
                 - rol
+                - email
+                - username
+                - telefono
       responses:
         '200':
           description: OK
@@ -224,12 +237,22 @@ paths:
       summary: Actualiza una avería
       tags:
         - técnico
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico de la avería
+
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Avería"
+              $ref: "#/components/schemas/ActualiarAvería"
+
+
       responses:
         200:
           description: OK
@@ -318,12 +341,19 @@ components:
           email:
             type: string
             description: correo del usuario
+          DNI:
+            type: string
+            description: Documento nacional de Identidad del usuario
+          telefono:
+            type: string
+            description: Teléfono del usuario
           idRol:
             type: integer
             description: id del rol del usuario
           rol:
             type: string
             description: nombre del rol del usuario
+
 
       Avería:
         type: object
@@ -361,10 +391,16 @@ components:
           idHuerto:
             type: integer
             description: id del huerto con el sensor averiado
+          fechaIni:
+            type: string
+            description: Fecha de inicio de la averia
+          fechaFin:
+            type: string
+            description: Fecha
       Huerto:
         type: object
         properties:
-          idHuerto:
+          id:
             type: integer
             description: id del Huerto
           Nombre:
@@ -373,4 +409,12 @@ components:
           Dirección:
             type: string
             description: Dirección del huerto
-
+      ActualiarAvería:
+        type: object
+        properties:
+          idEstadoIncidencia:
+            type: integer
+            description: id del estado de la incidencia
+          FechaFin:
+            type: string
+            description: Fecha de fin de la avería
