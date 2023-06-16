@@ -237,12 +237,22 @@ paths:
       summary: Actualiza una avería
       tags:
         - técnico
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico de la avería
+
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Avería"
+              $ref: "#/components/schemas/ActualiarAvería"
+
+
       responses:
         200:
           description: OK
@@ -381,6 +391,12 @@ components:
           idHuerto:
             type: integer
             description: id del huerto con el sensor averiado
+          fechaIni:
+            type: string
+            description: Fecha de inicio de la averia
+          fechaFin:
+            type: string
+            description: Fecha
       Huerto:
         type: object
         properties:
@@ -393,4 +409,12 @@ components:
           Dirección:
             type: string
             description: Dirección del huerto
-
+      ActualiarAvería:
+        type: object
+        properties:
+          idEstadoIncidencia:
+            type: integer
+            description: id del estado de la incidencia
+          FechaFin:
+            type: string
+            description: Fecha de fin de la avería
