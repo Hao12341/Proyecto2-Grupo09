@@ -331,7 +331,7 @@ if (isset($_SESSION['user'])) {
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
 <script src="../js/admin.js"></script>
-<script src="../js/grafica.js"></script>
+<script src="../js/PaginaSensores.js"></script>
 <script src="../js/HuertoInternet.js"></script>
 <script src="../js/sesion.js"></script>
 
