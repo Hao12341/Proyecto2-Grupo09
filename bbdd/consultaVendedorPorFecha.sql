@@ -1,1 +1,0 @@
-SELECT vendedor, AVG(`importe`), MAX(importe), MIN(importe), year(`fecha`), month(`fecha`) FROM `ventas` GROUP BY vendedor, year(`fecha`), month(`fecha`);
