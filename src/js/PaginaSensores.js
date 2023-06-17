@@ -139,6 +139,35 @@ async function crearTablas(idTabla, magnitud) {
     })
 }
 
+
+async function ultimosDatosCrear(idHuerto) {
+
+    let medidas = await fetchMedidas(idHuerto)
+
+
+    const values = medidas[tipoMedida]; // Obté l'array de valors específic del propietari de l'objecte
+    const uniqueValues = [...new Set(values)]; // Obté els valors únics de l'array
+    const numUniqueValues = uniqueValues.length; // Compta el nombre de valors únics
+    let utlimasMedidas = []
+
+    //Vamos a recoger el último valor por cada tipo de Valor
+    uniqueValues.forEach((tipoDeMedida) => {
+        let ultimaMedida = {tipoMedida, ultima}
+        //ponemos un valor a la fecha de base
+        let utltimaFecha = medidas[0].fecha
+        medidas.forEach((medida) => {
+            //miramos que sea el tipo de medida que queremos,
+            if (tipoDeMedida.tipoMedida === tipoDeMedida && tipoDeMedida.fecha > utltimaFecha) {
+                ultimaMedida.fecha = medida.fecha
+
+            }
+
+        })
+
+    })
+
+}
+
 //opciones js
 let
     opciones = {
@@ -161,6 +190,7 @@ let
         }
     };
 
+
 document.getElementById("huertos").addEventListener('change', disparadorCrearGraficas)
 
 async function disparadorCrearGraficas(event) {
@@ -177,7 +207,6 @@ addEventListener("load", async () => {
     await ponerHuertosTitulo()
 
 
-
     let idHuerto = parseInt(document.getElementById("huertos").value)
     console.log("ID usuario carga")
     console.log(idHuerto)
@@ -190,3 +219,7 @@ addEventListener("load", async () => {
     crearGrafica(idHuerto, "graficaluz", opciones, "Luz", "Luz")
 
 })
+
+
+
+
