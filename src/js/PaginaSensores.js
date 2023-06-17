@@ -1,4 +1,4 @@
-async function fetchMedidas(numeroHuerto) {
+async function getMedidas(numeroHuerto) {
     let response = await fetch("../api/medidas/" + numeroHuerto)
     return await response.json()
 }
@@ -54,11 +54,11 @@ function crearEjeX(mediciones) {
 /**
  * Dada unas mediciones, ordena el ejeX según la fecha y añade valores al ejeY correspondientes con estas
  * @param mediciones
- * @param magintud
+ * @param magnitud
  * @returns {*[]}
  */
 
-function crearDataset(mediciones, magintud) {
+function crearDataset(mediciones, magnitud) {
     //ordenamos las mediciones por fecha
     mediciones = ordenarJSONFecha(mediciones)
 
@@ -67,15 +67,11 @@ function crearDataset(mediciones, magintud) {
     let ejeX = crearEjeX(mediciones)
 
     let filtrado = mediciones.filter((valor) => {
-        if (valor.tipoMedida !== magintud) {
-            return false
-
-        } else {
-            return true
-        }
+        return valor.tipoMedida === magnitud;
     })
 
-    console.log("objeto filtrado" + filtrado)
+    console.log("objeto filtrado")
+    console.log(filtrado)
 
 
     return filtrado
@@ -103,7 +99,7 @@ async function crearGrafica(idHuerto, idGrafica, opciones, label, magnitud) {
     }
 
     // Crear datos gráfica
-    let datos = await fetchMedidas(idHuerto)
+    let datos = await getMedidas(idHuerto)
     let dataset = crearDataset(datos, magnitud)
     console.log("Dataset en crear gráfica")
     console.log(dataset)
@@ -130,19 +126,10 @@ async function crearGrafica(idHuerto, idGrafica, opciones, label, magnitud) {
 }
 
 
-async function crearTablas(idTabla, magnitud) {
-    let datos = await fetchMedidas('1')
-    let dataset = crearDataset(datos, magnitud)
-    dataset.forEach((dataRow) => {
-        let tabla = document.getElementById(idTabla)
-        let tableRow = tabla.appendChild(document.createElement("tr"))
-    })
-}
-
 
 async function getUltimosDatos(idHuerto) {
 
-    let medidas = await fetchMedidas(idHuerto)
+    let medidas = await getMedidas(idHuerto)
 
 
     const values = medidas[tipoMedida]; // Obté l'array de valors específic del propietari de l'objecte
@@ -173,12 +160,12 @@ async function getUltimosDatos(idHuerto) {
     return ultimasMedidas
 }
 
-
+/*
 async function crearTablaUltimosDatos (medidas) {
     let tabla = document.getElementById("huerto1")
     let
 }
-
+*/
 //opciones js
 let
     opciones = {
