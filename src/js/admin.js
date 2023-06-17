@@ -9,7 +9,35 @@ const cancelarBton = document.getElementById('cancelar');
 
 function validatePhone(event) {
     const input = event.target;
-    input.value = input.value.replace(/\D/g, "").slice(0, 9);
+    const phoneNumber = input.value.replace(/\D/g, "").slice(0, 9);
+    if (phoneNumber.length !== 9) {
+      input.setCustomValidity("Introduce un número de teléfono válido (9 dígitos)");
+    } else {
+      input.setCustomValidity("");
+    }
+    input.value = phoneNumber;
+  }
+
+  function validateEmail(event) {
+    const input = event.target;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailPattern.test(input.value);
+    if (!isValidEmail) {
+      input.setCustomValidity("Introduce un correo electrónico válido");
+    } else {
+      input.setCustomValidity("");
+    }
+  }
+
+  function validateDNI(event) {
+    const input = event.target;
+    const dniPattern = /^([0-9]{8})([A-Za-z])$/;
+    const isValidDNI = dniPattern.test(input.value);
+    if (!isValidDNI) {
+      input.setCustomValidity("Introduce un DNI o NIE válido");
+    } else {
+      input.setCustomValidity("");
+    }
   }
   
 anyadirBtn.addEventListener('click', function () {
@@ -62,6 +90,22 @@ function cerrarEditarUsuarioDialog() {
     return false; // Para evitar el envío del formulario
 }
 
+function ConfirmacionEliminar(idUsuario, nombreUsuario) {
+    var dialog = document.getElementById("ConfirmacionEliminar");
+    var mensaje = document.getElementById("mensaje");
+    mensaje.innerHTML = `¿Estás seguro de que quieres eliminar al usuario <strong>${nombreUsuario}</strong>?`;
+    dialog.showModal();
+
+    var correctoBtn = document.getElementById("correcto");
+    var cancelarBtn = document.getElementById("cerrarr");
+    correctoBtn.onclick = async function() {
+        await EliminarUsuario(idUsuario);
+        dialog.close();
+    };
+    cancelarBtn.onclick = function() {
+        dialog.close();
+    };
+}
 document.getElementById("buscar-btn").addEventListener("click", function () {
     // Obtener el valor del campo de búsqueda
     var textoBusqueda = document.getElementById("buscar-input").value.toLowerCase();

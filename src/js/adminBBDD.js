@@ -67,8 +67,10 @@ function separarPorRol (usuarios,RolID) {
                                     imagen2.classList.add("bi-x-circle")
                                     imagen2.value = usuario.id
                                     imagen2.onclick = async function(event) {
-                                        await EliminarUsuario(event);
-                                      };
+                                      const idUsuario = event.target.value;
+                                      const nombreUsuario = usuario.nombre;
+                                      await ConfirmacionEliminar(idUsuario, nombreUsuario);
+                                    };
                                       
                                     //TODO: Añadir función que abre la página de eliminar usuarios
                                     //imagen2.onclick = abrirEditarUsuarioDialog
@@ -165,44 +167,33 @@ async function actualizarDatos (event) {
  * Destruye un usuario en la base de datos
  * @param {number} idUsuario ID del usuario a eliminar
  */
+async function EliminarUsuario(idUsuario) {
+  try {
+    const promesa = await fetch("../api/usuarios/" + idUsuario, {
+      method: "delete"
+    });
 
-async function EliminarUsuario(event) {
-    const idUsuario = event.target.value;
-
-    const confirmacion = confirm("¿Estás seguro de que deseas eliminar este usuario?");
-    
-    if (!confirmacion) {
-      return;
+    switch (promesa.status) {
+      case 200:
+        console.log("Se ha eliminado el usuario correctamente");
+        break;
+      case 500:
+        console.error("Ha habido un error en el servidor");
+        break;
+      case 401:
+        console.error("No se tienen los permisos necesarios");
+        break;
+      case 404:
+        console.error("No se ha encontrado el usuario");
+        break;
+      default:
+        console.error("Error desconocido");
+        break;
     }
-  
-    try {
-      const promesa = await fetch("../api/usuarios/" + idUsuario, {
-        method: "delete"
-      });
-  
-      switch (promesa.status) {
-        case 200:
-          console.log("Se ha eliminado el usuario correctamente");
-          break;
-        case 500:
-          console.error("Ha habido un error en el servidor");
-          break;
-        case 401:
-          console.error("No se tienen los permisos necesarios");
-          break;
-        case 404:
-          console.error("No se ha encontrado el usuario");
-          break;
-        default:
-          console.error("Error desconocido");
-          break;
-      }
-    } catch (error) {
-      console.error("Ha ocurrido un error:", error);
-    }
-  
-    // Actualizar la página después de eliminar el usuario
-    location.reload();
+  } catch (error) {
+    console.error("Ha ocurrido un error:", error);
   }
 
-  
+  // Actualizar la página después de eliminar el usuario
+  location.reload();
+}
