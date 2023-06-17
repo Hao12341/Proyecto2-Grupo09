@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header2.css">
+
     <title>Huerto hidropónico Grupo 09</title>
 </head>
 
 
 <body>
 
-                                                    <!-- Empezar a copiar de aquí -->
+    <!-- Empezar a copiar de aquí -->
     <header class="Encabezado" role="banner">
         <!-- Esto es el encabezado que actuará de banner-->
-        <nav id="menu"><a id="Logo" href="index.html"><img src="img/logo.svg"alt="Logo de la empresa"></a>
+        <nav id="menu"><a id="Logo" href="index.html"><img src="img/logo.svg" alt="Logo de la empresa"></a>
             <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
             <div id="contenedorContenedorDesktop">
                 <div id="separador"></div>
@@ -34,13 +38,14 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="html/productos.html">Producto</a></li>
                 <li><a href="html/contacto.html">Contactanos</a></li>
-                
+
             </ul>
 
 
 
             <div id="iconosBanner">
-                <a id="Login" href="html/login.html"><img id="iconoLogin" src="img/perfilLogin.svg" alt="Perfil Log In"></a>
+                <a id="Login" href="html/login.html"><img id="iconoLogin" src="img/perfilLogin.svg"
+                        alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
                     <div></div>
@@ -49,88 +54,107 @@
             </div>
         </nav>
     </header>
+    <!-- Acabar de copiar aquí-->
+    <main>
+        <section class="landing-section">
+            <div class="text-container">
+                <h1>EMPIEZA <br>A MONITORIZAR <br> TUS CULTIVOS</h1>
+                <p>Descubre como hacerlo con nuestros productos</p>
+                <div class="button-container">
+                    <a href="html/productos.html">
+                        <button class="button1">DESCÚBRELO ></button>
+                    </a>
+                </div>
+            </div>
+            <div id="arrow-container">
+                <a id="Posicion" href="#producto">
+                    <div id="triangulo"><i class="bi bi-chevron-compact-down"></i></div>
+                </a>
+            </div>
+
+
+        </section>
+
+        <section class="producto-section" id="producto">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Saca partido a tus huertos</h4>
+                    <p class="card-text">
+                        Con nuestro sistema de monitorización de huertos podrás ver el estado de tus cultivos en todo
+                        momento y en cualquier lugar, las mediciones esenciales del estado de tu huerto, en definitiva
+                        podrás comenzar a optimizar tus cultivos.
+                    </p>
+                    <a href="html/productos.html">
+                        <button class="button1">Más información ></button>
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="image-container2">
+                <img src="img/Seccion2Index.jpeg" alt="Imagen de fondo">
+            </div>
+
+        </section>
+
+
+        </section>
+
+
+        <section class="producto-section2">
+            <div class="card2">
+                <div class="card-body">
+                    <h4 class="card-title">Quienes somos</h4>
+                    <p class="card-text">
+                        Somos un equipo apasionado por la tecnología y comprometido con el desarrollo sostenible.
+                        Nuestra misión es brindar soluciones innovadoras que ayuden a mejorar la eficiencia y la
+                        productividad. Queremos proporcinarte los datos de tus plantaciones, para que puedas tomar
+                        mejores decisiones.
+
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="image-container3">
+                <img src="img/Sección3Index.jpeg" alt="Imagen de fondo">
+            </div>
+
+        </section>
+
+
+
+    </main>
+    <footer class="flex-row " style="background-color: #f5f5f5;">
+        <section id="InfoEmpresa">
+            <p id="ContactoPie">Contacto</p>
+            <p class="Simple">TEL:999 999 999</p>
+            <p class="Black">¿Necesitas ayuda con tu pedido?</p>
+            <p class="Simple">¡Contactanos aquí!</p>
+            <p class="Simple">Lunes a Jueves, de 9:00 a 13:45 y de 16:00 a 18:00<br>Viernes, de 9:00 a 13:45</p>
+            <p class="Black">¡SIGUENOS TAMBIEN AQUI!</p>
+            <nav id="redes">
+                <a href="https://www.facebook.com/tu_pagina"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/tu_pagina"><i class="bi bi-instagram"></i></i> </a>
+                <a href="https://www.twitter.com/tu_pagina"><i class="bi bi-twitter"></i></a>
+            </nav>
+
+            <!-- Copyright -->
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright: Grupo09-GTI || <a href="html/pirivacidad.html" class="btn btn-link">Política de
+                    privacidad</a>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
     <script src="js/menu.js"></script>
     <script src="js/cerrarSesion.js"></script>
-                                                    <!-- Acabar de copiar aquí-->
-    <!-- Fondo a -->
-    <nav id="Foto-Landing">
-    <!-- Eslogan -->
 
-    <h1 id="eslogan">Empieza a poder monitorizar tus huertos </h1>
-    <h2 id="sublogo">Bienvenido al mundo de los huertos monitorizados desde la palma de tu mano, no importa si eres nuevo o tienes experiencia nosotros te ayudaremos a ser capaz de mantener vigilado todas las condiciones de tu huerto, cultivemos juntos</h2>
-
-
-    <!-- Fin eslogan -->
-
-    <!-- Call to action -->
-    <a href="html/productos.html"><button id="call-to-action">Nuestros Productos</button></a>
-
-    <div id="arrow-container">
-        <a id="Posicion" href="#destination">
-          <div id="triangulo"></div>
-        </a>
-    </div>
-    </nav>
-    <div id="destination">a</div>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            var posicionLink = document.getElementById("Posicion");
-
-            function changeLink() {
-                if (window.innerWidth <= 1230) {
-                    posicionLink.setAttribute("href", "#destination");
-                } else {
-                    posicionLink.setAttribute("href", "#Empresa");
-                }
-            }
-
-            changeLink(); // Llamar a la función cuando se carga la página inicialmente
-
-            window.addEventListener('resize', changeLink); // Llamar a la función cuando se redimensiona la ventana
-        });
-    </script>
-
-    <!-- Producto -->
-        <section id="Empresa">
-        <section class="titulos" id="informacion">
-            <h1 class="titulo">Quienes somos</h1>
-
-            <p class="texto">Somos un equipo apasionado por la tecnología y comprometido con el desarrollo sostenible. Nuestra misión es brindar soluciones innovadoras que ayuden a mejorar la eficiencia y la productividad.
-                Queremos proporcinarte los datos de tus plantaciones, para que puedas tomar mejores decisiones.
-            </p>
-
-        
-        </section>
-    <!-- Fin información -->
-    
-       <!-- Producto -->
-    <img id="Foto_Producto" src="img/temporal.jpg" alt="Foto producto completo">
-       <!-- FinProducto -->
-    </section>
-
-       <!-- Footer -->
-  
-    <footer>
-    <section id="InfoEmpresa">
-    <p id="ContactoPie">Contacto</p>
-    <p class="Simple">TEL:999 999 999</p>
-    <p class="Black">¿Necesitas ayuda con tu pedido?</p>
-    <p class="Simple">¡Contactanos aquí!</p>
-    <p class="Simple">Lunes a Jueves, de 9:00 a 13:45 y de 16:00 a 18:00<br>Viernes, de 9:00 a 13:45</p>
-    <p class="Black">¡SIGUENOS TAMBIEN AQUI!</p>
-    <nav id="redes">
-        <a href="https://www.facebook.com/tu_pagina"><img src="img/icons8-facebook-f.svg" alt="Facebook"></a>
-        <a href="https://www.instagram.com/tu_pagina"><img src="img/icons8-instagram.svg" alt="Instagram"></a>
-        <a href="https://www.twitter.com/tu_pagina"><img src="img/icons8-twitter.svg" alt="Twitter"></a>
-    </nav>
-
-
-        <p>Copyright © 2023 GTI Inc. Todos los derechos reservados.</p>
-        <p>Política de privacidad | Términos de uso | Información legal</p>
-    </footer>
-
-
-    <!-- Fin footer -->
 </body>
+
 </html>
