@@ -69,7 +69,7 @@ if (isset($_SESSION['user'])) {
 
 
             <div id="iconosBanner">
-                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                <a id="Login" href="perfil.php"><img id="iconoLogin" src="../img/perfilLogin.svg"
                         alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
