@@ -160,12 +160,11 @@ async function getUltimosDatos(idHuerto) {
     return ultimasMedidas
 }
 
-/*
+
 async function crearTablaUltimosDatos (medidas) {
     let tabla = document.getElementById("huerto1")
-    let
+    let arrayId = [""]
 }
-*/
 //opciones js
 let
     opciones = {
