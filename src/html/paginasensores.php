@@ -56,7 +56,7 @@ if (isset($_SESSION['user'])) {
             <ul id="menuDesplegable">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="perfil.php">Mi perfil</a></li>
-                <li><a href="login.html">Cerrar sesión</a></li>
+                <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
             </ul>
             <div id="iconosBanner">
                 <a id="Login" href="perfil.php"><img id="iconoLogin" src="../img/perfilLogin.svg"

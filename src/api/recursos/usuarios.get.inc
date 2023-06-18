@@ -20,6 +20,7 @@ $sql = "SELECT `usuarios`.`IdUsuario` as `id`,
        `usuarios`.`Contraseña` as `password`,
        `usuarios`.`Teléfono` as `telefono`,
        `usuarios`.UserName as `username`,
+       `usuarios`.Dirección as `direccion`,
        `roles`.`IdRol` as `idRol`, 
        `roles`.`rol` 
         
