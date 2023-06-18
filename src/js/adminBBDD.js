@@ -69,7 +69,7 @@ function separarPorRol (usuarios,RolID) {
                                     imagen2.onclick = async function(event) {
                                       const idUsuario = event.target.value;
                                       const nombreUsuario = usuario.nombre;
-                                      await ConfirmacionEliminar(idUsuario, nombreUsuario);
+                                      ConfirmacionEliminar(idUsuario, nombreUsuario);
                                     };
                                       
                                     //TODO: Añadir función que abre la página de eliminar usuarios

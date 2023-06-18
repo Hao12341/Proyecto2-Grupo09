@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>historico</title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/pagina_sensores.css">
     <link rel="stylesheet" href="../css/header2.css">
     <link rel="stylesheet" href="../css/estilos.css">
+
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <script src="../js/cambiartabla.js"></script>
 
@@ -23,26 +24,26 @@
             <div id="separador"></div>
             <div id="contenedorMenuDesktop">
                 <ul id="menuDesktop">
-                    <li><a href="#Contacto">Inicio</a></li>
-                    <li><a href="#Perfil">Mi perfil</a></li>
-                    <li><a href="#Sensores">Mis sensores</a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../html/perfil.php">Mi perfil</a></li>
+                    <li><a href="../html/paginasensores.php">Mis sensores</a></li>
                     <li><a href="../html/contacto.html">Contáctanos</a></li>
-                    <li><a href="#CerrarSesion">Cerrar sesión</a></li>
+                    <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>
 
         <ul id="menuDesplegable">
-            <li><a href="#Contacto">Inicio</a></li>
-            <li><a href="#Perfil">Mi perfil</a></li>
-            <li><a href="#Sensores">Mis sensores</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/perfil.php">Mi perfil</a></li>
+            <li><a href="../html/paginasensores.php">Mis sensores</a></li>
             <li><a href="../html/contacto.html">Contáctanos</a></li>
-            <li><a href="#CerrarSesion">Cerrar sesión</a></li>
+            <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
         </ul>
 
 
         <div id="iconosBanner">
-            <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+            <a id="Login" href="../Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
             <div class="hamburguesa">
                 <div></div>
                 <div></div>
@@ -54,6 +55,8 @@
 <script src="../js/menu.js"></script>
 
 <div class="titulotablas" id="titulotablas">
+
+    <a href="paginasensores.php"><i class="bi bi-arrow-left-square"></i></a>
     <h1 class="tabla">historial de medidas</h1>
 </div>
 
@@ -115,174 +118,7 @@
                     </thead>
 
                 </table>
-                <table id="tablahumedad1" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>humedad</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>00:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>23:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>22:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>21:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>20:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>19:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>18:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>17:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>16:00</p></td>
-                        <td><p>1.21</p></td>
-                    </tr>
-                </table>
-                <table id="tablahumedad2" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>humedad</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>15:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>14:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>13:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>12:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>11:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>10:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>09:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>08:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>02:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>1.21</p></td>
-                    </tr>
-                </table>
+
             </div>
 
 
@@ -306,178 +142,7 @@
                     </thead>
 
                 </table>
-                <table id="tablasal1" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>sal(g/l)</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>00:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>23:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>22:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>21:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>20:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>19:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>18:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>17:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>16:00</p></td>
-                        <td><p>1.21</p></td>
-                    </tr>
 
-
-                </table>
-                <table id="tablasal2" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>sal(g/l)</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>15:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>14:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>13:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>12:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>11:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>10:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>09:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>08:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>02:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>1.21</p></td>
-                    </tr>
-
-
-                </table>
             </div>
 
         </section>
@@ -502,179 +167,7 @@
 
 
                 </table>
-                <table id="tablatemp1" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>temperatura</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>00:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>23:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>22:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>21:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>20:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>19:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>18:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>16:00</p></td>
-                        <td><p>1.21</p></td>
 
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>17:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-
-
-                </table>
-                <table id="tablatemp2" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>temperatura</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>15:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>14:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>13:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>12:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>11:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>10:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>09:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>08:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>02:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>1.21</p></td>
-                    </tr>
-
-
-                </table>
             </div>
 
         </section>
@@ -698,24 +191,6 @@
                     </thead>
 
                 </table>
-                <table id="tablapH1" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>pH</h3></th>
-                    </tr>
-                    </thead>
-                </table>
-                <table id="tablapH2" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>pH</h3></th>
-                    </tr>
-                    </thead>
-                </table>
 
             </div>
 
@@ -738,175 +213,6 @@
                         <th><h3>luz</h3></th>
                     </tr>
                     </thead>
-                </table>
-                <table id="tablaluz1" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>luminosidad</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/16</p></td>
-                        <td><p>00:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>23:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>22:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>21:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>20:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>19:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>18:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>17:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>16:00</p></td>
-                        <td><p>1.21</p></td>
-                    </tr>
-
-                </table>
-                <table id="tablaluz2" class="historialhide">
-                    <thead>
-                    <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>luminosidad</h3></th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>15:00</p></td>
-                        <td><p>24.76</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>14:00</p></td>
-                        <td><p>16.62</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>13:00</p></td>
-                        <td><p>13.85</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>12:00</p></td>
-                        <td><p>35.27</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>11:00</p></td>
-                        <td><p>8.57</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>10:00</p></td>
-                        <td><p>29.78</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>09:00</p></td>
-                        <td><p>38.91</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>08:00</p></td>
-                        <td><p>7.6</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>07:00</p></td>
-                        <td><p>7.23</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>06:00</p></td>
-                        <td><p>2.93</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>05:00</p></td>
-                        <td><p>35.06</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>04:00</p></td>
-                        <td><p>8.38</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>03:00</p></td>
-                        <td><p>31.4</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>02:00</p></td>
-                        <td><p>28.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><p>2023/04/15</p></td>
-                        <td><p>01:00</p></td>
-                        <td><p>1.21</p></td>
-                    </tr>
                 </table>
 
             </div>
