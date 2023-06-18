@@ -93,7 +93,7 @@
 }
 
 
-.closeIcon{
+#closeIcon{
     position: absolute; /* Posición absoluta */
     top: 10px; /* Distancia desde arriba */
     right: 10px; /* Distancia desde la derecha */
@@ -107,6 +107,19 @@
     padding-top: 1rem;
 }
 
+#popUpBox {
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+    border-radius: 20px;
+    width: 70vw;
+    height: 80vh;
+}
 
 
 
@@ -115,7 +128,7 @@
 
 
 
-#Cliente1{
+.Cliente{
     height: 6vh;
     font-size: 18px;
     padding-left:1.5rem;
@@ -123,15 +136,14 @@
     padding-top: 0.8rem;
 }
 
-#Gravedad1{
+.Gravedad{
     height: 6vh;
     font-size: 18px;
     padding-left:1.5rem;
 }
 
 
-#popUpBox1{
-    display: none; /* Estado inicial oculto */
+.popUpBox{
     position: fixed; /* Posición fija */
     top: 50%; /* Centrado vertical */
     left: 50%; /* Centrado horizontal */
@@ -144,149 +156,57 @@
     height: 80vh;
 }
 
-#información1{
+.información{
+
+    width: 60vw;
+    height: auto;
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
-    flex
-    width: 60vw;
-    height: 50vh;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 1 0;
+}
+
+.activo {
     display: flex;
-    margin: 0 auto;
 }
 
-
-
-/*====================APARTADO CLIENTE 2================*/
-#Cliente2{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
-    text-align: left;
-    padding-top: 0.8rem;
+.desactivado{
+    display: none;
 }
 
-#Gravedad2{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
+#tituloAveria{
+    justify-self: flex-start;
 }
-
-
-
-#popUpBox2{
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
-    width: 70vw;
-    height: 80vh;
-}
-
-
-
-
-
-#información2{
-    width: 60vw;
-    height: 50vh;
+#averiaInfo{
     display: flex;
-    margin: 0 auto;
+    align-content: start;
+    justify-content: start;
+    flex-direction: column;
+    font-size: 13px;
 }
 
-/*====================APARTADO CLIENTE 3================*/
-#Cliente3{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
-    text-align: left;
-    padding-top: 0.8rem;
+#averiaInfo p {
+    font-size: 17px;
+}
+/*=======================COLORES GRAVEDAD============*/
+
+.Leve {
+    color:#52b734
 }
 
-#Gravedad3{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
+.Grave {
+    color:#D79C0EFF
+}
+.MuyGrave {
+    color:#fa0404
 }
 
-#popUpBox3{
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
-    width: 70vw;
-    height: 80vh;
+.Crítico{
+    color:#b70101
 }
 
-/*====================APARTADO CLIENTE 4================*/
-#Cliente4{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
-    text-align: left;
-    padding-top: 0.8rem;
-}
-
-#Gravedad4{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
-}
-
-
-#popUpBox4{
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
-    width: 70vw;
-    height: 80vh;
-}
-
-
-/*====================APARTADO CLIENTE 5================*/
-#Cliente5{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
-    text-align: left;
-    padding-top: 0.8rem;
-}
-
-#Gravedad5{
-    height: 6vh;
-    font-size: 18px;
-    padding-left:1.5rem;
-}
-
-
-#popUpBox5{
-    display: none; /* Estado inicial oculto */
-    position: fixed; /* Posición fija */
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Ajuste de centrado */
-    background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
-    z-index: 9999; /* Z-index para estar por encima de otros elementos */
-    border-radius: 20px;
-    width: 70vw;
-    height: 80vh;
-}
 
 
 
