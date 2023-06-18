@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `sql8624327`.`usuarios` (
   `Dirección` VARCHAR(75) NOT NULL,
   `UserName` VARCHAR(75) NOT NULL,
   `Teléfono` VARCHAR(9) NOT NULL,
-  `DNI` VARCHAR(10) NULL DEFAULT NULL,
+  `DNI` VARCHAR(9) NULL DEFAULT NULL,
   PRIMARY KEY (`IdUsuario`, `Rol`),
   INDEX `Rol` (`Rol` ASC),
   CONSTRAINT `usuarios_ibfk_1`
@@ -203,7 +203,7 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- Table `sql8624327`.`mediciones`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `sql8624327`.`mediciones` (
-  `idMediciones` INT(11) NOT NULL,
+  `idMediciones` INT(11) NOT NULL AUTO_INCREMENT,
   `IdSensor` INT(11) NOT NULL,
   `fecha` DATETIME NULL DEFAULT NULL,
   `Medida` DECIMAL(10,2) NULL DEFAULT NULL,
