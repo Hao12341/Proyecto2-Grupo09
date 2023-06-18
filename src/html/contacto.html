@@ -65,18 +65,18 @@
             <div class="divBlanco" id="contenedorGris">
                 <!-- Empieza Parte Escribir Formulario-->
                 <h3>Nombre y Apellidos*</h3>
-                <input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos">
+                <input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos" maxlength="69">
 
                 <h3>Email*</h3>
-                <input required class="inputCajaTexto" id="email" type="email" placeholder="Email">
+                <input required class="inputCajaTexto" id="email" type="email" placeholder="Email" maxlength="150">
 
                 <h3>Teléfono</h3>
-                <input id="tel" class="inputCajaTexto" type="tel" placeholder="Teléfono" pattern="[0-9]{9}">
+                <input id="tel" class="inputCajaTexto" type="tel" placeholder="Teléfono" pattern="[0-9]{9}" maxlength="9">
 
                 <h3>Escribe aquí tu consulta*</h3>
                 <textarea class="inputCajaTexto" required id="Texto_Consulta"
                           placeholder="Escriba aquí más información sobre su consulta..."
-                          rows="1" onkeyup="contarCaracteres(this)" maxlength="250"></textarea>
+                          rows="1" oninput="contarCaracteres(this)"  maxlength="250"></textarea>
 
                 <div id="caracteres">
                     <span id="contador">0</span>/250
