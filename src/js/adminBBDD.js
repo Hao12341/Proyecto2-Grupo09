@@ -3,6 +3,7 @@
  * @returns {Promise<any>} Objeto con los usuarios
  */
   async function getUsuarios() {
+
     const promesa = await fetch("../api/usuarios")
       let usuarios = await promesa.json()
       console.log(usuarios)
@@ -26,8 +27,10 @@ function separarPorRol (usuarios,RolID) {
   }
 
   function crearTabla (idTabla,usuarios) {
+      // Cojemos la tabla que vamos a rellenar
       let Tabla = document.getElementById(idTabla)
       console.log("adiós")
+      //Hacemos el HTML de la página que con java script
       let tbody = Tabla.appendChild(document.createElement("tbody"))
       usuarios.forEach( (usuario) => {
           let row = tbody.appendChild(document.createElement("tr"))
@@ -41,6 +44,7 @@ function separarPorRol (usuarios,RolID) {
                         cajaAcciones.classList.add("acciones")
                         let botones = cajaAcciones.appendChild(document.createElement("div"))
                             botones.classList.add("imagen")
+
                             let botonEditar = botones.appendChild(document.createElement("button"))
                                 botonEditar.type = "button"
                                 botonEditar.classList.add("boton-editar")
@@ -61,6 +65,13 @@ function separarPorRol (usuarios,RolID) {
                                 let imagen2 = botonEliminar.appendChild(document.createElement("i"))
                                     imagen2.classList.add("bi")
                                     imagen2.classList.add("bi-x-circle")
+                                    imagen2.value = usuario.id
+                                    imagen2.onclick = async function(event) {
+                                      const idUsuario = event.target.value;
+                                      const nombreUsuario = usuario.nombre;
+                                      await ConfirmacionEliminar(idUsuario, nombreUsuario);
+                                    };
+                                      
                                     //TODO: Añadir función que abre la página de eliminar usuarios
                                     //imagen2.onclick = abrirEditarUsuarioDialog
 
@@ -127,7 +138,6 @@ async function ponerDatosActualizarUsuarios (event) {
     return idUsuario
 }
 
-
 async function actualizarDatos (event) {
       let idUsuario = parseInt(document.getElementById("idRolEditar").value)
     console.log(idUsuario)
@@ -150,31 +160,40 @@ async function actualizarDatos (event) {
 }
 
 
-document.getElementById("editarUsuarioForm").addEventListener('submit',actualizarDatos)
 
 
-// DELETE
+//Delete
 /**
  * Destruye un usuario en la base de datos
- * @param idUsuario ID del usuario a eliminar
+ * @param {number} idUsuario ID del usuario a eliminar
  */
-
-async function EliminarUsuario (idUsuario) {
-      let textoEstadoEnvio
-      const promesa = await fetch('../api/usuarios/' + idUsuario, {
-        method: 'delete'
+async function EliminarUsuario(idUsuario) {
+  try {
+    const promesa = await fetch("../api/usuarios/" + idUsuario, {
+      method: "delete"
     });
+
     switch (promesa.status) {
-        case 200:
-            textoEstadoEnvio = "Se ha eliminado el usuario correctamente"
-            break
-        case 500:
-            textoEstadoEnvio ="Ha habido un error en el servidor"
-            break
-        case 401:
-            textoEstadoEnvio = "No se tienen los permisos necesarios"
-            break
-        case 404:
-            textoEstadoEnvio = "No se ha encontrado el usuario"
+      case 200:
+        console.log("Se ha eliminado el usuario correctamente");
+        break;
+      case 500:
+        console.error("Ha habido un error en el servidor");
+        break;
+      case 401:
+        console.error("No se tienen los permisos necesarios");
+        break;
+      case 404:
+        console.error("No se ha encontrado el usuario");
+        break;
+      default:
+        console.error("Error desconocido");
+        break;
     }
+  } catch (error) {
+    console.error("Ha ocurrido un error:", error);
+  }
+
+  // Actualizar la página después de eliminar el usuario
+  location.reload();
 }
