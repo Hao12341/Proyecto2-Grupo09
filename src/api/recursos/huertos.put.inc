@@ -15,7 +15,7 @@ if (!isset($connexion)) die();
 
 $id = intval($peticion->parametrosPath()[0]);
 $objeto = json_decode(file_get_contents('php://input'));
-$nombre = $objeto->nombre;
+$nombre = $objeto->Nombre;
 
 
 
