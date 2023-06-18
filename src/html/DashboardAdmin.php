@@ -107,14 +107,14 @@ if (isset($_SESSION['user'])) {
     <dialog id="popup">
         <form id="formAñadir" onsubmit="postUsuarios()">
             <div class="forms">
-                <input type="text" name="email" class="form-control-sm" id="correoAñadir" placeholder="Correo" required>
+                <input type="text" name="email" class="form-control-sm" id="correoAñadir" placeholder="Correo" required oninput="validateEmail(event)">
                 <input type="text" name="username" class="form-control-sm" id="usernameAñadir" placeholder="Username" required>
                 <input type="text" name="nombre" class="form-control-sm" id="nombreAñadir" placeholder="Nombre" required>
                 <input type="password" name="password" class="form-control-sm" id="contraseñaAañadir" placeholder="Contraseña" required>
-                <input type="tel" name="telefono" class="form-control-sm" id="telefonoAñadir" placeholder="Teléfono" pattern="[0-9]{9}"
+                <input type="text" name="telefono" class="form-control-sm" id="telefonoAñadir" oninput="validatePhone(event)" placeholder="Teléfono"
                        required>
                 <!--TODO: arreglar css campos que no sean texto-->
-                <input type="text" name="DNI" class="form-control-sm" id="DNIAñadir" placeholder="DNI">
+                <input type="text" name="DNI" class="form-control-sm" id="DNIAñadir" placeholder="DNI" oninput="validateDNI(event)">
                 <input type="text" name="dirección" class="form-control-sm" id="direccionAñadir" placeholder="Dirección">
 
             </div>
@@ -209,6 +209,14 @@ if (isset($_SESSION['user'])) {
             </button>
         </form>
     </dialog>
+
+    <dialog id="ConfirmacionEliminar">
+        <h3 id="mensaje">¿Estás seguro de que quieres eliminar al usuario </h3>
+        <button class="btn btn-outline-secondary" id="correcto" type="button">SÍ</button>
+        <button class="btn btn-outline-secondary" id="cerrarr" type="button">NO</button>
+    </dialog>
+
+
 
 </section>
 
