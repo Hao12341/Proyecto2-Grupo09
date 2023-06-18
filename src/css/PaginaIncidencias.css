@@ -2,59 +2,48 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
-
-
+/*========Aqui va Solo el apartado de Bienvenida*========*/
 #Bienvenido{
     text-align: center;
-    padding: 45px;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
+    font-size: 90px;
 }
+
 #contenedor{
-    text-align: start;
+    width: 80vw;
+    height: 90vh;
     display: flex;
-
-    flex: 1 1 0;
-
-}
-@media(max-width: 590px){
-    #contenedor{
-        flex-direction: column;
-    }
-    #Cuadrao{
-        text-align: center;
-    }
-
-}
-#Cuadrao{
-    width: 900px;
-    margin: 0 auto;
+    text-align: center;
+    margin:auto;
     display: flex;
-    align-items:center ;
     flex-direction: column;
-    background-color: rgba(180, 172, 172, 0.09);
 
 }
+
 #anuncio-incidencias{
-    width: 800px;
-    height: 130px;
-    border: 1px solid black;
-    margin: 10px auto;
+    width: 30vw;
+    height: 50vh;
+    border: 2px solid black;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     align-content: center;
     order: 0;
     background-color: white;
-    border-radius: 20px;
-
-
-
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    text-align:center;
+    ;
 }
 
 #NumerodeIncidencias{
-    font-size: 50px;
-    padding: 70px;
-
+    font-size: 15px;
+    display: flex;
+    align-content: space-between;
+    margin: auto
 }
 
 .cantidad{
@@ -62,56 +51,37 @@
 }
 
 .incidencias{
+    width: 70vw;
+    height: 13vh;
     display: flex;
-    width: 900px;
-    height: 150px;
     border: 1px solid black;
-    margin:  15px auto;
+    margin: 10px auto;
+    padding:0.5rem;
     order: 1;
     border-radius: 20px;
     background-color: white;
     display: flex;
-
 }
 
-p{
-    margin: 10px
-}
-.botonCerrar{
-    font-size: 70px;
-    margin-right: 40px;
-}
-
-.BienvenidoJL{
-    font-size: 80px;
-}
-
-.btn{
-    font-size: 25px;
-    width: 180px;
-    height: 100px;
-    border-radius: 20px;
+.datosPrincipales{
+    width: 120vw;
+    height: 12vh;
     display: flex;
-    align-self: flex-end;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    margin-right: 30px;
+    margin-top: 0.2rem;
+    text-align: left;
+    flex-direction: column;
+
+}
+.btn{
+    width: 25vw;
+    height: 9vh;
+    margin: 0 auto;
+    padding-right: 1.5rem;
+    padding-top: 0rem;
+    margin-top: 1rem;
 }
 
-.Cliente{
-    font-size: 30px;
-    padding: 3rem;
-}
-
-.Gravedad{
-    font-size: 30px;
-    padding: 10px;
-}
-
-
-/* Estilo del pop-up */
-#popUpBox{
+.popUpContent{
     display: none; /* Estado inicial oculto */
     position: fixed; /* Posición fija */
     top: 50%; /* Centrado vertical */
@@ -123,278 +93,105 @@ p{
     border-radius: 20px;
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 1300px) {
-    #popUpBox {
-        width: 900px; /* Ancho del pop-up para dispositivos de escritorio */
-        height: 1700px; /* Alto del pop-up para dispositivos de escritorio */
-    }
-    /* Estilo del contenido del pop-up */
-    .popUpContent{
-        padding: 20px; /* Relleno */
-        text-align: center; /* Alineación de texto */
 
-    }
-    /* Contenido de dentro del Pop-Up*/
-    .información{
-        padding-top: 2rem;
-    }
-
-
-
-    .tituloIncidencia{
-        font-size: 70px;
-    }
-
-    #nombreUsuario{
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-    }
-    #nombreUsuario3{
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-    }
-
-
-    .estado{
-        font-size: 25px;
-    }
-
-    #textoIdUsuario {
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .idUsuario{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #dirección{
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .direcciónUsuario{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #textoIdHuerto{
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .idHuerto{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #textoIdSonda{
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .idSonda{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #textoIdSensor{
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-
-    }
-
-    .idSensor{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-
-    .Usuario{
-        display: flex;
-        justify-content: center;
-        font-size: 24px;
-        padding: 1rem;
-    }
-
-    #infoProblema{
-        font-size: 40px;
-        display: flex;
-        padding: 2rem;
-
-    }
-    .elProblema{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    /* Estilo del icono de cerrar */
-
-    .closeIcon{
-        position: absolute; /* Posición absoluta */
-        top: 10px; /* Distancia desde arriba */
-        right: 10px; /* Distancia desde la derecha */
-        font-size: 20px; /* Tamaño de fuente */
-        cursor: pointer; /* Cursor de puntero */
-    }
-
-    .BotonX{
-        padding-right: 2rem;
-        padding-top: 1rem;
-    }
-
+/*====================APARTADO CLIENTE 1================*/
+#Cliente1{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+    text-align: left;
+    padding-top: 0.8rem;
 }
 
-/* ===================== Estilos para dispositivos de escritorio =============*/
-@media (min-width: 1000px) {
-    #popUpBox {
-        width: 1200px; /* Ancho del pop-up para dispositivos de escritorio */
-        height: 900px; /* Alto del pop-up para dispositivos de escritorio */
-    }
+#Gravedad1{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+}
+
+#popUpBox1{
+    display: none;
+    width: 70vw;
+    height: 64vh;
+    border-radius: 20px;
+    margin: 0 auto;
+    background: white;
+    order: ;
+}
 
 
 
-    /* Estilo del contenido del pop-up */
-    .popUpContent{
-    padding: 20px; /* Relleno */
-    text-align: center; /* Alineación de texto */
-    }
-
-    /* Contenido de dentro del Pop-Up*/
-    .información{
-        padding-top: 2rem;
-    }
-
-    .tituloIncidencia{
-        font-size: 40px;
-    }
-
-    #nombreUsuario{
-        font-size: 24px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .Cliente{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    .estado{
-        font-size: 25px;
-    }
-
-    #textoIdUsuario {
-        font-size: 24px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .idUsuario{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #dirección{
-        font-size: 24px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .direcciónUsuario{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #textoIdHuerto{
-         font-size: 24px;
-         display: flex;
-        padding: 2rem;
-     }
-
-    .idHuerto{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #textoIdSonda{
-        font-size: 24px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .idSonda{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    #textoIdSensor{
-        font-size: 24px;
-        display: flex;
-        padding: 2rem;
-    }
-
-    .idSensor{
-        display: flex;
-        font-size: 24px;
-        padding: 0rem;
-    }
-
-    .tipoSensor{
-        display: flex;
-        justify-content: center;
-        font-size: 24px;
-        padding:0rem;
-    }
 
 
-    .Usuario{
-        display: flex;
-        justify-content: center;
-        font-size: 24px;
-        padding: 2rem;
-    }
 
-    .InfoProblema{
-        padding: 10px;
-        font-size: 30px;
-    }
+#información1{
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    margin: 0 auto;
+}
 
 
-    /* Estilo del icono de cerrar */
+
+/*====================APARTADO CLIENTE 2================*/
+#Cliente2{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+    text-align: left;
+    padding-top: 0.8rem;
+}
+
+#Gravedad2{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+}
+
+/*====================APARTADO CLIENTE 3================*/
+#Cliente3{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+    text-align: left;
+    padding-top: 0.8rem;
+}
+
+#Gravedad3{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+}
+
+/*====================APARTADO CLIENTE 4================*/
+#Cliente4{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+    text-align: left;
+    padding-top: 0.8rem;
+}
+
+#Gravedad4{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+}
+
+/*====================APARTADO CLIENTE 5================*/
+#Cliente5{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+    text-align: left;
+    padding-top: 0.8rem;
+}
+
+#Gravedad5{
+    height: 6vh;
+    font-size: 18px;
+    padding-left:1.5rem;
+}
 
 
-    .closeIcon{
-        position: absolute; /* Posición absoluta */
-        top: 10px; /* Distancia desde arriba */
-        right: 10px; /* Distancia desde la derecha */
-        font-size: px; /* Tamaño de fuente */
-        cursor: pointer; /* Cursor de puntero */
-    }
-
-    .BotonX{
-        padding-right: 3rem;
-        padding-top: 1rem;
-    }
-    }
 

@@ -7,7 +7,6 @@ h1{
 .bienvenida{
 
     text-align: center;
-    margin-bottom: 1vw;
 }
 canvas{
     width: 40vw;
@@ -16,7 +15,7 @@ canvas{
 
 #ultimaactualizacion{
     text-align: center;
-    margin-left: 4vw;
+    margin-left: 2vw;
 }
 
 #loquenoesheader{
@@ -173,7 +172,6 @@ input:focus-visible + label {
 .tabsethistorico > input[type="radio"] {
     position: absolute;
     left: -200vw;
-    z-index: 2;
 }
 
 .tabsethistorico .tab-panelhistorico {
@@ -182,12 +180,7 @@ input:focus-visible + label {
 
 
 
-.tabsethistorico > input:first-child:checked ~ .tab-historico > .tab-panelhistorico:first-child,
-.tabsethistorico > input:nth-child(3):checked ~ .tab-historico > .tab-panelhistorico:nth-child(2),
-.tabsethistorico > input:nth-child(5):checked ~ .tab-historico > .tab-panelhistorico:nth-child(3),
-.tabsethistorico > input:nth-child(7):checked ~ .tab-historico > .tab-panelhistorico:nth-child(4),
-.tabsethistorico > input:nth-child(9):checked ~ .tab-historico > .tab-panelhistorico:nth-child(5),
-.tabsethistorico > input:nth-child(11):checked ~ .tab-historico > .tab-panelhistorico:nth-child(6) {
+.tabsethistorico > input:nth-child(odd):checked ~ .tab-historico > .tab-panelhistorico:nth-child(even) {
     display: block;
 }
 /*
@@ -196,7 +189,7 @@ input:focus-visible + label {
 
 
 .tabset > label {
-    position: absolute;
+    position: relative;
     display: inline-block;
     padding: 15px 15px 25px;
     border: 1px solid transparent;
@@ -204,7 +197,6 @@ input:focus-visible + label {
     cursor: pointer;
     font-weight: 600;
     margin-left: 0vw;
-    z-index: 3;
 }
 
 .tabset > label::after {
@@ -217,7 +209,7 @@ input:focus-visible + label {
     background: #8d8d8d;
 }
 .tabsethistorico > label {
-
+    position: relative;
     display: inline-block;
     padding: 15px 15px 25px;
     border: 1px solid transparent;
@@ -225,19 +217,16 @@ input:focus-visible + label {
     cursor: pointer;
     font-weight: 600;
     margin-left: 3vw;
-    z-index: 2;
 }
-svg{
-    z-index: 2;
-}
+
 .tabsethistorico > label::after {
     content: "";
+    position: absolute;
     left: 15px;
     bottom: 10px;
     width: 22px;
     height: 4px;
     background: #8d8d8d;
-    z-index: 2;
 }
 
 .tab-panel {
@@ -246,7 +235,6 @@ svg{
     margin-right: 3vw;
     border: 1px solid #ccc;
     width: 90vw;
-    z-index: 2;
 }
 .tab-panelhistorico {
     margin-bottom: 3vw;
@@ -254,7 +242,6 @@ svg{
     margin-right: 3vw;
     border: 1px solid #ccc;
     width: 90vw;
-    z-index: 2;
 }
 
 section h2{
@@ -280,25 +267,21 @@ button{
 .historial{
     width: 90vw;
     table-layout: fixed;
-
+    margin-top: 0;
 }
 
 .historial tr td{
-
+    margin: 0;
 
 }
 
 .historial tr td p {
     text-align: center;
     font-size: 14px;
-    font-weight: bold;
     margin-top: 3vw;
-}
-
-
-p{
     margin-bottom: 3vw;
 }
+
 .tab-historico{
     margin-bottom: 3vw;
     margin-left: 3vw;
@@ -345,17 +328,16 @@ p{
 
 
 .historial>tbody tr:nth-child(odd){
-    background-color: #aff1af;
+    background-color: lightgreen;
     margin: 0;
 }
 .historial>tbody tr:nth-child(even){
-    background-color: #84c984;
+    background-color: #61c561;
     margin: 0;
 }
 tfoot{
     display: none;
 }
-
 @media (min-width: 1280px) {
     #loquenoesheader{
 
@@ -426,19 +408,20 @@ tfoot{
     .historial{
         width: 25vw;
         height: 30vw;
-        margin-bottom: 2vw;
+        margin: 0;
+        padding: 0;
     }
     .historial>tbody tr:nth-child(odd){
-        background-color: #aff1af;
+        background-color: lightgreen;
     }
     .historial>tbody tr:nth-child(even){
-        background-color: #8bd38b;
+        background-color: #61c561;
     }
     .historialhide>tbody tr:nth-child(odd){
-        background-color: #aff1af;
+        background-color: lightgreen;
     }
     .historialhide>tbody tr:nth-child(even){
-        background-color: #8bd38b;
+        background-color: #61c561;
     }
 
     .historialhide{
@@ -447,19 +430,16 @@ tfoot{
         text-align: center;
         table-layout: fixed;
         justify-content: center;
-        margin-bottom: 2vw;
     }
 
     .tablaspc td{
         width: 10vw;
         height: 5vh;
-        align-items: center;
+
     }
 
     .historialhide p {
         font-size: 14px;
-        font-weight: bold;
-        margin-top: 3vw;
     }
     .historialhide td {
         font-size: 14px;
@@ -467,7 +447,12 @@ tfoot{
         height: 5vh;
     }
     .historialhide h3{
-        margin: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    .historial tr td p{
+        margin-top: .1vw;
+        margin-bottom: .1vh;
     }
 
 
