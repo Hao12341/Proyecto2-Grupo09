@@ -158,7 +158,7 @@ async function actualizarDatos (event) {
     //TODO: Añadir funcionalidad al popup de prevenir la edición sin querer
     location.reload()
 }
-
+document.getElementById("editarUsuarioForm").addEventListener("submit", actualizarDatos)
 
 
 
