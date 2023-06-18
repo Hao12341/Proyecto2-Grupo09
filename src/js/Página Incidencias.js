@@ -105,6 +105,7 @@ addEventListener('load', async () => {
         document.getElementById("textoIdHuerto").innerText = "ID del Huerto: " + averia.idHuerto
         document.getElementById("textoIdSensor").innerText = "Id Sensor: " + averia.idSensor
         document.getElementById("textoIdSonda").innerText = "Tipo de Sensor: " + averia.tipoSensor
+        document.getElementById("textoTipoIncidencia").innerText = "Tipo de Incidencia: " + averia.tipoIncidencias
     }
 
 
