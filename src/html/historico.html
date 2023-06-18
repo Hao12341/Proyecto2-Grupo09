@@ -27,8 +27,7 @@
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../html/perfil.php">Mi perfil</a></li>
                     <li><a href="../html/paginasensores.php">Mis sensores</a></li>
-                    <li><a href="../html/contacto.html">Contáctanos</a></li>
-                    <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+                    <li><a onclick="logout()" >Cerrar sesión</a></li>
                 </ul>
             </div>
         </div>
@@ -37,13 +36,12 @@
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="../html/perfil.php">Mi perfil</a></li>
             <li><a href="../html/paginasensores.php">Mis sensores</a></li>
-            <li><a href="../html/contacto.html">Contáctanos</a></li>
-            <li><a onclick="logout()" href="#">Cerrar sesión</a></li>
+            <li><a onclick="logout()" >Cerrar sesión</a></li>
         </ul>
 
 
         <div id="iconosBanner">
-            <a id="Login" href="../Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
+            <a id="Login" href="../html/login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
             <div class="hamburguesa">
                 <div></div>
                 <div></div>
@@ -52,12 +50,11 @@
         </div>
     </nav>
 </header>
-<script src="../js/menu.js"></script>
 
 <div class="titulotablas" id="titulotablas">
 
     <a href="paginasensores.php"><i class="bi bi-arrow-left-square"></i></a>
-    <h1 class="tabla">historial de medidas</h1>
+    <h1 class="tabla">Historial de medidas</h1>
 </div>
 
 
@@ -101,19 +98,19 @@
     <div class="tab-historico">
         <section id="humedad" class="tab-panelhistorico">
             <div class="tituloyselect">
-                <h2>humedad</h2>
-                <select id="selhumedad" class="select" onchange="cambiarTabla()">
+                <h2>Humedad</h2>
+               <!-- <select id="selhumedad" class="select" onchange="cambiarTabla()">
                     <option disabled selected><p>ordenar por</p></option>
                     <option id="fecha"><p>fecha</p></option>
-                </select>
+                </select>-->
             </div>
             <div class="tablaspc">
                 <table id="tablahum" class="historial">
                     <thead>
                     <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>humedad</h3></th>
+                        <th><h3>Fecha</h3></th>
+                        <th><h3>Hora</h3></th>
+                        <th><h3>Humedad</h3></th>
                     </tr>
                     </thead>
 
@@ -125,19 +122,19 @@
         </section>
         <section id="salinidad" class="tab-panelhistorico">
             <div class="tituloyselect">
-                <h2>salinidad</h2>
-                <select id="selsal" class="select" onchange="cambiarTabla()">
+                <h2>Salinidad</h2>
+                <!--<select id="selsal" class="select" onchange="cambiarTabla()">
                     <option disabled selected><p>ordenar por</p></option>
                     <option id="fechasal"><p>fecha</p></option>
-                </select>
+                </select>-->
             </div>
             <div class="tablaspc">
                 <table id="tablasal" class="historial">
                     <thead>
                     <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>sal</h3></th>
+                        <th><h3>Fecha</h3></th>
+                        <th><h3>Hora</h3></th>
+                        <th><h3>Sal</h3></th>
                     </tr>
                     </thead>
 
@@ -149,19 +146,18 @@
         <section id="temperatura" class="tab-panelhistorico">
 
             <div class="tituloyselect">
-                <h2>temperatura</h2>
-                <select id="seltemperatura" class="select" onchange="cambiarTabla()">
-                    <option disabled selected><p>ordenar por</p></option>
+                <h2>Temperatura</h2>
+                <!--<select id="seltemperatura" class="select" onchange="cambiarTabla()">
                     <option id="fechatemp"><p>fecha</p></option>
-                </select>
+                </select>-->
             </div>
             <div class="tablaspc">
                 <table id="tablatemp" class="historial">
                     <thead>
                     <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>temperatura</h3></th>
+                        <th><h3>Fecha</h3></th>
+                        <th><h3>Hora</h3></th>
+                        <th><h3>Temperatura</h3></th>
                     </tr>
                     </thead>
 
@@ -174,19 +170,19 @@
         <section id="ph" class="tab-panelhistorico">
 
             <div class="tituloyselect">
-                <h2>ph</h2>
-                <select id="selph" class="select" onchange="cambiarTabla()">
+                <h2>Ph</h2>
+               <!-- <select id="selph" class="select" onchange="cambiarTabla()">
                     <option disabled selected><p>ordenar por</p></option>
-                    <option id="fechaph"><p>fecha</p></option>
+                    <option id="fechaph"><p>Fecha</p></option>-->
                 </select>
             </div>
             <div class="tablaspc">
                 <table id="tablaph" class="historial">
                     <thead>
                     <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>ph</h3></th>
+                        <th><h3>Fecha</h3></th>
+                        <th><h3>Hora</h3></th>
+                        <th><h3>Ph</h3></th>
                     </tr>
                     </thead>
 
@@ -198,19 +194,19 @@
         <section id="luminosidad" class="tab-panelhistorico">
 
             <div class="tituloyselect">
-                <h2>luminosidad</h2>
-                <select id="selluz" class="select" onchange="cambiarTabla()">
+                <h2>Luminosidad</h2>
+                <!-- ><select id="selluz" class="select" onchange="cambiarTabla()">
                     <option disabled selected><p>ordenar por</p></option>
-                    <option id="fechaluz"><p>fecha</p></option>
-                </select>
+                    <option id="fechaluz"><p>Fecha</p></option>
+                </select>-->
             </div>
             <div class="tablaspc">
                 <table id="tablaluz" class="historial">
                     <thead>
                     <tr>
-                        <th><h3>fecha</h3></th>
-                        <th><h3>hora</h3></th>
-                        <th><h3>luz</h3></th>
+                        <th><h3>Fecha</h3></th>
+                        <th><h3>Hora</h3></th>
+                        <th><h3>Luz</h3></th>
                     </tr>
                     </thead>
                 </table>
@@ -223,7 +219,8 @@
     <script src="../js/historico.js"></script>
     <script src="../js/sesion.js"></script>
     <script src="../js/HuertoInternet.js"></script>
-
+    <script src="../js/menu.js"></script>
+    <script src="../js/cerrarSesion.js"></script>
 </div>
 </body>
 </html>
