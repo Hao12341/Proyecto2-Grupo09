@@ -4,6 +4,13 @@ body{
 h1{
     margin: 0;
 }
+
+.bi.bi-arrow-left-square {
+    color: #65946FFF;
+    font-size: 44px;
+    margin-left: 10px;
+}
+
 .bienvenida{
 
     text-align: center;
