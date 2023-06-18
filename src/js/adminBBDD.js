@@ -133,7 +133,7 @@ async function ponerDatosActualizarUsuarios (event) {
     document.getElementById("dniEditar").value = usuario.DNI
     document.getElementById("usernameEditar").value = usuario.username
     document.getElementById("passwordEditar").value = usuario.password
-    document.getElementById("direccionEditar").value = usuario.email
+    document.getElementById("direccionEditar").value = usuario.direccion
     document.getElementById("idRolEditar").value = usuario.id
     return idUsuario
 }
