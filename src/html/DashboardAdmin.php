@@ -63,8 +63,8 @@ if (isset($_SESSION['user'])) {
 
 
         <div id="iconosBanner">
-            <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
-                                                 alt="Perfil Log In"></a>
+            <!--<a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                                                 alt="Perfil Log In"></a> -->
             <div class="hamburguesa">
                 <div></div>
                 <div></div>
@@ -220,25 +220,7 @@ if (isset($_SESSION['user'])) {
 
 </section>
 
-<!-- <nav aria-label="...">
-        <ul class="pagination">
-            <li class="page-item disabled">
-                <a class="page-link" href="#!" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#!">1</a></li>
-            <li class="page-item active">
-                <a class="page-link" href="#!">2 <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#!">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#!">Next</a>
-            </li>
-        </ul>
-    </nav>
-   FIN tabla-->
 
-
-<!-- FIN DIV que tiene h1, filtrado y tabla-->
 </section>
 <!-- FIN section-->
 
