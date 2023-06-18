@@ -48,12 +48,16 @@ async function PonerHuertos() {
         const editar = document.getElementsByClassName('editar');
         const cancelarBtn = document.getElementById('cancelar-btn');
         const popup = document.getElementById('popup');
+        const si = document.getElementById('correcto');
+        const cancelar = document.getElementById('cancel');
+        const editHuerto = document.getElementById('edit');
+        const botonEdit = document.getElementById('botonEditar')
 
         let huertoId = 0
 
         Array.from(editar).forEach((edit) => {
             edit.addEventListener('click', async function (event) {
-                popup.showModal();
+                editHuerto.showModal();
                 huertoId = event.target.getAttribute("value")
             });
         });
@@ -64,21 +68,13 @@ async function PonerHuertos() {
         });
 
 
-        const si = document.getElementById('correcto');
-        const cancelar = document.getElementById('cancel');
-        const editHuerto = document.getElementById('edit');
-        const botonEdit = document.getElementById('botonEditar')
-
-
-
         si.addEventListener('click', function () {
-            editHuerto.showModal();
-            popup.close();
+            PutHuertos()
 
 
         });
         botonEdit.addEventListener('click', () => {
-            PutHuertos()
+            popup.showModal()
         })
 
         cancelar.addEventListener('click', function () {
@@ -91,12 +87,12 @@ async function PonerHuertos() {
             let nombreHuerto = document.getElementById("nombreHuerto").value
             console.log(nombreHuerto)
             console.log(huertoId)
-            let obejtoPUT = {idHuerto: huertoId, Nombre: nombreHuerto}
-            console.log(JSON.stringify(obejtoPUT))
+            let objetoPUT = {idHuerto: huertoId, Nombre: nombreHuerto}
+            console.log(JSON.stringify(objetoPUT))
 
             let promesaPut = await fetch("../api/huertos/" + huertoId, {
                 method: 'put',
-                body: JSON.stringify(obejtoPUT)
+                body: JSON.stringify(objetoPUT)
             })
             let textoRespuesta
             switch (promesaPut) {
@@ -111,12 +107,9 @@ async function PonerHuertos() {
                     textoRespuesta = "Ha habido un error inesperado en el cambio de nombre del huerto"
             }
 
+            location.reload()
 
 
-            /*let botonAceptar
-            botonAceptar.addEventListener('click', () => {
-                location.reload()
-            }) */
 
 
 
