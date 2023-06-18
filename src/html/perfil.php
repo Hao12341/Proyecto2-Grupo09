@@ -129,6 +129,8 @@ if (isset($_SESSION['user'])) {
 
 
 <script src="../js/perfil.js"></script>
+    <script src="../js/sesion.js"></script>
+    <script src="../js/HuertoInternet.js"></script>
     </script>
 
     <script>
