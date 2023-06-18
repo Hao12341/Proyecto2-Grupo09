@@ -36,8 +36,8 @@ const enviar = document.querySelector("#popup form button[type='submit']");
 // Cuando se haga clic en el botón "enviar", comprobar si el campo de correo electrónico está completo
 enviar.addEventListener("click", function(event) {
   const emailInput = document.querySelector("#popup input[type='email']");
+  event.preventDefault()
   if (emailInput.value.trim() === "") {
-      event.preventDefault();
       alert("Por favor, completa el campo de correo electrónico antes de enviar.");
   } else {
       // Mostrar el pop-up de envío correcto
