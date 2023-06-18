@@ -18,7 +18,9 @@ async function GetHuertos(idUsuario) {
  * @constructor
  */
 async function PonerHuertos() {
-    let huertos = await GetHuertos('4')
+    let sesion = await getSesion()
+    let huertos = await getHuertos(sesion.IdUsuario)
+    console.log(huertos)
     const contenedorHuerto = document.getElementById("ContenedorHuertos")
     huertos.forEach( (huerto) => {
         let cajaHuerto = contenedorHuerto.appendChild(document.createElement("div"))
@@ -40,18 +42,23 @@ async function PonerHuertos() {
         boton.innerText = "Editar"
         boton.type = "button"
         boton.classList.add("editar")
-        boton.id = huerto.idHuerto
+        boton.id = huerto.id
+        boton.value = huerto.id
 
         const editar = document.getElementsByClassName('editar');
         const cancelarBtn = document.getElementById('cancelar-btn');
         const popup = document.getElementById('popup');
+        const si = document.getElementById('correcto');
+        const cancelar = document.getElementById('cancel');
+        const editHuerto = document.getElementById('edit');
+        const botonEdit = document.getElementById('botonEditar')
 
         let huertoId = 0
 
         Array.from(editar).forEach((edit) => {
             edit.addEventListener('click', async function (event) {
-                popup.showModal();
-                huertoId = event.target.id
+                editHuerto.showModal();
+                huertoId = event.target.getAttribute("value")
             });
         });
 
@@ -61,21 +68,13 @@ async function PonerHuertos() {
         });
 
 
-        const si = document.getElementById('correcto');
-        const cancelar = document.getElementById('cancel');
-        const editHuerto = document.getElementById('edit');
-        const botonEdit = document.getElementById('botonEditar')
-
-
-
         si.addEventListener('click', function () {
-            editHuerto.showModal();
-            popup.close();
+            PutHuertos()
 
 
         });
         botonEdit.addEventListener('click', () => {
-            PutHuertos()
+            popup.showModal()
         })
 
         cancelar.addEventListener('click', function () {
@@ -86,14 +85,14 @@ async function PonerHuertos() {
 
         async function PutHuertos() {
             let nombreHuerto = document.getElementById("nombreHuerto").value
+            console.log(nombreHuerto)
             console.log(huertoId)
-            let obejtoPUT = {idHuerto: huertoId, Nombre: nombreHuerto}
-            //TODO: Poner el backend en marcha
-            console.log(JSON.stringify(obejtoPUT))
+            let objetoPUT = {idHuerto: huertoId, Nombre: nombreHuerto}
+            console.log(JSON.stringify(objetoPUT))
 
             let promesaPut = await fetch("../api/huertos/" + huertoId, {
                 method: 'put',
-                body: JSON.stringify(obejtoPUT)
+                body: JSON.stringify(objetoPUT)
             })
             let textoRespuesta
             switch (promesaPut) {
@@ -108,12 +107,9 @@ async function PonerHuertos() {
                     textoRespuesta = "Ha habido un error inesperado en el cambio de nombre del huerto"
             }
 
+            location.reload()
 
 
-            /*let botonAceptar
-            botonAceptar.addEventListener('click', () => {
-                location.reload()
-            }) */
 
 
 

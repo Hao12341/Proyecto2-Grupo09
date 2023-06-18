@@ -51,65 +51,69 @@
     <script src="../js/menu.js"></script>
     <script src="../js/cerrarSesion.js"></script>
 
+
+
+
+
+
     <div id="ContenedorNoHeader">
-    <div><h1 id="Título"> Contacta con nosotros</h1></div>
-    <form id="Formulario" action="#" method="post">
-    <!-- Empieza Caja Formulario -->
-    <div class="divBlanco" id="contenedorGris">
-        <!-- Empieza Parte Escribir Formulario-->
-        <h3>Nombre y Apellidos*</h3><input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos">
-
-        <h3>Email*</h3><input required class="inputCajaTexto" id="email" type="email" placeholder="Email">
-
-        <h3>Teléfono</h3><input id="tel" class="inputCajaTexto" type="tel" placeholder="Teléfono" pattern="[0-9]{9}">
-
-        <h3>Escribe aquí tu consulta*</h3>
-
-        <textarea class="inputCajaTexto" required id="Texto_Consulta" placeholder="Escriba aquí más información sobre su consulta..."
-                  rows="1" onkeyup="contarCaracteres(this)" maxlength="250"></textarea>
-
-        <div id="caracteres">
-            <span id="contador">0</span>/250
+        <div>
+            <h1 id="Título">Contacta con nosotros</h1>
         </div>
+        <form id="Formulario" action="#" method="post">
+            <!-- Empieza Caja Formulario -->
+            <div class="divBlanco" id="contenedorGris">
+                <!-- Empieza Parte Escribir Formulario-->
+                <h3>Nombre y Apellidos*</h3>
+                <input class="inputCajaTexto" required id="Nombre" type="text" placeholder="Nombre y apellidos" maxlength="69">
 
+                <h3>Email*</h3>
+                <input required class="inputCajaTexto" id="email" type="email" placeholder="Email" maxlength="150">
 
-        <!-- Acaba parte escribir formulario-->
+                <h3>Teléfono</h3>
+                <input id="tel" class="inputCajaTexto" type="tel" placeholder="Teléfono" pattern="[0-9]{9}" maxlength="9">
 
-        <!--Marcar cuales son necesarias de rellenar-->
-        <div id="obligatorio">
-            <p id="textoobligatorio">Los campos marcados con <b>*</b> han de ser rellenados</p>
-        </div>
+                <h3>Escribe aquí tu consulta*</h3>
+                <textarea class="inputCajaTexto" required id="Texto_Consulta"
+                          placeholder="Escriba aquí más información sobre su consulta..."
+                          rows="1" oninput="contarCaracteres(this)"  maxlength="250"></textarea>
 
-        <!-- Empiezan checkbox y botón de envío -->
-        <div id="containerCheckbox">
-            <input type="checkbox" id="checkboxTerminos" class="checkbox" required>
-            <label for="checkboxTerminos">
-                <div>
-                <p id="terminosServicio">Acepto los
-                    <a href="#">
-                        <p>Términos y condiciones del servicio</p>
-                     </a>
-                </p>
+                <div id="caracteres">
+                    <span id="contador">0</span>/250
                 </div>
-            </label>
-        </div>
 
-        <div id="DivBoton">
-            <button id="botonEnvio" type="submit"> Enviar... </button>
+                <!-- Acaba parte escribir formulario-->
+
+                <!-- Marcar cuales son necesarias de rellenar -->
+                <div id="obligatorio">
+                    <p id="textoobligatorio">Los campos marcados con <b>*</b> han de ser rellenados</p>
+                </div>
+
+                <!-- Empiezan checkbox y botón de envío -->
+                <div id="containerCheckbox">
+                    <input type="checkbox" id="checkboxTerminos" class="checkbox" required>
+                    <label for="checkboxTerminos">
+                        <div>
+                            <p id="terminosServicio">Acepto los
+                                <a href="#">
+                            <p>Términos y condiciones del servicio</p>
+                            </a>
+                            </p>
+                        </div>
+                    </label>
+                </div>
+
+                <div id="DivBoton">
+                    <button id="botonEnvio" type="submit">Enviar...</button>
+                </div>
+                <!-- Acaba checkbox y botón de envío -->
+
+                <!-- Div estado del envío -->
+                <div id="Estado envío">
+                    <p id="textoEnvío"></p>
+                </div>
             </div>
-        <!-- Acaba checkbox y boton de envío-->
-
-        <!-- Div estado del envío -->
-        <div id="Estado envío">
-            <p id="textoEnvío"></p>
-        </div>
-
-
-
-
-
-    </div>
-    </form>
+        </form>
     </div>
     <script src="../js/contacto.js"></script>
     <script src="../js/menu.js"></script>

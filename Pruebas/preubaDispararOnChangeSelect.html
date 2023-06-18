@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<select id="mySelect">
+    <option value="option1">Opción 1</option>
+    <option value="option2">Opción 2</option>
+    <option value="option3">Opción 3</option>
+</select>
+
+<script>
+    var selectElement = document.getElementById("mySelect");
+
+    selectElement.addEventListener("change", function() {
+        var selectedOption = selectElement.value;
+        console.log("Opción seleccionada:", selectedOption);
+    });
+</script>
+
+
+</body>
+</html>

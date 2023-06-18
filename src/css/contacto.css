@@ -24,6 +24,12 @@ body {
     position: center;
 }
 
+h3 {
+    margin-top: 15px;
+    padding-bottom: .5rem;
+}
+
+
 #Título{
     font-size: 28px;
     display: block;
@@ -33,7 +39,7 @@ body {
 /*COntenedor de página */
 
 #ContenedorNoHeader{
-    padding-top: 70px;
+    padding-top: 40px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -48,9 +54,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 40vw;
+    width: 60vw;
     min-width: min-content;
-    height: 60vh;
+    height: 70vh;
     padding: 20px;
 }
 
@@ -60,8 +66,8 @@ body {
     border: 2px solid #ccc;
     border-radius: 10px;
     padding-left: 0.5em;
+    padding: 8px;
 }
-
 
 #containerCheckbox{
     width: 250px;
@@ -89,7 +95,7 @@ body {
 }
 #DivBoton{
     display: flex;
-    flex: center;
+    flex: auto;
 }
 
 

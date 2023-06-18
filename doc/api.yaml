@@ -1,10 +1,10 @@
 openapi: 3.0.3
 info:
   title: Proyecto02-Grupo09
-  description: Proyecto02-Grupo09
+  description: Proyecto efectuado en la asignatura de Proyecto programación Web
   version: 1.0.0
 servers:
-  - url: 'https'
+  - url: 'https://aesccar.upv.edu.es'
 paths:
   /sesion:
     get:
@@ -95,10 +95,23 @@ paths:
                   type: string
                 rol:
                   type: integer
+                email:
+                  type: string
+                dirección:
+                  type: string
+                telefono:
+                  type: string
+                DNI:
+                  type: string
+                username:
+                  type: string
               required:
                 - nombre
                 - password
                 - rol
+                - email
+                - username
+                - telefono
       responses:
         '200':
           description: OK
@@ -224,12 +237,22 @@ paths:
       summary: Actualiza una avería
       tags:
         - técnico
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: Id numérico de la avería
+
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Avería"
+              $ref: "#/components/schemas/ActualizarAvería"
+
+
       responses:
         200:
           description: OK
@@ -243,6 +266,8 @@ paths:
   /huertos/{id}:
     get:
       summary: obtiene todos los huertos de un usuario
+      tags:
+        - usuario
       parameters:
         - in: path
           name: id
@@ -275,7 +300,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Huerto"
+              $ref: "#/components/schemas/NombreHuerto"
       responses:
         200:
           description: OK
@@ -318,6 +343,12 @@ components:
           email:
             type: string
             description: correo del usuario
+          DNI:
+            type: string
+            description: Documento nacional de Identidad del usuario
+          telefono:
+            type: string
+            description: Teléfono del usuario
           idRol:
             type: integer
             description: id del rol del usuario
@@ -325,9 +356,16 @@ components:
             type: string
             description: nombre del rol del usuario
 
+
       Avería:
         type: object
         properties:
+          fechaIni:
+            type: string
+            description: Fecha de inicio de la averia
+          fechaFin:
+            type: string
+            description: Fecha
           id:
             type: integer
             description: id de la avería
@@ -361,10 +399,11 @@ components:
           idHuerto:
             type: integer
             description: id del huerto con el sensor averiado
+
       Huerto:
         type: object
         properties:
-          idHuerto:
+          id:
             type: integer
             description: id del Huerto
           Nombre:
@@ -374,3 +413,22 @@ components:
             type: string
             description: Dirección del huerto
 
+
+      NombreHuerto:
+        type: object
+        properties:
+          Nombre:
+            type: string
+            description: Nombre nuevo del Huerto
+
+
+
+      ActualizarAvería:
+        type: object
+        properties:
+          idEstadoIncidencia:
+            type: integer
+            description: id del estado de la incidencia
+          FechaFin:
+            type: string
+            description: Fecha de fin de la avería

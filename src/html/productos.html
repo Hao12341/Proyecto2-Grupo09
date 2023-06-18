@@ -5,143 +5,261 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/header2.css">
-    <link rel="stylesheet" href="../css/productos2.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/productos.css">
+    <title>Productos</title>
 </head>
 
 
 <body>
 
-                                    <!-- Empezar a copiar de aquí -->
-<header class="Encabezado" role="banner">
-<!-- Esto es el encabezado que actuará de banner-->
-   <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg"
-                                      alt="Logo de la empresa"></a>
-      <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
-       <div id="contenedorContenedorDesktop">
-          <div id="separador"></div>
-            <div id="contenedorMenuDesktop">
-                <ul id="menuDesktop">
-                  <li><a href="../index.html">Inicio</a></li>
+
+    <header class="Encabezado" role="banner">
+        <!-- Esto es el encabezado que actuará de banner-->
+        <nav id="menu"><a id="Logo" href="../index.html"><img src="../img/logo.svg" alt="Logo de la empresa"></a>
+            <!-- Enlace a la página index.html, imagen de logo en la ruta especificada y alt = alternativa -->
+            <div id="contenedorContenedorDesktop">
+                <div id="separador"></div>
+                <div id="contenedorMenuDesktop">
+                    <ul id="menuDesktop">
+                        <li><a href="../index.html">Inicio</a></li>
                         <li><a href="contacto.html">Contáctanos</a></li>
-                          <li><a href="login.html">Iniciar sesión</a></li>
-                             </ul>
-                               </div>
-                                </div>
-                                 <ul id="menuDesplegable">
-                                  <li><a href="../index.html">Inicio</a></li>
-                                    <li><a href="contacto.html">Contáctanos</a></li>
-                                    <li><a href="login.html">Iniciar sesión</a></li>
-                                    </ul>
+                        <li><a href="login.html">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul id="menuDesplegable">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
 
 
-                                   <div id="iconosBanner">
-                                  <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg" alt="Perfil Log In"></a>
-                                 <div class="hamburguesa">
-                                <div></div>
-                               <div></div>
-                              <div></div>
-                             </div>
-                            </div>
-                           </nav>
-                          </header>
-                         <script src="../js/menu.js"></script>
-                        <script src="../js/cerrarSesion.js"></script>
+            <div id="iconosBanner">
+                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                        alt="Perfil Log In"></a>
+                <div class="hamburguesa">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="../js/menu.js"></script>
+    <script src="../js/cerrarSesion.js"></script>
 
 
+    <section class="producto-section2">
+        <div class="card2">
+            <div class="card-body">
+                <h4 class="card-title">Nuestro Producto</h4>
+                <p class="card-text">
+                    Nuestro sistema de monitorización almacena los sensores necesarios en una caja de alta resistencia
+                    ante todas las condiciones medioambientales.
+                    En la caja podrás encontrar sensores de humedad, temperatura, luminosidad, salinidad y de nivel pH.
+                </p>
+                <a href="../html/contacto.html">
+                    <button type="button" class="btn btn-outline-success" style="color: white; background-color: #65946F">Contactanos</button>
+
+                </a>
+
+            </div>
+
+        </div>
+        <div class="image-container3">
+            <img src="../img/Sensor-en-huerto-urbano.jpg" alt="Imagen de fondo">
+        </div>
+    </section>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <section class="producto-section" id="producto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Sensor de luminosidad</h4>
+                            <p class="card-text">
+                                Un sensor de luz es un dispositivo con la capacidad
+                                de detectar la cantidad de luz presente en su entorno.
+                                Cuando la luz contacta con el sensor, genera una pequeña
+                                corriente eléctrica. Cuanta más luz haya, mayor será la
+                                corriente generada.
+                            </p>
 
 
+                        </div>
 
+                    </div>
+                    <div class="image-container2">
+                        <img src="../img/foto_sensor_de_luz.jpg" alt="Imagen de fondo">
+                    </div>
 
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="producto-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Sensor de pH</h4>
+                            <p class="card-text">
+                                Un sensor de pH es un dispositivo utilizado para medir
+                                la acidez de un sustancia líquida. Detecta los cambios de
+                                en el nivel y lo convierte en una lectura, lo cual nos
+                                permite controlar el pH en diferentes entornos.
 
+                            </p>
 
-<!--Versión de ordenador de la web-->
-<div class="todo">
-<div class="nuestroProducto">
-    <!--primer div para la explicación del prodcuto y su imagen-->
-    <h1>Nuestro Producto</h1>
-    <img class="fotos" src="../img/CajaPackSensores.jpg" alt="Caja pack de sensores"/>
-    <p3>Nuestro sistema de monitorización almacena los sensores necesarios en una caja de alta resistencia ante todas las condiciones medioambientales. </p3>
-    <p2>En la caja podrás encontrar sensores de humedad, temperatura, luminosidad, salinidad y de nivel pH.</p2>
+                        </div>
 
-</div>
-</div>
-<div class="entero">
-<div class="contenedor">
-<aside class="lateral-1">
-    <h2>Sensor de Luminosidad</h2>
-    <img class="fotos" src="../img/foto_sensor_de_luz.jpg" alt="Sensor de luminosidad"/>
-    <p>Un sensor de luz es un dispositivo con la capacidad
-        de detectar la cantidad de luz presente en su entorno.
-        Cuando la luz contacta con el sensor, genera una pequeña
-        corriente eléctrica. Cuanta más luz haya, mayor será la
-        corriente generada</p>
+                    </div>
+                    <div class="image-container2">
+                        <img src="../img/foto_sensor_de_ph.jpg" alt="Imagen de fondo">
+                    </div>
 
-    <h2>Sensor de pH</h2>
-    <img class="fotos" src="../img/foto_sensor_de_ph.jpg" alt="Sensor de pH"/>
-    <p>Un sensor de pH es un dispositivo utilizado para medir
-        la acidez de un sustancia líquida. Detecta los cambios de
-        en el nivel y lo convierte en una lectura, lo cual nos
-        permite controlar el pH en diferentes entornos.</p>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="producto-section" id="producto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Sensor de temperatura</h4>
+                            <p class="card-text">
+                                Un sensor de temperatura es un dispositivo para
+                                medir la temperatura de su entorno. Se generan corrientes
+                                electricas con los cambios de temperatura que se utilizan
+                                para monitorizar.
+                            </p>
 
-    <h2>Sensor de Temperatura</h2>
-    <img class="fotos" src="../img/foto_sensor_de_temperatura.jpg" alt="Sensor de temperatura"/>
-    <p>Un sensor de temperatura es un dispositivo para
-        medir la temperatura de su entorno. Se generan corrientes
-        electricas con los cambios de temperatura que se utilizan
-        para monitorizar.</p>
+                        </div>
 
-    <h2>Tus datos</h2>
-    <img class="fotos" src="../img/fotorandomdatos.jpg"/>
-    <p>Contamos con un sistema de almacenación de datos, donde todos los datos de tus sensores permanecerán almacenados de manera permanente y podrás tener acceso a ellos en cualquier momento.</p>
+                    </div>
+                    <div class="image-container2">
+                        <img src="../img/foto_sensor_de_temperatura.jpg" alt="Imagen de fondo">
+                    </div>
 
-</aside>
+                </section>
 
-<aside class="lateral-2">
-    <h2>Sensor de Humedad</h2>
-    <img class="fotos" src="../img/foto_sensor_de_humedad.jpg" alt="Sensor de humedad"/>
-    <p>El sensor de humedad se utiliza para medir la
-        cantidad de humedad o vapor de agua presente en el aire
-        o en un objeto. Los cambios en las medidas se convierten
-        en corrientes que podemos usar para controlar y monitorizar
-        la humedad de diversos entornos.</p>
-
-    <h2>Sensor de Salinidad</h2>
-    <img class="fotos" src="../img/foto_sensor_de_salinidad.jpeg"/>
-    <p>El sensor de salinidad es un dispositivo utilizado
-        para  medir medir la cantidad de sal disuelta en un
-        líquido. Permitiendo detectar el valor de salinidad
-        basado en las corrientes que genera según cambia.</p>
-
-    <h2>Nuestra Página</h2>
-    <img class="fotoweb" src="../img/pagina_web.jpg">
-    <p3>Con nuestra web tienes acceso a todos los datos de los sensores en tu huerto, para que el control y monitorización de este sea lo más práctico posible.</p3>
-    <p2>También puedes ver los valores que han detectado los sensores desde que fueron instalados para poder ver con facilidad el desarrollo y lo que necesita en cada momento.</p2>
-    <p2>Además podrás controlar varios huertos desde una misma web alternando fácilmente entre gráficas.</p2>
-
-</aside>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="producto-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Sensor de salinidad</h4>
+                            <p class="card-text">
+                                El sensor de salinidad es un dispositivo utilizado
+                                para medir la cantidad de sal disuelta en un
+                                líquido. Permitiendo detectar el valor de salinidad
+                                basado en las corrientes que genera según cambia.
+            
+                            </p>
+            
+                        </div>
+            
+                    </div>
+                    <div class="image-container2">
+                        <img src="../img/foto_sensor_de_salinidad.jpeg" alt="Imagen de fondo">
+                    </div>
+            
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="producto-section" id="producto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Sensor de humedad</h4>
+                            <p class="card-text">
+                                El sensor de humedad se utiliza para medir la
+                                cantidad de humedad o vapor de agua presente en el aire
+                                o en un objeto. Los cambios en las medidas se convierten
+                                en corrientes que podemos usar para controlar y monitorizar
+                                la humedad de diversos entornos.
+                            </p>
+            
+            
+                        </div>
+                    </div>
+                    <div class="image-container2">
+                        <img src="../img/foto_sensor_de_humedad.jpg" alt="Imagen de fondo">
+                    </div>
+            
+                </section>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
-    <footer>
-            <!--apartado final con un div más pequeño que enlaza al contact0-->
-            <h4>Contacto</h4>
-            <h3>¿Quieres más información?</h3>
-            <p>No dudes en contactarnos ,estaremos encantados de atenderte</p>
-            <a href="contacto.html"><button id="call-to-action">CONTACTANOS</button></a>
-    </footer>
-
-</div>
+    <!-- Sensor 1 -->
 
 
+    <section class="producto-section2">
+        <div class="card2">
+            <div class="card-body">
+                <h4 class="card-title">Nuestra página</h4>
+                <p class="card-text">
+                    Con nuestra web tienes acceso a todos los datos de los sensores en tu huerto, para que el control y
+                    monitorización de este sea lo más práctico posible.
+                    Además podrás controlar varios huertos desde una misma web alternando fácilmente entre gráficas.
+                </p>
 
+            </div>
 
+        </div>
+        <div class="image-container3">
+            <img class="tlf" src="../img/telf.jpg" alt="Imagen de fondo">
+            <img class="pc" src="../img/pc.jpg" alt="Imagen de fondo">
 
+        </div>
 
+    </section>
 
+    <footer class="flex-row " style="background-color: #f5f5f5;">
+        <section id="InfoEmpresa">
+            <p class="Black">¿Necesitas ayuda con tu pedido?</p>
+            <p class="Simple">¡Contactanos aquí!</p>
+            <p class="Simple">TEL:999 999 999</p>
+            <p class="Simple">Lunes a Jueves, de 9:00 a 13:45 y de 16:00 a 18:00<br>Viernes, de 9:00 a 13:45</p>
+            <p class="Black">¡SIGUENOS TAMBIEN AQUI!</p>
+            <nav id="redes">
+                <a href="https://www.facebook.com/tu_pagina"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/tu_pagina"><i class="bi bi-instagram"></i></i> </a>
+                <a href="https://www.twitter.com/tu_pagina"><i class="bi bi-twitter"></i></a>
+            </nav>
 
+            <!-- Copyright -->
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright: Grupo09-GTI || <a href="../html/politicaPrivacidad.html" class="btn btn-link">Política de
+                    privacidad</a>
+            </div>
+        </section></footer>
 
-<!-- Hay que hacer que todo esto sea un @media para que sirva como vista de móvil al hacer más pequeña la página y dejar predeterminada la vista de ordenador -->
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

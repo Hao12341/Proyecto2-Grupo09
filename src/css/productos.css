@@ -1,275 +1,268 @@
-/* Import de fuente */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 /* Estilos generales */
+
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
-html{
+
+/*Variables con color asignado*/
+:root {
+    --main-bg-color: #ffffff;
+    --main-fg-color: #092a09;
+    --contrast-bg-color: #65946F;
+    --contrast-fg-color: #204b36;
+    --accent-bg-color: #092a09;
+    --accent-fg-color: #f1f1f1;
+}
+
+
+html {
     scroll-behavior: smooth;
 }
 
-.todo {
+
+.producto-section {
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 100vw;
-    background-position: center;
-    background-size: auto;
-    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: var(--accent-fg-color);
+    height: 70vh;
+
+
 }
-
-    section{
-        width: 50vw;
-    }
-
-.pagina1{
-    min-height: 100vh;
-    width: 100vw;
-}
-body{
-    background-image: url("src/img/FondoInicioSesion.jpeg");
-    background-position: top right;
-    background-size: cover;
-    background-blend-mode: normal;
-    background-repeat: no-repeat;
-}
+   
 
 
-.PackSensores {
-
-    height: 600px;
-    background-color: rgba(252, 252, 252, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto;
-    margin-top: 100px;
+.producto-section2 {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    color: var(--main-bg-color);
+    height: 70vh;
+
+
 }
-#iconosBanner , #contenedorContenedorDesktop{
+.tlf{
     display: none;
 }
+   /* Clase personalizada para los indicadores */
+   .carousel-indicators li {
+    background-color: var(--contrast-bg-color);
+}
 
-.botonSolicitarPresupuesto {
-    display: flex;
-    align-items: flex-end;
-    margin-left: 150px;
-    flex: 1 1 0;
+/* Clase personalizada para las flechas de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--contrast-bg-color);
+    border-radius: 5px;
+    height: 3rem;
+
 }
 
 button {
-    background-color: #04291C;
-    color: #fff;
+    background-color: transparent;
+    color: #000000;
+    padding: 10px 0px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 22px;
     cursor: pointer;
-    margin: 10px auto;
 }
 
-.botonesProductos {
-    display: flex;
-    justify-content: space-between;
+.button-container {
+    margin-top: 1rem;
 }
 
-.contenidopack{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Sensor {
-    position: relative;
-    height: 600px;
-    background-color: rgba(252, 252, 252, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 400px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 8rem;
+.button1 {
+    margin-right: 1rem;
 }
 
 
-
-
-
-
-
-
-
-.fotos{
-
-    height: 300px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    width: 340px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+.image-container2 {
+    width: 30%;
+    padding-left: 5rem;
 }
 
-.espacio{
-    margin-top: 20px;
-}
-
-.h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-    padding: 0.5em;
-}
-
-.botonContacto{
-    position: absolute;
-    margin: ;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items:  flex-end ;
-    justify-content: center;
+.image-container2 img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
 
 }
 
-#Contactame{
-    display: flex;
-    align-items: ;
+.image-container3 img {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+
+}
+
+.image-container3 {
+    width: 45%;
+}
+
+
+.card {
+    width: 40%;
+    border: none;
+    padding: 1rem;
+    order: 2;
+    align-self: center;
+    background-color: transparent;
+    padding-right: 5rem;
+}
+
+
+.card2 {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.image-container2 {
+    flex: 1;
+}
+
+.card-title {
+    font-size: 3rem;
+    color: var(--contrast-bg-color);
+    margin-bottom: 2rem;
 }
 
 
 
-
-
-
-#botonContacto {
-    margin-bottom: 5rem;
-    height: 8rem;
-    width: 16rem;
-    margin-top: 0;
-}
-
-form{
+img {
+    object-fit: cover;
 }
 
 
-<<<<<<< Updated upstream
-=======
-@media(max-width: 590px) {
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: white;
-        background-position: center;
-        background-size: cover;
-    }
 
-    .todo{
-        /* esto hace que salgo todo en columna y no se amontone en una sola página, no borrar o me suicido */
-    }
+.card-img-top {
+    height: 355px;
+}
 
-    .pagina1{
-        min-height: 100vh;
-        background-image: url(src/img/FondoInicioSesion.jpeg);
-        background-position: center;
-        background-size: cover;
-    }
+.card p {
+    font-size: 1rem;
+    color: #999;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
-    .PackSensores {
 
-        height: 100vh;
-        background-color: rgba(252, 252, 252, 0.9);
-        padding: 1em;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        margin: 0 auto;
-        margin-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+@media (max-width: 768px) {
+   
+
+
+
+    .producto-section {
         flex-direction: column;
+        padding: 20px;
+        height: 80vh;
     }
 
-    .botonSolicitarPresupuesto {
-        display: flex;
-        align-items: flex-end;
-        margin-left: 25px;
-        flex: 1 1 0;
+    .producto-section2 {
+        flex-direction: column;
+        height: 100vh;
+        padding-left: 0rem;
+
+
+    }
+    .container2{
+        flex: 0;
     }
 
-    button {
-        background-color: #04291C;
-        color: #fff;
+    .image-container2 {
+        width: 100%;
+        padding-left: 0rem;
+        height: 50vh;
+
+    }
+
+    .image-container2 img {
+        height: 40vh;
+
+    }
+
+    .image-container3 {
+        width: 100%;
+    }
+
+    .image-container3 img {
+        height: 50vh;
+        width: 100vw;
+
+    }
+
+    .card {
+        width: 110%;
         border: none;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        margin: 10px auto;
-
+        padding: 0rem;
+        order: 2;
+        align-self: center;
+        background-color: transparent;
+        order: 1;
     }
 
-
-    .botonesProductos {
-        display: flex;
-        justify-content: space-between;
+    .card2 {
+        width: 110%;
+        border: none;
+        padding: 0rem;
+        order: 2;
+        align-self: center;
+        background-color: transparent;
+        order: 1;
     }
 
-    .contenidopack{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .SensorLuz {
-        position: relative;
-        height: 100vh;
-        background-color: rgba(252, 252, 252, 0.9);
-        padding: 1em;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .SensorHumedad{
-        position: relative;
-        height: 100vh;
-        background-color: rgba(252, 252, 252, 0.9);
-        padding: 1em;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-        max-width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
->>>>>>> Stashed changes
+.pc{
+    display: none;
+}
+.tlf{
+    display: block;
+}
 
 
+}
 
+footer {
+    background-color: white#333;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+
+p {
+    font-size: 1rem;
+    color: #999;
+
+}
+
+.nosotros-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+#redes i {
+    color: black;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+  }
+
+
+.text-dark {
+    color: #333;
+}
+
+.p-3 {
+    padding: 0.75rem !important;
+}
+
+footer h3{
+    font-size: 1rem;
+}

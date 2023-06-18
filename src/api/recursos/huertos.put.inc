@@ -17,7 +17,12 @@ $id = intval($peticion->parametrosPath()[0]);
 $objeto = json_decode(file_get_contents('php://input'));
 $nombre = $objeto->Nombre;
 
-$sql = "UPDATE `huertos` SET `NombreHuerto` = '$nombre'  WHERE `huertos`.`IdHuerto` = 1";
+
+
+
+$sql = "UPDATE `huertos` SET `NombreHuerto` = '$nombre'
+                 
+                 WHERE `huertos`.`IdHuerto` = '$id'";
 try {
     mysqli_query($connexion, $sql);
     http_response_code(200);

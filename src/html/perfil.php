@@ -63,7 +63,7 @@ if (isset($_SESSION['user'])) {
 
 
             <div id="iconosBanner">
-                <a id="Login" href="Login.html"><img id="iconoLogin" src="../img/perfilLogin.svg"
+                <a id="Login" href="perfil.php"><img id="iconoLogin" src="../img/perfilLogin.svg"
                         alt="Perfil Log In"></a>
                 <div class="hamburguesa">
                     <div></div>
@@ -129,6 +129,8 @@ if (isset($_SESSION['user'])) {
 
 
 <script src="../js/perfil.js"></script>
+    <script src="../js/sesion.js"></script>
+    <script src="../js/HuertoInternet.js"></script>
     </script>
 
     <script>
