@@ -24,9 +24,8 @@
 
 #anuncio-incidencias{
     width: 30vw;
-    height: 50vh;
+    height: 10vh;
     border: 2px solid black;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     align-content: center;
@@ -34,9 +33,8 @@
     background-color: white;
     border-radius: 10px;
     display: flex;
-    margin: auto;
     text-align:center;
-    ;
+    margin: 0 auto;
 }
 
 #NumerodeIncidencias{
@@ -45,10 +43,8 @@
     align-content: space-between;
     margin: auto
 }
+/*============================================TODAS LAS CLASES=============================*/
 
-.cantidad{
-
-}
 
 .incidencias{
     width: 70vw;
@@ -64,6 +60,7 @@
 }
 
 .datosPrincipales{
+
     width: 120vw;
     height: 12vh;
     display: flex;
@@ -74,27 +71,50 @@
 }
 .btn{
     width: 25vw;
-    height: 9vh;
+    height: 7vh;
     margin: 0 auto;
-    padding-right: 1.5rem;
-    padding-top: 0rem;
     margin-top: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+
 }
 
 .popUpContent{
-    display: none; /* Estado inicial oculto */
+    display: block; /* Estado inicial oculto */
     position: fixed; /* Posición fija */
+    width: 68vw;
+    height: 65vh;
     top: 50%; /* Centrado vertical */
     left: 50%; /* Centrado horizontal */
     transform: translate(-50%, -50%); /* Ajuste de centrado */
     background-color: #ffffff; /* Color de fondo */
-    border: 2px solid #000000; /* Borde */
     z-index: 9999; /* Z-index para estar por encima de otros elementos */
     border-radius: 20px;
 }
 
 
+.closeIcon{
+    position: absolute; /* Posición absoluta */
+    top: 10px; /* Distancia desde arriba */
+    right: 10px; /* Distancia desde la derecha */
+    font-size: 20px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+.BotonX{
+    ;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+
+
+
+
 /*====================APARTADO CLIENTE 1================*/
+
+
+
 #Cliente1{
     height: 6vh;
     font-size: 18px;
@@ -109,22 +129,25 @@
     padding-left:1.5rem;
 }
 
+
 #popUpBox1{
-    display: none;
-    width: 70vw;
-    height: 64vh;
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
     border-radius: 20px;
-    margin: 0 auto;
-    background: white;
-    order: ;
+    width: 70vw;
+    height: 80vh;
 }
 
-
-
-
-
-
 #información1{
+    display: flex;
+    flex-direction: column;
+    flex
     width: 60vw;
     height: 50vh;
     display: flex;
@@ -148,6 +171,33 @@
     padding-left:1.5rem;
 }
 
+
+
+#popUpBox2{
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+    border-radius: 20px;
+    width: 70vw;
+    height: 80vh;
+}
+
+
+
+
+
+#información2{
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    margin: 0 auto;
+}
+
 /*====================APARTADO CLIENTE 3================*/
 #Cliente3{
     height: 6vh;
@@ -161,6 +211,20 @@
     height: 6vh;
     font-size: 18px;
     padding-left:1.5rem;
+}
+
+#popUpBox3{
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+    border-radius: 20px;
+    width: 70vw;
+    height: 80vh;
 }
 
 /*====================APARTADO CLIENTE 4================*/
@@ -178,6 +242,22 @@
     padding-left:1.5rem;
 }
 
+
+#popUpBox4{
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+    border-radius: 20px;
+    width: 70vw;
+    height: 80vh;
+}
+
+
 /*====================APARTADO CLIENTE 5================*/
 #Cliente5{
     height: 6vh;
@@ -192,6 +272,22 @@
     font-size: 18px;
     padding-left:1.5rem;
 }
+
+
+#popUpBox5{
+    display: none; /* Estado inicial oculto */
+    position: fixed; /* Posición fija */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+    background-color: #ffffff; /* Color de fondo */
+    border: 2px solid #000000; /* Borde */
+    z-index: 9999; /* Z-index para estar por encima de otros elementos */
+    border-radius: 20px;
+    width: 70vw;
+    height: 80vh;
+}
+
 
 
 
