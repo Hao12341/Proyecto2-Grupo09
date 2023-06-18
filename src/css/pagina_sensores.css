@@ -180,7 +180,12 @@ input:focus-visible + label {
 
 
 
-.tabsethistorico > input:nth-child(odd):checked ~ .tab-historico > .tab-panelhistorico:nth-child(even) {
+.tabsethistorico > input:first-child:checked ~ .tab-historico > .tab-panelhistorico:first-child,
+.tabsethistorico > input:nth-child(3):checked ~ .tab-historico > .tab-panelhistorico:nth-child(2),
+.tabsethistorico > input:nth-child(5):checked ~ .tab-historico > .tab-panelhistorico:nth-child(3),
+.tabsethistorico > input:nth-child(7):checked ~ .tab-historico > .tab-panelhistorico:nth-child(4),
+.tabsethistorico > input:nth-child(9):checked ~ .tab-historico > .tab-panelhistorico:nth-child(5),
+.tabsethistorico > input:nth-child(11):checked ~ .tab-historico > .tab-panelhistorico:nth-child(6) {
     display: block;
 }
 /*
