@@ -74,6 +74,7 @@ if (isset($_SESSION['user'])) {
     </nav>
 </header>
 <!-- FIN Header-->
+
 <!-- script que hace funcionar el menu desplegable-->
 <script src="../js/menu.js"></script>
 <!-- FIN del script-->
@@ -149,7 +150,7 @@ if (isset($_SESSION['user'])) {
                 <th>Nombre Usuario</th>
                 <th>Email</th>
                 <th>Teléfono</th>
-                <th>Acciones</th>
+                <th class="accionesH">Acciones</th>
             </tr>
             </thead>
 
@@ -163,7 +164,7 @@ if (isset($_SESSION['user'])) {
                 <th>Nombre Usuario</th>
                 <th>Email</th>
                 <th>Teléfono</th>
-                <th>Acciones</th>
+                <th class="accionesH">Acciones</th>
             </tr>
             </thead>
             <tbody>

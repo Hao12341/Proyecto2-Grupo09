@@ -54,13 +54,13 @@ html {
     outline: 0;
 }
 
-
 .boton-anyadir {
     font-size: 2.3rem;
     background-color: transparent;
     border: none;
     color: var(--contrast-bg-color);
     margin-left: 3rem;
+    float: right;
 }
 
 
@@ -68,14 +68,14 @@ html {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    width: 50vw;
+    width: 100vw;
 
 }
-
-.input-group-append button,
-.input-group-append i {
-    margin-right: 20px;
-    /* Espacio entre los elementos */
+.input-group .boton-anyadir {
+    margin-left: auto; /* Alinea el contenedor a la derecha */
+    margin-right: 5vw;
+    float: right; /* Utiliza float para alinear a la derecha */
+  
 }
 
 
@@ -120,9 +120,9 @@ html {
 /* --------------------------
 ---Estilos de la tabla---
 ------------------------- */
-
 th {
     font-size: 12px;
+    width: 25%;
 }
 
 td {
@@ -325,6 +325,9 @@ dialog {
 ---Estilos de POP-UP Eliminar---
 ------------------------- */
 
+#correcto{
+    padding: 100%;
+}
 
   
 /* --------------------------
@@ -345,7 +348,6 @@ dialog {
         flex-direction: row;
         margin-left: 5px;
     }
-
 
 
     .anadir {
@@ -387,13 +389,6 @@ dialog {
         margin-left: 0vw;
 
     }
-
-    .input-group-append button,
-    .input-group-append i {
-        margin-right: 20px;
-        /* Espacio entre los elementos */
-    }
-
     .buscador {
         width: 18rem;
         display: flex;
@@ -471,7 +466,6 @@ dialog {
     #popup {
         width: 80vw;
     }
-
 
 
     .boton-cancelar {
