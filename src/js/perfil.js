@@ -18,7 +18,8 @@ async function GetHuertos(idUsuario) {
  * @constructor
  */
 async function PonerHuertos() {
-    let huertos = await GetHuertos('4')
+    let sesion = await getSesion()
+    let huertos = await getHuertos(sesion.IdUsuario)
     console.log(huertos)
     const contenedorHuerto = document.getElementById("ContenedorHuertos")
     huertos.forEach( (huerto) => {
@@ -88,6 +89,7 @@ async function PonerHuertos() {
 
         async function PutHuertos() {
             let nombreHuerto = document.getElementById("nombreHuerto").value
+            console.log(nombreHuerto)
             console.log(huertoId)
             let obejtoPUT = {idHuerto: huertoId, Nombre: nombreHuerto}
             console.log(JSON.stringify(obejtoPUT))

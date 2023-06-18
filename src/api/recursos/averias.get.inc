@@ -17,7 +17,7 @@ $sql = "SELECT FechaIni as fechaIni,FechaFin as fechaFin,`incidencias`.`IdIncide
        `incidencias`.`TipoIncidencia` as tipoIncidencias,
        `incidencias`.NivelGravedad as nivelGravedad,
        `EI`.`Valor Estado` as estado,
-       sensores.`IdSensor` as `idSesnor`,
+       sensores.`IdSensor` as `idSensor`,
        `t`.`TipoSensor` as `tipoSensor`,
        huertos.UsuarioPropietario as idUsuario,
        `usuarios`.Nombre as `usuario`,

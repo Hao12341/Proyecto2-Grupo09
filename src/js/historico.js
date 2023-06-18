@@ -27,7 +27,7 @@ async function crearTablas(idTabla, magnitud, idHuerto) {
 
         let fechaString = fechaDate.getDate() + "/" + fechaDate.getMonth() + "/" + fechaDate.getFullYear()
 
-        let horaString = fechaDate.getHours() + ":" + fechaDate.getMinutes()+ ":" + fechaDate.getSeconds()
+        let horaString = fechaDate.getHours() + ":" + fechaDate.getMinutes() // + ":" + fechaDate.getSeconds()
 
 
         fechaP.innerText = fechaString;
